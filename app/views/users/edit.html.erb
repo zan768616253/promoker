@@ -1,0 +1,165 @@
+<div class="account-settings">
+  <div class="account-tabs">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="active">
+        <a href="#basic" data-toggle="tab">个人资料</a>
+      </li>
+      <li><a href="#avatar" data-toggle="tab">修改头像</a></li>
+      <li><a href="#password" data-toggle="tab">修改密码</a></li>
+      <li><a href="#oauth" data-toggle="tab">绑定帐号</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="basic">
+        <%= form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+          <% if @user.errors.any? %>
+            <!--<div id="error_explanation">-->
+              <!--<ul>-->
+                <!--<% @user.errors.full_messages.each do |msg| %>-->
+                  <!--<li><%= msg %></li>-->
+                <!--<% end %>-->
+              <!--</ul>-->
+            <!--</div>-->
+          <% end %>
+        <!--<form class="form-horizontal" role="form">-->
+          <div class="form-group">
+            <%= f.label :nickname, '昵称', :class => 'col-sm-2 control-label' %>
+            <!--<label for="nickname" class="col-sm-2 control-label">昵称</label>-->
+            <div class="col-sm-5">
+              <%= f.text_field :nickname, :placeholder => "昵称", :class => 'form-control' %>
+              <!--<input type="text" class="form-control" id="nickname" placeholder="昵称">-->
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :email, "邮箱", :class => "col-sm-2 control-label" %>
+            <!--<label for="email" class="col-sm-2 control-label">邮箱</label>-->
+            <div class="col-sm-5">
+              <%= f.text_field :email, :placeholder => '邮箱', :class => 'form-control' %>
+              <!--<input type="email" class="form-control" id="email" placeholder="邮箱">-->
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">性别</label>
+            <div class="col-sm-5">
+              <div class="radio-inline">
+                <label>
+                  <%= f.radio_button :gender, "m" %>
+                  <!--<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>-->
+                  男
+                </label>
+              </div>
+              <div class="radio-inline">
+                <label>
+                  <%= f.radio_button :gender, "f" %>
+                  <!--<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">-->
+                  女
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">所在地</label>
+            <div class="col-sm-8">
+              <%= f.region_select [:province, :city, :district], province_prompt: '请选择省', city_prompt: '请选择市', district_prompt: '请选择区'%>
+            </div>
+          </div>
+          <!--<div class="form-group">-->
+            <!--<label for="about" class="col-sm-2 control-label">身份</label>-->
+            <!--<div class="col-sm-6">-->
+
+            <!--</div>-->
+          <!--</div>-->
+          <div class="form-group">
+            <label for="about" class="col-sm-2 control-label">个性签名</label>
+            <div class="col-sm-6">
+              <%= f.text_area :about, :rows => 5, :cols => 20, :class => 'form-control' %>
+              <!--<textarea class="form-control" rows="4"></textarea>-->
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <%= f.submit "保存", :class => "btn btn-primary"%>
+              <!--<button type="submit" class="btn btn-primary pull-right">保存</button>-->
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="tab-pane" id="avatar">
+        avatar
+      </div>
+      <div class="tab-pane" id="password">
+        <%= form_for(@user, :url => password_path(:user), :html => { :method => :put, :class => 'form-horizontal' }) do |f| %>
+
+          <div class="form-group">
+            <label for="current_password" class="col-sm-2 control-label">当前密码</label>
+            <div class="col-sm-6">
+              <%= f.password_field :current_password, :autofocus => true, :class => 'form-control' %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">新密码</label>
+            <div class="col-sm-6">
+              <%= f.password_field :password, :class => 'form-control' %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">确认新密码</label>
+            <div class="col-sm-6">
+              <%= f.password_field :password_confirmation, :class => 'form-control' %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <%= f.submit "修改", :class => "btn btn-primary"%>
+              <!--<button type="submit" class="btn btn-primary pull-right">保存</button>-->
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="tab-pane" id="oauth">
+        <ul>
+          <li class="weibo">
+            <i class="fa fa-weibo"></i>
+            <a href="#" class="active">
+              已绑定
+            </a>
+          </li>
+          <li class="facebook">
+            <i class="fa fa-facebook-square"></i>
+            <a href="#">
+              绑定
+            </a>
+          </li>
+          <li class="twitter">
+            <i class="fa fa-twitter-square"></i>
+            <a href="#" class="">
+              绑定
+            </a>
+          </li>
+          <li class="google">
+            <i class="fa fa-google-plus"></i>
+            <a href="#">
+              绑定
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="account-preview">
+    <div class="avatar">
+      <img src="<%= gravatar_image_url(@user.email, size: 160) %>" alt=""/>
+    </div>
+    <div class="nickname"><%= @user.nickname %></div>
+    <div class="role">导演,  编剧</div>
+    <% if @user.location %>
+    <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
+    <% end %>
+    <div class="actions">
+      <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i>关注</a>
+      <a href="#" class="btn btn-info"><i class="fa fa-comment"></i>约谈</a>
+    </div>
+  </div>
+</div>

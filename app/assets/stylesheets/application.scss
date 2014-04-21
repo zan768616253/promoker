@@ -1,0 +1,185 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require bxslider
+ *= require social-share-button
+ *= require_tree .
+ */
+
+@import 'bootstrap';
+@import 'font-awesome';
+
+
+.flash {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  z-index: 1000;
+  left: 0px;
+  right: 0px;
+}
+.flash .alert {
+  padding: 10px;
+}
+
+.navbar .account {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.navbar .account a.dropdown-toggle {
+  color: #444;
+  text-decoration: none;
+}
+
+.navbar .account:hover {
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+
+ul.account-actions {
+  list-style: none;
+  position: relative;
+  top: 10px;
+}
+.account-actions li {
+  display: inline-block;
+  color: white;
+}
+
+
+.account-actions img {
+  width: 20px;
+  position: relative;
+  bottom: 3px;
+  margin-right: 2px;
+}
+
+.account-actions a {
+  color: #444;
+}
+
+.profile img {
+  //-webkit-border-radius: 3px;
+  //-moz-border-radius: 3px;
+  //-ms-border-radius: 3px;
+  //-o-border-radius: 3px;
+  //border-radius: 3px;
+  border-radius: 50%;
+  border: 1px solid #C0BBBB;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: 5px;
+}
+
+ul.dropdown-menu li i {
+  margin-right: 10px;
+}
+ul.dropdown-menu li {
+  font-size: 13px;
+}
+
+
+
+#footer-wrapper {
+	margin:auto;
+	border-top:2px solid #d9d9d9;
+	padding-top:1px;
+	background:#eae9e2;
+}
+.footer-wrapper-no-content {
+	border:none !important;
+	padding:none !important;
+	background:0px !important;
+}
+#footer-inner {
+	margin:auto;
+	border-top:1px solid #d9d9d9;
+	background:url(http://www.fqpai.com/wp-content/themes/fqp-three/images/footer-pattern-bg.png) repeat;
+}
+.footer-inner-no-content {
+	border:0px !important;
+}
+#footer-partners-wrapper {
+	width:960px;
+	margin:0 auto;
+	padding-top:36px;
+	padding-bottom:36px;
+}
+#footer-partners-wrapper h3 {
+	font-size:14pt;
+	padding-bottom:28px;
+	font-weight:normal;
+}
+#footer-partners-inner {
+	width:940px;
+	padding:10px;
+	margin:0 auto;
+	background:url(http://www.fqpai.com/wp-content/themes/fqp-three/images/pattern-pixel.png) repeat;	
+}
+#footer-partners {
+	width:920px;
+	padding:20px;
+	background:#FFF url(http://www.fqpai.com/wp-content/themes/fqp-three/images/footer-partners.png) repeat;
+}
+#footer-partners ul {
+	list-style:none;
+	width:920px;
+}
+#footer-partners ul li {
+	width:180px !important;
+	float:left;
+	text-align:center;
+}
+#footer-partners .bx-prev:link,
+#footer-partners .bx-prev:visited {
+	position:absolute;
+	top:-55px;
+	right:-5px;
+	background-image:url(http://www.fqpai.com/wp-content/themes/fqp-three/images/footer-partners-prev.png);
+	background-repeat:no-repeat;
+	background-position:7px 5px;
+	height:20px;
+	width:20px;
+	display:block;
+	text-indent:-9999px;
+	background-color:#b2b2b2;
+}
+#footer-partners .bx-next:link,
+#footer-partners .bx-next:visited {
+	position:absolute;
+	top:-55px;
+	right:-30px;
+	background-image:url(http://www.fqpai.com/wp-content/themes/fqp-three/images/footer-partners-next.png);	
+	background-color:#b2b2b2;
+	background-repeat:no-repeat;
+	background-position:7px 5px;
+	height:20px;
+	width:20px;
+	display:block;
+	text-indent:-9999px;	
+}
+
+#footer-partners a.bx-prev:hover, #footer-partners a.bx-next:hover {
+	opacity: 0.8;
+}
+
+#footer > div.tip {
+    text-align: center;
+    background-color: #353535;
+    color: #CCC;
+    font-size: 12px;
+    padding: 20px;
+}

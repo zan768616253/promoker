@@ -1,0 +1,60 @@
+<div class="articles-wrapper">
+  <div class="article-box">
+    <div class="article-title">
+      <%= @article.title %>
+    </div>
+    <div class="article-share">
+      <%= social_share_button_tag(@article.title) %>
+    </div>
+    <div class="article-body">
+      <%= raw @article.body  %>
+    </div>
+  </div>
+  <div class="comments-wrapper">
+    <h2>评论一下吧</h2>
+   <div class="comments-new">
+     <%= form_for :comment, :url => article_comments_path(@article) do |f| %>
+      <div class="form-group">
+        <%= f.text_area :comment, :rows => '4', :class => 'form-control' %>
+      </div>
+      <% if user_signed_in? %>
+        <%= f.submit '发表评论', :class => 'btn btn-primary pull-right' %>
+      <% else %>
+        <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#login-modal">发表评论</a>
+      <% end %>
+     <% end %>
+
+   </div>
+    <ul class="comments">
+      <% @article.comments.each do |c| %>
+      <li class=comment>
+        <div class="comment-user-avatar">
+         <%= gravatar_image_tag(c.user.email, :size => 100) %>
+        </div>
+        <div class="comment-body">
+          <div class="comment-user-nickname">
+            <%= link_to c.user.nickname, user_path(c.user)%>
+          </div>
+          <div class="comment-date">
+            <%= c.created_at.strftime("%Y-%m-%d %H:%M") %>
+          </div>
+          <div class="comment-content">
+            <%= c.comment %>
+          </div>
+
+          <div class="comment-actions">
+            <!--<i class="fa fa-comment-o"></i>-->
+            <i class="fa fa-heart-o"></i>
+            <% if c.user == current_user %>
+              <i class="fa fa-trash-o"></i>
+            <% end %>
+          </div>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+

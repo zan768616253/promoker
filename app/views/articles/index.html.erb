@@ -1,0 +1,32 @@
+<div class="articles-wrapper">
+  <div class="articles-header">
+    <h2>资讯</h2>
+  </div>
+  <div class="articles">
+    <% @articles.each do |article| %>
+    <div class="article">
+      <a href="<%= article_path(article) %>">
+        <div class="article-thumb">
+          <!--<a href="<%= article_path(article) %>">-->
+            <img src="<%= article.thumb %>" alt=""/>
+          <!--</a>-->
+        </div>
+        <div class="article-basic">
+          <div class="article-title">
+            <%=  article.title %>
+            <%# link_to article.title, article_path(article) %>
+          </div>
+          <div class="article-date">
+            <%= article.updated_at.strftime("%Y-%m-%d %H:%M") %>
+          </div>
+          <div class="article-summary">
+            <%# truncate(h(strip_tags(article.body)), :length => 200,  :separator => ' ', :omission => "<br/><a href='#'>...</a>")%>
+            <%= article.summary + '...'%>
+          </div>
+        </div>
+      </a>
+    </div>
+   <% end %>
+    <%= paginate @articles %>
+  </div>
+</div>

@@ -1,0 +1,191 @@
+.account-settings {
+  width: 960px;
+  margin: 80px auto;
+  background-color: #FFF;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  padding: 20px;
+}
+
+.account-settings a {
+  color: #444;
+}
+
+.account-settings .tab-content {
+  padding: 20px 20px 0px 20px;
+}
+
+.account-settings .region {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.account-tabs {
+  display: inline-block;
+  width: 700px;
+}
+.account-preview {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.account-preview .role {
+  color: #999;
+  font-size: 12px;
+}
+
+.account-preview .actions a {
+  color: white;
+}
+.account-preview .actions a i {
+  margin-right: 6px;
+}
+
+.account-preview .location {
+  color: #999;
+  font-size: 11px;
+}
+.account-preview .actions {
+  margin-top: 10px;
+}
+.account-preview .avatar {
+  border: 1px solid #BBB;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.account-preview .avatar img {
+  width: 160px;
+}
+.account-preview .location i {
+  margin-right: 5px;
+}
+
+#basic input[type="submit"] {
+  padding: 8px 30px;
+  font-size: 15px;
+}
+
+
+#oauth i {
+  font-size: 30px;
+}
+#oauth ul > li {
+  display: inline-block;
+  margin: 20px;
+  width: 40px;
+  text-align: center;
+}
+
+#oauth > ul > li > a {
+  font-size: 13px;
+  text-decoration: none;
+  position: relative;
+  right: 3px;
+  top: 5px;
+}
+
+#oauth > ul > li > a.active {
+  background-color: #C2A377;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+#oauth > ul > li > a:hover {
+  background-color: #C2A377;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.user-wrapper {
+  width: 1060px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+#user-content {
+  background-color: white;
+  width: 800px;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  padding: 20px;
+}
+
+#user-profile {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  background-color: #FFF;
+  padding: 10px;
+}
+#user-profile .avatar {
+  border: 1px solid #BBB;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#user-profile .avatar img {
+  width: 160px;
+}
+#user-profile .location i {
+  margin-right: 5px;
+}
+
+#user-profile .role {
+  color: #999;
+  font-size: 12px;
+}
+
+#user-profile .actions a {
+  color: white;
+}
+#user-profile .actions a i {
+  margin-right: 6px;
+}
+
+#user-profile .location {
+  color: #999;
+  font-size: 11px;
+}
+#user-profile .actions {
+  margin-top: 10px;
+}
+
+.user-nav a {
+  color: #999;
+  font-weight: bold;
+  text-decoration: none;
+}
+.user-nav a.active {
+  color: #F57070;
+}
+
+.user-nav a:hover {
+  color: #F57070;
+}
+
+.user-nav li {
+  display: inline-block;
+  margin: 5px;
+  padding-right: 15px;
+}
+
+
+
