@@ -9,6 +9,7 @@
     <div class="article-body">
       <%= raw @article.body  %>
     </div>
+
   </div>
   <div class="comments-wrapper">
     <h2>评论一下吧</h2>
@@ -51,6 +52,23 @@
           </div>
         </div>
       </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="relate-articles">
+    <div class="relate-header">热门文章</div>
+    <ul class="relates">
+      <% @relates.each do |r| %>
+        <li class="relate">
+          <div class="relate-thumb">
+            <img src="<%= r.thumb %>" alt=""/>
+          </div>
+          <div class="relate-title">
+            <a href="<%= article_path(r) %>">
+              <%= r.title %>
+            </a>
+          </div>
+        </li>
       <% end %>
     </ul>
   </div>

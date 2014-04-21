@@ -100,6 +100,8 @@
   background-color: white;
   width: 550px;
   min-height: 200px;
+  display: inline-block;
+  vertical-align: top;
 }
 .comments-wrapper h2 {
   font-size: 16px;
@@ -182,4 +184,46 @@ li.comment:last-child {
 
 .comment-actions i:hover {
   color: orange;
+}
+
+.relate-articles {
+  display: inline-block;
+  width: 370px;
+  position: relative;
+  margin-left: 15px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+}
+
+.relate {
+  width: 160px;
+  height: 180px;
+  display: inline-block;
+  margin: 5px;
+  vertical-align: top;
+}
+.relate-thumb {
+  width: 160px;
+  height: 120px;
+  overflow: hidden;
+}
+.relate-title {
+  text-align: center;
+  margin-top: 3px;
+}
+.relate-title a {
+  color: #444;
+}
+
+.relate-thumb img {
+  width: 160px;
+  height: 120px;
+}
+
+.article-share {
+  float: right;
+  position: relative;
+  bottom: 45px;
+  right: 10px;
 }
