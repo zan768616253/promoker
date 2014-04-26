@@ -27,7 +27,7 @@
         				<li class="dropdown">
         					<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">分享 <b class="fa fa-angle-down rotate"></b></a>
         					<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">推荐</a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>">推荐</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>">资讯</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">活动</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">电影节</a></li>
@@ -91,7 +91,7 @@
             </div>
         </div>
     </nav>
-  <div class="flash">
+  <!-- <div class="flash">
     <% if not flash[:notice].nil? %>
       <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert">×</button>
@@ -104,7 +104,7 @@
         <%= flash[:alert] %>
       </div>
     <% end %>
-  </div>
+  </div> -->
     <%= yield %>
 
     <div id="login-modal" class="modal fade">

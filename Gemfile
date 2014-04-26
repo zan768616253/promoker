@@ -19,6 +19,7 @@ gem "devise"
 gem "gravatar_image_tag"
 gem 'china_region_fu'
 gem 'rails_admin'
+gem 'rails_admin_tag_list', git: 'git@github.com:emoreth/rails_admin_tag_list.git'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'

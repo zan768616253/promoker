@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420171719) do
+ActiveRecord::Schema.define(version: 20140426014542) do
+
+  create_table "actors", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "actors_movies", force: true do |t|
+    t.integer "movie_id"
+    t.integer "actor_id"
+  end
+
+  create_table "actors_movies_tables", force: true do |t|
+    t.integer "movies_id"
+    t.integer "actors_id"
+  end
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -56,6 +71,22 @@ ActiveRecord::Schema.define(version: 20140420171719) do
   add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
+  create_table "directors", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  create_table "directors_movies", force: true do |t|
+    t.integer "movie_id"
+    t.integer "director_id"
+  end
+
+  create_table "directors_movies_tables", force: true do |t|
+    t.integer "movies_id"
+    t.integer "directors_id"
+  end
+
   create_table "districts", force: true do |t|
     t.string   "name"
     t.integer  "city_id"
@@ -69,6 +100,42 @@ ActiveRecord::Schema.define(version: 20140420171719) do
   add_index "districts", ["name"], name: "index_districts_on_name"
   add_index "districts", ["pinyin"], name: "index_districts_on_pinyin"
   add_index "districts", ["pinyin_abbr"], name: "index_districts_on_pinyin_abbr"
+
+  create_table "movies", force: true do |t|
+    t.string   "title"
+    t.text     "desc"
+    t.string   "short_desc"
+    t.string   "thumb"
+    t.string   "duration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "url"
+    t.text     "content"
+  end
+
+  create_table "movies_actors_tables", force: true do |t|
+    t.integer "movies_id"
+    t.integer "actors_id"
+  end
+
+  create_table "movies_directors_tables", force: true do |t|
+    t.integer "movies_id"
+    t.integer "directors_id"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.string   "name"
+    t.string   "role"
+    t.string   "about"
+    t.string   "style"
+    t.string   "avatar"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "profilable_id"
+    t.string   "profilable_type"
+  end
+
+  add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id"
 
   create_table "provinces", force: true do |t|
     t.string   "name"

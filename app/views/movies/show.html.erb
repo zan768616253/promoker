@@ -1,0 +1,118 @@
+<div class="movie-container">
+
+<div class="movie-content">
+  <div class="ribbon"></div>
+  <div class="movie-title" id="movie-title">
+    <%= @movie.title %>
+  </div>
+  <div class="movie0">
+    <%= raw @movie.content %>
+  </div>
+  <div class="movie-actions"> 
+    <a href="#" class="btn btn-default">
+      <i class="fa fa-heart-o"></i>
+      喜欢
+    </a>
+    <div class="movie-share">
+      <!-- JiaThis Button BEGIN -->
+      <div class="jiathis_style_32x32">
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+      </div>
+      <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1394127006547805" charset="utf-8"></script>
+      <script>
+      var jiathis_config = {
+      title:document.getElementById("movie-title").innerHTML
+      }
+      </script>
+    </div>
+<!-- JiaThis Button END -->
+    
+  </div>
+</div>
+
+<div class="left-panel">
+  <div class="movie-details">
+      <div class="ribbon"></div>
+      <div class="movie-title"><%= @movie.title %></div>
+      <div class="movie-time"><%= @movie.updated_at.strftime("%Y-%m-%d %H:%M") %> | </div>
+      <!-- <div class="movie-director"><%= @movie.directors %></div> -->
+      <!-- <div class="movie-actors"><%= @movie.actors %></div> -->
+      <div class="movie-types"><a href=""><%= @movie.type_list.join(' ') %></a></div>
+      <div class="movie-desc"><%=raw @movie.desc %></div>
+  </div>
+  <div class="comments-wrapper">
+    <h2>评论一下吧</h2>
+    <div class="comments-new">
+      <%= form_for :comment, :url => movie_comments_path(@movie) do |f| %>
+        <div class="form-group">
+          <%= f.text_area :comment, :rows => '4', :class => 'form-control' %>
+        </div>
+        <% if user_signed_in? %>
+          <%= f.submit '发表评论', :class => 'btn btn-primary pull-right' %>
+        <% else %>
+          <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#login-modal">发表评论</a>
+        <% end %>
+      <% end %>
+
+    </div>
+    <ul class="comments">
+      <% @movie.comments.each do |c| %>
+        <li class=comment>
+          <div class="comment-user-avatar">
+            <%= gravatar_image_tag(c.user.email, :size => 100) %>
+          </div>
+          <div class="comment-body">
+            <div class="comment-user-nickname">
+              <%= link_to c.user.nickname, user_path(c.user)%>
+            </div>
+            <div class="comment-date">
+              <%= c.created_at.strftime("%Y-%m-%d %H:%M") %>
+            </div>
+            <div class="comment-content">
+              <%= c.comment %>
+            </div>
+
+            <div class="comment-actions">
+              <!--<i class="fa fa-comment-o"></i>-->
+              <i class="fa fa-heart-o"></i>
+              <% if c.user == current_user %>
+                <i class="fa fa-trash-o"></i>
+              <% end %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<div class="right-panel">
+  <div class="movie-author-info">
+    <div class="ribbon"></div>
+    <div class="movie-director">
+      <div class="movie-director-thumb">
+        <%= image_tag @director.profiles.first.avatar %>
+      </div>
+      <div class="movie-director-info">
+        <span>导演: </span>
+        <span><%=  @director.name %></span>
+      </div>
+    </div>
+    <ul class="movie-actors">
+      <% @actors.each do |actor| %>
+        <li class="movie-actor">
+          <div class="movie-actor-thumb">
+            <%= image_tag actor.profiles.first.avatar %>
+          </div>
+          <div class="movie-actor-info">
+            <%= actor.name %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+</div>

@@ -2,12 +2,19 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @article = Article.find(params[:article_id])
+    if params[:article_id]
+      @commentable = Article.find(params[:article_id])
+      redirect_url = article_path(@commentable)
+    end
+    if params[:movie_id]
+      @commentable = Movie.find(params[:movie_id])
+      redirect_url = movie_path(@commentable)
+    end
     @comment = Comment.new(comment_params)
-    @comment.commentable = @article
+    @comment.commentable = @commentable
     @comment.user = current_user
     @comment.save!
-    redirect_to article_path(@article)
+    redirect_to redirect_url
   end
 
   private

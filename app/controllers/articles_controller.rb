@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.page(params[:page])
+    @articles = Article.recent.page(params[:page])
   end
   def show
     @article = Article.find(params[:id])

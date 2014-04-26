@@ -1,3 +1,11 @@
+GIT
+  remote: git@github.com:emoreth/rails_admin_tag_list.git
+  revision: 2ef3bbc2a1ed873e33ce733eb627cc7556f244ba
+  specs:
+    rails_admin_tag_list (0.1.5)
+      rails (>= 3.1)
+      rails_admin (>= 0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -261,6 +269,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.1.0)
   rails_admin
+  rails_admin_tag_list!
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

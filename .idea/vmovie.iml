@@ -85,6 +85,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v4.1.0, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_admin (v0.6.2, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_admin_tag_list (v0.1.5@2ef3bb, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.1.0, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.3.1, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.1.1, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
@@ -98,6 +99,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v4.0.3, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.0, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.5.0, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="social-share-button (v0.1.6, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v1.1.2, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.11.0, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.1.3, RVM: ruby-1.9.3-p448 [rails4]) [gem]" level="application" />

@@ -2,24 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76c61454-753a-43f1-b089-672eb0cd51a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/article.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/article.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/movie.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/movie.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/movies/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/article.rb" afterPath="$PROJECT_DIR$/app/models/article.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/rails_admin.rb" afterPath="$PROJECT_DIR$/config/initializers/rails_admin.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vmovie.iml" afterPath="$PROJECT_DIR$/.idea/vmovie.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vmovie.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398007671893" ignored="false" />
-    <file path="/Gemfile" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398006132348" ignored="false" />
+    <file path="/Dummy.txt" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398364455584" ignored="false" />
+    <file path="/Gemfile" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398093148413" ignored="false" />
     <file path="/20140420095821_add_nickname_avatar_gender_about_to_users.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1397987953007" ignored="false" />
     <file path="/20140420100213_add_location_to_users.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1397988135644" ignored="false" />
     <file path="/_likes.html.erb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1397988861840" ignored="false" />
-    <file path="/rails_admin.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398010053199" ignored="false" />
-    <file path="/articles_controller.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398059771142" ignored="false" />
+    <file path="/rails_admin.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398364362294" ignored="false" />
+    <file path="/articles_controller.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398335371471" ignored="false" />
     <file path="/routes.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398053282789" ignored="false" />
-    <file path="/show.html.erb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398060669351" ignored="false" />
-    <file path="/index.html.erb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398012771611" ignored="false" />
-    <file path="/article.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398014428737" ignored="false" />
+    <file path="/show.html.erb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398348604982" ignored="false" />
+    <file path="/index.html.erb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398356470615" ignored="false" />
+    <file path="/article.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398335331936" ignored="false" />
     <file path="/20140420152753_add_summary_to_articles.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398007684557" ignored="false" />
     <file path="/article.css.scss" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398060219303" ignored="false" />
     <file path="/application.scss" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398049320943" ignored="false" />
@@ -27,6 +36,30 @@
     <file path="/fragment.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398056822949" ignored="false" />
     <file path="/users_controller.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398057427031" ignored="false" />
     <file path="/application.html.erb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398057643567" ignored="false" />
+    <file path="/20140421133311_create_movies.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398090127944" ignored="false" />
+    <file path="/movie.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398364685414" ignored="false" />
+    <file path="/20140421152503_add_url_to_movies.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398093923178" ignored="false" />
+    <file path="/Ruby Console" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398095066155" ignored="false" />
+    <file path="/movie.js.coffee" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398268181301" ignored="false" />
+    <file path="/movie.css.scss" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398355766466" ignored="false" />
+    <file path="/movies_controller.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398348472682" ignored="false" />
+    <file path="/20140424142532_create_profiles.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398349667658" ignored="false" />
+    <file path="/20140424143808_remove_director_from_movies.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398350298870" ignored="false" />
+    <file path="/profile.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398362642157" ignored="false" />
+    <file path="/20140424145847_add_profilable_to_profiles.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398353702901" ignored="false" />
+    <file path="/director.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398363774992" ignored="false" />
+    <file path="/actor.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398363715394" ignored="false" />
+    <file path="/20140424164759_create_directors.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398358181080" ignored="false" />
+    <file path="/20140424165423_add_movie_id_to_directors.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398358488671" ignored="false" />
+    <file path="/20140424165529_add_movie_id_to_actors.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398358542074" ignored="false" />
+    <file path="/20140424171343_create_movies_directors_table.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398359677867" ignored="false" />
+    <file path="/20140424171515_create_movies_actors_table.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398359729659" ignored="false" />
+    <file path="/20140424172059_remove_movie_id_from_actors_and_directors.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398360166278" ignored="false" />
+    <file path="/20140424172632_change_movies_id_to_movie_id_from_actors.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398360693146" ignored="false" />
+    <file path="/20140424172744_change_movies_id_to_movie_id_from_directors.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398360730545" ignored="false" />
+    <file path="/20140424173751_add_columns_to_directors.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398361090231" ignored="false" />
+    <file path="/20140424183158_change_diretor_to_directors_from_movies.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398364339830" ignored="false" />
+    <file path="/20140424183416_add_name_to_directors.rb" changelist="76c61454-753a-43f1-b089-672eb0cd51a2" time="1398364472485" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,35 +78,7 @@
     <favorites_list name="vmovie" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/articles/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="10" selection-start="225" selection-end="225" vertical-scroll-proportion="-4.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.css.scss" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/article.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="1" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.92718446">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articles_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/articles_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="58" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -95,22 +100,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/articles/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20140420171719_acts_as_votable_migration" />
-        <option value="$PROJECT_DIR$/app/models/article.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/initializers/social_share_button.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/articles/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/article.css.scss" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424171734_create_actors_movies_table.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424171832_create_actors_movies.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424171855_create_directors_movies.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424172059_remove_movie_id_from_actors_and_directors.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424172632_change_movies_id_to_movie_id_from_actors.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424172744_change_movies_id_to_movie_id_from_directors.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424172633_change_movies_id_to_movie_id_from_actors.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424172745_change_movies_id_to_movie_id_from_directors.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424173751_add_columns_to_directors.rb" />
+        <option value="$PROJECT_DIR$/app/models/profile.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424183158_change_diretor_to_directors_from_movies.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/rails_admin.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140424183416_add_name_to_directors.rb" />
+        <option value="$PROJECT_DIR$/app/models/director.rb" />
+        <option value="$PROJECT_DIR$/app/models/actor.rb" />
+        <option value="$PROJECT_DIR$/app/models/movie.rb" />
       </list>
     </option>
   </component>
@@ -152,13 +157,34 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="vmovie" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vmovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="acts_as_commentable (v4.0.1, RVM: ruby-1.9.3-p448 [rails4]) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -244,6 +270,32 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vmovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vmovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -276,54 +328,11 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vmovie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vmovie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vmovie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vmovie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -340,6 +349,31 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: vmovie">
+    <configuration default="false" name="IRB console" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="vmovie" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p448/bin/irb" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--prompt simple" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -444,6 +478,27 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="IrbRunConfigurationType" factoryName="IRB console">
+      <module name="" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -556,12 +611,18 @@
       <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Rake.test" />
       <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
       <item index="2" class="java.lang.String" itemvalue="Rails.Production: vmovie" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: vmovie" />
+      <item index="4" class="java.lang.String" itemvalue="IRB console.IRB console" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="IRB console.IRB console" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
@@ -591,17 +652,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="706" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26904377" sideWeight="0.6896552" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31034482" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26661265" sideWeight="0.7671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2328125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53291535" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2984375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -675,114 +736,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424171832_create_actors_movies.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="31" selection-start="719" selection-end="719" vertical-scroll-proportion="0.8754864">
+        <state line="4" column="26" selection-start="156" selection-end="156" vertical-scroll-proportion="0.16">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424171734_create_actors_movies_table.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="42" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
+        <state line="4" column="26" selection-start="121" selection-end="168" vertical-scroll-proportion="0.15075377">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424171343_create_movies_directors_table.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="87" selection-start="3322" selection-end="3346" vertical-scroll-proportion="-6.7916665">
+        <state line="4" column="29" selection-start="127" selection-end="177" vertical-scroll-proportion="0.15075377">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424171515_create_movies_actors_table.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="26" selection-start="121" selection-end="168" vertical-scroll-proportion="0.14251782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424171709_create_directors_movies_table.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="29" selection-start="177" selection-end="177" vertical-scroll-proportion="0.14251782">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="23" selection-start="1709" selection-end="1716" vertical-scroll-proportion="-6.1538463">
+        <state line="123" column="16" selection-start="3976" selection-end="3976" vertical-scroll-proportion="0.38121548">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448@rails4/gems/acts_as_commentable-4.0.1/lib/commentable_methods.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424172634_change_movies_id_to_movie_id_from_actors.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+        <state line="7" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.2638191">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/article.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424172746_change_movies_id_to_movie_id_from_directors.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+        <state line="7" column="20" selection-start="248" selection-end="248" vertical-scroll-proportion="0.2638191">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424172059_remove_movie_id_from_actors_and_directors.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="59" selection-start="8269" selection-end="8269" vertical-scroll-proportion="0.61647725">
+        <state line="6" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="0.21377672">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/bin/rails">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="36" selection-start="352" selection-end="352" vertical-scroll-proportion="0.42613637">
+        <state line="5" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.16198704">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448@rails4/gems/rails-4.1.0/guides/code/getting_started/app/controllers/comments_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/rails_admin.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="7" selection-start="454" selection-end="537" vertical-scroll-proportion="0.8097686">
+        <state line="47" column="42" selection-start="977" selection-end="977" vertical-scroll-proportion="0.47948164">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/profile.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="49" selection-end="414" vertical-scroll-proportion="0.5825243">
+        <state line="2" column="25" selection-start="85" selection-end="85" vertical-scroll-proportion="0.064794816">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140424183416_add_name_to_directors.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="348" selection-end="348" vertical-scroll-proportion="0.47330096">
+        <state line="5" column="29" selection-start="116" selection-end="116" vertical-scroll-proportion="0.16198704">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="47" selection-start="780" selection-end="780" vertical-scroll-proportion="-0.12864077">
+        <state line="17" column="54" selection-start="443" selection-end="443" vertical-scroll-proportion="0.5507559">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/models/actor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="452" column="0" selection-start="8843" selection-end="8843" vertical-scroll-proportion="0.80451125">
+        <state line="3" column="24" selection-start="111" selection-end="111" vertical-scroll-proportion="0.09719223">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/director.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="10" selection-start="225" selection-end="225" vertical-scroll-proportion="-4.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/articles_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="58" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/article.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="1" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.92718446">
+        <state line="2" column="21" selection-start="98" selection-end="98" vertical-scroll-proportion="0.064794816">
           <folding />
         </state>
       </provider>

@@ -3,10 +3,10 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with do
+     warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
 
   ## == Cancan ==
   # config.authorize_with :cancan
@@ -32,17 +32,37 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  config.models do
+    edit do
+      fields_of_type :tag_list do
+        partial 'tag_list_with_suggestions'
+      end
+    end
+  end
+
   config.model Article do
     edit do
       field :title
       field :thumb
       field :summary
+      field :tag_list
       field :body, :ck_editor
     end
   end
 
-  config.authenticate_with do
-    warden.authenticate! scope: :user
+  config.model Movie do
+    edit do
+      field :title
+      field :desc
+      field :content, :ck_editor
+      field :thumb
+      field :directors
+      field :actors
+      field :duration
+      field :url
+      field :location_list
+      field :type_list
+    end
   end
-  config.current_user_method &:current_user
+
 end
