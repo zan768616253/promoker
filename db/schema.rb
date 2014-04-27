@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426014542) do
+ActiveRecord::Schema.define(version: 20140427022820) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -100,6 +100,18 @@ ActiveRecord::Schema.define(version: 20140426014542) do
   add_index "districts", ["name"], name: "index_districts_on_name"
   add_index "districts", ["pinyin"], name: "index_districts_on_pinyin"
   add_index "districts", ["pinyin_abbr"], name: "index_districts_on_pinyin_abbr"
+
+  create_table "messages", force: true do |t|
+    t.integer  "from_id"
+    t.integer  "to_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "read",       default: false
+  end
+
+  add_index "messages", ["from_id"], name: "index_messages_on_from_id"
+  add_index "messages", ["to_id"], name: "index_messages_on_to_id"
 
   create_table "movies", force: true do |t|
     t.string   "title"

@@ -157,6 +157,10 @@
     <% if @user.location %>
     <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
     <% end %>
+    <div class="divider"></div>
+    <div class="about">
+      <%= @user.about %>
+    </div>
     <div class="actions">
       <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i>关注</a>
       <a href="#" class="btn btn-info"><i class="fa fa-comment"></i>约谈</a>

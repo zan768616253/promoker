@@ -71,7 +71,15 @@
                           <!--<li role="presentation"><a href="#"><i class="fa fa-signal"></i>关注动态</a></li>-->
                           <!--<li role="presentation"><a href="#"><i class="fa fa-bell"></i>我的消息</a></li>-->
                           <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-gear "></i>个人设置</a></li>
-                          <li role="presentation"><a href="#"><i class="fa fa-envelope "></i>消息</a></li>
+                          <li role="presentation"><a href="<%= messages_path %>">
+                            <i class="fa fa-envelope "></i>
+                            <% if Message.unread(current_user).count != 0%>
+                            我的消息 (<%= Message.unread(current_user).count %>)
+                            <% else %>
+                            我的消息
+                            <% end %>
+                          </a>
+                        </li>
                           <li class="divider"></li>
                           <li role="presentation">
                             <%= link_to destroy_user_session_path, method: :delete do %>
@@ -108,7 +116,7 @@
     <%= yield %>
 
     <div id="login-modal" class="modal fade">
-      <div class="modal-dialog login-wrapper"">
+      <div class="modal-dialog login-wrapper">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

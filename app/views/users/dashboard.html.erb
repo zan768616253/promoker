@@ -4,7 +4,12 @@
       <li><a href="#" class="active">喜欢</a></li>
       <li><a href="#">项目</a></li>
       <li><a href="#">推广</a></li>
-      <li><a href="#">消息</a></li>
+      <li><a href="<%= messages_path %>">
+        <% if Message.unread(current_user).count != 0%>
+          消息 (<%= Message.unread(current_user).count %>)
+        <% else %>
+          消息
+        <% end %></a></li>
     </ul>
     <div class="user-content">
       <%= render 'likes' %>
@@ -19,6 +24,10 @@
     <% if @user.location %>
       <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
     <% end %>
+    <div class="divider"></div>
+    <div class="about">
+      <%= @user.about %>
+    </div>
     <div class="actions">
       <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i>关注</a>
       <a href="#" class="btn btn-info"><i class="fa fa-comment"></i>约谈</a>

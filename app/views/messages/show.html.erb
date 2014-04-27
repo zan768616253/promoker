@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="messages-wrapper">
+		<div class="message-detail">
+			<div class="message-user">
+				<div class="message-user-thumb">
+					<a href="<%= user_path(@message.from) %>">
+						<%= gravatar_image_tag(@message.from.email) %>
+					</a>
+				</div>
+				<div class="message-info">
+					<div class="message-user-nickname">
+						<%= link_to @message.from.nickname, user_path(@message.from) %>	
+					</div>
+					<div class="message-content"><%= @message.content %></div>
+					<div class="message-date"><%= @message.created_at.strftime("%Y-%m-%d %H:%M") %></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

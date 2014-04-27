@@ -322,10 +322,27 @@ div.movie-director-thumb {
     border-radius: 50%;
     overflow: hidden;
     display: inline-block;
+    line-height: 10px;
 }
 div.movie-director-info {
     display: inline-block;
     vertical-align: top;
     margin-top: 20px;
     margin-left: 20px;
+}
+
+.movie-actions a .fa-heart{
+  display: none;
+}
+
+.movie-actions a.liked .fa-heart {
+  display: inline;
+}
+
+.movie-actions a .fa-heart-o {
+  display: inline;
+}
+
+.movie-actions a.liked .fa-heart-o {
+  display: none;
 }

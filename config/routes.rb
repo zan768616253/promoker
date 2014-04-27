@@ -8,11 +8,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  resources :messages
   resources :movies do
     resources :comments, :only => :create
     get 'hot'
     get 'recent'
-    get 'like_mos'
+    post 'like'
+    post 'unlike'
   end
   resources :users, :only => [:show, :edit, :update]
   resources :articles, :only => [:show, :index] do

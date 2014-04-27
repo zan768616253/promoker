@@ -1,3 +1,46 @@
+<script>
+  $(function(){
+    var params = {}
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    if(getParameterByName('location')){
+      params['location'] = getParameterByName('location')
+    }
+    if(getParameterByName('type')){
+      params['type'] = getParameterByName('type')
+    }
+      
+    for (key in params){
+      $('a[data-filter="'+ key + '"]').removeClass('active')
+      $('a[data-filter="'+ key + '"]').each(function(){
+        if($(this).data('name') == params[key]){
+          $(this).addClass('active')  
+        }
+      })
+    }
+
+    $('a.filter-item').click(function(e){
+      e.preventDefault()
+      e.stopPropagation()
+      var filter = $(this).data('filter')
+      var value = $(this).data('name')
+      if(value){
+        params[filter] = value  
+      }else{
+        delete params[filter]
+      }
+      if(Object.keys(params).length === 0){
+        window.location.href = "http://" + location.host + '/movies'
+      }else{
+        window.location.href = "http://" + location.host + '/movies?' + $.param(params)  
+      }
+    })
+  })
+</script>
 <div class="movies-wrapper">
   <div class="filters-container">
     <div class="filters">
@@ -5,9 +48,9 @@
         <h2>按区域查看:</h2>
       </div>
       <div class="filter-wrapper">
-        <a href="#" class="filter-item active">全部</a>
+        <a href="#" class="filter-item active" data-filter="location">全部</a>
       <% tag_cloud(@locations, %w(css1 css2 css3 css4)) do |location|%>
-          <a href="#" class="filter-item" onclick="Movies.search(this)"><%= location.name %></a>
+          <a href="#" class="filter-item" data-filter="location" data-name="<%= location.name %>"><%= location.name %></a>
       <% end %>
       </div>
     </div>
@@ -17,22 +60,22 @@
         <h2>按类型查看:</h2>
       </div>
       <div class="filter-wrapper">
-        <a href="#" class="filter-item active">全部</a>
+        <a href="#" class="filter-item active" data-filter="type" data-name="">全部</a>
         <% tag_cloud(@types, %w(css1 css2 css3 css4)) do |type|%>
-            <a href="#" class="filter-item" onclick="Movies.search(this)"><%= type.name %></a>
+            <a href="#" class="filter-item" data-filter="type" data-name="<%= type.name %>"><%= type.name %></a>
         <% end %>
       </div>
     </div>
-    <div class="filters sort">
+    <!-- <div class="filters sort">
       <div class="filter-header">
         <h2>排序:</h2>
       </div>
       <div class="filter-wrapper">
-        <a href="#" class="filter-item active">最新发布</a>
+        <a href="#" class="filter-item active">最新发布</a> -->
         <!--<a href="#" class="filter-item">最多评论</a>-->
         <!--<a href="#" class="filter-item">最热推荐</a>-->
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
   </div>
   <div class="movies-container">
     <ul class="movies">
