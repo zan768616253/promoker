@@ -23,7 +23,8 @@
 
 .article {
   position: relative;
-  height: 240px;
+  height: 220px;
+  overflow: hidden;
   background: #FFF;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
   margin-bottom: 20px;
@@ -226,4 +227,22 @@ li.comment:last-child {
   position: relative;
   bottom: 45px;
   right: 10px;
+}
+
+div.article-body img {
+  width: 100%;
+}
+
+.article-box .article-date {
+    float: right;
+    position: relative;
+    right: 10px;
+}
+
+div.article-likes {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: orange;
+    font-size: 18px;
 }

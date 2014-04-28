@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   resources :users, :only => [:show, :edit, :update]
   resources :articles, :only => [:show, :index] do
     resources :comments, :only => :create
+    post 'like'
+    post 'unlike'
   end
 
   root to: "home#index"

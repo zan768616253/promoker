@@ -3,13 +3,40 @@
     <div class="article-title">
       <%= @article.title %>
     </div>
-    <div class="article-share">
-      <%= social_share_button_tag(@article.title) %>
+    <div class="article-date">
+      <%= @article.updated_at.strftime("%Y-%m-%d %H:%M") %>
     </div>
     <div class="article-body">
       <%= raw @article.body  %>
     </div>
-
+    <div class="movie-actions"> 
+      <a href="#" class="btn btn-default <%= 'liked' if current_user.liked? @article%>"
+              data-state="<%= 'liked' if current_user.liked? @article %>"
+              data-id="<%= @article.id %>"
+              data-count="<%= @article.likes.size %>"
+              onclick="Articles.like(this, event)">
+          <i class="fa fa-heart-o"></i>
+          <i class="fa fa-heart"></i>
+        喜欢
+      </a>
+      <div class="movie-share">
+        <!-- JiaThis Button BEGIN -->
+        <div class="jiathis_style_32x32">
+          <a class="jiathis_button_tsina"></a>
+          <a class="jiathis_button_fb"></a>
+          <a class="jiathis_button_weixin"></a>
+          <a class="jiathis_button_googleplus"></a>
+          <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        </div>
+        <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1394127006547805" charset="utf-8"></script>
+        <script>
+        var jiathis_config = {
+        title:document.getElementById("movie-title").innerHTML
+        }
+        </script>
+      </div>
+<!-- JiaThis Button END -->
+    </div>
   </div>
   <div class="comments-wrapper">
     <h2>评论一下吧</h2>

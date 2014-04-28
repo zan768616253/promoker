@@ -19,6 +19,9 @@
           <div class="article-date">
             <%= article.updated_at.strftime("%Y-%m-%d %H:%M") %>
           </div>
+          <div class="article-likes">
+            <i class="fa fa-heart-o"></i> <%= article.likes.count %>
+          </div>
           <div class="article-summary">
             <%# truncate(h(strip_tags(article.body)), :length => 200,  :separator => ' ', :omission => "<br/><a href='#'>...</a>")%>
             <%= article.summary + '...'%>
