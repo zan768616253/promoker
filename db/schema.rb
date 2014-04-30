@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140427022820) do
+ActiveRecord::Schema.define(version: 20140430171437) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -100,6 +100,18 @@ ActiveRecord::Schema.define(version: 20140427022820) do
   add_index "districts", ["name"], name: "index_districts_on_name"
   add_index "districts", ["pinyin"], name: "index_districts_on_pinyin"
   add_index "districts", ["pinyin_abbr"], name: "index_districts_on_pinyin_abbr"
+
+  create_table "events", force: true do |t|
+    t.string   "thumb"
+    t.string   "address"
+    t.text     "content"
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "summary"
+  end
 
   create_table "messages", force: true do |t|
     t.integer  "from_id"

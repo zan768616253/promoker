@@ -1,0 +1,110 @@
+div.events-wrapper {
+    width: 960px;
+    margin: 60px auto;
+}
+div.events-container {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+.event-item {
+    display: inline-block;
+	width: 450px;
+}
+div.event-thumb {
+    display: inline-block;
+	width: 110px;
+	height: 150px;
+	overflow: hidden;
+	border: 1px solid #bbb;
+}
+.event-thumb img {
+    width: 110px;
+}
+.event-info {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+  font-size: 13px;
+  line-height: 40px;
+  width: 330px;
+}
+div.event-title {
+    font-size: 14px;
+    position: relative;
+}
+
+div.event-box {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+    width: 650px;
+    position: relative;
+}
+
+.event-box div.event-thumb {
+    width: 160px;
+    height: 200px;
+    border: none;
+}
+.event-box div.event-thumb img {
+    width: 150px;
+    height: 200px;
+}
+
+.event-box .event-info {
+  line-height: 30px;
+  width: 430px;
+}
+
+
+.event-actions {
+  margin-top: 10px;
+}
+.event-actions a {
+    background-color: #FFCCBB;
+    color: #EC7C7C;
+    border: none;
+}
+
+.event-actions a:hover, .event-actions a.liked {
+    background-color: #FFA283;
+    color: #D55B5B;
+    border: none;
+}
+
+.event-actions a .fa-heart{
+  display: none;
+}
+
+.event-actions a.liked .fa-heart {
+  display: inline;
+}
+
+.event-actions a .fa-heart-o {
+  display: inline;
+}
+
+.event-actions a.liked .fa-heart-o {
+  display: none;
+}
+
+div.event-share {
+  float: right;
+}
+
+div.event-sidebar {
+    position: fixed;
+    top: 60px;
+    background: white;
+    right: 100px;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+}
+
+.events-wrapper div.comments-wrapper {
+  width: 650px;
+  margin-top: 10px;
+}
+

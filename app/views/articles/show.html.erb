@@ -10,6 +10,13 @@
       <%= raw @article.body  %>
     </div>
     <div class="movie-actions"> 
+      <% if current_user.nil? %>
+      <a href="#" class="btn btn-default" data-toggle="modal" data-target="#login-modal">
+        <i class="fa fa-heart-o"></i>
+        <i class="fa fa-heart"></i>
+        喜欢
+      </a>
+      <% else %>
       <a href="#" class="btn btn-default <%= 'liked' if current_user.liked? @article%>"
               data-state="<%= 'liked' if current_user.liked? @article %>"
               data-id="<%= @article.id %>"
@@ -19,6 +26,7 @@
           <i class="fa fa-heart"></i>
         喜欢
       </a>
+      <% end %>
       <div class="movie-share">
         <!-- JiaThis Button BEGIN -->
         <div class="jiathis_style_32x32">

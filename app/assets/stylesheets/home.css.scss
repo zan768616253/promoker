@@ -798,12 +798,12 @@ ul.nav li.dropdown:hover .rotate {
     color: #9782B8;
 }
 
-.events a img {
+.news.events a img {
   border: none;
   border-radius: 5px;
 }
 
-.events {
+.news.events {
   background-color: #FAFAFA;
   padding: 10px;
   margin-bottom: 20px;
@@ -813,11 +813,11 @@ ul.nav li.dropdown:hover .rotate {
     float: left;
     display: block;
 }
-.events li {
+.news.events li {
     margin: 0px 0px 15px;
 }
 
-.events a.btn {
+.news.events a.btn {
   color: #FFF;
 }
 

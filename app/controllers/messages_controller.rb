@@ -15,10 +15,7 @@ class MessagesController < ApplicationController
 		message.to_id = params['message']['to']
 		message.content = params['message']['content']
 		message.from_id = current_user.id
-		if message.save
-			redirect_to messages_path
-		else
-			redirect_to user_path(params['message']['to'])
-		end
+		message.save
+		redirect_to user_path(params['message']['to'])
 	end		
 end

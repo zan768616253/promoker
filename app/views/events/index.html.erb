@@ -1,0 +1,99 @@
+<script>
+  $(function(){
+    var params = {}
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    if(getParameterByName('location')){
+      params['location'] = getParameterByName('location')
+    }
+    if(getParameterByName('type')){
+      params['type'] = getParameterByName('type')
+    }
+      
+    for (key in params){
+      $('a[data-filter="'+ key + '"]').removeClass('active')
+      $('a[data-filter="'+ key + '"]').each(function(){
+        if($(this).data('name') == params[key]){
+          $(this).addClass('active')  
+        }
+      })
+    }
+
+    $('a.filter-item').click(function(e){
+      e.preventDefault()
+      e.stopPropagation()
+      var filter = $(this).data('filter')
+      var value = $(this).data('name')
+      if(value){
+        params[filter] = value  
+      }else{
+        delete params[filter]
+      }
+      if(Object.keys(params).length === 0){
+        window.location.href = "http://" + location.host + '/events'
+      }else{
+        window.location.href = "http://" + location.host + '/events?' + $.param(params)  
+      }
+    })
+  })
+</script>
+<div class="events-wrapper">
+	<div class="articles-header">
+    	<h2>活动</h2>
+  	</div>
+  	<div class="filters-container">
+	    <div class="filters">
+		    <div class="filter-header">
+		        <h2>按区域查看:</h2>
+		    </div>
+		    <div class="filter-wrapper">
+		        <a href="#" class="filter-item active" data-filter="location">全部</a>
+		      <% tag_cloud(@locations, %w(css1 css2 css3 css4)) do |location|%>
+		        <a href="#" class="filter-item" data-filter="location" data-name="<%= location.name %>"><%= location.name %></a>
+		      <% end %>
+		    </div>
+		</div>
+	    <div class="filters">
+		    <div class="filter-header">
+		     <h2>按类型查看:</h2>
+		    </div>
+	      	<div class="filter-wrapper">
+		        <a href="#" class="filter-item active" data-filter="type" data-name="">全部</a>
+		        <% tag_cloud(@types, %w(css1 css2 css3 css4)) do |type|%>
+		            <a href="#" class="filter-item" data-filter="type" data-name="<%= type.name %>"><%= type.name %></a>
+		        <% end %>
+	     	</div>
+	    </div>
+	</div>
+	<div class="events-container">
+		<ul class="events">
+			<% @events.each do |event| %>
+			<li class="event-item">
+				<div class="event-thumb">
+					<a href="<%= event_path(event) %>">
+						<%= image_tag event.thumb %>
+					</a>
+				</div>
+				<div class="event-info">
+					<div class="event-title">
+						<%= link_to event.title, event_path(event) %>
+					</div>
+					<div class="event-date">
+						<span>时间: </span><%= event.start.strftime("%m月%d日") %> ~ <%= event.end.strftime("%m月%d日") %>
+					</div>
+					<div class="event-address">
+						<span>地点: </span><%= event.address %>
+					</div>
+					<div class="event-likes">
+						<%= event.likes.count %>人感兴趣
+					</div>
+				</div>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+</div>

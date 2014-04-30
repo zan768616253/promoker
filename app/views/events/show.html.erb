@@ -1,0 +1,127 @@
+<div class="events-wrapper">
+	<div class="event-sidebar">
+		<div class="event-info">
+			<div class="event-title">
+				<%=  @event.title %>
+			</div>
+			<div class="event-date">
+				<span>时间: </span><%= @event.start.strftime("%m月%d日") %> ~ <%= @event.end.strftime("%m月%d日") %>
+			</div>
+			<div class="event-type">
+				<span>类型: </span><%= link_to @event.type_list.join(' '), events_path({:type=>@event.type_list.join(' ')}) %>
+			</div>
+			<div class="event-address">
+				<span>地点: </span><%= @event.address %>
+			</div>
+			<div class="event-likes">
+				<b><%= @event.likes.count %></b>人感兴趣
+			</div>
+		</div>	
+	</div>
+	<div class="event-box">
+		<div class="ribbon"></div>
+		<div class="event-thumb">
+			<a href="<%= event_path(@event) %>">
+				<%= image_tag @event.thumb %>
+			</a>
+		</div>
+		
+		<div class="event-info">
+			<div class="event-title">
+				<%= @event.title %>
+			</div>
+			<div class="event-date">
+				<span>时间: </span><%= @event.start.strftime("%m月%d日") %> ~ <%= @event.end.strftime("%m月%d日") %>
+			</div>
+			<div class="event-type">
+				<span>类型: </span><%= link_to @event.type_list.join(' '), events_path({:type=>@event.type_list.join(' ')}) %>
+			</div>
+			<div class="event-address">
+				<span>地点: </span><%= @event.address %>
+			</div>
+			<div class="event-likes">
+				<b><%= @event.likes.count %></b>人感兴趣
+			</div>
+			<div class="event-actions">
+				<% if current_user.nil? %>
+			    <a href="#" class="btn btn-default" data-toggle="modal" data-target="#login-modal">
+			        <i class="fa fa-heart-o"></i>
+			        <i class="fa fa-heart"></i>
+			        我感兴趣
+			    </a>
+			    <% else %>
+			      <a href="#" class="btn btn-default <%= 'liked' if current_user.liked? @event%>"
+			            data-state="<%= 'liked' if current_user.liked? @event %>"
+			            data-id="<%= @event.id %>"
+			            data-count="<%= @event.likes.size %>"
+			            onclick="Events.like(this, event)">
+			        <i class="fa fa-heart-o"></i>
+			        <i class="fa fa-heart"></i>
+			      我感兴趣
+			    </a>
+			    <% end %>
+			</div>
+			<div class="event-share">
+		    	<!-- JiaThis Button BEGIN -->
+				<div class="jiathis_style">
+					<span class="jiathis_txt">分享到：</span>
+					<a class="jiathis_button_tsina"></a>
+					<a class="jiathis_button_fb"></a>
+					<a class="jiathis_button_weixin"></a>
+					<a class="jiathis_button_googleplus"></a>
+					<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+				</div>
+				<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1394127006547805" charset="utf-8"></script>
+				<!-- JiaThis Button END -->
+		    </div>
+		</div>
+		<hr>
+		<div class="event-content">
+			<%= raw @event.content %>
+		</div>
+	</div>
+	<div class="comments-wrapper">
+    <h2>评论一下吧</h2>
+   <div class="comments-new">
+     <%= form_for :comment, :url => event_comments_path(@event) do |f| %>
+      <div class="form-group">
+        <%= f.text_area :comment, :rows => '4', :class => 'form-control' %>
+      </div>
+      <% if user_signed_in? %>
+        <%= f.submit '发表评论', :class => 'btn btn-primary pull-right' %>
+      <% else %>
+        <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#login-modal">发表评论</a>
+      <% end %>
+     <% end %>
+
+   </div>
+    <ul class="comments">
+      <% @event.comments.each do |c| %>
+      <li class=comment>
+        <div class="comment-user-avatar">
+         <%= gravatar_image_tag(c.user.email, :size => 100) %>
+        </div>
+        <div class="comment-body">
+          <div class="comment-user-nickname">
+            <%= link_to c.user.nickname, user_path(c.user)%>
+          </div>
+          <div class="comment-date">
+            <%= c.created_at.strftime("%Y-%m-%d %H:%M") %>
+          </div>
+          <div class="comment-content">
+            <%= c.comment %>
+          </div>
+
+          <div class="comment-actions">
+            <!--<i class="fa fa-comment-o"></i>-->
+            <i class="fa fa-heart-o"></i>
+            <% if c.user == current_user %>
+              <i class="fa fa-trash-o"></i>
+            <% end %>
+          </div>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

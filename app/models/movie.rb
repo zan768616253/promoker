@@ -13,5 +13,4 @@ class Movie < ActiveRecord::Base
   has_and_belongs_to_many :directors
   has_and_belongs_to_many :actors
 
-  scope :recent, -> { order("created_at DESC") }
 end

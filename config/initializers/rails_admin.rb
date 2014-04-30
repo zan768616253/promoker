@@ -65,4 +65,18 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Event do
+    edit do
+      field :title
+      field :content, :ck_editor
+      field :thumb
+      field :address
+      field :start
+      field :end
+      field :location_list
+      field :type_list
+      field :tag_list
+    end
+  end
+
 end

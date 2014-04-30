@@ -2,6 +2,10 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
+    if params[:event_id]
+      @commentable = Event.find(params[:event_id])
+      redirect_url = event_path(@commentable)
+    end
     if params[:article_id]
       @commentable = Article.find(params[:article_id])
       redirect_url = article_path(@commentable)
