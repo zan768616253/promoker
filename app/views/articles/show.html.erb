@@ -49,9 +49,9 @@
   <div class="comments-wrapper">
     <h2>评论一下吧</h2>
    <div class="comments-new">
-     <%= form_for :comment, :url => article_comments_path(@article) do |f| %>
+     <%= form_for :comment, :url => article_comments_path(@article), :remote => true do |f| %>
       <div class="form-group">
-        <%= f.text_area :comment, :rows => '4', :class => 'form-control' %>
+        <%= f.text_area :comment, :rows => '4', :class => 'form-control', :id => "newcomment" %>
       </div>
       <% if user_signed_in? %>
         <%= f.submit '发表评论', :class => 'btn btn-primary pull-right' %>

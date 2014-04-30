@@ -63,6 +63,7 @@
 
 .article-title {
   margin-bottom: 10px;
+  display: inline-block;
 }
 
 .article-title {
@@ -234,9 +235,10 @@ div.article-body img {
 }
 
 .article-box .article-date {
-    float: right;
-    position: relative;
-    right: 10px;
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  float: right;
 }
 
 div.article-likes {

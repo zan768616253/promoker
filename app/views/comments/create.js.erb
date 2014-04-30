@@ -1,0 +1,6 @@
+<% if @comment.errors.empty? %>
+  $('#newcomment').val('');
+  $('<%= j(render :partial => 'comment', :object => @comment) %>').appendTo($('.comments'));
+<% else %>
+  alert('@comment.errors.full_messages.join(',')');
+<% end %>

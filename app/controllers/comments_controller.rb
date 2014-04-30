@@ -17,8 +17,15 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.commentable = @commentable
     @comment.user = current_user
-    @comment.save!
-    redirect_to redirect_url
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to redirect_url }
+        format.js
+      else
+        format.html { redirect_to redirect_url }
+        format.js
+      end
+    end
   end
 
   private
