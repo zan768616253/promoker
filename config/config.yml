@@ -1,0 +1,12 @@
+defaults: &defaults
+  faye_server: "http://127.0.0.1:9292/faye"
+  faye_token: "123456"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

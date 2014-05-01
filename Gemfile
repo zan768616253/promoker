@@ -32,6 +32,9 @@ gem 'acts-as-taggable-on'
 gem 'acts_as_commentable'
 gem 'acts_as_votable', '~> 0.8.0'
 gem 'social-share-button'
+gem 'thin'
+gem 'faye-rails'
+gem "settingslogic"
 
 group :development do
   gem 'pry-nav'

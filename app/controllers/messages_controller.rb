@@ -6,8 +6,12 @@ class MessagesController < ApplicationController
 
 	def show 
 		@message = Message.find(params[:id])
-		@message.read = true
-		@message.save!
+		if @message.to != current_user and @message.from != current_user
+			render_404
+		else
+			@message.read = true
+			@message.save!
+		end
 	end
 
 	def create

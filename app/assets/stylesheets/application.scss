@@ -195,3 +195,32 @@ ul.dropdown-menu li {
 	width: 960px;
 	margin: 60px auto;
 }
+
+.badge-error {
+    background-color: brown;
+    padding: 3px 9px;
+}
+span#user_messages_count {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    z-index: 10;
+}
+
+.breadcrumb {
+	display: none;
+}
+
+div#notification-alert {
+    margin-top: 45px;
+    height: 45px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+div#notification-alert a {
+    color: orange;
+}
+
+div#notification-alert a.close {
+	opacity: 0.8;
+}

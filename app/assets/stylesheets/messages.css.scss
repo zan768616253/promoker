@@ -3,6 +3,7 @@ div.messages-wrapper {
     background-color: white;
     width: 85%;
     box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+    position: relative;
 }
 table.messages {
     width: 100%;
@@ -64,4 +65,19 @@ div.message-date {
 
 tr.message.unread {
     background-color: #FFF7EA;
+}
+
+a#mark-read {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 11px;
+    padding: 3px 10px;
+}
+
+td.message-user-thumb img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
 }

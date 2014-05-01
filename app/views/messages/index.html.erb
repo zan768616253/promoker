@@ -8,11 +8,13 @@
 <div class="container">
 	<div class="messages-wrapper">
 		<h2>消息</h2>
+		<a id="mark-read" class="btn btn-warning">Mark All As Read</a>
 		<table class="table table-hover messages">
 			<% @messages.each do |m| %>
 			<tr class="message <%= 'unread' if m.read == false %>" data-href="<%= message_path(m) %>" >
+				<td width="5%" class="message-user-thumb"><%= gravatar_image_tag(m.from.email) %></td>
 				<td width="10%" class="message-user"><%= link_to m.from.nickname, user_path(m.from) %></td>
-				<td width="60%" class="message-summary"><%= truncate m.content, length: 30 %></td>
+				<td width="50%" class="message-summary"><%= truncate m.content, length: 30 %></td>
 				<td width="20%" class="message-date"><%= m.created_at.strftime("%Y-%m-%d %H:%M") %></td>
 			</tr>
 			<% end %>

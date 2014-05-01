@@ -16,6 +16,7 @@
 //= require bootstrap
 //= require bxslider
 //= require social-share-button
+//= require faye
 //= require_tree .
 
 $(function(){
