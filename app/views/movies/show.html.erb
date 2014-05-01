@@ -54,7 +54,7 @@
       <div class="movie-time"><%= @movie.updated_at.strftime("%Y-%m-%d %H:%M") %> | </div>
       <!-- <div class="movie-director"><%= @movie.directors %></div> -->
       <!-- <div class="movie-actors"><%= @movie.actors %></div> -->
-      <div class="movie-types"><a href=""><%= @movie.type_list.join(' ') %></a></div>
+      <div class="movie-types"><a href="/movies?type=<%= @movie.type_list[0] %>"><%= @movie.type_list.join(' ') %></a></div>
       <div class="movie-desc"><%=raw @movie.desc %></div>
   </div>
   <div class="comments-wrapper">
