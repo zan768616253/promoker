@@ -22,4 +22,13 @@ class MessagesController < ApplicationController
 		message.save
 		redirect_to user_path(params['message']['to'])
 	end		
+
+	def mark
+		messages = Message.unread(current_user)
+		for message in messages
+			message.read = true
+			message.save
+		end
+		redirect_to messages_path
+	end
 end

@@ -1,8 +1,13 @@
 # coding: utf-8
 class UsersController < ApplicationController
+
   def show
     @user = User.find(params[:id])
-    if current_user.id == @user.id
+    unless @user.nil?
+      @likes = @user.find_votes.order('created_at desc')
+      @liked_items = @user.find_liked_items.reverse
+    end
+    if not current_user.nil? and current_user.id == @user.id
       render 'dashboard'
     else
       render 'show'

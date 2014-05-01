@@ -1,1 +1,31 @@
-likes
+<div class="user-lkes-wrapper"></div>
+<ul class="user-likes">
+	<% @liked_items.each_with_index do |like, i| %>
+	<li class="user-like">
+		<div class="user-avatar">
+			<div><%= gravatar_image_tag @user.email %></div>
+		</div>	
+		<div class="user-like-info">
+			<div class="user-nickname"><%= @user.nickname %> 赞了 <%= @likes[i].votable_type %></div>
+			<div class="user-like-detail">
+				<div class="user-like-thumb">
+					<%= image_tag like.thumb %>
+				</div>	
+				<div class="user-like-desc">
+					<div class="user-like-title">
+						<a href="/<%= @likes[i].votable_type.downcase.pluralize + '/' + @likes[i].votable_id.to_s %>">
+							<%= like.title %>
+						</a>
+					</div>
+					<div class="user-like-summary">
+						<%= like.summary %>
+					</div>
+				</div>
+			</div>
+			<div class="user-like-date">
+				<%= time_ago_in_words(@likes[i].created_at) %>	
+			</div>
+		</div>
+	</li>
+	<% end %>
+</ul>

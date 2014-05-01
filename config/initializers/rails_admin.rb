@@ -54,6 +54,7 @@ RailsAdmin.config do |config|
     edit do
       field :title
       field :desc
+      field :summary
       field :content, :ck_editor
       field :thumb
       field :directors
@@ -68,6 +69,7 @@ RailsAdmin.config do |config|
   config.model Event do
     edit do
       field :title
+      field :summary
       field :content, :ck_editor
       field :thumb
       field :address
