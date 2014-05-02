@@ -32,6 +32,24 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  config.included_models = [
+    'ActsAsTaggableOn::Tag', 
+    'ActsAsTaggableOn::Tagging', 
+    'Article', 
+    'Movie',
+    'Actor',
+    'Category',
+    'Comment',
+    'Director',
+    'Event',
+    'Message',
+    'Movie',
+    'Profile',
+    'Project',
+    'Ticket',
+    'User'
+  ]
+
   config.models do
     edit do
       fields_of_type :tag_list do
@@ -45,6 +63,9 @@ RailsAdmin.config do |config|
       field :title
       field :thumb
       field :summary
+      fields_of_type :tag_list do
+        partial 'tag_list_with_suggestions'
+      end
       field :tag_list
       field :body, :ck_editor
     end
@@ -78,6 +99,27 @@ RailsAdmin.config do |config|
       field :location_list
       field :type_list
       field :tag_list
+    end
+  end
+
+  config.model ActsAsTaggableOn::Tag do
+    list do
+      field :name
+      field :set
+      field :taggings_count
+    end
+    edit do
+      field :name
+      field :set
+    end
+  end
+
+  config.model ActsAsTaggableOn::Taggable do
+    edit do
+      field :name
+      field :taggable_id
+      field :taggable_type
+      field :context
     end
   end
 

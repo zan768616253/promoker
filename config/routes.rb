@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  resources :tickets, :only => :create
+  resources :projects
   resources :messages do
     collection do
       post 'mark'

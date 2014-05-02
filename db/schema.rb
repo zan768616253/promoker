@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501080014) do
+ActiveRecord::Schema.define(version: 20140502173429) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 20140501080014) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "summary"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.string   "scope"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "cities", force: true do |t|
@@ -162,6 +169,17 @@ ActiveRecord::Schema.define(version: 20140501080014) do
 
   add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id"
 
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.string   "location"
+    t.string   "contact"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "provinces", force: true do |t|
     t.string   "name"
     t.string   "pinyin"
@@ -189,9 +207,22 @@ ActiveRecord::Schema.define(version: 20140501080014) do
   create_table "tags", force: true do |t|
     t.string  "name"
     t.integer "taggings_count", default: 0
+    t.string  "set",            default: "default"
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+  add_index "tags", ["set"], name: "index_tags_on_set"
+
+  create_table "tickets", force: true do |t|
+    t.string   "title"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.string   "location"
+    t.string   "contact"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

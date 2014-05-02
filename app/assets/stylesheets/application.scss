@@ -224,3 +224,62 @@ div#notification-alert a {
 div#notification-alert a.close {
 	opacity: 0.8;
 }
+
+#post-modal .modal-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div.post-project {
+    width: 260px;
+    display: inline-block;
+    text-align: center;
+}
+div.post-ticket {
+    width: 260px;
+    margin-left: 30px;
+    display: inline-block;
+    float: right;
+    text-align: center;
+}
+
+#post-modal .modal-body {
+  padding-bottom: 30px;
+  font-size: 15px;
+}
+
+div.post-project-desc {
+    height: 100px;
+    text-align: left;
+    border: 2px solid #C25B5B;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+div.post-ticket-desc {
+    height: 100px;
+    text-align: left;
+    border: 2px solid #C25B5B;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+div.post-project a {
+  color: #FFF;
+  background-color: #C25B5B;  
+}
+
+div.post-ticket a {
+  color: #FFF;
+  background-color: #C25B5B;  
+}
+
+div.post-project a:hover {
+  color: #FFF;
+  background-color: #C25B5B;  
+}
+
+div.post-ticket a:hover {
+  color: #FFF;
+  background-color: #C25B5B;  
+}

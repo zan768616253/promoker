@@ -30,10 +30,10 @@
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>">推荐</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>">资讯</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>">活动</a></li>
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">电影节</a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'">电影节</a></li>
         					</ul>
         				</li>
-        				<li><a href="#">项目</a></li>
+        				<li><a href="<%= projects_path %>">项目</a></li>
         				<li><a href="#">营销</a></li>
         			</ul>
                 <!-- <div class="searchbar navbar-left">
@@ -47,7 +47,7 @@
 
                 <ul class="nav navbar-nav navbar-right local">
                 	<li>
-                		<a class="btn btn-primary">发布</a>
+                		<a class="btn btn-primary" data-toggle="modal" data-target="#post-modal">发布</a>
                 	</li>
                 	<li>
                 		<a class="btn btn-primary">推广</a>
@@ -121,6 +121,50 @@
     <div class="breadcrumb"></div>
     <%= yield %>
 
+    <div id="post-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-title">发布项目</div>
+          </div>
+          <div class="modal-body">
+            <div id="post-wrapper">
+              <div class="post-project">
+                <div class="post-project-desc">
+                  如果您有影视项目需求，发起一句话项目，让我们帮你快速匹配资源
+                </div>
+                <a href="" class="btn">发布一句话项目</a>
+              </div>
+              <div class="post-ticket">
+                <div class="post-ticket-desc">
+                  如果您正在筹备影视项目，详细描述您的项目和需求，让我们帮您找到您正缺少的资源
+                </div>
+                <a href="" class="btn">发布拍摄计划</a>
+              </div>
+            </div>
+            <div id="ticket-wrapper">
+              <%= form_for Ticket.new, :html => {:class => 'form-horizontal'}, :remote => true  do |f| %>
+                <div class="form-group">
+                  <%= f.label :title, '标题', :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-5">
+                    <%= f.text_field :title, :placeholder => '标题', :class => 'form-control' %>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="" class="col-sm-2 control-label">地点</label>
+                  <div class="col-sm-8">
+                    <%= f.region_select [:province, :city], province_prompt: '请选择省', city_prompt: '请选择市'%>
+                  </div>
+                </div>
+                <div class="form-group">
+                  
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+    </div>
     <div id="login-modal" class="modal fade">
       <div class="modal-dialog login-wrapper">
         <div class="modal-content">
