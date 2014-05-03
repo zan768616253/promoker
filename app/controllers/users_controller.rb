@@ -3,10 +3,14 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    unless @user.nil?
-      @likes = @user.find_votes.order('created_at desc')
-      @liked_items = @user.find_liked_items.reverse
+    if @user.nil?
+      redirect_to root_url
     end
+
+    @likes = @user.find_votes.order('created_at desc')
+    @liked_items = @user.find_liked_items.reverse
+
+    @tickets = @user.tickets
     if not current_user.nil? and current_user.id == @user.id
       render 'dashboard'
     else
@@ -22,12 +26,12 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     params[:user][:nickname] = params[:user][:nickname].strip
-    unless params[:user][:province].empty?
+    unless params[:user][:province].blank?
       province = Province.find(params[:user][:province])
       province_name = province.name unless province.nil?
       params[:user][:location] = province_name + ' '
     end
-    unless params[:user][:city].empty?
+    unless params[:user][:city].blank?
       city = City.find(params[:user][:city])
       city_name = city.name unless city.nil?
       params[:user][:location] += city_name + ' '

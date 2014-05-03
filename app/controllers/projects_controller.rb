@@ -1,8 +1,8 @@
 class ProjectsController < ApplicationController
-	before_filter :authenticate_user! :except => [:index]
+	before_filter :authenticate_user!, :except => [:index]
 	def index 
 		@projects = Project.recent.page(params[:page])
-		@tickets = Ticket.recent.page(pramsp[:page])
+		@tickets = Ticket.recent.page(params[:page])
 	end
 
 	def show

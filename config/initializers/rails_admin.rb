@@ -32,25 +32,28 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.included_models = [
-    'ActsAsTaggableOn::Tag', 
-    'ActsAsTaggableOn::Tagging', 
-    'Article', 
-    'Movie',
-    'Actor',
-    'Category',
-    'Comment',
-    'Director',
-    'Event',
-    'Message',
-    'Movie',
-    'Profile',
-    'Project',
-    'Ticket',
-    'User'
-  ]
+  # config.included_models = [
+  #   'ActsAsTaggableOn::Tag', 
+  #   'ActsAsTaggableOn::Tagging', 
+  #   'Article', 
+  #   'Movie',
+  #   'Actor',
+  #   'Category',
+  #   'Comment',
+  #   'Director',
+  #   'Event',
+  #   'Message',
+  #   'Movie',
+  #   'Profile',
+  #   'Project',
+  #   'Ticket',
+  #   'User'
+  # ]
 
   config.models do
+    list do
+      field :id
+    end
     edit do
       fields_of_type :tag_list do
         partial 'tag_list_with_suggestions'
@@ -89,6 +92,7 @@ RailsAdmin.config do |config|
 
   config.model Event do
     edit do
+      field :id
       field :title
       field :summary
       field :content, :ck_editor
@@ -102,25 +106,50 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model ActsAsTaggableOn::Tag do
+  config.model Tag do
     list do
+      field :id
       field :name
-      field :set
+      field :context
       field :taggings_count
     end
     edit do
       field :name
-      field :set
-    end
-  end
-
-  config.model ActsAsTaggableOn::Taggable do
-    edit do
-      field :name
-      field :taggable_id
-      field :taggable_type
       field :context
     end
   end
 
+  config.model Tagging do
+    list do
+      field :id
+      field :tag
+      # 显示link
+      # field :tag do
+      #   pretty_value do
+      #     id = bindings[:object].tag_id
+      #     name = Tag.find(id).name
+      #     bindings[:view].link_to "#{name}", bindings[:view].rails_admin.show_path('tag', id)
+      #   end
+      # end
+      field :taggable
+      field :context
+    end
+    edit do
+      field :tag
+      field :taggable
+      field :context
+    end
+  end
+
+  # config.model Ticket do
+  #   # list do
+  #     field :user do 
+  #       pretty_value do
+  #         id = bindings[:object].user_id
+  #         name = User.find(id).nickname
+  #         bindings[:view].link_to "#{name}", bindings[:view].rails_admin.show_path('user', id)
+  #       end
+  #     end
+  #   # end
+  # end
 end

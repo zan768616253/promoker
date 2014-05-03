@@ -30,3 +30,13 @@ ul.project-nav li {
 .project-nav li:hover a {
   color: #F57070;
 }
+
+td.ticket-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+td.ticket-user {
+    text-align: center;
+}

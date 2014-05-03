@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :messages
+  has_many :tickets
+
+  before_create :copy_name
   acts_as_voter
 
   def temp_access_token
@@ -11,4 +14,9 @@ class User < ActiveRecord::Base
       SecureRandom.hex
     end
   end
+
+  def copy_name
+    self.name = self.nickname
+  end 
+  
 end

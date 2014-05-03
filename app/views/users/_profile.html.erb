@@ -1,0 +1,20 @@
+<div id="user-profile">
+  <div class="avatar">
+    <img src="<%= gravatar_image_url(@user.email, size: 160) %>" alt=""/>
+  </div>
+  <div class="nickname"><%= @user.nickname %></div>
+  <div class="role">导演,  编剧</div>
+  <% if @user.location %>
+    <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
+  <% end %>
+  <div class="about-divider"></div>
+  <div class="about">
+    <%= @user.about %>
+  </div>
+  <% if current_user != @user %>
+  <div class="actions">
+    <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i>关注</a>
+    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#message-modal"><i class="fa fa-comment"></i>约谈</a>
+  </div>
+  <% end %>
+</div>

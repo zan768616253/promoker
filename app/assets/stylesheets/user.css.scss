@@ -180,12 +180,12 @@
   padding-bottom: 5px;
 }
 
-.user-nav a.active {
+.user-nav li.active a {
   color: #F57070;
   border-bottom: 2px solid #F57070;
 }
 
-.user-nav a:hover {
+.user-nav li a:hover {
   color: #F57070;
 }
 
@@ -286,6 +286,26 @@ div.user-like-title a {
 div.user-like-summary {
     font-size: 13px;
     color: #999;
+}
+
+div#projects ul li {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+div#projects ul li a {
+  color: #999;
+  text-decoration: none;
+}
+
+div#projects ul li.active, div#projects ul li:hover {
+  background: orange;
+}
+
+div#projects ul li.active a, div#projects ul li:hover a{
+  color: white;
 }
 
 

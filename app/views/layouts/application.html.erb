@@ -47,7 +47,11 @@
 
                 <ul class="nav navbar-nav navbar-right local">
                 	<li>
-                		<a class="btn btn-primary" data-toggle="modal" data-target="#post-modal">发布</a>
+                		<a class="btn btn-primary" 
+                    data-toggle="modal" 
+                    data-target="#post-modal"
+                    data-backdrop="static"
+                    data-keyboard="false">发布</a>
                 	</li>
                 	<li>
                 		<a class="btn btn-primary">推广</a>
@@ -104,12 +108,12 @@
             </div>
         </div>
     </nav>
-  <!-- <div class="flash">
+  <div class="flash">
     <% if not flash[:notice].nil? %>
-      <div class="alert alert-success">
+    <!--   <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <%= flash[:notice] %>
-      </div>
+      </div> -->
     <% end %>
     <% if not flash[:alert].nil? %>
       <div class="alert alert-warning">
@@ -117,7 +121,13 @@
         <%= flash[:alert] %>
       </div>
     <% end %>
-  </div> -->
+    <% if not flash[:error].nil? %>
+      <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+  </div>
     <div class="breadcrumb"></div>
     <%= yield %>
 
@@ -134,21 +144,22 @@
                 <div class="post-project-desc">
                   如果您有影视项目需求，发起一句话项目，让我们帮你快速匹配资源
                 </div>
-                <a href="" class="btn">发布一句话项目</a>
+                <a href="" class="btn btn-wine" id="ticket-link">发布一句话项目</a>
               </div>
               <div class="post-ticket">
                 <div class="post-ticket-desc">
                   如果您正在筹备影视项目，详细描述您的项目和需求，让我们帮您找到您正缺少的资源
                 </div>
-                <a href="" class="btn">发布拍摄计划</a>
+                <a href="<%= new_project_path %>" class="btn btn-wine">发布拍摄计划</a>
               </div>
             </div>
-            <div id="ticket-wrapper">
-              <%= form_for Ticket.new, :html => {:class => 'form-horizontal'}, :remote => true  do |f| %>
+            <div id="ticket-wrapper" style="display:none;">
+              <%= form_for Ticket.new, :html => {:class => 'form-horizontal'}  do |f| %>
+                <%= f.hidden_field :needs %>
                 <div class="form-group">
-                  <%= f.label :title, '标题', :class => 'col-sm-2 control-label' %>
-                  <div class="col-sm-5">
-                    <%= f.text_field :title, :placeholder => '标题', :class => 'form-control' %>
+                  <%= f.label :title, '描述', :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-8">
+                    <%= f.text_field :title, :placeholder => '描述', :class => 'form-control' %>
                   </div>
                 </div>
                 <div class="form-group">
@@ -158,8 +169,29 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  
+                  <label for="" class="col-sm-2 control-label">需求</label>
+                  <div class="col-sm-8">
+                    <% Tag.tags_on('roles').each do |tag| %>
+                    <span class="tag">
+                      <%= tag %>
+                    </span>
+                    <% end %>
+                  </div>
                 </div>
+                <div class="form-group">
+                  <label for="" class="col-sm-2 control-label">联系方式</label>
+                  <div class="col-sm-8">
+                    <%= f.text_field :contact, :placeholder => 'whatapp, QQ, 微信, 电话', :class => 'form-control' %>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <div class="pull-right">
+                      <a href="#" id="post-link"><< 返回</a>
+                      <a href="" class='btn btn-wine submit'>发布</a> 
+                    </div>
+                  </div>
+                </div>
+
               <% end %>
             </div>
           </div>

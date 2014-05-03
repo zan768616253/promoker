@@ -1,9 +1,9 @@
 <div class="user-wrapper">
   <div id="user-content">
     <ul class="user-nav">
-      <li><a href="#" class="active">喜欢</a></li>
-      <li><a href="#">项目</a></li>
-      <li><a href="#">推广</a></li>
+      <li class="active"><a href="#likes" data-toggle="tab">喜欢</a></li>
+      <li><a href="#projects" data-toggle="tab">项目</a></li>
+      <li><a href="#promotes">推广</a></li>
       <li><a href="<%= messages_path %>">
         <% if Message.unread(current_user).count != 0%>
           消息 (<%= Message.unread(current_user).count %>)
@@ -11,26 +11,17 @@
           消息
         <% end %></a></li>
     </ul>
-    <div class="user-content">
-      <%= render 'likes' %>
+    <div class="user-content tab-content">
+      <div id="likes" class="tab-pane active">
+        <%= render 'likes'%>
+      </div>
+      <div id="projects" class="tab-pane">
+        <%= render 'projects'%>
+      </div>
+      <div id="promotes" class="tab-pane">
+        <%= render 'promotes'%>
+      </div>
     </div>
   </div>
-  <div id="user-profile">
-    <div class="avatar">
-      <img src="<%= gravatar_image_url(@user.email, size: 160) %>" alt=""/>
-    </div>
-    <div class="nickname"><%= @user.nickname %></div>
-    <div class="role">导演,  编剧</div>
-    <% if @user.location %>
-      <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
-    <% end %>
-    <div class="about-divider"></div>
-    <div class="about">
-      <%= @user.about %>
-    </div>
-    <div class="actions">
-      <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i>关注</a>
-      <a href="#" class="btn btn-info"><i class="fa fa-comment"></i>约谈</a>
-    </div>
-  </div>
+  <%= render 'profile', :object => @user %>
 </div>

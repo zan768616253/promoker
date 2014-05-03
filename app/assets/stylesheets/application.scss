@@ -264,22 +264,45 @@ div.post-ticket-desc {
     margin-bottom: 10px;
 }
 
-div.post-project a {
+.btn-wine {
   color: #FFF;
   background-color: #C25B5B;  
 }
 
-div.post-ticket a {
+.btn-wine:hover {
   color: #FFF;
   background-color: #C25B5B;  
 }
 
-div.post-project a:hover {
-  color: #FFF;
-  background-color: #C25B5B;  
+.input.region {
+    display: inline-block;
+    margin: 5px;
 }
 
-div.post-ticket a:hover {
-  color: #FFF;
-  background-color: #C25B5B;  
+#post-modal input[type="submit"] {
+    padding: 8px 40px;
+    font-size: 15px;
+}
+
+#post-modal .submit {
+    padding: 8px 40px;
+    font-size: 15px;
+    margin-right: 110px;
+}
+
+#post-modal span.tag {
+  font-size: 14px;
+  border-radius: 3px;
+  margin: 3px;
+  padding: 3px 6px;
+  display: inline-block;
+  cursor: pointer;
+}
+#post-modal span.tag.selected {
+    background: #83AAA2;    
+    color: white;
+}
+#post-modal span.tag:hover {
+    background: #83AAA2;    
+    color: white;
 }
