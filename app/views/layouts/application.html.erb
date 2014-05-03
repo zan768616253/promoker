@@ -31,6 +31,8 @@
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>">资讯</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>">活动</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'">电影节</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'">微电影学院</a></li>
         					</ul>
         				</li>
         				<li><a href="<%= projects_path %>">项目</a></li>
@@ -144,13 +146,21 @@
                 <div class="post-project-desc">
                   如果您有影视项目需求，发起一句话项目，让我们帮你快速匹配资源
                 </div>
-                <a href="" class="btn btn-wine" id="ticket-link">发布一句话项目</a>
+                <% if user_signed_in? %>
+                  <a href="" class="btn btn-wine" id="ticket-link">发布一句话项目</a>
+                <% else %>
+                  <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-wine">发布一句话项目</a>
+                <% end %>
               </div>
               <div class="post-ticket">
                 <div class="post-ticket-desc">
                   如果您正在筹备影视项目，详细描述您的项目和需求，让我们帮您找到您正缺少的资源
                 </div>
-                <a href="<%= new_project_path %>" class="btn btn-wine">发布拍摄计划</a>
+                <% if user_signed_in? %>
+                  <a href="<%= new_project_path %>" class="btn btn-wine">发布拍摄计划</a>
+                <% else %>
+                  <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-wine">发布拍摄计划</a>
+                <% end %>  
               </div>
             </div>
             <div id="ticket-wrapper" style="display:none;">

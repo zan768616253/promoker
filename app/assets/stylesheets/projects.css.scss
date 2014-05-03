@@ -40,3 +40,29 @@ td.ticket-user img {
 td.ticket-user {
     text-align: center;
 }
+
+#new_project span.tag {
+  font-size: 14px;
+  border-radius: 3px;
+  margin: 3px;
+  padding: 3px 6px;
+  display: inline-block;
+  cursor: pointer;
+}
+#new_project span.tag.selected {
+    background: #83AAA2;    
+    color: white;
+}
+#new_project span.tag:hover {
+    background: #83AAA2;    
+    color: white;
+}
+
+
+#new_project {
+  margin: 60px auto;
+  width: 960px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+  padding: 20px;
+}
