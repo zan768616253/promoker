@@ -306,3 +306,20 @@ div.post-ticket-desc {
     background: #83AAA2;    
     color: white;
 }
+
+#error_page {
+  margin: 80px auto;
+  width: 960px;
+  background: #FFF;
+  padding: 20px;
+  font-size: 18px;  
+  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+}
+
+
+#error_page h1 {
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #999;
+}

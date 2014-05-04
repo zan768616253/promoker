@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  captcha_route
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => {:passwords => "passwords"} do
     resources :passwords
@@ -9,7 +10,14 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   resources :tickets, :only => :create
-  resources :projects
+  
+  resources :project_details, :only => [:create, :update]
+  resources :projects do
+    member do 
+      get 'preview'
+    end
+  end
+
   resources :messages do
     collection do
       post 'mark'

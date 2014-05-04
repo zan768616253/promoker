@@ -35,6 +35,10 @@ gem 'social-share-button'
 gem 'thin'
 gem 'faye-rails'
 gem "settingslogic"
+gem 'carrierwave'
+# gem 'honeypot-captcha'
+gem 'easy_captcha'
+gem 'rmagick'
 
 group :development do
   gem 'pry-nav'

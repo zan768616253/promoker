@@ -1,0 +1,51 @@
+<div class="project-page">
+	<div class="project-page-title">
+		<h1><%= @project.title %></h1>
+		<div class="project-page-user">
+			<div class="user-nickname"><%= @project.user.nickname %></div>
+			<div class="user-thumb"><%# gravatar_image_tag @project.user.email %></div>
+		</div>
+	</div>
+	<div class="project-page-content">
+		<div class="project-page-left">
+			<div class="project-page-video">
+				<embed src="<%= @project.video %>" allowFullScreen="true" quality="high" width="700" height="500" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			</div>
+			<div class="project-page-description project-page-text">
+				<h2>项目介绍</h2>
+				<p>
+					<%= @project.description %>
+				</p>
+			</div>
+			<div class="project-page-script project-page-text">
+				<h2>剧本介绍</h2>
+				<%= @project.script %>
+			</div>
+			<div class="project-page-team project-page-text">
+				<h2>拍摄团队</h2>
+				<%= @project.team %>
+			</div>
+			<div class="project-page-plan project-page-text">
+				<h2>拍摄计划</h2>
+				<%= @project.plan %>
+			</div>
+			<div class="project-page-expense project-page-text">
+				<h2>资金用途</h2>
+				<%= @project.expense %>
+			</div>
+		</div>
+		<div class="project-page-right">
+			<div class="project-page-basic">
+				<h2>项目简介</h2>
+				<p>项目名称: <%= @project.title %></p>
+				<p>项目类型: <%= @project.movie_type %></p>
+				<p>时长: <%= @project.duration %></p>
+				<p>拍摄时间: <%= @project.start_at.strftime('%y-%m-%m') %> </p>
+				<p>预计资金: <%= @project.budget %>万</p>
+				<p>需求: <%= @project.need_list.join(',') %></p>
+			</div>
+			<%= render 'users/profile'%>
+		</div>
+
+	</div>
+</div>

@@ -157,11 +157,26 @@
                   如果您正在筹备影视项目，详细描述您的项目和需求，让我们帮您找到您正缺少的资源
                 </div>
                 <% if user_signed_in? %>
-                  <a href="<%= new_project_path %>" class="btn btn-wine">发布拍摄计划</a>
+                  <a href="#" id="project-link" class="btn btn-wine">发布拍摄计划</a>
                 <% else %>
                   <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-wine">发布拍摄计划</a>
                 <% end %>  
               </div>
+            </div>
+            <div id="project-wrapper" style="display:none;">
+              <%= form_for Project.new, :html => {:class => 'form-horizontal'} do |f|%>
+                <div class="form-group">
+                  <%= f.label :title, '项目名称', :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-8">
+                    <%= f.text_field :title, :class => 'form-control' %>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="text-center">
+                    <%= f.submit "创建拍摄计划", :class => 'btn btn-wine' %>
+                  </div>
+                </div>
+              <% end %>
             </div>
             <div id="ticket-wrapper" style="display:none;">
               <%= form_for Ticket.new, :html => {:class => 'form-horizontal'}  do |f| %>

@@ -49,6 +49,14 @@ $(function(){
         $('#ticket-wrapper').fadeIn()
     })
 
+    $('#project-link').click(function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        $('#post-modal .modal-title').text('拍摄计划')
+        $('#post-wrapper').hide()
+        $('#project-wrapper').fadeIn()
+    })
+
 
     $('span.tag').click(function(){
     	$(this).toggleClass('selected')

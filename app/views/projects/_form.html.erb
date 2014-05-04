@@ -1,4 +1,4 @@
-<%= form_for @project, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @project, :html => { :class => 'form-horizontal edit-project' } do |f| %>
 <% if @project.errors.any? %>
 <div id="error_explanation">
   <ul>
@@ -8,10 +8,12 @@
   </ul>
 </div>
 <% end %>
+<%= f.hidden_field :status, :value => 'draft' %>
 <div class="form-group">
 	<label for="" class="col-sm-2 control-label">项目图片</label>
 	<div class="col-sm-5">
   		<%= f.file_field :cover%>
+  		 <%= f.hidden_field :cover_cache %>
 	</div>
 </div>
 <div class="form-group">
@@ -22,18 +24,25 @@
 </div>
 
 <div class="form-group">
-	<%= f.label :type, '项目类型', :class => 'col-sm-2 control-label' %>
+	<%= f.label :start_at, '开拍时间', :class => 'col-sm-2 control-label' %>
 	<div class="col-sm-5">
-  		<%= f.select :type, @types, :class => 'form-control' %>
+  		<%= f.date_field :start_at%>
+	</div>
+</div>
+
+<div class="form-group">
+	<%= f.label :movie_type, '项目类型', :class => 'col-sm-2 control-label' %>
+	<div class="col-sm-5">
+  		<%= f.select :movie_type, @types, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
 	<%= f.label :needs, '需求', :class => 'col-sm-2 control-label' %>
-	<%= f.hidden_field :needs %>
+	<%= f.hidden_field :needs, :value => @project.need_list %>
 	<div class="col-sm-5">
   		<% @needs.each do |need|%>
-		<span class="tag <%= 'active' if @project.need_list.include? need %>"><%= need %></span>
+		<span class="tag <%= 'selected' if @project.need_list.include? need %>"><%= need %></span>
   		<% end %>
 	</div>
 </div>
@@ -100,9 +109,56 @@
   		<%= f.text_field :video, :class => 'form-control' %>
 	</div>
 </div>
-<div class="form-group">
-	<div class="col-sm-offset-6 col-sm-5">
-		<%= f.submit '提交', :class => 'btn btn-primary' %>
-	</div>
+<div class="project-save">
+	<a href="" class='btn submit' id="project-publish">发布</a> 
+	<a href="<%= preview_project_path(@project) %>" target="_blank" class='btn preview' id="project-review">预览</a> 
+	<a href="" class="btn" id="project-save">保存</a>
 </div>
 <% end %>
+<div id="preview">
+	<div class="project">
+	    <div class="project-card-wrap">
+	      	<div class="project-card">
+	        	<div class="project-thumbnail">
+	          		<a href="#" target="">
+	          			<% if @project.cover.blank? %>
+	            			<img alt="Photo-little" class="projectphoto-little" height="150" src="https://d297h9he240fqh.cloudfront.net/assets/projects/missing_little.png" width="220">
+	            		<% else %>
+							<%= image_tag @project.cover, :height => 150, :width => 220, :class => "projectphoto-little" %>
+	            		<% end %>
+	          		</a>
+	        	</div>
+	        	<h2 class="bbcard_name">
+		          	<strong>
+		            	<a href="#" target=""><%= @project.title %></a>
+		          	</strong>
+		          	<span>
+		          	<%= @project.user.nickname unless @project.user.blank? %>
+		          	</span>
+	        	</h2>
+		        <p class="bbcard_blurb">
+		          <%= @project.description %>
+		        </p>
+		        <ul class="project-meta">
+		          	<li>
+		           	 	<span class="fa fa-map-marker"></span>
+		            	<span class="location-name"><%= @project.location %></span>
+		          	</li>
+		        </ul>
+		        <div class="project-pledged-wrap">
+		          <div class="project-pledged" style="width: 100%"></div>
+		        </div>
+		        <ul class="project-stats">
+		          <li class="pledged">
+		            <strong><span class="money usd no-code"><%= @project.budget %>万</span></strong>
+		            预算
+		          </li>
+		          <li class="pledged">
+		            <strong><span class="money usd no-code"><%= (@project.start_at.to_date - Date.current).to_i unless @project.start_at.blank? %></span></strong>
+		            天后开始拍摄
+		          </li>
+		        </ul>
+	    	</div>
+	    </div>
+	</div>
+</div>

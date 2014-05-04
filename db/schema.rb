@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503175004) do
+ActiveRecord::Schema.define(version: 20140504051225) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -170,7 +170,7 @@ ActiveRecord::Schema.define(version: 20140503175004) do
   add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id"
 
   create_table "projects", force: true do |t|
-    t.string   "title"
+    t.string   "title",       default: "untitled"
     t.string   "province"
     t.string   "city"
     t.string   "district"
@@ -178,7 +178,6 @@ ActiveRecord::Schema.define(version: 20140503175004) do
     t.string   "contact"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type"
     t.string   "duration"
     t.string   "budget"
     t.text     "description"
@@ -188,6 +187,11 @@ ActiveRecord::Schema.define(version: 20140503175004) do
     t.text     "expense"
     t.string   "cover"
     t.string   "video"
+    t.integer  "user_id"
+    t.string   "status",      default: "draft"
+    t.datetime "start_at"
+    t.integer  "project_id"
+    t.string   "movie_type"
   end
 
   create_table "provinces", force: true do |t|

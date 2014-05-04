@@ -1,3 +1,15 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+	$('#project-save').click () ->
+		tags = []
+		for elem in $('form.edit-project span.tag.selected')
+			tag = $(elem).text().trim()	
+			tags.push(tag)
+		$('#project_needs').val(tags)
+		$('form.edit-project').submit()
+	$('#project-publish').click () ->
+		tags = []
+		for elem in $('form.edit-project span.tag.selected')
+			tag = $(elem).text().trim()	
+			tags.push(tag)
+		$('#project_needs').val(tags)
+		$('form.edit-project').submit()

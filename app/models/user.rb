@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :messages
   has_many :tickets
+  has_many :projects
 
   before_create :copy_name
   acts_as_voter
