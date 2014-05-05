@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -12,14 +12,14 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby
 
 gem "devise"
 
 gem "gravatar_image_tag"
 gem 'china_region_fu'
 gem 'rails_admin'
-gem 'rails_admin_tag_list', git: 'git@github.com:emoreth/rails_admin_tag_list.git'
+gem 'rails_admin_tag_list', git: 'https://github.com/emoreth/rails_admin_tag_list.git'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
@@ -78,3 +78,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rubber'
+gem 'open4'
