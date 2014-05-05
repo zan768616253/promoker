@@ -1,4 +1,4 @@
-EasyCaptcha.setup do |config|
+# EasyCaptcha.setup do |config|
   # Cache
   # config.cache          = true
   # Cache temp dir from Rails.root
@@ -63,4 +63,4 @@ EasyCaptcha.setup do |config|
     # generator.blur_radius            = 1
     # generator.blur_sigma             = 2
   # end
-end
+# end
