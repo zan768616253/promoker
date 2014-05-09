@@ -6,7 +6,7 @@
     <%= @movie.title %>
   </div>
   <div class="movie0">
-    <%= raw @movie.content %>
+    <embed src="<%= @movie.url %>" allowFullScreen="true" quality="high" width="100%" height="500px" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
   </div>
   <div class="movie-actions"> 
     <% if current_user.nil? %>

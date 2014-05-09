@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  captcha_route
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => {:passwords => "passwords"} do
     resources :passwords

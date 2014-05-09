@@ -79,7 +79,6 @@ RailsAdmin.config do |config|
       field :title
       field :desc
       field :summary
-      field :content, :ck_editor
       field :thumb
       field :directors
       field :actors

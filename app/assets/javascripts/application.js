@@ -17,6 +17,7 @@
 //= require bxslider
 //= require social-share-button
 //= require faye
+//= require jquery.imgareaselect
 //= require_tree .
 
 $(function(){

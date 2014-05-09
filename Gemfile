@@ -46,6 +46,8 @@ gem 'carrierwave'
 # gem 'easy_captcha'
 # gem 'rmagick'
 
+gem 'imgareaselect-rails'
+
 group :development do
   gem 'pry-nav'
   gem 'pry-rails'

@@ -43,14 +43,12 @@
               <div class="radio-inline">
                 <label>
                   <%= f.radio_button :gender, "m" %>
-                  <!--<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>-->
                   男
                 </label>
               </div>
               <div class="radio-inline">
                 <label>
                   <%= f.radio_button :gender, "f" %>
-                  <!--<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">-->
                   女
                 </label>
               </div>
@@ -84,7 +82,13 @@
         <% end %>
       </div>
       <div class="tab-pane" id="avatar">
-        avatar
+        <%= form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+          <div id="holder"></div>
+          <div class="fileUpload" id="upload">
+            <span>选择图片</span>  
+          <%= f.file_field :avatar, :class => "upload", :id => "files" %>
+          </div>
+        <% end %>
       </div>
       <div class="tab-pane" id="password">
         <%= form_for(@user, :url => password_path(:user), :html => { :method => :put, :class => 'form-horizontal' }) do |f| %>
