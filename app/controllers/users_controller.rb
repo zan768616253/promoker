@@ -21,10 +21,16 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @roles = Tag.tags_on('roles')
   end
 
   def update
     @user = User.find(params[:id])
+    if @user.nil?
+      render_404 and return
+    end
+    roles = params[:user][:roles]
+    params[:user].delete(:roles)
     params[:user][:nickname] = params[:user][:nickname].strip
     unless params[:user][:province].blank?
       province = Province.find(params[:user][:province])
@@ -41,9 +47,10 @@ class UsersController < ApplicationController
       district_name = district.name unless district.nil?
       params[:user][:location] += district_name + ' '
     end
-
+    @user.update_attributes(user_params)
+    @user.role_list = roles
     respond_to do |format|
-      if @user.update_attributes(params.require(:user).permit!)
+      if @user.save
         format.html {
           redirect_to edit_user_path(@user), :notice => "更新成功"
         }
@@ -58,5 +65,10 @@ class UsersController < ApplicationController
 
   def likes
     p params
+  end
+
+  private 
+  def user_params
+    params.require(:user).permit!
   end
 end

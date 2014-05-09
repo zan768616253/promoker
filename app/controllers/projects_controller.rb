@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
 		p params
 		@project = Project.find(params[:id])
 		if @project.user != current_user
-			render_403
+			render_403 and return
 		end
 		needs = params[:project][:needs]
 		params[:project].delete(:needs)

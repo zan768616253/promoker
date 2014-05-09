@@ -340,3 +340,23 @@ div#holder {
     text-align: center;
 }
 
+.edit-user span.tag {
+  font-size: 14px;
+  border-radius: 3px;
+  margin: 3px;
+  padding: 3px 6px;
+  display: inline-block;
+  cursor: pointer;
+}
+.edit-user span.tag.selected {
+    background: #83AAA2;    
+    color: white;
+}
+.edit-user span.tag:hover {
+    background: #83AAA2;    
+    color: white;
+}
+
+.edit-user a {
+  color: white;
+}

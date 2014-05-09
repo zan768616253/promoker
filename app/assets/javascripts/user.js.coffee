@@ -1,4 +1,11 @@
 $ ->
+    $('#user-save').click () ->
+      tags = []
+      for elem in $('form.edit-user span.tag.selected')
+        tag = $(elem).text().trim() 
+        tags.push(tag)
+      $('#user_roles').val(tags)
+      $('form.edit-user').submit()
     previewfile = (file) ->
       if tests.filereader is true and acceptedTypes[file.type] is true
         reader = new FileReader()
