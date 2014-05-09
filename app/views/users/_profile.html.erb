@@ -1,6 +1,6 @@
 <div id="user-profile">
   <div class="avatar">
-    <img src="<%= gravatar_image_url(@user.email, size: 160) %>" alt=""/>
+    <%= image_tag @user.avatar %>
   </div>
   <div class="nickname"><%= @user.nickname %></div>
   <div class="role">导演,  编剧</div>

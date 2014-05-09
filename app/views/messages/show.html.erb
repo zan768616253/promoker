@@ -4,7 +4,7 @@
 			<div class="message-user">
 				<div class="message-user-thumb">
 					<a href="<%= user_path(@message.from) %>">
-						<%= gravatar_image_tag(@message.from.email) %>
+						<%= image_tag @message.from.avatar %>
 					</a>
 				</div>
 				<div class="message-info">

@@ -38,6 +38,15 @@
             </div>
           </div>
           <div class="form-group">
+            <%= f.label :roles, '需求', :class => 'col-sm-2 control-label' %>
+            <%= f.hidden_field :needs, :value => @project.role_list %>
+            <div class="col-sm-5">
+                <% @needs.each do |need|%>
+              <span class="tag <%= 'selected' if @project.need_list.include? need %>"><%= need %></span>
+                <% end %>
+            </div>
+          </div>
+          <div class="form-group">
             <label for="email" class="col-sm-2 control-label">性别</label>
             <div class="col-sm-5">
               <div class="radio-inline">
@@ -154,7 +163,7 @@
   </div>
   <div class="account-preview">
     <div class="avatar">
-      <img src="<%= gravatar_image_url(@user.email, size: 160) %>" alt=""/>
+      <%= image_tag @user.avatar %>
     </div>
     <div class="nickname"><%= @user.nickname %></div>
     <div class="role">导演,  编剧</div>

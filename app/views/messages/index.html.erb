@@ -12,7 +12,7 @@
 		<table class="table table-hover messages">
 			<% @messages.each do |m| %>
 			<tr class="message <%= 'unread' if m.read == false %>" data-href="<%= message_path(m) %>" >
-				<td width="5%" class="message-user-thumb"><%= gravatar_image_tag(m.from.email) %></td>
+				<td width="5%" class="message-user-thumb"><%= image_tag m.from.avatar %></td>
 				<td width="10%" class="message-user"><%= link_to m.from.nickname, user_path(m.from) %></td>
 				<td width="50%" class="message-summary"><%= truncate m.content, length: 30 %></td>
 				<td width="20%" class="message-date"><%= m.created_at.strftime("%Y-%m-%d %H:%M") %></td>

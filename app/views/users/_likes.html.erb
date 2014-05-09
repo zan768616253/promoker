@@ -3,7 +3,7 @@
 	<% @liked_items.each_with_index do |like, i| %>
 	<li class="user-like">
 		<div class="user-avatar">
-			<div><%= gravatar_image_tag @user.email %></div>
+			<div><%= image_tag @user.avatar %></div>
 		</div>	
 		<div class="user-like-info">
 			<div class="user-nickname"><%= @user.nickname %> 赞了 <%= @likes[i].votable_type %></div>

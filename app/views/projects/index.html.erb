@@ -93,7 +93,7 @@
 						</td>	
 						<td class="ticket-user">
 							<a href="<%= user_path(ticket.user) %>">
-								<%= gravatar_image_tag ticket.user.email, size: 80 %>
+								<%= image_tag ticket.user.avatar %>
 							</a>
 						</td>	
 					</tr>

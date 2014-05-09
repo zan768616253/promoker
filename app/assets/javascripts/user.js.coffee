@@ -20,6 +20,8 @@ $ ->
         console.log file
       return
     holder = document.getElementById("holder")
+    if not holder
+      return
     tests =
       filereader: typeof FileReader isnt "undefined"
       dnd: "draggable" of document.createElement("span")
@@ -44,7 +46,7 @@ $ ->
         support[api].className = "hidden"  if support[api]
       return
 
-    if tests.dnd
+    if tests.dnd 
       holder.ondragover = ->
         $(this).addClass("hover")
         false
@@ -72,13 +74,13 @@ $ ->
     #         height: Math.round(scaleY * 160) + 'px',
     #         marginLeft: '-' + Math.round(scaleX * selection.x1) + 'px',
     #         marginTop: '-' + Math.round(scaleY * selection.y1) + 'px'
-    $('<div><img src="" style="position: relative;" /><div>').css(
-        float: 'left',
-        position: 'relative',
-        overflow: 'hidden',
-        width: '100px',
-        height: '100px'
-    ).insertAfter($('#photo'));
+    # $('<div><img src="" style="position: relative;" /><div>').css(
+    #     float: 'left',
+    #     position: 'relative',
+    #     overflow: 'hidden',
+    #     width: '100px',
+    #     height: '100px'
+    # ).insertAfter($('#photo'));
     # $('img#photo').imgAreaSelect
     #     maxWidth: 150
     #     maxHeight: 150

@@ -76,7 +76,7 @@
       <% @movie.comments.each do |c| %>
         <li class=comment>
           <div class="comment-user-avatar">
-            <%= gravatar_image_tag(c.user.email, :size => 100) %>
+            <%= image_tag c.user.avatar %>
           </div>
           <div class="comment-body">
             <div class="comment-user-nickname">

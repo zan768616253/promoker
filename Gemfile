@@ -22,7 +22,7 @@ gem 'therubyracer',  platforms: :ruby
 
 gem "devise"
 
-gem "gravatar_image_tag"
+# gem "gravatar_image_tag"
 gem 'china_region_fu'
 gem 'rails_admin'
 gem 'rails_admin_tag_list', git: 'https://github.com/emoreth/rails_admin_tag_list.git'
@@ -42,6 +42,9 @@ gem 'thin'
 gem 'faye-rails'
 gem "settingslogic"
 gem 'carrierwave'
+# gem 'identicon'
+# gem 'identiconify'
+gem 'ruby_identicon'
 # gem 'honeypot-captcha'
 # gem 'easy_captcha'
 # gem 'rmagick'

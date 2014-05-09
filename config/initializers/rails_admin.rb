@@ -140,6 +140,15 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Profile do
+    edit do
+      field :name
+      field :role
+      field :about
+      field :avatar, :carrierwave
+    end
+  end
+
   # config.model Ticket do
   #   # list do
   #     field :user do 

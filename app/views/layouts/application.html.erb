@@ -71,7 +71,7 @@
                             <% if current_user.avatar %>
                               <img src="<%= current_user.avatar %>" alt=""/>
                             <% else %>
-                              <img src="<%= gravatar_image_url(current_user.email) %>" alt=""/>
+                              <%= image_tag @user.avatar %>
                             <% end %>
                             <span><i class="fa fa-caret-down"></i></span>
                           </div>
@@ -101,9 +101,9 @@
                       </div>
                     </li>
                   <% else %>
-                	<li><a href="#">注册</a></li>
+                	<li><a href="#" id="register-modal-link">注册</a></li>
                 	<li class="vdivider"></li>
-                	<li><a href="#" data-toggle="modal" data-target="#login-modal">登录</a></li>
+                	<li><a href="#" id="login-modal-link">登录</a></li>
                 	<!-- <li><a href="#">简/繁</a></li> -->
                   <% end %>
                 </ul>

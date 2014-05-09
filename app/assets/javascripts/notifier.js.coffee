@@ -52,7 +52,7 @@ class Notifier
             $.notifier.visitUrl(url)
       else
         opts =
-          icon : "http://gravatar.com/avatar/5c150641568b031c837b46059675db91?size=80"
+          icon : avatar
           body : content
           onclick : ->
             window.parent.focus()

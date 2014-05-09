@@ -22,6 +22,20 @@
 
 $(function(){
 
+    $('#register-modal-link').click(function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        $('#login-modal').modal()
+        $('#login').hide()
+        $('#register').fadeIn()
+    })
+    $('#login-modal-link').click(function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        $('#login-modal').modal()
+        $('#register').hide()
+        $('#login').fadeIn()
+    })
     $('#register-link').click(function(e){
     	e.preventDefault()
     	e.stopPropagation()
