@@ -6,7 +6,7 @@
   padding: 20px;
 }
 
-.account-settings a {
+#oauth a {
   color: #444;
 }
 
@@ -319,25 +319,42 @@ input#files {
 }
 div.fileUpload {
   position: relative;
-  height: 230px;
-  width: 230px;
-  border: 3px dashed #BBB;
 }
 
 .fileUpload span {
   position: relative;
-  top: 90px;
   color: #999;
-  font-size: 20px;
+}
+
+
+
+div#holder {
+  position: relative;
+  text-align: center;
+  height: 300px;
+  border: 1px solid #CCC;
+  width: 300px;
+  margin-top: 10px;
+  background: #F5F5F5;
 }
 
 #holder img {
-  max-width: 300px;
-  border: 1px solid #bbb;
+  height: 300px;
 }
 
-div#holder {
-    text-align: center;
+#holder span {
+  position: relative;
+  top: 130px;
+  font-size: 15px;
+  color: #999;
+}
+
+#holder i.fa.fa-cloud-upload {
+  position: absolute;
+  font-size: 140px;
+  color: #E9E9E9;
+  top: 90px;
+  left: 70px;
 }
 
 .edit-user span.tag {
@@ -359,4 +376,56 @@ div#holder {
 
 .edit-user a {
   color: white;
+}
+
+div.upload-wrapper {
+    display: inline-block;
+    vertical-align: top;
+}
+div.preview-wrapper {
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+div.preview.icon-180 {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  img {
+    width: 180px;
+  }
+}
+div.preview.icon-50 {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  img {
+    width: 50px;
+  }
+}
+div.preview.icon-30 {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  img {
+    width: 30px;
+  }
+}
+.preview {
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+.preview-wrapper p {
+  text-align: center;
+  color: #999;
+}
+
+#avatar div.divider {
+    display: inline-block;
+    border-right: 1px solid #ddd;
+    height: 260px;
+    margin-left: 20px;
+    padding: 10px;
+    vertical-align: top;
+    margin-top: 50px;
 }

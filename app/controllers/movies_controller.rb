@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
 	def index
     p params
-		@locations = Movie.tag_counts_on(:locations)
-		@types = Movie.tag_counts_on(:types)
+		@locations = Tag.tags_on(:location)
+		@types = Tag.tags_on(:movie_type)
     if(params[:location] || params[:type])
       @movies = Movie.tagged_with([params[:location], params[:type]]).page(params[:page])
     else

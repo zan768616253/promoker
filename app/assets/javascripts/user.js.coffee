@@ -6,6 +6,7 @@ $ ->
         tags.push(tag)
       $('#user_roles').val(tags)
       $('form.edit-user').submit()
+    ias = {}
     previewfile = (file) ->
       if tests.filereader is true and acceptedTypes[file.type] is true
         reader = new FileReader()
@@ -13,13 +14,57 @@ $ ->
           image = new Image()
           image.src = event.target.result
           image.id = "photo"
-          fileupload.style.border = "none"
+          $(image).data('width',image.width)
+          $(image).data('height',image.height)
+          $('.preview img').attr('src', event.target.result)
           holder.appendChild image
-          document.getElementById('files').disabled = true
-          $('img#photo').imgAreaSelect
-            maxWidth: 150
-            maxHeight: 150
+          preview = (img, selection) ->
+            return  if not selection.width or not selection.height
+            $('#user_crop_x1').val(selection.x1);
+            $('#user_crop_y1').val(selection.y1);
+            $('#user_crop_w').val(Math.round(selection.width/img.width * $(img).data('width')));
+            $('#user_crop_h').val(Math.round(selection.height/img.height * $(img).data('height')));    
+            scaleX = 180 / selection.width
+            scaleY = 180 / selection.height
+            $(".preview.icon-180 img").css
+              width: Math.round(scaleX * img.width)
+              height: Math.round(scaleY * img.height)
+              marginLeft: -Math.round(scaleX * selection.x1)
+              marginTop: -Math.round(scaleY * selection.y1)
+
+            scaleX = 50 / selection.width
+            scaleY = 50 / selection.height
+            $(".preview.icon-50 img").css
+              width: Math.round(scaleX * img.width)
+              height: Math.round(scaleY * img.height)
+              marginLeft: -Math.round(scaleX * selection.x1)
+              marginTop: -Math.round(scaleY * selection.y1)
+            scaleX = 30 / selection.width
+            scaleY = 30 / selection.height
+            $(".preview.icon-30 img").css
+              width: Math.round(scaleX * img.width)
+              height: Math.round(scaleY * img.height)
+              marginLeft: -Math.round(scaleX * selection.x1)
+              marginTop: -Math.round(scaleY * selection.y1)
+            return
+          width = $("#photo").width()
+          height = $("#photo").height()
+          empty = (obj) ->
+            for k of obj
+              return false
+            true
+          if not empty(ias)
+            ias.remove()
+          ias = $("#photo").imgAreaSelect
+            instance: true
+            aspectRatio: "1:1"
+            x1: (width - 180)/2
+            y1: (height - 180)/2
+            x2: (width - 180)/2 + 180
+            y2: (height - 180)/2 + 180
             handles: true
+            onSelectChange: preview
+            onInit: preview
           return
         reader.readAsDataURL file
       else

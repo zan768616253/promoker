@@ -10,15 +10,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-          <img src="http://www.vmovier.com/Uploads/Banner/2014/04/04/533e2bc96a8dd.jpg" alt="">
+          <img src="<%= @siteConfig['banner1'] %>" alt="">
           <div class="carousel-caption"></div>
       </div>
       <div class="item">
-        <img src="http://www.vmovier.com/Uploads/Banner/2014/03/31/5338d127325ee.jpg" alt="">
+        <img src="<%= @siteConfig['banner2'] %>" alt="">
         <div class="carousel-caption"></div>
       </div>
       <div class="item">
-          <img src="http://www.vmovier.com/Uploads/Banner/2014/03/27/533383ba2b441.jpg" alt="">
+          <img src="<%= @siteConfig['banner3'] %>" alt="">
           <div class="carousel-caption"></div>
       </div>
 
@@ -40,38 +40,18 @@
       <div class="recommend">
         <h2><i class="fa fa-crosshairs"></i><a href="#">特别推荐</a></h2>
         <ul class="video-list clearfix mb30">
-          <li>
-            <div class="list-image">
-              <a href="http://www.xinpianchang.com/a4829" class="work-img" target="_blank"><img src="http://www.xinpianchang.com/uploadfile/article/2014/04/07/53423ed859feb_225.jpeg" alt="“爸爸去哪儿”－《被超人绑架的爸爸》"></a>
-            </div>
-            <div class="list-desc">
-              <a href="http://www.xinpianchang.com/a4829" class="overdot work-title" target="_blank">“爸爸去哪儿”－《被超人绑架的爸爸》</a>
-            </div>
-          </li>
-          <li>
-            <div class="list-image">
-              <a href="http://www.xinpianchang.com/a4826" class="work-img" target="_blank"><img src="http://www.xinpianchang.com/uploadfile/article/2014/04/08/5343b6e3d1005_225.jpeg" alt="&lt;高山雨露&gt;战争史诗微电影"></a>
-            </div>
-            <div class="list-desc">
-              <a href="http://www.xinpianchang.com/a4826" class="overdot work-title" target="_blank">&lt;高山雨露&gt;战争史诗微电影</a>
-            </div>
-          </li>
-          <li>
-            <div class="list-image">
-              <a href="http://www.xinpianchang.com/a4827" class="work-img" target="_blank"><img src="http://www.xinpianchang.com/uploadfile/article/2014/04/07/534236ae3c02c_225.jpeg" alt="童话微电影《梦幻岛的天气预报员》"></a>
-            </div>
-            <div class="list-desc">
-              <a href="http://www.xinpianchang.com/a4827" class="overdot work-title" target="_blank">童话微电影《梦幻岛的天气预报员》</a>
-            </div>
-          </li>
-          <li>
-            <div class="list-image">
-              <a href="http://www.xinpianchang.com/a4828" class="work-img" target="_blank"><img src="http://www.xinpianchang.com/uploadfile/article/2014/04/07/53423c5824e71_225.jpeg" alt="真人版“多啦A梦”－《玛丽的自然卷世界》"></a>
-            </div>
-            <div class="list-desc">
-              <a href="http://www.xinpianchang.com/a4828" class="overdot work-title" target="_blank">真人版“多啦A梦”－《玛丽的自然卷世界》</a>
-            </div>
-          </li>
+          <% @recommends.each do |movie| %>
+            <li class="video">
+              <div class="list-image">
+                <a href="<%= movie_path(movie) %>" class="work-img" target="_blank">
+                  <%= image_tag movie.thumb %>
+                </a>
+              </div>
+              <div class="list-desc">
+                <a href="<%= movie_path(movie) %>" class="overdot work-title" target="_blank"><%= movie.title %></a>
+              </div>
+            </li>
+          <% end %>
         </ul>
       </div>
       <div class="festival">

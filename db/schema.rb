@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509134426) do
+ActiveRecord::Schema.define(version: 20140510071615) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -154,6 +154,12 @@ ActiveRecord::Schema.define(version: 20140509134426) do
     t.integer "directors_id"
   end
 
+  create_table "photos", force: true do |t|
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "profiles", force: true do |t|
     t.string   "name"
     t.string   "role"
@@ -204,6 +210,13 @@ ActiveRecord::Schema.define(version: 20140509134426) do
   add_index "provinces", ["name"], name: "index_provinces_on_name"
   add_index "provinces", ["pinyin"], name: "index_provinces_on_pinyin"
   add_index "provinces", ["pinyin_abbr"], name: "index_provinces_on_pinyin_abbr"
+
+  create_table "site_configs", force: true do |t|
+    t.string   "property"
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"

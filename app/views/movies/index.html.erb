@@ -53,8 +53,8 @@
       </div>
       <div class="filter-wrapper">
         <a href="#" class="filter-item active" data-filter="location">全部</a>
-      <% tag_cloud(@locations, %w(css1 css2 css3 css4)) do |location|%>
-          <a href="#" class="filter-item" data-filter="location" data-name="<%= location.name %>"><%= location.name %></a>
+      <% @locations.each do |location|%>
+          <a href="#" class="filter-item" data-filter="location" data-name="<%= location %>"><%= location %></a>
       <% end %>
       </div>
     </div>
@@ -65,8 +65,8 @@
       </div>
       <div class="filter-wrapper">
         <a href="#" class="filter-item active" data-filter="type" data-name="">全部</a>
-        <% tag_cloud(@types, %w(css1 css2 css3 css4)) do |type|%>
-            <a href="#" class="filter-item" data-filter="type" data-name="<%= type.name %>"><%= type.name %></a>
+        <% @types.each do |type|%>
+            <a href="#" class="filter-item" data-filter="type" data-name="<%= type %>"><%= type %></a>
         <% end %>
       </div>
     </div>

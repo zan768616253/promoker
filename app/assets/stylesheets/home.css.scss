@@ -849,7 +849,6 @@ ul.nav li.dropdown:hover .rotate {
     overflow: hidden;
     background-color: white;
     border: 1px solid #ccc;
-    height: 180px;
 }
 .left-col .video-list li a {
     color: #444;
@@ -1134,3 +1133,12 @@ ul.nav li.dropdown:hover .rotate {
     margin-top: 160px;
 }
 
+.video-list div.list-image {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-bottom: 1px solid #bbb;
+}
+.video-list div.list-image img {
+    width: 200px;
+}

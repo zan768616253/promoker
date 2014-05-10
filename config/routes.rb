@@ -34,7 +34,9 @@ Rails.application.routes.draw do
     post 'like'
     post 'unlike'
   end
-  resources :users, :only => [:show, :edit, :update]
+  resources :users, :only => [:show, :edit, :update] do
+    post 'update_avatar'
+  end
   resources :articles, :only => [:show, :index] do
     resources :comments, :only => :create
     post 'like'

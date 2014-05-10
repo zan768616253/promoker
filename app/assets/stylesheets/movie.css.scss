@@ -60,12 +60,11 @@ a.filter-item:hover, a.filter-item.active {
 
 .movie-item {
   display: inline-block;
-  margin: 10px;
 }
 .movie-thumb {
   position: relative;
   width: 200px;
-  height: 150px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -86,7 +85,6 @@ a.filter-item:hover, a.filter-item.active {
 
 .movie-thumb img {
   width: 200px;
-  height: 150px;
 }
 
 .comments-wrapper {

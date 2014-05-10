@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
 
   def generate_avatar
     if self.avatar.blank?
-      blob = RubyIdenticon.create(self.email, background_color: 0xffffffff, square_size: 128)
+      blob = RubyIdenticon.create(self.email, background_color: 0xffffffff, square_size: 30, grid_size: 6)
       tempfile = Tempfile.new ['avatar', 'jpg']
       tempfile.binmode
       tempfile.write(blob)

@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
 	def index
 		p params
-		@locations = Event.tag_counts_on(:locations)
-		@types = Event.tag_counts_on(:types)
+		@locations = Tag.tags_on(:location)
+		@types = Tag.tags_on(:event)
     	if(params[:location] || params[:type])
       		@events = Event.tagged_with([params[:location], params[:type]]).page(params[:page])
     	else

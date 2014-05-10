@@ -71,11 +71,7 @@ ul.account-actions {
 }
 
 .profile img {
-  //-webkit-border-radius: 3px;
-  //-moz-border-radius: 3px;
-  //-ms-border-radius: 3px;
-  //-o-border-radius: 3px;
-  //border-radius: 3px;
+  border: 1px solid #ccc;
   border-radius: 50%;
   height: 30px;
   width: 30px;

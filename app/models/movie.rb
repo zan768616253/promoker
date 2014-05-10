@@ -3,6 +3,8 @@ class Movie < ActiveRecord::Base
   acts_as_commentable
   acts_as_votable
 
+  mount_uploader :thumb, ImageUploader
+
   scope :recent, -> { order("created_at DESC ")}
   scope :top, -> { select("*, count(comments.id) AS comments_count").
     joins(:comments).

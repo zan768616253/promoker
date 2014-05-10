@@ -1,5 +1,18 @@
 # coding: utf-8
 class UsersController < ApplicationController
+  def update_avatar
+    p params
+    @user = User.find(params[:user_id])
+    if @user.nil?
+      redirect_to root_url
+    end
+    @user.avatar = cropped_image(params[:user])
+    if @user.save
+      redirect_to edit_user_path(@user), :notice => "更新成功"
+    else
+      render action: 'edit'
+    end
+  end
 
   def show
     @user = User.find(params[:id])
@@ -70,5 +83,13 @@ class UsersController < ApplicationController
   private 
   def user_params
     params.require(:user).permit!
+  end
+
+  def cropped_image(params)
+    image = MiniMagick::Image.open(params[:avatar].path)
+    crop_params = "#{params[:crop][:w]}x#{params[:crop][:h]}+#{params[:crop][:x1]}+#{params[:crop][:y1]}"
+    p crop_params
+    image.crop(crop_params)
+    image
   end
 end
