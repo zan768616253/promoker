@@ -14,29 +14,25 @@
 	    bottom: 0px;
 	    left: 0px;
 	    right: 0px;
+	    overflow: hidden;
 	}
 	#welcome .welcome-bg img {
 	    position: absolute;
-	    right: 0px;
-	    width: 100%;
-	    top: 0px;
-	    bottom: 0px;
-	    height: 100%;
-	    z-index: -1;
+		right: 0px;
+		width: 100%;
+		z-index: -1;
+		top: -240px;
 	}
 	div.welcome-avatar {
 	    display: inline-block;
 	}
 	div.welcome-wrapper {
-	    position: absolute;
-	    color: #727272;
-	    background: rgba(255, 255, 255, 0.8);
-	    border-radius: 10px;
-	    width: 360px;
-	    padding: 10px;
-	    left: 20%;
-	    top: 50%;
-	    font-weight: bold;
+	    position: relative;
+		width: 680px;
+		padding: 10px;
+		margin: 0px auto;
+		top: 40%;
+		font-weight: bold;
 	}
 	div.welcome-text {
 	    display: inline-block;
@@ -62,22 +58,21 @@
 	    font-style: normal;
 	}
 	#weather {
-	  position: absolute;
-	  width: 500px;
-	  margin: 0px auto;
-	  text-align: center;
-	  text-transform: uppercase;
-	  right: 10%;
-	  top: 30%;
+	  	position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 300px;
+		top: -20px;
+		left: 20px;
 	}
 
 	#weather i {
-	  color: #fff;
-	  font-family: weather;
-	  font-size: 150px;
-	  font-weight: normal;
-	  font-style: normal;
-	  line-height: 1.0;
+	  	color: #FFF;
+		font-family: weather;
+		font-size: 100px;
+		font-weight: normal;
+		font-style: normal;
+		line-height: 1.0;
 	}
 
 	.icon-0:before { content: ":"; }
@@ -132,7 +127,7 @@
 	#weather h2 {
 	  margin: 0 0 8px;
 	  color: #fff;
-	  font-size: 60px;
+	  font-size: 40px;
 	  font-weight: 300;
 	  text-align: center;
 	  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
@@ -155,22 +150,53 @@
 	  margin: 0 20px;
 	}
 	div#logo {
-	    font-size: 60px;
-		color: #FFF;
-		top: 15%;
 		position: absolute;
-		left: 25%;
-	}
-	#logo a {
-	    font-size: 50px;
-	    color: white;
-	    margin-left: 20px;
-	    text-decoration: none;
+		top: -320px;
+		left: 10%;
 	}
 
-	#logo a.blink {
+	a.blink {
 		color: #E62E4C;
 	}
+
+	#logo img {
+    	width: 500px;
+	}
+
+	div.welcome-text-wrapper {
+	    background: rgba(255, 255, 255, 0.4);
+	    position: absolute;
+	    padding-left: 100px;
+	    top: 10px;
+	    z-index: -1;
+	    left: 28px;
+	    color: #444;
+	    padding-top: 10px;
+	    height: 100px;
+	    padding-right: 10px;
+	}
+	div.author-wrapper {
+	    position: relative;
+	    display: inline-block;
+	    width: 320px;
+	}
+
+	#weather h2.region {
+		font-size: 30px;
+	}
+
+	.welcome-wrapper a {
+	    font-size: 18px;
+	    float: right;
+	    color: white;
+	    text-decoration: none;
+	    position: relative;
+	    right: 70px;
+	    top: 10px;
+	}
+
+
+
 
   </style>
   <script>
@@ -184,7 +210,11 @@
 	              html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
 	              // html += '<img src="' + weather.image + '">';
 	              // $("#weather").html(html);
-	              html += '<h2>' + weather.city + ', ' + weather.country + '</h2>';
+	              if(weather.country == 'Hong Kong'){
+	              	html += '<h2 class="region">' + weather.country + '</h2>';	
+	              }else{
+	              	html += '<h2 class="region">' + weather.city + ', ' + weather.country + '</h2>';	
+	              }
 	              $("#weather").html(html);
 	            },
 	            error: function(error) {
@@ -200,25 +230,30 @@
 </head>
 <body>
 	<div id="welcome">
-		<div id="logo">
-			普摩客 | <span style="color: #E62E4C;">Promo</span>ker
-			<a href="/home">>></a>
-		</div>
+		
 		<div class="welcome-bg">
 			<img src="<%= @siteConfig['welcome_bg'] %>" alt="">
 		</div>
 		<div class="welcome-wrapper">
-			<div class="welcome-avatar">
-				<img src="<%= @siteConfig['welcome_avatar'] %>">
+			<div id="logo">
+				<img src="<%= @siteConfig['logo_welcome'] %>" alt="">
 			</div>
-			<div class="welcome-text">
-				<%= @siteConfig['welcome_text'] %>
-			</div>	
-			<div class="welcome-author">
-				<%= @siteConfig['welcome_author'] %>
-			</div>	
+			<div class="author-wrapper">
+				<div class="welcome-avatar">
+					<img src="<%= @siteConfig['welcome_avatar'] %>">
+				</div>
+				<div class="welcome-text-wrapper">
+					<div class="welcome-text">
+						<%= @siteConfig['welcome_text'] %>
+					</div>	
+					<div class="welcome-author">
+						<%= @siteConfig['welcome_author'] %>
+					</div>	
+				</div>
+			</div>
+			<div id="weather"></div>
+			<a href="/home">>>></a>
 		</div>
-		<div id="weather"></div>
 	</div>
 </body>
 </html>
