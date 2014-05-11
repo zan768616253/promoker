@@ -2,8 +2,9 @@
   <div id="user-content">
     <ul class="user-nav">
       <li class="active"><a href="#likes" data-toggle="tab">喜欢</a></li>
-      <li><a href="#projects" data-toggle="tab">项目</a></li>
+      <li><a href="#user-projects" data-toggle="tab">项目</a></li>
       <li><a href="#promotes">推广</a></li>
+      <li><a href="#follows" data-toggle="tab">关注</a></li>
       <li><a href="<%= messages_path %>">
         <% if Message.unread(current_user).count != 0%>
           消息 (<%= Message.unread(current_user).count %>)
@@ -15,11 +16,20 @@
       <div id="likes" class="tab-pane active">
         <%= render 'likes'%>
       </div>
-      <div id="projects" class="tab-pane">
+      <div id="user-projects" class="tab-pane">
         <%= render 'projects'%>
       </div>
       <div id="promotes" class="tab-pane">
         <%= render 'promotes'%>
+      </div>
+      <div id="follows" class="tab-pane">
+        <ul>
+          <% @followings.each do |f| %>
+            <li>
+              <div class="follow-thumb"><a href="<%= user_path(f) %>"><%= image_tag f.avatar %></a></div>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>

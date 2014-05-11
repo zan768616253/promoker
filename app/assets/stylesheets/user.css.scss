@@ -286,23 +286,23 @@ div.user-like-summary {
     color: #999;
 }
 
-.user-wrapper div#projects ul li {
+.user-wrapper div#user-projects ul li {
   display: inline-block;
   padding: 5px 10px;
   margin: 10px;
   border-radius: 5px;
 }
 
-.user-wrapper div#projects ul li a {
+.user-wrapper div#user-projects ul li a {
   color: #999;
   text-decoration: none;
 }
 
-.user-wrapper div#projects ul li.active, div#projects ul li:hover {
+.user-wrapper div#user-projects ul li.active, div#user-projects ul li:hover {
   background: orange;
 }
 
-.user-wrapper div#projects ul li.active a, div#projects ul li:hover a{
+.user-wrapper div#user-projects ul li.active a, div#user-projects ul li:hover a{
   color: white;
 }
 
@@ -338,9 +338,9 @@ div#holder {
   background: #F5F5F5;
 }
 
-#holder img {
-  height: 300px;
-}
+// #holder img {
+//   height: 300px;
+// }
 
 #holder span {
   position: relative;
@@ -428,4 +428,26 @@ div.preview.icon-30 {
     padding: 10px;
     vertical-align: top;
     margin-top: 50px;
+}
+
+#user-projects .project-list .project {
+    float: none;
+    display: inline-block;
+    width: 240px;
+    margin: 5px;
+}
+
+.follow-thumb img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+#follows ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+#follows ul li:hover img {
+  border: 2px solid #E62E4C;
 }

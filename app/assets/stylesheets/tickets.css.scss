@@ -1,3 +1,75 @@
-// Place all the styles related to the tickets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-profile {
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+  margin-left: 10px;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  background-color: #FFF;
+}
+.user-profile .avatar {
+  	border-radius: 50%;
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	margin: 0px auto;
+	margin-bottom: 5px;
+}
+
+.user-profile .avatar img {
+  width: 50px;
+}
+.user-profile .location i {
+  margin-right: 5px;
+}
+
+.user-profile .role {
+  color: #999;
+  font-size: 12px;
+}
+
+.user-profile .actions a {
+  color: white;
+}
+.user-profile .actions a i {
+  margin-right: 6px;
+}
+
+.user-profile .location {
+  color: #999;
+  font-size: 11px;
+}
+.user-profile .actions {
+  margin-top: 10px;
+}
+
+div.home-ticket-info {
+    display: inline-block;
+}
+
+div.home-ticket-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+span.home-ticket-date {
+    font-size: 11px;
+    color: #999;
+    font-weight: normal;
+    margin-left: 20px;
+}
+div.home-ticket-needs {
+    margin-top: 10px;
+}
+
+div.home-ticket-contact {
+    margin-top: 10px;
+}
+
+div.home-ticket-wrapper {
+    width: 700px;
+	padding: 20px;
+	height: 240px;
+}

@@ -1,4 +1,7 @@
-$ ->
+$(document).on 'page:load', ()->
+# $ ->
+	$("a.fancybox").fancybox
+		type: 'ajax'
 	$('.bx-slider').bxSlider
 		minSlides: 1,
 		maxSlides: 6,
@@ -17,4 +20,7 @@ $ ->
 	$('.project-thumbnail img').contenthover
 		overlay_background: "#000"
 		overlay_opacity: 0.8
+
+	$('.back-to-top').click ()->
+		$('html, body').animate({ scrollTop: 0 }, 'slow');
 

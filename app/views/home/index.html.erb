@@ -1,4 +1,4 @@
- <div class="container-fluid">
+<div class="container-fluid">
   <div id="vm-carousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <!-- <ol class="carousel-indicators">
@@ -38,7 +38,7 @@
   <div id="content">
     <div class="left-col">
       <div class="recommend">
-        <h2><i class="fa fa-crosshairs"></i><a href="#">特别推荐</a></h2>
+        <h2><i class="fa fa-thumbs-o-up"></i><a href="<%= movies_path %>">特别推荐</a></h2>
         <ul class="video-list clearfix mb30">
           <% @recommends.each do |movie| %>
             <li class="video">
@@ -50,15 +50,16 @@
               <div class="list-desc">
                 <a href="<%= movie_path(movie) %>" class="overdot work-title" target="_blank"><%= movie.title %></a>
               </div>
+              <div class="list-ribbon"></div>
             </li>
           <% end %>
         </ul>
       </div>
       <div class="festival">
-        <h2><i class="fa fa-video-camera"></i><a href="#">电影节精选</a></h2>
+        <h2><i class="fa fa-video-camera"></i><a href="<%= events_path%>?type=电影节">电影节精选</a></h2>
         <div class="poster-wrapper">
           <div class=" poster-left poster">
-            <img src="http://www.vmovier.com/Uploads/Banner/2014/03/31/5338d127325ee.jpg" alt="">
+            <img src="<%= @selections.first.thumb %>" alt="">
             <div class="contenthover">
               <h3>《玛丽的自然卷世界》</h3>
               <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pulvinar ante quis augue lobortis volutpat. </p>
@@ -66,7 +67,7 @@
             </div>
           </div>
           <div class="poster-right-up poster">
-            <img src="http://party.img.vmovier.com/uploads/2014/03/daoyanxiehui.jpg" alt="">
+            <img src="<%= @selections.second.thumb %>" alt="">
             <div class="contenthover">
               <h3>《梦幻岛的天气预报员》</h3>
               <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pulvinar ante quis augue lobortis volutpat. </p>
@@ -74,7 +75,7 @@
             </div>
           </div>
           <div class="poster-right-bottom poster">
-            <img src="http://www.vmovier.com/Uploads/Banner/2014/03/27/533383ba2b441.jpg" alt="">
+            <img src="<%= @selections.third.thumb %>" alt="">
             <div class="contenthover">
               <h3>《被超人绑架的爸爸》</h3>
               <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pulvinar ante quis augue lobortis volutpat. </p>
@@ -85,36 +86,36 @@
         </div>
       </div>
       <div class="ongoing">
-        <h2><i class="fa fa-clock-o"></i><a href="#">正在进行的项目</a></h2>
+        <h2><i class="fa fa-clock-o"></i><a href="<%= projects_path %>">正在进行的项目</a></h2>
         <ul class="ongoing-filter">
-          <li class="active"><a href="#">微电影</a></li>
-          <li><a href="#">短片</a></li>
+          <!-- <li class="active"><a href="#">拍摄计划</a></li>
+          <li><a href="#">一句话项目</a></li> -->
         </ul>
         <div class="project-list">
+          <% @projects.each do |project| %>
           <div class="project">
             <div class="project-card-wrap">
               <div class="project-card">
                 <div class="project-thumbnail">
-                  <a href="#" target="">
-                    <img alt="Photo-little" class="projectphoto-little" height="150" src="https://s3.amazonaws.com/ksr/projects/922073/photo-little.jpg?1395673838" width="160">
+                  <a href="<%= project_path(project) %>" target="">
+                    <img alt="Photo-little" class="projectphoto-little" height="150" src="<%= project.cover %>" width="180">
                   </a>
                 </div>
                 <h2 class="bbcard_name">
                   <strong>
-                    <a href="/projects/donhejny/nerdwax-it-keeps-your-glasses-up?ref=home_popular" target="">Nerdwax : It Keeps Your Glasses Up!</a>
+                    <a href="<%= project_path(project) %>" target=""><%= project.title %></a>
                   </strong>
                   <span>
-                  by
-                  Don Hejny
+                  <%= link_to project.user.nickname, user_path(project.user) %>
                   </span>
                 </h2>
                 <p class="bbcard_blurb">
-                  Nerdwax is a beeswax based blend of All Natural and Certified Organic ingredients specially formulated to keep your glasses in place.
+                  <%= project.description %>
                 </p>
                 <ul class="project-meta">
                   <li>
                     <span class="fa fa-map-marker"></span>
-                    <span class="location-name">Chapel Hill, NC</span>
+                    <span class="location-name"><%= project.location %></span>
                   </li>
                 </ul>
                 <div class="project-pledged-successful" style="display: none;">
@@ -124,270 +125,69 @@
                   <div class="project-pledged" style="width: 100%"></div>
                 </div>
                 <ul class="project-stats">
-                  <li class="first funded">
-                    <strong>187%</strong>
-                    funded
+                  <li class="pledged">
+                    <strong><span class="money usd no-code"><%= project.budget %>万</span></strong>
+                  预算
                   </li>
                   <li class="pledged">
-                    <strong><span class="money usd no-code">$18,789</span></strong>
-                    pledged
+                    <strong><span class="money usd no-code"><%= (project.start_at.to_date - Date.current).to_i unless project.start_at.blank? %></span></strong>
+                  天后开始拍摄
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="project">
-            <div class="project-card-wrap">
-              <div class="project-card">
-                <div class="project-thumbnail">
-                  <a href="#" target="">
-                    <img alt="Photo-little" class="projectphoto-little" height="150" src="https://s3.amazonaws.com/ksr/projects/922073/photo-little.jpg?1395673838" width="160">
-                  </a>
-                </div>
-                <h2 class="bbcard_name">
-                  <strong>
-                    <a href="/projects/donhejny/nerdwax-it-keeps-your-glasses-up?ref=home_popular" target="">Nerdwax : It Keeps Your Glasses Up!</a>
-                  </strong>
-                  <span>
-                  by
-                  Don Hejny
-                  </span>
-                </h2>
-                <p class="bbcard_blurb">
-                  Nerdwax is a beeswax based blend of All Natural and Certified Organic ingredients specially formulated to keep your glasses in place.
-                </p>
-                <ul class="project-meta">
-                  <li>
-                    <span class="fa fa-map-marker"></span>
-                    <span class="location-name">Chapel Hill, NC</span>
-                  </li>
-                </ul>
-                <div class="project-pledged-successful" style="display: none;">
-                  <strong>Successful!</strong>
-                </div>
-                <div class="project-pledged-wrap">
-                  <div class="project-pledged" style="width: 100%"></div>
-                </div>
-                <ul class="project-stats">
-                  <li class="first funded">
-                    <strong>187%</strong>
-                    funded
-                  </li>
-                  <li class="pledged">
-                    <strong><span class="money usd no-code">$18,789</span></strong>
-                    pledged
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <div class="project-card-wrap">
-              <div class="project-card">
-                <div class="project-thumbnail">
-                  <a href="#" target="">
-                    <img alt="Photo-little" class="projectphoto-little" height="150" src="https://s3.amazonaws.com/ksr/projects/922073/photo-little.jpg?1395673838" width="160">
-                  </a>
-                </div>
-                <h2 class="bbcard_name">
-                  <strong>
-                    <a href="/projects/donhejny/nerdwax-it-keeps-your-glasses-up?ref=home_popular" target="">Nerdwax : It Keeps Your Glasses Up!</a>
-                  </strong>
-                  <span>
-                  by
-                  Don Hejny
-                  </span>
-                </h2>
-                <p class="bbcard_blurb">
-                  Nerdwax is a beeswax based blend of All Natural and Certified Organic ingredients specially formulated to keep your glasses in place.
-                </p>
-                <ul class="project-meta">
-                  <li>
-                    <span class="fa fa-map-marker"></span>
-                    <span class="location-name">Chapel Hill, NC</span>
-                  </li>
-                </ul>
-                <div class="project-pledged-successful" style="display: none;">
-                  <strong>Successful!</strong>
-                </div>
-                <div class="project-pledged-wrap">
-                  <div class="project-pledged" style="width: 100%"></div>
-                </div>
-                <ul class="project-stats">
-                  <li class="first funded">
-                    <strong>187%</strong>
-                    funded
-                  </li>
-                  <li class="pledged">
-                    <strong><span class="money usd no-code">$18,789</span></strong>
-                    pledged
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <div class="project-card-wrap">
-              <div class="project-card">
-                <div class="project-thumbnail">
-                  <a href="#" target="">
-                    <img alt="Photo-little" class="projectphoto-little" height="150" src="https://s3.amazonaws.com/ksr/projects/922073/photo-little.jpg?1395673838" width="160">
-                  </a>
-                </div>
-                <h2 class="bbcard_name">
-                  <strong>
-                    <a href="/projects/donhejny/nerdwax-it-keeps-your-glasses-up?ref=home_popular" target="">Nerdwax : It Keeps Your Glasses Up!</a>
-                  </strong>
-                  <span>
-                  by
-                  Don Hejny
-                  </span>
-                </h2>
-                <p class="bbcard_blurb">
-                  Nerdwax is a beeswax based blend of All Natural and Certified Organic ingredients specially formulated to keep your glasses in place.
-                </p>
-                <ul class="project-meta">
-                  <li>
-                    <span class="fa fa-map-marker"></span>
-                    <span class="location-name">Chapel Hill, NC</span>
-                  </li>
-                </ul>
-                <div class="project-pledged-successful" style="display: none;">
-                  <strong>Successful!</strong>
-                </div>
-                <div class="project-pledged-wrap">
-                  <div class="project-pledged" style="width: 100%"></div>
-                </div>
-                <ul class="project-stats">
-                  <li class="first funded">
-                    <strong>187%</strong>
-                    funded
-                  </li>
-                  <li class="pledged">
-                    <strong><span class="money usd no-code">$18,789</span></strong>
-                    pledged
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
     <div class="right-col">
-      <div class="news shadowbox">
+      <div class="news shadowbox feeds">
         <ul>
           <h1>最新资讯
-            <!-- <a href="http://www.pmovie.com/news/" target="_blank">更多&gt;</a> -->
             <a href="<%= articles_path %>" target="_blank"><i class="fa fa-chevron-right"></i></a>
           </h1>
+          <% @articles.each_with_index do |article, i| %>
           <li>
-            <span>1</span>
-            <a href="http://www.pmovie.com/article-2153-1.html" title="大地院线学麦当劳开连锁店 专盯二、三线市场" target="_blank">大地院线学麦当劳开连锁店 </a>
-            <em>04-08</em>
+            <span><%= i + 1%></span>
+            <a href="<%= article_path(article) %>" title="<%= article.title %>" target="_blank"><%= article.title %></a>
+            <em><%= article.updated_at.strftime('%m-%d') %></em>
           </li>
-          <li>
-            <span>2</span>
-            <a href="http://www.pmovie.com/article-2152-1.html" title="儿童录综艺节目引争论 出名趁早？少干扰童年？" target="_blank">儿童录综艺节目引争论 出名</a>
-            <em>04-08</em>
-          </li>
-          <li>
-            <span>3</span>
-            <a href="http://www.pmovie.com/article-2151-1.html" title="总局严打微电影 创作者：从此拒绝情色擦边球" target="_blank">总局严打微电影 创作者：从</a>
-            <em>04-08</em>
-          </li>
-          <li>
-            <span>4</span>
-            <a href="http://www.pmovie.com/article-2150-1.html" title="港星审美疲劳：一年见的次数比我亲妈还多" target="_blank">港星审美疲劳：一年见的次</a>
-            <em>04-08</em>
-          </li>
-          <li>
-            <span>5</span>
-            <a href="http://www.pmovie.com/article-2149-1.html" title="盛大转让酷6四成股权 三大疑团待解" target="_blank">盛大转让酷6四成股权 三大</a>
-            <em>04-04</em>
-          </li>
-          <li>
-            <span>6</span>
-            <a href="http://www.pmovie.com/article-2148-1.html" title="娱乐宝首期7800万产品售罄 共22.38万网友投资" target="_blank">娱乐宝首期7800万产品售罄 </a>
-            <em>04-04</em>
-          </li>
-          <li>
-            <span>7</span>
-            <a href="http://www.pmovie.com/article-2147-1.html" title="演员片酬缩水美国向东瞅 大波好莱坞大牌来华" target="_blank">演员片酬缩水美国向东瞅 大</a>
-            <em>04-04</em>
-          </li>
-          <li style="overflow:hidden;height:24px;line-height:24px;">
-            <span>8</span>
-            <a href="http://www.pmovie.com/article-2146-1.html" title="新京报：姚笛是最大输家 输舆论又输文章" target="_blank">新京报：姚笛是最大输家 输</a>
-            <em>04-02</em>
-          </li>
-          <li>
-            <span>9</span>
-            <a href="http://www.pmovie.com/article-2145-1.html" title="陈可辛谈演员片酬：&quot;谁都逃不过市场&quot;" target="_blank">陈可辛谈演员片酬："谁都逃</a>
-            <em>04-01</em>
-          </li>
-          <li>
-            <span>10</span>
-            <a href="http://www.pmovie.com/article-2144-1.html" title="韩国电影在华票房遇冷 韩导:观众口味不同" target="_blank">韩国电影在华票房遇冷 韩导</a>
-            <em>04-01</em>
-          </li>
+          <% end %>
         </ul>
       </div>
       <div class="news shadowbox events">
         <ul>
           <h1>最新活动
-            <!-- <a href="http://www.pmovie.com/news/" target="_blank">更多&gt;</a> -->
-            <a href="http://www.pmovie.com/news/" target="_blank"><i class="fa fa-chevron-right"></i></a>
+            <a href="<%= events_path %>" target="_blank"><i class="fa fa-chevron-right"></i></a>
           </h1>
+          <% @events.each do |event| %>
           <li>
-            <a class="rmhdimg" href="forum.php?mod=viewthread&amp;tid=27754" title="【讲座】刘永泗教授作客拍电电网" target="_blank">
-              <img src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2014/04/png1&h=174&w=294&zc=1&q=100" width="105" height="80" alt="【讲座】刘永泗教授作客拍电电网">
+            <a class="rmhdimg" href="<%= event_path(event) %>" title="" target="_blank">
+              <img src="<%= event.thumb %>" width="105" height="80" alt="">
             </a>
             <div class="rmhdcont">
               <p>
-                <a href="forum.php?mod=viewthread&amp;tid=27754" title="【讲座】刘永泗教授作客拍电电网" target="_blank">【讲座】刘永泗教授作客拍电电网
-                </a>
+                <a href="<%= event_path(event) %>" title="<%= event.title %>" target="_blank"><%= event.title %></a>
               </p>
-              <a class="rmhdcona btn btn-info" href="forum.php?mod=viewthread&amp;tid=27754" title="【讲座】刘永泗教授作客拍电电网" target="_blank">立即参与
-              </a>
+              <a class="rmhdcona btn" href="<%= event_path(event) %>" target="_blank">查看更多</a>
             </div>
           </li>
-          <li>
-            <a class="rmhdimg" href="forum.php?mod=viewthread&amp;tid=27611" title="4月影片分析活动：“光影中的张国荣”（附电影全集下载）" target="_blank">
-              <img src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2014/04/QQ%E6%88%AA%E5%9B%BE20140405102602.png&h=74&w=104&zc=1&q=100" width="105" height="80" alt="4月影片分析活动：“光影中的张国荣”（附电影全集下载）">
-            </a>
-            <div class="rmhdcont">
-              <p>
-                <a href="forum.php?mod=viewthread&amp;tid=27611" title="4月影片分析活动：“光影中的张国荣”（附电影全集下载）" target="_blank">4月影片分析活动：“光影中的张
-                </a>
-              </p>
-              <a class="rmhdcona btn btn-info" href="forum.php?mod=viewthread&amp;tid=27611" title="4月影片分析活动：“光影中的张国荣”（附电影全集下载）" target="_blank">立即参与
-              </a>
-            </div>
-          </li>
+          <% end %>
         </ul>
       </div>
-            <div class="news shadowbox mini-project">
+      <div class="news shadowbox mini-project">
         <ul>
           <h1>一句话项目
-            <!-- <a href="http://www.pmovie.com/news/" target="_blank">更多&gt;</a> -->
-            <a href="http://www.pmovie.com/news/" target="_blank"><i class="fa fa-chevron-right"></i></a>
+            <a href="<%= projects_path %>" target="_blank"><i class="fa fa-chevron-right"></i></a>
           </h1>
+          <% @tickets.each do |ticket| %>
           <li>
-            <span>1</span>
-            <a href="http://www.pmovie.com/article-2153-1.html" title="大地院线学麦当劳开连锁店 专盯二、三线市场" target="_blank">项目1 </a>
-            <em>04-08</em>
+            <span><%= image_tag ticket.user.avatar%></span>
+            <a href="<%= ticket_path(ticket) %>" class="fancybox"><%= ticket.title %></a>
+            <em><%= ticket.city %></em>
           </li>
-          <li>
-            <span>2</span>
-            <a href="http://www.pmovie.com/article-2152-1.html" title="儿童录综艺节目引争论 出名趁早？少干扰童年？" target="_blank">项目2</a>
-            <em>04-08</em>
-          </li>
-          <li>
-            <span>3</span>
-            <a href="http://www.pmovie.com/article-2151-1.html" title="总局严打微电影 创作者：从此拒绝情色擦边球" target="_blank">项目3</a>
-            <em>04-08</em>
-          </li>
+          <% end %>
         </ul>
       </div>
     </div>

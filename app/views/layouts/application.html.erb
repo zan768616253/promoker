@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VMovie</title>
+  <title>Promoker</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <!--[if lt IE 10]>
@@ -20,7 +21,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
         			</button> -->
-        			<a href="/" class="navbar-brand"><span style="color: orange; font-weight: bold;">V</span>Movie</a>
+        			<a href="<%= root_url %>" class="navbar-brand"><span style="color: orange; font-weight: bold;">Promo</span>ker</a>
         		</div>
         		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         			<ul class="nav navbar-nav">
@@ -36,7 +37,7 @@
         					</ul>
         				</li>
         				<li><a href="<%= projects_path %>">项目</a></li>
-        				<li><a href="#">营销</a></li>
+        				<li><a href="<%= promote_path %>">营销</a></li>
         			</ul>
                 <!-- <div class="searchbar navbar-left">
                     <input type="text" placeholder="搜作品"/>
@@ -227,7 +228,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <div class="modal-title title">VMovie Login</div>
+            <div class="modal-title title">Promoker Login</div>
           </div>
           <div class="modal-body">
             <!--<div class="title">VMovie Login</div>-->
@@ -235,7 +236,7 @@
             <div class="login-auth">
               <ul>
                 <li class="weibo">
-                  <a href="#">
+                  <a href="<%= user_omniauth_authorize_path(:weibo) %>">
                     <i class="fa fa-weibo"></i>
                   </a>
                 </li>
@@ -323,7 +324,7 @@
 			<br>
 	本站不提供任何视听上传服务，所有内容均来自视频分享站点所提供的公开引用资源。
 		</div>
-	</div>
+</div>
   <script type="text/javascript" data-turbolinks-eval=false>
     ROOT_URL = "<%= root_url %>";
     FAYE_SERVER_URL = "<%= Setting.faye_server %>";

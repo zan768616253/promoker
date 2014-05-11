@@ -1,4 +1,26 @@
-$ ->
+$(document).on 'page:load', () ->
+# $ ->
+    $('#follow').click (e) ->
+      e.preventDefault()
+      e.stopPropagation()
+      $elem = $(this)
+      if $elem.data("state") != "followed"
+        $.ajax
+          url : "/users/" + $elem.data("id") + "/follow"
+          type : "POST"
+        $elem.data("state", "followed")
+        $elem.find('span').text("已关注")
+        $elem.find('i').removeClass('fa-plus').addClass('fa-minus')
+        $elem.toggleClass("followed")
+      else
+        $.ajax
+          url : "/users/" + $elem.data("id") + "/unfollow"
+          type : "POST"
+        $elem.data("state", "")
+        $elem.find('span').text("关注")
+        $elem.find('i').removeClass('fa-minus').addClass('fa-plus')
+        $elem.toggleClass("followed")
+
     $('#user-save').click () ->
       tags = []
       for elem in $('form.edit-user span.tag.selected')
@@ -16,12 +38,16 @@ $ ->
           image.id = "photo"
           $(image).data('width',image.width)
           $(image).data('height',image.height)
+          if image.width > image.height
+            $(image).attr('width', "300")
+          else
+            $(image).attr('height', "300")
           $('.preview img').attr('src', event.target.result)
           holder.appendChild image
           preview = (img, selection) ->
             return  if not selection.width or not selection.height
-            $('#user_crop_x1').val(selection.x1);
-            $('#user_crop_y1').val(selection.y1);
+            $('#user_crop_x1').val(Math.round(selection.x1/img.width * $(img).data('width')));
+            $('#user_crop_y1').val(Math.round(selection.y1/img.height * $(img).data('height')));
             $('#user_crop_w').val(Math.round(selection.width/img.width * $(img).data('width')));
             $('#user_crop_h').val(Math.round(selection.height/img.height * $(img).data('height')));    
             scaleX = 180 / selection.width

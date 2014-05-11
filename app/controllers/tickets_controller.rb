@@ -1,6 +1,11 @@
 # coding: utf-8
 class TicketsController < ApplicationController
-	before_filter :authenticate_user!
+	before_filter :authenticate_user!, :except => [:show]
+	def show
+		@ticket = Ticket.find(params[:id])
+		@user = @ticket.user
+		render 'show', layout: false
+	end
 	def create
 		p params[:ticket]
 		@ticket = Ticket.new

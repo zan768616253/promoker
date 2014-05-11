@@ -65,7 +65,7 @@
       <% @article.comments.each do |c| %>
       <li class=comment>
         <div class="comment-user-avatar">
-         <%= image_tag @user.avatar %>
+         <%= image_tag c.user.avatar %>
         </div>
         <div class="comment-body">
           <div class="comment-user-nickname">

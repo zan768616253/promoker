@@ -24,7 +24,9 @@ class UsersController < ApplicationController
     @liked_items = @user.find_liked_items.reverse
 
     @tickets = @user.tickets
+    @projects = @user.projects
     if not current_user.nil? and current_user.id == @user.id
+      @followings = @user.all_following
       render 'dashboard'
     else
       render 'show'
@@ -45,6 +47,7 @@ class UsersController < ApplicationController
     roles = params[:user][:roles]
     params[:user].delete(:roles)
     params[:user][:nickname] = params[:user][:nickname].strip
+    params[:user][:name] = params[:user][:nickname]
     unless params[:user][:province].blank?
       province = Province.find(params[:user][:province])
       province_name = province.name unless province.nil?
@@ -55,7 +58,7 @@ class UsersController < ApplicationController
       city_name = city.name unless city.nil?
       params[:user][:location] += city_name + ' '
     end
-    unless params[:user][:district].empty?
+    unless params[:user][:district].blank?
       district = District.find(params[:user][:district])
       district_name = district.name unless district.nil?
       params[:user][:location] += district_name + ' '
@@ -78,6 +81,18 @@ class UsersController < ApplicationController
 
   def likes
     p params
+  end
+
+  def follow
+    p params
+    @user = User.find(params[:id])
+    current_user.follow(@user)
+  end
+
+  def unfollow
+    p params
+    @user = User.find(params[:id])
+    current_user.stop_following(@user)
   end
 
   private 

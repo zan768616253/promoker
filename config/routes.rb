@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users, :controllers => {:passwords => "passwords"} do
+  devise_for :users, :controllers => {:passwords => "passwords", :omniauth_callbacks => 'omniauth_callbacks'} do
     resources :passwords
   end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  resources :tickets, :only => :create
+  resources :tickets, :only => [:create,:show]
   
   resources :project_details, :only => [:create, :update]
   resources :projects do
@@ -36,14 +37,19 @@ Rails.application.routes.draw do
   end
   resources :users, :only => [:show, :edit, :update] do
     post 'update_avatar'
+    member do 
+      post 'follow'
+      post 'unfollow'  
+    end
   end
   resources :articles, :only => [:show, :index] do
     resources :comments, :only => :create
     post 'like'
     post 'unlike'
   end
-
-  root to: "home#index"
+  match '/promote' => 'home#promote', :via => :get
+  match '/home' => 'home#index', :via => :get
+  root to: "home#welcome"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

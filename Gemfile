@@ -44,11 +44,15 @@ gem "settingslogic"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'ruby_identicon'
+gem "acts_as_follower"
+gem 'omniauth-weibo-oauth2'
 # gem 'honeypot-captcha'
 # gem 'easy_captcha'
 # gem 'rmagick'
 
 gem 'imgareaselect-rails'
+
+gem 'fancybox2-rails', '~> 0.2.8'
 
 group :development do
   gem 'pry-nav'

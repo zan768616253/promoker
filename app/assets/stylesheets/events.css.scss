@@ -1,57 +1,63 @@
 div.events-wrapper {
-    width: 960px;
-    margin: 60px auto;
+  width: 960px;
+  margin: 60px auto;
 }
+
+
 div.events-container {
-    position: relative;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  position: relative;
+  padding: 10px;
 }
 
 .event-item {
-    display: inline-block;
-	width: 450px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  margin: 10px;
+  overflow: hidden;
+  height: 250px;
 }
+
 div.event-thumb {
-    display: inline-block;
-	width: 110px;
-	height: 150px;
-	overflow: hidden;
-	border: 1px solid #bbb;
+  display: inline-block;
+  width: 500px;
 }
+
 .event-thumb img {
-    width: 110px;
+  width: 500px;
 }
+
 .event-info {
   display: inline-block;
   vertical-align: top;
   margin-left: 5px;
   font-size: 13px;
   line-height: 40px;
-  width: 330px;
+  width: 390px;
+  position: relative;
 }
+
 div.event-title {
-    font-size: 14px;
-    position: relative;
+  font-size: 14px;
+  position: relative;
 }
 
 div.event-box {
-    background: white;
-    padding: 20px;
-    box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
-    width: 650px;
-    position: relative;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+  width: 650px;
+  position: relative;
 }
 
 .event-box div.event-thumb {
-    width: 160px;
-    height: 200px;
-    border: none;
+  width: 160px;
+  height: 200px;
+  border: none;
 }
+
 .event-box div.event-thumb img {
-    width: 150px;
-    height: 200px;
+  width: 150px;
+  height: 200px;
 }
 
 .event-box .event-info {
@@ -59,23 +65,23 @@ div.event-box {
   width: 430px;
 }
 
-
 .event-actions {
   margin-top: 10px;
 }
+
 .event-actions a {
-    background-color: #FFCCBB;
-    color: #EC7C7C;
-    border: none;
+  background-color: #FFCCBB;
+  color: #EC7C7C;
+  border: none;
 }
 
 .event-actions a:hover, .event-actions a.liked {
-    background-color: #FFA283;
-    color: #D55B5B;
-    border: none;
+  background-color: #FFA283;
+  color: #D55B5B;
+  border: none;
 }
 
-.event-actions a .fa-heart{
+.event-actions a .fa-heart {
   display: none;
 }
 
@@ -96,12 +102,13 @@ div.event-share {
 }
 
 div.event-sidebar {
-    position: fixed;
-    top: 60px;
-    background: white;
-    right: 100px;
-    padding: 10px;
-    box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+  position: fixed;
+  top: 60px;
+  background: white;
+  right: 100px;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+  width: 350px;
 }
 
 .events-wrapper div.comments-wrapper {
@@ -110,6 +117,35 @@ div.event-sidebar {
 }
 
 .events-wrapper div.comments-wrapper .comment-body {
-  width: 90%;  
+  width: 90%;
 }
 
+.event-title a {
+    color: #444;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.event-title .label {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.event-title .label {
+    font-size: 14px;
+    margin-right: 5px;
+}
+.event-date i.fa.fa-clock-o {
+    font-size: 16px;
+    margin-right: 10px;
+}
+div.event-address i {
+  font-size: 18px;
+  margin-right: 11px;
+  margin-left: 1px;
+}
+
+.event-likes i.fa.fa-heart {
+  font-size: 15px;
+  margin-right: 9px;
+}

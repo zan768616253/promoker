@@ -71,7 +71,6 @@
 	    </div>
 	</div>
 	<div class="events-container">
-		<div class="ribbon"></div>
 		<ul class="events">
 			<% @events.each do |event| %>
 			<li class="event-item">
@@ -81,17 +80,35 @@
 					</a>
 				</div>
 				<div class="event-info">
+					
 					<div class="event-title">
+						<% case event.status
+						when '报名中'
+							style = 'warning' 
+						when '进行中'
+							style = 'info' 
+						when '已结束'
+							style = 'default' 
+						else
+							style = 'default' 
+						end %>
+						<span class="label label-<%= style %>">
+							<%= event.status %>
+						</span>
 						<%= link_to event.title, event_path(event) %>
 					</div>
 					<div class="event-date">
-						<span>时间: </span><%= event.start.strftime("%m月%d日") %> ~ <%= event.end.strftime("%m月%d日") %>
+						<span><i class="fa fa-clock-o"></i> </span><%= event.start.strftime("%m月%d日") %> ~ <%= event.end.strftime("%m月%d日") %>
 					</div>
 					<div class="event-address">
-						<span>地点: </span><%= event.address %>
+						<span><i class="fa fa-map-marker"></i> </span><%= event.address %>
 					</div>
 					<div class="event-likes">
-						<%= event.likes.count %>人感兴趣
+						<i class="fa fa-heart"></i>
+						<b><%= event.likes.count %></b> 人感兴趣
+					</div>
+					<div class="event-likers">
+						
 					</div>
 				</div>
 			</li>

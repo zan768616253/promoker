@@ -1,6 +1,8 @@
 defaults: &defaults
   faye_server: "http://127.0.0.1:9292/faye"
   faye_token: "123456"
+  weibo_key: '15461246'
+  weibo_secret: '516b6ef690d35075e98ed114efdc7fe4'
 
 development:
   <<: *defaults

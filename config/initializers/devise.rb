@@ -5,7 +5,7 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '566f911b570836bfb527a64be81bc81663d0cd0266e6eaa994819524cc1068af1017cf74d6026f6181ab869ff9a2e4012e1f0ca4e680f245ad8f757315990e6c'
-
+  
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -230,6 +230,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+
+  config.omniauth :weibo, Setting.weibo_key, Setting.weibo_secret
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

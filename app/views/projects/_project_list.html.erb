@@ -1,0 +1,49 @@
+<div class="project-list">
+	<% @projects.each do |project| %>
+	<div class="project">
+		<div class="project-card-wrap">
+			<div class="project-card">
+				<div class="project-thumbnail">
+					<a href="<%= project_path(project) %>" target="_blank">
+						<% if project.cover.blank? %>
+						<img alt="Photo-little" class="projectphoto-little" height="150" src="https://d297h9he240fqh.cloudfront.net/assets/projects/missing_little.png" width="220">
+						<% else %>
+						<%= image_tag project.cover, :height => 150, :width => 220, :class => "projectphoto-little" %>
+						<% end %>
+					</a>
+				</div>
+				<h2 class="bbcard_name">
+					<strong>
+						<a href="<%= project_path(project) %>" target=""><%= project.title %></a>
+					</strong>
+					<span>
+						<%= link_to project.user.nickname, user_path(project.user) unless project.user.blank? %>
+					</span>
+				</h2>
+				<p class="bbcard_blurb">
+					<%= project.description %>
+				</p>
+				<ul class="project-meta">
+					<li>
+						<span class="fa fa-map-marker"></span>
+						<span class="location-name"><%= project.location %></span>
+					</li>
+				</ul>
+				<div class="project-pledged-wrap">
+					<div class="project-pledged" style="width: 100%"></div>
+				</div>
+				<ul class="project-stats">
+					<li class="pledged">
+						<strong><span class="money usd no-code"><%= project.budget %>万</span></strong>
+						预算
+					</li>
+					<li class="pledged">
+						<strong><span class="money usd no-code"><%= (project.start_at.to_date - Date.current).to_i unless project.start_at.blank? %></span></strong>
+						天后开始拍摄
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>		
+	<% end %>
+</div>

@@ -1,4 +1,5 @@
-$ ->
+$(document).on 'page:load', () ->
+# $ ->
 	$('#project-save').click () ->
 		tags = []
 		for elem in $('form.edit-project span.tag.selected')

@@ -41,12 +41,12 @@ a.filter-item {
 }
 
 a.filter-item:hover, a.filter-item.active {
-  background-color: #FFA500;
+  background-color: #E62E4C;
   color: #FFF;
 }
 
 .sort a.filter-item:hover, .sort a.filter-item.active  {
-  color: #FFA500;
+  color: #E62E4C;
   background-color: transparent;
 }
 
@@ -76,10 +76,10 @@ a.filter-item:hover, a.filter-item.active {
   display: none;
   position: absolute;
   left: 0px;
-  top: 0px;
+  bottom: 0px;
   right: 0px;
   height: 5px;
-  background-color: #FFA500;
+  background-color: #E62E4C;
 }
 
 
@@ -305,7 +305,7 @@ div.ribbon {
   top: 0px;
   left: 10px;
   height: 5px;
-  background: #FFA500;
+  background: #E62E4C;
   width: 60px;
 }
 

@@ -18,10 +18,10 @@
 //= require social-share-button
 //= require faye
 //= require jquery.imgareaselect
+//= require fancybox
 //= require_tree .
 
-$(function(){
-
+$(document).on('page:load', function() {
     $('#register-modal-link').click(function(e){
         e.preventDefault()
         e.stopPropagation()

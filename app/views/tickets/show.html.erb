@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag 'application' %>
+<div class="home-ticket-wrapper">
+	<div class="home-ticket-info">
+		<div class="home-ticket-title"><%= @ticket.title %> <span class="home-ticket-date">发布时间: <%= @ticket.updated_at.strftime('%m-%d') %></span></div>
+		<div class="home-ticket-location">
+			<i class="fa fa-map-marker"></i> <%= @ticket.location %>
+		</div>
+		<div class="home-ticket-needs">
+			<b>需求:</b>
+			<% @ticket.need_list.each do |need| %>
+				<span class="label label-info"> <%= need %></span>
+			<% end %>
+		</div>
+		<div class="home-ticket-contact">
+			<b>联系方式:</b>
+			<%= @ticket.contact %>
+		</div>
+	</div>
+	<div class="user-profile">
+	  <div class="avatar">
+	    <%= image_tag @user.avatar %>
+	  </div>
+	  <div class="nickname"><%= @user.nickname %></div>
+	  <div class="role"><%= @user.role_list.join(' ') %></div>
+	  <% if @user.location %>
+	    <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
+	  <% end %>
+	  <div class="about-divider"></div>
+	  <div class="about">
+	    <%= @user.about %>
+	  </div>
+	  <% if current_user != @user %>
+	  <div class="actions">
+	    <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i>关注</a>
+	    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#message-modal"><i class="fa fa-comment"></i>约谈</a>
+	  </div>
+	  <% end %>
+	</div>
+</div>
