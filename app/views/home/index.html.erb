@@ -98,7 +98,11 @@
               <div class="project-card">
                 <div class="project-thumbnail">
                   <a href="<%= project_path(project) %>" target="">
-                    <img alt="Photo-little" class="projectphoto-little" height="150" src="<%= project.cover %>" width="180">
+                    <% if project.cover.blank? %>
+                    <img alt="Photo-little" class="projectphoto-little" height="150" src="https://d297h9he240fqh.cloudfront.net/assets/projects/missing_little.png" width="180">
+                    <% else %>
+                    <%= image_tag project.cover, :width => 180, :class => "projectphoto-little" %>
+                    <% end %>
                   </a>
                 </div>
                 <h2 class="bbcard_name">

@@ -21,7 +21,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
         			</button> -->
-        			<a href="<%= root_url %>" class="navbar-brand"><span style="color: orange; font-weight: bold;">Promo</span>ker</a>
+        			<a href="/home" class="navbar-brand"><span style="color: orange; font-weight: bold;">Promo</span>ker</a>
         		</div>
         		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         			<ul class="nav navbar-nav">
@@ -31,7 +31,7 @@
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>">推荐</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>">资讯</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>">活动</a></li>
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'">电影节</a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=电影节">电影节</a></li>
                     <li role="presentation" class="divider"></li>
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'">微电影学院</a></li>
         					</ul>
@@ -174,6 +174,7 @@
                 </div>
                 <div class="form-group">
                   <div class="text-center">
+                    <a href="#" id="project-back"><< 返回</a>
                     <%= f.submit "创建拍摄计划", :class => 'btn btn-wine' %>
                   </div>
                 </div>
@@ -212,7 +213,7 @@
                 </div>
                 <div class="form-group">
                     <div class="pull-right">
-                      <a href="#" id="post-link"><< 返回</a>
+                      <a href="#" id="ticket-back"><< 返回</a>
                       <a href="" class='btn btn-wine submit'>发布</a> 
                     </div>
                   </div>
@@ -228,7 +229,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <div class="modal-title title">Promoker Login</div>
+            <div class="modal-title title">Promoker 登录</div>
           </div>
           <div class="modal-body">
             <!--<div class="title">VMovie Login</div>-->
@@ -263,18 +264,13 @@
               <%= form_for :user, :url => session_path(:user), :html => {:id => 'login-form'} do |f| %>
                 <fieldset class="clearfix">
                   <p>
-                    <span class="fontawesome-user"></span>
                     <%= f.text_field :email, :autofocus => true, :placeholder => '邮箱' %>
-                    <!--<input type="text" placeholder="用户名" required>-->
                   </p>
                   <p>
-                    <span class="fontawesome-lock"></span>
                     <%= f.password_field :password, :placeholder => '密码' %>
-                    <!--<input type="password"  placeholder="密码" required>-->
                   </p>
                   <p>
                     <%= f.submit '登录' %>
-                    <!--<input type="submit" value="登录">-->
                   </p>
                 </fieldset>
               <% end %>
@@ -284,19 +280,15 @@
               <%= form_for :user, :url => registration_path(:user), :html => {:id => 'register-form'} do |f| %>
                 <fieldset class="clearfix">
                   <p>
-                    <span class="fontawesome-user"></span>
                     <%= f.text_field :email, :autofocus => true, :placeholder => '邮箱' %>
                   </p>
                   <p>
-                    <span class="fontawesome-font"></span>
                     <%= f.text_field :nickname, :placeholder => '昵称' %>
                   </p>
                   <p>
-                    <span class="fontawesome-lock"></span>
                     <%= f.password_field :password, :placeholder => '密码' %>
                   </p>
                   <p>
-                    <span class="fontawesome-lock"></span>
                     <%= f.password_field :password_confirmation, :placeholder => '确认密码' %>
                   </p>
                   <p>
@@ -313,7 +305,7 @@
     </div>
     <div id="footer">
 		<div class="tip">Copyright © 2011-2014 &nbsp;&nbsp;
-			<a href="/">VMovie</a>
+			<a href="/">Promoker</a>
 			<!-- &nbsp;&nbsp;京ICP备12001467号 &nbsp;&nbsp;京公网安备11010802011460号 -->
 		&nbsp;
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/cn/">

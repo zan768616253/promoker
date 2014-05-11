@@ -1,5 +1,4 @@
-$(document).on 'page:load', ()->
-# $ ->
+$ ->
 	$("a.fancybox").fancybox
 		type: 'ajax'
 	$('.bx-slider').bxSlider
@@ -23,4 +22,7 @@ $(document).on 'page:load', ()->
 
 	$('.back-to-top').click ()->
 		$('html, body').animate({ scrollTop: 0 }, 'slow');
+# $(document).ready(ready)
+# $(document).on('page:load', ready)
+
 

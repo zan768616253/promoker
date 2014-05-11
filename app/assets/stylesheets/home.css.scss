@@ -1,6 +1,8 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
 /* line 1, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 4, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 5, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -10,6 +12,8 @@
 
 /* Space out content a bit */
 /* line 9, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 13, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 15, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -17,6 +21,8 @@ body {
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 /* line 17, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 22, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 25, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .header,
 .marketing,
 .footer {
@@ -26,11 +32,16 @@ body {
 
 /* Custom page header */
 /* line 23, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 29, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 33, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .header {
   border-bottom: 1px solid #e5e5e5;
   /* Make the masthead heading the same height as the navigation */
 }
+
 /* line 27, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 34, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 40, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -40,6 +51,8 @@ body {
 
 /* Custom page footer */
 /* line 36, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 43, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 50, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .footer {
   padding-top: 19px;
   color: #777;
@@ -47,17 +60,24 @@ body {
 }
 
 /* line 42, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 50, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 58, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .container-narrow > hr {
   margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
 /* line 47, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 56, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 65, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
+
 /* line 50, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 61, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 72, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
@@ -65,16 +85,23 @@ body {
 
 /* Supporting marketing content */
 /* line 57, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 68, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 80, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .marketing {
   margin: 40px 0;
 }
+
 /* line 59, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 72, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 86, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .marketing p + h4 {
   margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 /* line 89, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 78, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 93, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 body {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -83,6 +110,8 @@ body {
 }
 
 /* line 96, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 86, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 102, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-default {
   background-color: #fff;
   border-color: #BDBDBD;
@@ -91,18 +120,24 @@ body {
 }
 
 /* line 103, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 94, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 111, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-default .navbar-brand {
   color: #563D7C;
   font-weight: 500;
 }
 
 /* line 108, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 100, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 118, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-default .navbar-nav > li > a {
   color: #563D7C;
   font-weight: 500;
 }
 
 /* line 113, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 106, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 125, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .searchbar {
   position: relative;
   top: 6px;
@@ -111,6 +146,8 @@ body {
 }
 
 /* line 120, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 114, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 134, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .searchbar input[type="text"] {
   position: relative;
   border: 1px solid #CCC;
@@ -122,6 +159,8 @@ body {
 }
 
 /* line 130, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 125, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 146, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .searchbar input:focus {
   outline: none;
   border: 1px solid #9ecbe2;
@@ -129,6 +168,8 @@ body {
 }
 
 /* line 136, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 132, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 154, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .searchbar i {
   position: absolute;
   top: 10px;
@@ -137,6 +178,8 @@ body {
 }
 
 /* line 144, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 140, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 163, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-right.auth li:first-child {
   position: relative;
   top: 17px;
@@ -147,6 +190,8 @@ body {
 }
 
 /* line 153, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 150, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 174, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-right.auth li.social {
   position: relative;
   top: 5px;
@@ -159,16 +204,22 @@ body {
 }
 
 /* line 164, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 162, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 187, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-right.auth li.social:hover {
   background-color: #F7F7F7;
 }
 
 /* line 168, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 167, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 193, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-right.auth > li.social > a {
   padding: 2px;
 }
 
 /* line 172, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 172, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 199, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-right.local {
   position: relative;
   right: 25px;
@@ -176,6 +227,8 @@ body {
 }
 
 /* line 178, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 179, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 207, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-right.local .vdivider {
   position: relative;
   border-right: 1px solid #BBB;
@@ -184,22 +237,30 @@ body {
 }
 
 /* line 185, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 187, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 216, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .fa.fa-weibo {
   font-size: 40px;
 }
 
 /* line 189, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 192, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 222, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .fa.fa-facebook-square {
   padding: 0px 1.5px;
   font-size: 40px;
 }
 
 /* line 195, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 198, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 229, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar-default .navbar-nav > li > a:hover {
   opacity: 0.6;
 }
 
 /* line 199, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 203, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 235, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #vm-carousel {
   position: relative;
   margin-bottom: 20px;
@@ -209,6 +270,8 @@ body {
 }
 
 /* line 208, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 212, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 245, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags {
   zoom: 1;
   padding: 0px;
@@ -216,17 +279,23 @@ body {
 }
 
 /* line 214, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 219, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 253, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags:before, .tags:after {
   content: '';
   display: table;
 }
 
 /* line 219, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 225, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 260, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags:after {
   clear: both;
 }
 
 /* line 223, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 230, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 266, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags li {
   position: relative;
   float: left;
@@ -234,12 +303,16 @@ body {
 }
 
 /* line 229, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 237, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 274, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags li:active {
   margin-top: 1px;
   margin-bottom: 7px;
 }
 
 /* line 234, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 243, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 281, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags li:after {
   content: '';
   z-index: 2;
@@ -256,6 +329,8 @@ body {
 }
 
 /* line 249, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 259, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 298, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags a, .tags span {
   display: block;
   -webkit-box-sizing: border-box;
@@ -264,6 +339,8 @@ body {
 }
 
 /* line 256, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 267, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 307, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags a {
   height: 26px;
   line-height: 23px;
@@ -286,6 +363,8 @@ body {
 }
 
 /* line 277, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 289, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 330, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags a:hover span {
   padding: 0 7px 0 6px;
   max-width: 40px;
@@ -294,6 +373,8 @@ body {
 }
 
 /* line 284, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 297, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 339, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags span {
   position: absolute;
   top: 1px;
@@ -326,6 +407,8 @@ body {
 }
 
 /* line 315, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 329, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 372, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .movie-wrapper {
   background-color: #fff;
   position: relative;
@@ -337,18 +420,24 @@ body {
 }
 
 /* line 324, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 340, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 384, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .movie-item {
   position: relative;
   padding: 10px;
 }
 
 /* line 328, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 346, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 391, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .thumb img {
   width: 300px;
   height: 200px;
 }
 
 /* line 332, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 352, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 398, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .duration {
   position: absolute;
   right: 10px;
@@ -357,6 +446,8 @@ body {
 }
 
 /* line 339, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 360, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 407, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .movie-item .thumb {
   position: relative;
   width: 300px;
@@ -364,6 +455,8 @@ body {
 }
 
 /* line 345, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 367, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 415, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .movie-item .intro {
   position: relative;
   display: inline-block;
@@ -374,6 +467,8 @@ body {
 }
 
 /* line 353, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 377, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 426, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .movie-item .title {
   position: relative;
   font-size: 20px;
@@ -382,12 +477,16 @@ body {
 }
 
 /* line 359, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 385, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 435, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .movie-item .title a {
   color: #444;
   text-decoration: none;
 }
 
 /* line 364, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 391, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 442, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .movie-item .rating {
   zoom: 1;
   vertical-align: top;
@@ -396,6 +495,8 @@ body {
 }
 
 /* line 371, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 399, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 451, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .rating .rating-holder {
   display: inline-block;
   zoom: 1;
@@ -408,6 +509,8 @@ body {
 }
 
 /* line 382, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 411, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 464, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .rating .rating-holder span {
   display: inline-block;
   zoom: 1;
@@ -420,6 +523,8 @@ body {
 }
 
 /* line 393, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 423, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 477, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .movie-item .time {
   position: absolute;
   right: 10px;
@@ -428,6 +533,8 @@ body {
 }
 
 /* line 400, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 431, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 486, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .footer {
   position: relative;
   margin-top: 40px;
@@ -437,16 +544,22 @@ body {
 }
 
 /* line 408, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 440, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 496, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .footer ul {
   list-style: none;
 }
 
 /* line 412, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 445, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 502, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .footer ul > li:first-child {
   border-left: 0px;
 }
 
 /* line 415, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 450, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 508, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .footer ul > li {
   position: relative;
   display: inline-block;
@@ -455,11 +568,15 @@ body {
 }
 
 /* line 422, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 458, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 517, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .footer ul > li > a {
   color: #444;
 }
 
 /* line 426, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 463, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 523, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .copyright {
   text-align: center;
   position: relative;
@@ -467,6 +584,8 @@ body {
 }
 
 /* line 432, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 470, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 531, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags-wrapper {
   padding: 10px;
   box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
@@ -475,6 +594,8 @@ body {
 }
 
 /* line 438, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 478, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 540, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .right-panel {
   position: relative;
   float: right;
@@ -482,6 +603,8 @@ body {
 }
 
 /* line 444, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 485, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 548, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .tags-wrapper .title {
   font-size: 15px;
   font-weight: bold;
@@ -490,6 +613,8 @@ body {
 }
 
 /* line 451, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 493, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 557, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .recommends-wrapper {
   padding: 10px;
   box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
@@ -497,6 +622,8 @@ body {
 }
 
 /* line 456, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 500, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 565, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .recommends-wrapper .title {
   position: relative;
   font-size: 15px;
@@ -513,12 +640,16 @@ body {
 /* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
 /* ---------- FONTAWESOME ---------- */
 /* line 483, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 516, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 582, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
 
 /* ---------- GENERAL ---------- */
 /* line 489, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 522, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 589, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 body {
   background: #F0F0F0;
   font: 87.5%/1.5em 'Open Sans', sans-serif;
@@ -526,17 +657,23 @@ body {
 }
 
 /* line 496, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 529, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 597, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #footer a {
   color: #eee;
   text-decoration: none;
 }
 
 /* line 501, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 535, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 604, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #footer a:hover {
   text-decoration: underline;
 }
 
 /* line 505, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 540, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 610, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .login-wrapper input {
   border: none;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -547,29 +684,28 @@ body {
 }
 
 /* line 514, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 550, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 621, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 p {
   line-height: 1.5em;
 }
 
 /* line 518, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 555, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 627, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .clearfix {
   *zoom: 1;
 }
 
-/* For IE 6/7 */
-/* line 519, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .clearfix:before, .clearfix:after {
   display: table;
   content: "";
 }
 
-/* line 523, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* ---------- LOGIN ---------- */
-/* line 532, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #login {
   margin-left: 50px;
   width: 280px;
@@ -578,6 +714,8 @@ p {
 }
 
 /* line 538, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 581, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 657, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #login form span {
   background-color: #363B41;
   border-radius: 3px 0px 0px 3px;
@@ -592,62 +730,52 @@ p {
 }
 
 /* line 550, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 595, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 672, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #login form input {
   height: 50px;
 }
 
-/* line 554, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+
 #login form input[type="text"], #login form input[type="password"] {
-  background-color: white;
-  border-radius: 0px 3px 3px 0px;
   color: #A2A2A2;
   margin-bottom: 1em;
   padding: 0 16px;
   width: 260px;
 }
 
-/* line 563, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #login form input[type="submit"] {
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  border: none;
   background-color: #363B41;
   color: #eee;
   font-weight: bold;
   margin-bottom: 2em;
-  text-transform: uppercase;
   width: 260px;
-  /* opacity: 0.8; */
-}
-
-/* line 576, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
-#login form input[type="submit"]:hover {
   opacity: 1;
 }
 
-/* line 579, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+#login form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
 #login a {
   color: #444;
 }
 
-/* line 582, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #login > p {
   text-align: center;
 }
 
-/* line 586, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #login > p span {
   padding-left: 5px;
 }
 
-/* line 590, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #register {
   margin-left: 50px;
   width: 280px;
   display: inline-block;
 }
 
-/* line 596, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #register form span {
   background-color: #363b41;
   border-radius: 3px 0px 0px 3px;
@@ -660,56 +788,42 @@ p {
   width: 50px;
 }
 
-/* line 608, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #register form input {
   height: 50px;
 }
 
-/* line 612, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #register form input[type="text"], #register form input[type="password"] {
-  background-color: #3b4148;
-  border-radius: 0px 3px 3px 0px;
   color: #A2A2A2;
   margin-bottom: 1em;
   padding: 0 16px;
-  width: 198px;
+  width: 260px;
 }
 
-/* line 621, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #register form input[type="submit"] {
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  background-color: #82639B;
+  background-color: #363B41;
   color: #eee;
   font-weight: bold;
   margin-bottom: 2em;
-  text-transform: uppercase;
-  width: 280px;
-  opacity: 0.8;
-}
-
-/* line 634, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
-#register form input[type="submit"]:hover {
+  width: 260px;
   opacity: 1;
 }
 
-/* line 637, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+#register form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
 #register a {
   color: #444;
 }
 
-/* line 640, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #register > p {
   text-align: center;
 }
 
-/* line 644, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #register > p span {
   padding-left: 5px;
 }
 
-/* line 648, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .login-wrapper .divider {
   border-right: 1px dashed #aaa;
   height: 240px;
@@ -719,14 +833,24 @@ p {
 }
 
 /* line 656, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 722, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 816, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .login-auth {
   display: inline-block;
   vertical-align: top;
   width: 200px;
+}
+
+.user-login div.login-wrapper {
   background: #E62E4C;
+  padding: 10px;
+  width: 600px;
+  margin: 60px auto;
 }
 
 /* line 662, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 730, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 825, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .login-auth li {
   position: relative;
   top: 5px;
@@ -737,40 +861,42 @@ p {
 }
 
 /* line 677, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
-.login-wrapper .title {
+/* line 740, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 836, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+.user-login .login-wrapper .title {
   font-size: 20px;
   position: relative;
-  color: #563D7C;
+  color: white;
   font-weight: bold;
   width: 200px;
 }
 
 /* line 685, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
-.fa.fa-twitter-square {
-  
-}
-
 /* line 689, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
-.fa.fa-google-plus {
- 
-}
-
 /* line 693, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 759, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 848, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar {
   margin-bottom: 0px;
 }
 
 /* line 697, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 764, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 854, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #vm-carousel > .carousel-control > span {
   font-size: 40px;
 }
 
 /* line 702, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 769, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 860, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .container-fluid {
   padding: 0px;
 }
 
 /* line 706, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 774, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 866, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .nav.local a.btn {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -781,6 +907,8 @@ p {
 }
 
 /* line 715, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 784, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 877, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .nav.local a.btn:hover {
   color: white;
   background-color: #E62E4C;
@@ -788,11 +916,15 @@ p {
 }
 
 /* line 721, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 791, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 885, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block;
 }
 
 /* line 726, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 796, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 891, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .rotate {
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
@@ -808,6 +940,8 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 /* line 742, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 811, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 907, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 ul.nav li.dropdown:hover .rotate {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
@@ -815,29 +949,40 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 748, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 818, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 915, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .bx-wrapper {
   margin: 0px;
 }
 
 /* line 752, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 823, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 921, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .bx-wrapper .bx-prev {
   left: inherit;
 }
 
 /* line 756, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 828, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 927, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news {
   background-color: #FAFAFA;
   padding: 10px;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 /* line 761, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 835, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 935, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .shadowbox {
   border-radius: 4px;
   box-shadow: 0 1px 3px #AAA;
 }
 
 /* line 765, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 841, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 942, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news ul li span {
   display: inline-block;
   color: #E62E4C;
@@ -851,18 +996,24 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 777, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 854, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 956, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news ul a {
   color: #555;
   text-decoration: none;
 }
 
 /* line 781, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 860, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 963, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news ul li em {
   float: right;
   color: #999;
 }
 
 /* line 785, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 866, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 970, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news ul h1 {
   height: 28px;
   margin-bottom: 8px;
@@ -874,6 +1025,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 794, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 877, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 982, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news ul h1 a {
   float: right;
   font-size: 16px;
@@ -881,6 +1034,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 800, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 884, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 990, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news.events {
   background-color: #FAFAFA;
   padding: 10px;
@@ -888,34 +1043,46 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 806, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 891, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 998, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .rmhdimg {
   float: left;
   display: block;
 }
 
 /* line 810, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 897, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1005, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news.events li {
   margin: 0px 0px 15px;
 }
 
 /* line 814, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 902, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1011, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .news.events a.btn {
   color: #FFF;
 }
 
 /* line 818, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 907, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1017, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .rmhdcont {
   position: relative;
   left: 10px;
 }
 
 /* line 823, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 913, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1024, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 #content {
   width: 1100px;
   margin: -10px auto;
 }
 
 /* line 828, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 919, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1031, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .left-col > div > h2 {
   padding: 0px 0px 10px 0;
   font-size: 18px;
@@ -923,13 +1090,18 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 834, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 926, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1039, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .left-col > div > h2 > a {
   color: #444;
   text-decoration: none;
 }
 
 /* line 839, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 932, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1046, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .left-col .video-list li {
+  position: relative;
   width: 195px;
   float: left;
   margin: 5px;
@@ -939,41 +1111,55 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 847, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 942, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1057, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .left-col .video-list li a {
   color: #444;
 }
 
 /* line 851, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 947, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1063, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .video-list .list-desc {
   padding: 5px;
 }
 
 /* line 855, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 952, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1069, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .left-col {
   float: left;
-  min-width: 820px;
+  width: 820px;
 }
 
 /* line 859, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 958, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1076, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .right-col {
   float: left;
-  min-width: 270px;
+  width: 270px;
   margin-left: 10px;
   margin-top: 35px;
 }
 
 /* line 866, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 966, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1085, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .left-col > div > h2 i {
   margin-right: 10px;
-  color: #F3825E;
+  color: #E62E4C;
 }
 
 /* line 871, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 972, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1092, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .left-col .festival h2 {
   padding-top: 20px;
 }
 
 /* line 875, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 977, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1098, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .poster-left {
   width: 500px;
   overflow: hidden;
@@ -982,6 +1168,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 882, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 985, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1107, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .poster-wrapper {
   position: relative;
   min-height: 420px;
@@ -989,6 +1177,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 888, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 992, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1115, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .poster-right-up {
   width: 300px;
   height: 200px;
@@ -998,6 +1188,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 896, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1001, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1125, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .poster-right-bottom {
   width: 300px;
   height: 200px;
@@ -1008,27 +1200,37 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 905, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1011, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1136, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .poster {
   border: 2px solid white;
 }
 
 /* line 909, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1016, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1142, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .poster-right-up img, .poster-right-bottom img {
   width: 300px;
   height: 200px;
 }
 
 /* line 914, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1022, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1149, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .contenthover {
   padding: 20px 20px 10px 20px;
 }
 
 /* line 915, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1027, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1155, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .contenthover, .contenthover h3, contenthover a {
   color: #fff;
 }
 
 /* line 916, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1032, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1161, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .contenthover h3, .contenthover p {
   margin: 0 0 10px 0;
   line-height: 1.4em;
@@ -1036,6 +1238,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 917, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1039, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1169, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .contenthover a.mybutton {
   display: block;
   float: left;
@@ -1049,72 +1253,95 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 918, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1052, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1183, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .contenthover a.mybutton:hover {
   background: #34742d;
 }
 
 /* line 921, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1057, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1189, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .ongoing-filter {
   display: inline-block;
 }
 
 /* line 924, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1062, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1195, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .ongoing > h2 {
   width: 200px;
   display: inline-block;
 }
 
 /* line 928, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1068, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1202, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .ongoing-filter li {
   display: inline-block;
   padding: 0px 5px;
 }
 
 /* line 933, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1074, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1209, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .ongoing-filter li a {
   color: #444;
   text-decoration: none;
 }
 
 /* line 938, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1080, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1216, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .ongoing-filter li.active {
   background-color: #E97C5A;
   border-radius: 5px;
 }
 
 /* line 943, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1086, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1223, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .ongoing-filter li.active a {
   color: white;
 }
 
 /* line 947, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1091, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1229, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .ongoing-filter li:hover {
   background-color: #E97C5A;
   border-radius: 5px;
 }
 
 /* line 952, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1097, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1236, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .ongoing-filter li:hover a {
   color: white;
 }
 
 /* line 956, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1102, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1242, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .navbar {
   margin-bottom: 0px;
   padding: 0px 15px;
 }
 
 /* line 961, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
-.project-list .project {
+/* line 1108, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1249, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+.ongoing .project-list .project {
   float: left;
   width: 200px;
   min-height: 330px;
-  margin-top: 10px;
   position: relative;
   overflow: hidden;
 }
 
 /* line 970, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1118, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1260, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap {
   border-radius: 9px;
   background: rgba(11, 25, 2, 0.06);
@@ -1124,6 +1351,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 978, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1127, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1270, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card {
   padding: 5px;
   background-position: 0 307px;
@@ -1131,6 +1360,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 983, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1134, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1278, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card {
   overflow: hidden;
   border-radius: 6px;
@@ -1141,15 +1372,20 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 992, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1144, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1289, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card h2.bbcard_name {
   font-size: 12px;
   font-weight: bold;
   line-height: 15px;
   padding: 0 5px;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 /* line 999, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1153, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1299, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card h2.bbcard_name span {
   display: block;
   font-size: 12px;
@@ -1161,6 +1397,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1009, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1164, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1311, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card p.bbcard_blurb {
   color: #75796F !important;
   padding: 0 5px;
@@ -1174,6 +1412,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1021, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1177, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1325, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card ul.project-meta {
   list-style: none;
   position: absolute;
@@ -1184,17 +1424,23 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1030, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1187, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1336, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card ul.project-meta li {
   width: 190px;
   color: #75796F;
 }
 
 /* line 1035, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1193, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1343, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card ul.project-meta li span.location-name {
   font-size: 11px;
 }
 
 /* line 1041, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1198, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1349, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card .project-pledged-successful {
   position: absolute;
   bottom: 43px;
@@ -1207,6 +1453,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1052, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1210, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1362, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card .project-pledged-wrap {
   border-radius: 4px;
   position: absolute;
@@ -1219,7 +1467,13 @@ ul.nav li.dropdown:hover .rotate {
   margin-top: 5px;
 }
 
+.ongoing .project-card-wrap .project-card .project-pledged-wrap {
+  width: 170px;
+}
+
 /* line 1064, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1223, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1376, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card .project-pledged-wrap .project-pledged {
   background: #76CC1E;
   border-radius: 4px;
@@ -1227,6 +1481,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1071, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1230, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1384, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card ul.project-stats {
   margin: 0;
   padding: 0;
@@ -1242,6 +1498,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1085, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1245, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1400, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card ul.project-stats strong {
   font-size: 12px;
   line-height: 12px;
@@ -1251,6 +1509,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1093, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1254, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1410, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card ul.project-stats li {
   list-style-image: none;
   list-style-type: none;
@@ -1262,6 +1522,8 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1104, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1265, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1422, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card ul.project-stats li {
   width: auto !important;
   border: 0;
@@ -1270,19 +1532,19 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1112, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1273, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1431, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card ul.project-stats li.last {
   border-right: 0;
   width: 1px !important;
   overflow: visible !important;
 }
 
-/* line 1118, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-card-wrap .project-card h2.bbcard_name a {
   color: #0B1902;
   text-decoration: none;
 }
 
-/* line 1124, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .video-list div.list-image {
   width: 200px;
   height: 300px;
@@ -1291,11 +1553,15 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 /* line 1130, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1294, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1455, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .video-list div.list-image img {
   width: 200px;
 }
 
 /* line 1134, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1299, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1461, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 a.rmhdcona {
   background-color: #E62E4C;
   border-color: #E62E4C;
@@ -1303,6 +1569,8 @@ a.rmhdcona {
 }
 
 /* line 1140, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1306, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1469, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 a.rmhdcona:hover {
   background-color: #E62E4C;
   border-color: #E62E4C;
@@ -1310,6 +1578,8 @@ a.rmhdcona:hover {
 }
 
 /* line 1146, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1313, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1477, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .mini-project img {
   width: 30px;
   border-radius: 50%;
@@ -1317,65 +1587,111 @@ a.rmhdcona:hover {
 }
 
 /* line 1152, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1320, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1485, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .project-meta .fa-map-marker {
   color: #E62E4C;
 }
 
 /* line 1156, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1325, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1491, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .poster-left img {
   height: 400px;
   width: 500px;
 }
 
 /* line 1161, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1331, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1498, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .mini-project li a {
   position: relative;
   top: 5px;
   left: 10px;
   display: inline-block;
   vertical-align: top;
-  width: 140px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
 /* line 1172, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1344, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1511, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .mini-project em {
   position: relative;
   top: 5px;
 }
 
 /* line 1177, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1350, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1518, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .feeds li a {
   width: 170px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  display: inline-block;
 }
 
-.modal-body {
+#login-modal .modal-body {
   background: #E62E4C;
 }
 
+/* line 1361, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1531, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
 .login-auth i {
   font-size: 40px;
   color: white;
 }
 
-.login-auth i.fa-weibo:hover  {
+/* line 1366, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1537, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+.login-auth i.fa-weibo:hover {
   opacity: 0.8;
 }
 
-.login-auth i.fa-facebook-square:hover  {
+/* line 1370, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1542, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+.login-auth i.fa-facebook-square:hover {
   opacity: 0.8;
 }
 
-.login-auth i.fa-google-plus:hover  {
+/* line 1374, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1547, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+.login-auth i.fa-google-plus:hover {
   opacity: 0.8;
 }
 
-.login-auth i.fa-twitter-square:hover  {
+/* line 1378, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+/* line 1552, /Users/yaoyi/Workspace/PROJECT-vmovie/vmovie/app/assets/stylesheets/home.css.scss */
+.login-auth i.fa-twitter-square:hover {
   opacity: 0.8;
+}
+
+.recommend {
+  margin-top: 30px;
+}
+
+div.list-ribbon {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #E62E4C;
+  height: 5px;
+}
+
+.left-col .video-list li:hover .list-ribbon {
+  display: block;
+}
+
+
+.ongoing .project-thumbnail {
+  width: 180px;
+  height: 150px;
+}
+
+.ongoing .project-thumbnail img {
+  width: 180px;
 }

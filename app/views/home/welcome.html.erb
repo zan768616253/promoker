@@ -5,7 +5,6 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/2.7.0/jquery.simpleWeather.min.js"></script>
   <style>
   	div#welcome {
 	    height: 100%;
@@ -175,29 +174,28 @@
 
   </style>
   <script>
-  	$(document).ready(function() {
-  		jQuery.getJSON('http://freegeoip.net/json/', function(location) {
-  			$.simpleWeather({
-			    location: location.country_name,
-			    woeid: '',
-			    unit: 'c',
-			    success: function(weather) {
-			      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-			      // html += '<img src="' + weather.image + '">';
-			      // $("#weather").html(html);
-			      html += '<h2>' + weather.city + ', ' + weather.country + '</h2>';
-			      $("#weather").html(html);
-			    },
-			    error: function(error) {
-			      $("#weather").html('<p>'+error+'</p>');
-			    }
-			  });
-		});
-		setInterval(function(){
-			$('#logo a').toggleClass('blink')
-		}, 1000)
-	  
-	});
+  	$(function(){
+  		$.getJSON('http://freegeoip.net/json/', function(location) {
+	        $.simpleWeather({
+	            location: location.country_name,
+	            woeid: '',
+	            unit: 'c',
+	            success: function(weather) {
+	              html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+	              // html += '<img src="' + weather.image + '">';
+	              // $("#weather").html(html);
+	              html += '<h2>' + weather.city + ', ' + weather.country + '</h2>';
+	              $("#weather").html(html);
+	            },
+	            error: function(error) {
+	              $("#weather").html('<p>'+error+'</p>');
+	            }
+	          });
+		    });
+	    setInterval(function(){
+	        $('#logo a').toggleClass('blink')
+	    }, 1000)
+  	})
   </script>
 </head>
 <body>

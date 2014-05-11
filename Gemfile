@@ -46,6 +46,7 @@ gem 'mini_magick'
 gem 'ruby_identicon'
 gem "acts_as_follower"
 gem 'omniauth-weibo-oauth2'
+gem 'jquery-turbolinks'
 # gem 'honeypot-captcha'
 # gem 'easy_captcha'
 # gem 'rmagick'
@@ -94,3 +95,4 @@ gem 'spring',        group: :development
 
 gem 'rubber'
 gem 'open4'
+

@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require bxslider
 //= require social-share-button
@@ -20,8 +20,9 @@
 //= require jquery.imgareaselect
 //= require fancybox
 //= require_tree .
+//= require turbolinks
 
-$(document).on('page:load', function() {
+$(function() {
     $('#register-modal-link').click(function(e){
         e.preventDefault()
         e.stopPropagation()
@@ -49,13 +50,22 @@ $(document).on('page:load', function() {
         $('#login').fadeIn()
     })
 
-    $('#post-link').click(function(e){
+    $('#ticket-back').click(function(e){
     	e.preventDefault()
     	e.stopPropagation()
     	$('#post-modal .modal-title').text('发布项目')
         $('#ticket-wrapper').hide()
         $('#post-wrapper').fadeIn()
     })
+
+    $('#project-back').click(function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        $('#post-modal .modal-title').text('发布项目')
+        $('#project-wrapper').hide()
+        $('#post-wrapper').fadeIn()
+    })
+
     $('#ticket-link').click(function(e){
     	e.preventDefault()
     	e.stopPropagation()
@@ -86,5 +96,4 @@ $(document).on('page:load', function() {
     	$('#ticket_needs').val(tags)
     	$('#new_ticket').submit()
     })
-    
 })

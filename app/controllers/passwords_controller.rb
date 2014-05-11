@@ -12,13 +12,13 @@ class PasswordsController < ApplicationController
 
       # Sign in the user bypassing validation in case his password changed
       sign_in @user, :bypass => true
-
-      redirect_to edit_user_path(@user), :notice => "密码更新成功"
+      flash[:alert] = "密码更新成功"
+      redirect_to edit_user_path(@user)
     else
 
       #flash[:alert] = @user.errors.full_messages.join("<br />")
-      flash[:alert] = '密码更新失败'
-      render :template => "users/edit"
+      flash[:alert] = "密码更新失败"
+      redirect_to edit_user_path(@user)
     end
   end
 

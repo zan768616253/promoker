@@ -51,12 +51,14 @@ class UsersController < ApplicationController
     unless params[:user][:province].blank?
       province = Province.find(params[:user][:province])
       province_name = province.name unless province.nil?
+      params[:user][:province] = province_name
       params[:user][:location] = province_name + ' '
     end
     unless params[:user][:city].blank?
       city = City.find(params[:user][:city])
       city_name = city.name unless city.nil?
-      params[:user][:location] += city_name + ' '
+      params[:user][:city] = city_name
+      params[:user][:location] += city_name + ' ' if city_name != province_name
     end
     unless params[:user][:district].blank?
       district = District.find(params[:user][:district])

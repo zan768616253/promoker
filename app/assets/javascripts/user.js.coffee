@@ -1,5 +1,4 @@
-$(document).on 'page:load', () ->
-# $ ->
+$ ->
     $('#follow').click (e) ->
       e.preventDefault()
       e.stopPropagation()
@@ -164,3 +163,5 @@ $(document).on 'page:load', () ->
     #     maxHeight: 150
     #     handles: true
         # onSelectChange: preview
+# $(document).ready(ready)
+# $(document).on('page:load', ready)

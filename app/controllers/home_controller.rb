@@ -16,13 +16,17 @@ class HomeController < ApplicationController
 	end
 
 	def welcome
-		siteConfigs = SiteConfig.all
-		@siteConfig = {}
-		for config in siteConfigs
-			p config
-			@siteConfig[config.property] = config.value
+		if user_signed_in?
+			redirect_to '/home'
+		else
+			siteConfigs = SiteConfig.all
+			@siteConfig = {}
+			for config in siteConfigs
+				p config
+				@siteConfig[config.property] = config.value
+			end
+			render 'welcome', :layout => false
 		end
-		render 'welcome', :layout => false
 	end
 
 	def promote
