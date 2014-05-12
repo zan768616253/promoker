@@ -1,7 +1,7 @@
 # coding: utf-8
 class HomeController < ApplicationController
 	def index
-		@projects = Project.recent.limit(4)
+		@projects = Project.published.recent.limit(4)
 		@articles = Article.recent.limit(10)
 		@events = Event.recent.limit(3)
 		@tickets = Ticket.recent.limit(10)

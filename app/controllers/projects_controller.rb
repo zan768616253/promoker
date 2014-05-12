@@ -1,6 +1,6 @@
 # coding: utf-8
 class ProjectsController < ApplicationController
-	before_filter :authenticate_user!, :except => [:index]
+	before_filter :authenticate_user!, :except => [:index, :show]
 	def index 
 		@projects = Project.recent.page(params[:page])
 		@tickets = Ticket.recent.page(params[:page])
