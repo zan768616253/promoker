@@ -208,10 +208,13 @@ span#user_messages_count {
 }
 
 div#notification-alert {
-    margin-top: 45px;
-    height: 45px;
-    margin-bottom: 0px;
-    text-align: center;
+  top: 45px;
+  height: 45px;
+  margin-bottom: 0px;
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  right: 0px;
 }
 div#notification-alert a {
     color: orange;
