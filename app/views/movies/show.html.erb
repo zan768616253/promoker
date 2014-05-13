@@ -105,6 +105,7 @@
 <div class="right-panel">
   <div class="movie-author-info">
     <div class="ribbon"></div>
+    <% unless @director.blank? %>
     <div class="movie-director">
       <div class="movie-director-thumb">
         <%= image_tag @director.profiles.first.avatar %>
@@ -114,6 +115,7 @@
         <span><%=  @director.name %></span>
       </div>
     </div>
+    <% end %>
     <ul class="movie-actors">
       <% @actors.each do |actor| %>
         <li class="movie-actor">
