@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   extend OmniauthCallbacks
+  include RedisCaptcha::Model
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   has_many :sent_messages, :foreign_key => 'from_id', :class_name => "Message", :dependent => :destroy

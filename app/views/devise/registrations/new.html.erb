@@ -42,6 +42,9 @@
           <p>
             <%= f.password_field :password_confirmation, :placeholder => '确认密码' %>
           </p>
+          <%= image_tag(captcha_path(:timestamp => Time.now.to_i), :alt => "captcha") %>
+          <%= f.text_field :captcha %>
+          <%= f.hidden_field :captcha_key, :value => session[:captcha_key] %>
           <p>
             <%= f.submit '注册' %>
           </p>

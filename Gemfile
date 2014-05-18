@@ -6,6 +6,7 @@ gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 group :development do
 	gem 'sqlite3'
+	gem 'capistrano'
 end
 
 group :production do
@@ -47,9 +48,7 @@ gem 'ruby_identicon'
 gem "acts_as_follower"
 gem 'omniauth-weibo-oauth2'
 gem 'jquery-turbolinks'
-# gem 'honeypot-captcha'
-# gem 'easy_captcha'
-# gem 'rmagick'
+gem 'redis_captcha', github: 'yaoyi/redis_captcha'
 
 gem 'imgareaselect-rails'
 
@@ -65,6 +64,8 @@ end
 
 group :test do
   gem "rspec-rails"
+  gem 'factory_girl_rails'
+  gem "capybara"
 end
 
 gem 'omniauth-weibo-oauth2'
