@@ -23,7 +23,7 @@
         				<span class="icon-bar"></span>
         			</button> -->
         			<a href="/home" class="navbar-brand">
-                <img src="<%= root_url + '/' + Setting.logo_home %>">
+                <img src="<%= root_url + '/' + Settings.logo_home %>">
               </a>
         		</div>
         		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -320,7 +320,7 @@
 </div>
   <script type="text/javascript" data-turbolinks-eval=false>
     ROOT_URL = "<%= root_url %>";
-    FAYE_SERVER_URL = "<%= Setting.faye_server %>";
+    FAYE_SERVER_URL = "<%= Settings.faye_server %>";
     <% if current_user %>
       CURRENT_USER_ACCESS_TOKEN = "<%= current_user.temp_access_token %>";
     <% end %>

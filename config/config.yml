@@ -1,4 +1,6 @@
 defaults: &defaults
+  admin_emails:
+    - "linyaoyi011@gmail.com"
   faye_server: "http://127.0.0.1:9292/faye"
   faye_token: "123456"
   weibo_key: '15461246'

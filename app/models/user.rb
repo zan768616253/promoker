@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
   acts_as_followable
   acts_as_follower
 
+
+  def admin?
+    Settings.admin_emails.include?(self.email)
+  end
   def password_required?
     (authorizations.empty? || !password.blank?) && super
   end
