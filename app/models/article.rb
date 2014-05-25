@@ -12,4 +12,6 @@ class Article < ActiveRecord::Base
       group("articles.id").
       order("comments_count DESC")
   }
+
+  validates_presence_of :title
 end

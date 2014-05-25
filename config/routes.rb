@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount RedisCaptcha::Engine => '/captcha', :as => :captcha
-  devise_for :users, :controllers => {:passwords => "passwords", :omniauth_callbacks => 'omniauth_callbacks', :registrations => 'registrations'} do
+  devise_for :users, :controllers => {:passwords => "passwords", :omniauth_callbacks => 'omniauth_callbacks'} do
     resources :passwords
   end
 
@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :projects do
     member do 
       get 'preview'
+      post 'publish'
+      post 'unpublish'
     end
   end
 
@@ -26,27 +28,31 @@ Rails.application.routes.draw do
   end
   resources :events do
     resources :comments, :only => :create
-    post 'like'
-    post 'unlike'
+    member do
+      post 'like'
+      post 'unlike'  
+    end    
   end
   resources :movies do
     resources :comments, :only => :create
-    get 'hot'
-    get 'recent'
-    post 'like'
-    post 'unlike'
+    member do
+      post 'like'
+      post 'unlike'  
+    end
   end
   resources :users, :only => [:show, :edit, :update] do
-    post 'update_avatar'
     member do 
+      post 'update_avatar'  
       post 'follow'
       post 'unfollow'  
     end
   end
   resources :articles, :only => [:show, :index] do
     resources :comments, :only => :create
-    post 'like'
-    post 'unlike'
+    member do
+      post 'like'
+      post 'unlike'  
+    end
   end
   match '/promote' => 'home#promote', :via => :get
   match '/home' => 'home#index', :via => :get

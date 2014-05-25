@@ -7,7 +7,6 @@ class TicketsController < ApplicationController
 		render 'show', layout: false
 	end
 	def create
-		p params[:ticket]
 		@ticket = Ticket.new
 		@ticket.need_list = params[:ticket][:needs]
 		@ticket.title = params[:ticket][:title]

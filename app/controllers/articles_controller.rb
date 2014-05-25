@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :show]
   def index
     @articles = Article.recent.page(params[:page])
   end
@@ -8,13 +9,13 @@ class ArticlesController < ApplicationController
   end
 
   def like 
-    a = Article.find(params['article_id'])
-    a.liked_by current_user
-    render :text => m.likes.size
+    article = Article.find(params[:id])
+    article.liked_by current_user
+    render :text => article.likes.size
   end
   def unlike
-    a = Article.find(params['article_id'])
-    a.unliked_by current_user
-    render :text => m.likes.size
+    article = Article.find(params[:id])
+    article.unliked_by current_user
+    render :text => article.likes.size
   end
 end

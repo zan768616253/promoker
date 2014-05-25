@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
+	  before_filter :authenticate_user!, :except => [:index, :show]
 	def index
-		p params
 		@locations = Tag.tags_on(:location)
 		@types = Tag.tags_on(:event)
     	if(params[:location] || params[:type])
@@ -14,13 +14,13 @@ class EventsController < ApplicationController
 	end
 
 	def like 
-		e = Event.find(params['event_id'])
-		e.liked_by current_user
-		render :text => e.likes.size
+		event = Event.find(params[:id])
+		event.liked_by current_user
+		render :text => event.likes.size
 	end
 	def unlike
-		e = Event.find(params['event_id'])
-		e.unliked_by current_user
-		render :text => e.likes.size
+		event = Event.find(params[:id])
+		event.unliked_by current_user
+		render :text => event.likes.size
 	end
 end

@@ -11,6 +11,8 @@ defaults: &defaults
 
 development:
   <<: *defaults
+  time_zone: 'Beijing'
+  default_locale: 'zh-CN'
 
 test:
   <<: *defaults

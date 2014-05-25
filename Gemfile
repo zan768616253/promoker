@@ -62,10 +62,17 @@ group :development do
   gem 'meta_request'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'spork-rails'
+end
+
 group :test do
-  gem "rspec-rails"
+  gem 'launchy'
+  gem 'capybara'
   gem 'factory_girl_rails'
-  gem "capybara"
+  gem 'faker'
+  gem 'database_cleaner'
 end
 
 gem 'omniauth-weibo-oauth2'

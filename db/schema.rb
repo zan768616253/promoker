@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518075152) do
+ActiveRecord::Schema.define(version: 20140524090846) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -120,8 +120,8 @@ ActiveRecord::Schema.define(version: 20140518075152) do
     t.string   "thumb"
     t.string   "address"
     t.text     "content"
-    t.datetime "start"
-    t.datetime "end"
+    t.time     "start_time"
+    t.time     "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"

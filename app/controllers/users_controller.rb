@@ -1,28 +1,32 @@
 # coding: utf-8
 class UsersController < ApplicationController
-  def update_avatar
-    p params
-    @user = User.find(params[:user_id])
-    if @user.nil?
-      redirect_to root_url
+  before_filter :authenticate_user!, :except => [:show]
+  before_filter :find_user
+  before_filter :current_user!, :except => [:show, :follow, :unfollow]
+
+  def find_user 
+    @user = User.find(params[:id])
+  end
+
+  def current_user!
+    if @user != current_user
+      redirect_to root_path
     end
+  end
+
+  def update_avatar
     @user.avatar = cropped_image(params[:user])
-    if @user.save
-      redirect_to edit_user_path(@user), :notice => "更新成功"
+    if @user.save!
+      flash[:alert] = "更新成功"
+      redirect_to edit_user_path(@user)
     else
       render action: 'edit'
     end
   end
 
   def show
-    @user = User.find(params[:id])
-    if @user.nil?
-      redirect_to root_url
-    end
-
     @likes = @user.find_votes.order('created_at desc')
     @liked_items = @user.find_liked_items.reverse
-
     @tickets = @user.tickets
     @projects = @user.projects
     if not current_user.nil? and current_user.id == @user.id
@@ -31,19 +35,13 @@ class UsersController < ApplicationController
     else
       render 'show'
     end
-
   end
 
   def edit
-    @user = User.find(params[:id])
     @roles = Tag.tags_on('roles')
   end
 
   def update
-    @user = User.find(params[:id])
-    if @user.nil?
-      render_404 and return
-    end
     roles = params[:user][:roles]
     params[:user].delete(:roles)
     params[:user][:nickname] = params[:user][:nickname].strip
@@ -70,7 +68,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         format.html {
-          redirect_to edit_user_path(@user), :notice => "更新成功"
+          flash[:alert] = "更新成功"
+          redirect_to edit_user_path(@user)
         }
       else
         format.html {
@@ -81,20 +80,24 @@ class UsersController < ApplicationController
 
   end
 
-  def likes
-    p params
-  end
-
   def follow
-    p params
-    @user = User.find(params[:id])
-    current_user.follow(@user)
+    respond_to do |format|
+      if current_user.follow(@user)
+        format.json { render :json => { success: true} }
+      else
+        format.json { render :json => { success: false} }
+      end
+    end
   end
 
   def unfollow
-    p params
-    @user = User.find(params[:id])
-    current_user.stop_following(@user)
+    respond_to do |format|
+      if current_user.stop_following(@user)
+        format.json { render :json => { success: true} }
+      else
+        format.json { render :json => { success: false} }
+      end
+    end
   end
 
   private 
@@ -105,7 +108,6 @@ class UsersController < ApplicationController
   def cropped_image(params)
     image = MiniMagick::Image.open(params[:avatar].path)
     crop_params = "#{params[:crop][:w]}x#{params[:crop][:h]}+#{params[:crop][:x1]}+#{params[:crop][:y1]}"
-    p crop_params
     image.crop(crop_params)
     image
   end

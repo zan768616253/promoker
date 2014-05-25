@@ -22,7 +22,6 @@ class HomeController < ApplicationController
 			siteConfigs = SiteConfig.all
 			@siteConfig = {}
 			for config in siteConfigs
-				p config
 				@siteConfig[config.property] = config.value
 			end
 			render 'welcome', :layout => false

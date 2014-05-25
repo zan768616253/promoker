@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>普摩客|Promoker</title>
+  <title><%= t('promoker') %>|Promoker</title>
   <meta property="wb:webmaster" content="6baf5a987f1f7694" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -29,9 +29,9 @@
         		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         			<ul class="nav navbar-nav">
         				<li class="dropdown">
-        					<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">分享 <b class="fa fa-angle-down rotate"></b></a>
+        					<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('home.menu.share') %> <b class="fa fa-angle-down rotate"></b></a>
         					<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>">推荐</a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>"><%= t('home.menu.recommend') %></a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>">资讯</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>">活动</a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=电影节">电影节</a></li>

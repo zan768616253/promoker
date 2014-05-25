@@ -57,6 +57,7 @@
       </div>
       <div class="festival">
         <h2><i class="fa fa-video-camera"></i><a href="<%= events_path%>?type=电影节">电影节精选</a></h2>
+        <% unless @selections.empty? %>
         <div class="poster-wrapper">
           <div class=" poster-left poster">
             <img src="<%= @selections.first.thumb %>" alt="">
@@ -84,6 +85,7 @@
           </div>
           <div></div>
         </div>
+        <% end %>
       </div>
       <div class="ongoing">
         <h2><i class="fa fa-clock-o"></i><a href="<%= projects_path %>">正在进行的项目</a></h2>

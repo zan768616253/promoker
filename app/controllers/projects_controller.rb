@@ -1,25 +1,36 @@
 # coding: utf-8
 class ProjectsController < ApplicationController
 	before_filter :authenticate_user!, :except => [:index, :show]
+	before_filter :find_project, :except => [:index, :create]
+  	before_filter :current_user!, :except => [:index, :show, :create]
+	
+
+	def find_project
+		@project = Project.find(params[:id])
+	end
+
+	def current_user!
+	    if @project.user != current_user
+	      redirect_to root_path
+	    end
+  	end
+
 	def index 
 		@projects = Project.recent.page(params[:page])
 		@tickets = Ticket.recent.page(params[:page])
 	end
 
-
-	def edit 
-		@project = Project.find(params[:id])
-		@types = Tag.tags_on('movie_type')
-		@roles = Tag.tags_on('roles')
-		@needs = @roles + Tag.tags_on('needs')
-	end
-
 	def show
-		@project = Project.find(params[:id])
 		if @project.status != 'published'
 			render_404 and return
 		end
 		@user = @project.user
+	end
+
+	def edit 
+		@types = Tag.tags_on('movie_type')
+		@roles = Tag.tags_on('roles')
+		@needs = @roles + Tag.tags_on('needs')
 	end
 
 	def create
@@ -35,11 +46,6 @@ class ProjectsController < ApplicationController
 	end
 
 	def update
-		p params
-		@project = Project.find(params[:id])
-		if @project.user != current_user
-			render_403 and return
-		end
 		needs = params[:project][:needs]
 		params[:project].delete(:needs)
 		unless params[:project][:province].blank?
@@ -71,15 +77,19 @@ class ProjectsController < ApplicationController
 	end
 
 	def publish
+		@project.publish!
+		flash[:alert] = "#{@project.title}发布成功"
+		redirect_to user_path(@project.user)
+	end
 
+	def unpublish
+		@project.unpublish!
+		flash[:alert] = "#{@project.title}已取消发布"
+		redirect_to user_path(@project.user)
 	end
 
 	def preview
-		@project = Project.find(params[:id])
-		if @project.user != current_user
-			render_404 and return
-		end
-		@user = current_user
+		@user = @project.user
 		render 'preview'
 	end
 

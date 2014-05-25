@@ -49,8 +49,8 @@ class User
       user.email = "#{provider + uid.to_s}@example.com" if data[:email].nil?
 
       user.nickname = data["nickname"]
-      user.avatar = data["image"] if user.avatar.nil?
-      # user.remote_avatar_url = data["image"] + '.jpg' unless user.avatar?
+      # user.avatar = data["image"] if user.avatar.nil?
+      user.remote_avatar_url = data["image"] + '.jpg' unless user.avatar?
 
       user.password = Devise.friendly_token[0,20]
       user.location = data["location"]
