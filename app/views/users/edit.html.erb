@@ -2,11 +2,11 @@
   <div class="account-tabs">
     <ul class="nav nav-tabs nav-justified">
       <li class="active">
-        <a href="#basic" data-toggle="tab">个人资料</a>
+        <a href="#basic" data-toggle="tab"><%= t('users.edit.basic') %></a>
       </li>
-      <li><a href="#avatar" data-toggle="tab">修改头像</a></li>
-      <li><a href="#password" data-toggle="tab">修改密码</a></li>
-      <li><a href="#oauth" data-toggle="tab">绑定帐号</a></li>
+      <li><a href="#avatar" data-toggle="tab"><%= t('users.edit.avatar') %></a></li>
+      <li><a href="#password" data-toggle="tab"><%= t('users.edit.password') %></a></li>
+      <li><a href="#oauth" data-toggle="tab"><%= t('users.edit.oauth') %></a></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="basic">
@@ -22,23 +22,23 @@
           <% end %>
         <!--<form class="form-horizontal" role="form">-->
           <div class="form-group">
-            <%= f.label :nickname, '昵称', :class => 'col-sm-2 control-label' %>
+            <%= f.label :nickname, t('users.edit.nickname'), :class => 'col-sm-2 control-label' %>
             <!--<label for="nickname" class="col-sm-2 control-label">昵称</label>-->
             <div class="col-sm-5">
-              <%= f.text_field :nickname, :placeholder => "昵称", :class => 'form-control' %>
+              <%= f.text_field :nickname, :placeholder => t('users.edit.nickname'), :class => 'form-control' %>
               <!--<input type="text" class="form-control" id="nickname" placeholder="昵称">-->
             </div>
           </div>
           <div class="form-group">
-            <%= f.label :email, "邮箱", :class => "col-sm-2 control-label" %>
+            <%= f.label :email, t('users.edit.email'), :class => "col-sm-2 control-label" %>
             <!--<label for="email" class="col-sm-2 control-label">邮箱</label>-->
             <div class="col-sm-5">
-              <%= f.text_field :email, :placeholder => '邮箱', :class => 'form-control' %>
+              <%= f.text_field :email, :placeholder => t('users.edit.email'), :class => 'form-control' %>
               <!--<input type="email" class="form-control" id="email" placeholder="邮箱">-->
             </div>
           </div>
           <div class="form-group">
-            <%= f.label :roles, '身份', :class => 'col-sm-2 control-label' %>
+            <%= f.label :roles, t('users.edit.nickname'), :class => 'col-sm-2 control-label' %>
             <%= f.hidden_field :roles, :value => @user.role_list %>
             <div class="col-sm-8">
                 <% @roles.each do |role|%>
@@ -47,26 +47,26 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">性别</label>
+            <label for="email" class="col-sm-2 control-label"><%= t('users.edit.gender') %></label>
             <div class="col-sm-5">
               <div class="radio-inline">
                 <label>
                   <%= f.radio_button :gender, "m" %>
-                  男
+                  <%= t('users.edit.male') %>
                 </label>
               </div>
               <div class="radio-inline">
                 <label>
                   <%= f.radio_button :gender, "f" %>
-                  女
+                  <%= t('users.edit.female') %>
                 </label>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="" class="col-sm-2 control-label">所在地</label>
+            <label for="" class="col-sm-2 control-label"><%= t('users.edit.location') %></label>
             <div class="col-sm-8">
-              <%= f.region_select [:province, :city, :district], province_prompt: '请选择省', city_prompt: '请选择市', district_prompt: '请选择区'%>
+              <%= f.region_select [:province, :city, :district], province_prompt: t('users.edit.select_province'), city_prompt: t('users.edit.select_city'), district_prompt: t('users.edit.select_district')%>
             </div>
           </div>
           <!--<div class="form-group">-->
@@ -76,7 +76,7 @@
             <!--</div>-->
           <!--</div>-->
           <div class="form-group">
-            <label for="about" class="col-sm-2 control-label">个性签名</label>
+            <label for="about" class="col-sm-2 control-label"><%= t('users.edit.about') %></label>
             <div class="col-sm-6">
               <%= f.text_area :about, :rows => 5, :cols => 20, :class => 'form-control' %>
               <!--<textarea class="form-control" rows="4"></textarea>-->
@@ -84,7 +84,7 @@
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <a href="" class="btn btn-primary" id="user-save">保存</a>
+              <a href="" class="btn btn-primary" id="user-save"><%= t('users.edit.save') %></a>
               <!--<button type="submit" class="btn btn-primary pull-right">保存</button>-->
             </div>
           </div>
@@ -98,12 +98,12 @@
           <%= hidden_field_tag 'user[crop][h]'%>
           <div class="upload-wrapper">
             <div class="fileUpload btn btn-default" id="upload">
-              <span><i class="fa fa-upload"></i> 选择图片</span>  
+              <span><i class="fa fa-upload"></i><%= t('users.edit.pick') %></span>  
             <%= f.file_field :avatar, :class => "upload", :id => "files" %>
             </div>
             <div id="holder">
               <i class="fa fa-cloud-upload"></i>
-              <span>选择一张本地的图片编辑后上传为头像</span>
+              <span><%= t('users.edit.pick_words') %></span>
             </div>
           </div>
           <div class="divider"></div>
@@ -111,18 +111,18 @@
             <div class="preview icon-180">
               <%= image_tag @user.avatar %>
             </div>
-            <p>大尺寸头像，180x180像素</p>
+            <p><%= t('users.edit.size_180') %></p>
             <div class="preview icon-50">
               <%= image_tag @user.avatar %>
             </div>
-            <p>中尺寸头像，50x50像素</p>
+            <p><%= t('users.edit.size_50') %></p>
             <div class="preview icon-30">
               <%= image_tag @user.avatar %>
             </div>
-            <p>小尺寸头像，30x30像素</p>
+            <p><%= t('users.edit.size_30') %></p>
           </div>
           <div>
-            <%= f.submit '更新头像', :class => "btn btn-primary" %>
+            <%= f.submit t("users.edit.update_avatar"), :class => "btn btn-primary" %>
           </div>
         <% end %>
       </div>
@@ -130,21 +130,21 @@
         <%= form_for(@user, :url => password_path(:user), :html => { :method => :put, :class => 'form-horizontal' }) do |f| %>
 
           <div class="form-group">
-            <label for="current_password" class="col-sm-2 control-label">当前密码</label>
+            <label for="current_password" class="col-sm-2 control-label"><%= t('users.edit.current_password') %></label>
             <div class="col-sm-6">
               <%= f.password_field :current_password, :autofocus => true, :class => 'form-control' %>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="password" class="col-sm-2 control-label">新密码</label>
+            <label for="password" class="col-sm-2 control-label"><%= t('users.edit.new_password') %></label>
             <div class="col-sm-6">
               <%= f.password_field :password, :class => 'form-control' %>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="password" class="col-sm-2 control-label">确认新密码</label>
+            <label for="password" class="col-sm-2 control-label"><%= t('users.edit.new_password_confirmation') %></label>
             <div class="col-sm-6">
               <%= f.password_field :password_confirmation, :class => 'form-control' %>
             </div>
@@ -152,7 +152,7 @@
 
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <%= f.submit "修改", :class => "btn btn-primary"%>
+              <%= f.submit t('users.edit.update_password'), :class => "btn btn-primary"%>
               <!--<button type="submit" class="btn btn-primary pull-right">保存</button>-->
             </div>
           </div>
@@ -163,25 +163,25 @@
           <li class="weibo bind">
             <i class="fa fa-weibo"></i>
             <a href="#">
-              已绑定
+              <%= t('users.edit.binded') %>
             </a>
           </li>
           <li class="facebook">
             <i class="fa fa-facebook-square"></i>
             <a href="#">
-              绑定
+              <%= t('users.edit.bind') %>
             </a>
           </li>
           <li class="twitter">
             <i class="fa fa-twitter-square"></i>
             <a href="#" class="">
-              绑定
+              <%= t('users.edit.bind') %>
             </a>
           </li>
           <li class="google">
             <i class="fa fa-google-plus"></i>
             <a href="#">
-              绑定
+              <%= t('users.edit.bind') %>
             </a>
           </li>
         </ul>
@@ -202,8 +202,8 @@
       <%= @user.about %>
     </div>
     <div class="actions">
-      <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i>关注</a>
-      <a href="#" class="btn btn-info"><i class="fa fa-comment"></i>约谈</a>
+      <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i><%= t('users.follow') %></a>
+      <a href="#" class="btn btn-info"><i class="fa fa-comment"></i><%= t('users.chat') %></a>
     </div>
   </div>
 </div>

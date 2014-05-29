@@ -1,15 +1,15 @@
 <div class="user-wrapper">
   <div id="user-content">
     <ul class="user-nav">
-      <li class="active"><a href="#likes" data-toggle="tab">喜欢</a></li>
-      <li><a href="#user-projects" data-toggle="tab">项目</a></li>
-      <li><a href="#promotes">推广</a></li>
-      <li><a href="#follows" data-toggle="tab">关注</a></li>
+      <li class="active"><a href="#likes" data-toggle="tab"><%= t('dashboard.tab.like') %></a></li>
+      <li><a href="#user-projects" data-toggle="tab"><%= t('dashboard.tab.project') %></a></li>
+      <li><a href="#promotes"><%= t('dashboard.tab.promote') %></a></li>
+      <li><a href="#follows" data-toggle="tab"><%= t('dashboard.tab.follow') %></a></li>
       <li><a href="<%= messages_path %>">
         <% if Message.unread(current_user).count != 0%>
-          消息 (<%= Message.unread(current_user).count %>)
+          <%= t('dashboard.tab.message') %> (<%= Message.unread(current_user).count %>)
         <% else %>
-          消息
+          <%= t('dashboard.tab.message') %>
         <% end %></a></li>
     </ul>
     <div class="user-content tab-content">

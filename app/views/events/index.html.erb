@@ -43,16 +43,16 @@
 </script>
 <div class="events-wrapper">
 	<div class="articles-header">
-    	<h2>活动</h2>
+    	<h2><%= t('events.event') %></h2>
   	</div>
   	<div class="filters-container">
   		<div class="ribbon"></div>
 	    <div class="filters">
 		    <div class="filter-header">
-		        <h2>按区域查看:</h2>
+		        <h2><%= t('events.filter.area') %></h2>
 		    </div>
 		    <div class="filter-wrapper">
-		        <a href="#" class="filter-item active" data-filter="location">全部</a>
+		        <a href="#" class="filter-item active" data-filter="location"><%= t('events.filter.all') %></a>
 		      <% @locations.each do |location|%>
 		        <a href="#" class="filter-item" data-filter="location" data-name="<%= location %>"><%= location %></a>
 		      <% end %>
@@ -60,10 +60,10 @@
 		</div>
 	    <div class="filters">
 		    <div class="filter-header">
-		     <h2>按类型查看:</h2>
+		     <h2><%= t('events.filter.type') %></h2>
 		    </div>
 	      	<div class="filter-wrapper">
-		        <a href="#" class="filter-item active" data-filter="type" data-name="">全部</a>
+		        <a href="#" class="filter-item active" data-filter="type" data-name=""><%= t('events.filter.all') %></a>
 		        <% @types.each do |type|%>
 		            <a href="#" class="filter-item" data-filter="type" data-name="<%= type %>"><%= type %></a>
 		        <% end %>
@@ -83,11 +83,11 @@
 					
 					<div class="event-title">
 						<% case event.status
-						when '报名中'
+						when t('enroll')
 							style = 'warning' 
-						when '进行中'
+						when t('underway')
 							style = 'info' 
-						when '已结束'
+						when t('finished')
 							style = 'default' 
 						else
 							style = 'default' 
@@ -98,14 +98,14 @@
 						<%= link_to event.title, event_path(event) %>
 					</div>
 					<div class="event-date">
-						<span><i class="fa fa-clock-o"></i> </span><%= event.start.strftime("%m月%d日") %> ~ <%= event.end.strftime("%m月%d日") %>
+						<span><i class="fa fa-clock-o"></i> </span><%= event.start.strftime("%m#{t('month')}%d#{t('date')}") %> ~ <%= event.end.strftime("%m#{t('month')}%d#{t('date')}") %>
 					</div>
 					<div class="event-address">
 						<span><i class="fa fa-map-marker"></i> </span><%= event.address %>
 					</div>
 					<div class="event-likes">
 						<i class="fa fa-heart"></i>
-						<b><%= event.likes.count %></b> 人感兴趣
+						<b><%= event.likes.count %></b> <%= t('like_count') %>
 					</div>
 					<div class="event-likers">
 						

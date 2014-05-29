@@ -6,6 +6,7 @@ class HomeController < ApplicationController
 		@events = Event.recent.limit(3)
 		@tickets = Ticket.recent.limit(10)
 		@recommends = Movie.all.limit(4)
+		@partners = Partner.all
 		@selections = Event.tagged_with('电影节')
 		siteConfigs = SiteConfig.all
 		@siteConfig = {}

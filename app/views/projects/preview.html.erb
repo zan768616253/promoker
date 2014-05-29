@@ -1,4 +1,4 @@
 <div class="back">
-	<%= link_to '<< 返回编辑', edit_project_path(@project), :class => 'btn btn-danger' %>
+	<%= link_to "<< #{t('projects.preview.back_to_edit')}", edit_project_path(@project), :class => 'btn btn-danger' %>
 </div>
 <%= render :file => '/projects/show' %>

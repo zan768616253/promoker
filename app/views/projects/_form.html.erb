@@ -10,35 +10,35 @@
 <% end %>
 <%= f.hidden_field :status, :value => 'draft' %>
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">项目图片</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_cover') %></label>
 	<div class="col-sm-5">
   		<%= f.file_field :cover%>
   		 <%= f.hidden_field :cover_cache %>
 	</div>
 </div>
 <div class="form-group">
-	<%= f.label :title, '项目名称', :class => 'col-sm-2 control-label' %>
+	<%= f.label :title, t('projects.project_title'), :class => 'col-sm-2 control-label' %>
 	<div class="col-sm-5">
-  		<%= f.text_field :title, :placeholder => "项目名称", :class => 'form-control' %>
+  		<%= f.text_field :title, :placeholder => t('projects.project_cover'), :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
-	<%= f.label :start_at, '开拍时间', :class => 'col-sm-2 control-label' %>
+	<%= f.label :start_at, t('projects.start_at'), :class => 'col-sm-2 control-label' %>
 	<div class="col-sm-5">
   		<%= f.date_field :start_at%>
 	</div>
 </div>
 
 <div class="form-group">
-	<%= f.label :movie_type, '项目类型', :class => 'col-sm-2 control-label' %>
+	<%= f.label :movie_type, t('projects.project_type'), :class => 'col-sm-2 control-label' %>
 	<div class="col-sm-5">
   		<%= f.select :movie_type, @types, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
-	<%= f.label :needs, '需求', :class => 'col-sm-2 control-label' %>
+	<%= f.label :needs, t('projects.project_needs'), :class => 'col-sm-2 control-label' %>
 	<%= f.hidden_field :needs, :value => @project.need_list %>
 	<div class="col-sm-5">
   		<% @needs.each do |need|%>
@@ -48,71 +48,71 @@
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">拍摄地</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_location') %></label>
 	<div class="col-sm-5">
-  		<%= f.region_select [:province, :city], province_prompt: '请选择省', city_prompt: '请选择市'%>
+  		<%= f.region_select [:province, :city], province_prompt: t('projects.select_province'), city_prompt: t('projects.project_city')%>
 	</div>
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">时长</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_duration') %></label>
 	<div class="col-sm-5">
   		<%= f.text_field :duration, :class => "form-control" %>
 	</div>
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">预计资金</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_budget') %></label>
 	<div class="col-sm-5">
   		<%= f.number_field :budget, :class => "form-control" %>
 	</div>
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">项目介绍</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_desc') %></label>
 	<div class="col-sm-5">
   		<%= f.text_area :description, :rows => 5, :cols => 20, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">剧本介绍</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects_script') %></label>
 	<div class="col-sm-5">
   		<%= f.text_area :script, :rows => 5, :cols => 20, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">拍摄团队</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_team') %></label>
 	<div class="col-sm-5">
   		<%= f.text_area :team, :rows => 5, :cols => 20, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">拍摄计划</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_plan') %></label>
 	<div class="col-sm-5">
   		<%= f.text_area :plan, :rows => 5, :cols => 20, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">资金用途</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_expense') %></label>
 	<div class="col-sm-5">
   		<%= f.text_area :expense, :rows => 5, :cols => 20, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">相关视频</label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_video') %></label>
 	<div class="col-sm-5">
   		<%= f.text_field :video, :class => 'form-control' %>
 	</div>
 </div>
 <div class="project-save">
-	<a href="" class='btn submit' id="project-publish">发布</a> 
-	<a href="<%= preview_project_path(@project) %>" target="_blank" class='btn preview' id="project-review">预览</a> 
-	<a href="" class="btn" id="project-save">保存</a>
+	<a href="" class='btn submit' id="project-publish"><%= t('projects.project_publish') %></a> 
+	<a href="<%= preview_project_path(@project) %>" target="_blank" class='btn preview' id="project-review"><%= t('projects.project_preview') %></a> 
+	<a href="" class="btn" id="project-save"><%= t('projects.project_save') %></a>
 </div>
 <% end %>
 <div id="preview">
@@ -150,12 +150,12 @@
 		        </div>
 		        <ul class="project-stats">
 		          <li class="pledged">
-		            <strong><span class="money usd no-code"><%= @project.budget %>万</span></strong>
-		            预算
+		            <strong><span class="money usd no-code"><%= @project.budget %><%= t('home.wan') %></span></strong>
+		            <%= t('home.budget') %>
 		          </li>
 		          <li class="pledged">
 		            <strong><span class="money usd no-code"><%= (@project.start_at.to_date - Date.current).to_i unless @project.start_at.blank? %></span></strong>
-		            天后开始拍摄
+		            <%= t('home.day_to_film') %>
 		          </li>
 		        </ul>
 	    	</div>

@@ -6,7 +6,7 @@
 			<div><%= image_tag @user.avatar %></div>
 		</div>	
 		<div class="user-like-info">
-			<div class="user-nickname"><%= @user.nickname %> 赞了 <%= @likes[i].votable_type %></div>
+			<div class="user-nickname"><%= @user.nickname %> <%= t('users.liked') %> <%= @likes[i].votable_type %></div>
 			<div class="user-like-detail">
 				<div class="user-like-thumb">
 					<%= image_tag like.thumb %>

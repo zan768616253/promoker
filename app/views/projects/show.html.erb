@@ -12,37 +12,37 @@
 				<embed src="<%= @project.video %>" allowFullScreen="true" quality="high" width="700" height="500" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 			</div>
 			<div class="project-page-description project-page-text">
-				<h2>项目介绍</h2>
+				<h2><%= t('projects.project_desc') %></h2>
 				<p>
 					<%= @project.description %>
 				</p>
 			</div>
 			<div class="project-page-script project-page-text">
-				<h2>剧本介绍</h2>
+				<h2><%= t('projects.project_script') %></h2>
 				<%= @project.script %>
 			</div>
 			<div class="project-page-team project-page-text">
-				<h2>拍摄团队</h2>
+				<h2><%= t('projects.project-team') %></h2>
 				<%= @project.team %>
 			</div>
 			<div class="project-page-plan project-page-text">
-				<h2>拍摄计划</h2>
+				<h2><%= t('projects.project_plan') %></h2>
 				<%= @project.plan %>
 			</div>
 			<div class="project-page-expense project-page-text">
-				<h2>资金用途</h2>
+				<h2><%= t('projects.project_expense') %></h2>
 				<%= @project.expense %>
 			</div>
 		</div>
 		<div class="project-page-right">
 			<div class="project-page-basic">
-				<h2>项目简介</h2>
-				<p>项目名称: <%= @project.title %></p>
-				<p>项目类型: <%= @project.movie_type %></p>
-				<p>时长: <%= @project.duration %></p>
-				<p>拍摄时间: <%= @project.start_at.strftime('%y-%m-%m') %> </p>
-				<p>预计资金: <%= @project.budget %>万</p>
-				<p>需求: <%= @project.need_list.join(',') %></p>
+				<h2><%= t('projects.project_summary') %></h2>
+				<p><%= t('projects.project_title') %>: <%= @project.title %></p>
+				<p><%= t('projects.project_type') %>: <%= @project.movie_type %></p>
+				<p><%= t('projects.project_duration') %>: <%= @project.duration %></p>
+				<p><%= t('projects.project_start_at') %>: <%= @project.start_at.strftime('%y-%m-%m') %> </p>
+				<p><%= t('projects.project_budget') %>: <%= @project.budget %><%= t('home.wan') %></p>
+				<p><%= t('projects.project_need') %>: <%= @project.need_list.join(',') %></p>
 			</div>
 			<%= render 'users/profile'%>
 		</div>

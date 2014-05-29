@@ -43,16 +43,16 @@
 </script>
 <div class="movies-wrapper">
   <div class="articles-header">
-      <h2>推荐</h2>
+      <h2><%= t('recommends.recommend') %></h2>
     </div>
   <div class="filters-container">
     <div class="ribbon"></div>
     <div class="filters">
       <div class="filter-header">
-        <h2>按区域查看:</h2>
+        <h2><%= t('recommends.filter.area') %></h2>
       </div>
       <div class="filter-wrapper">
-        <a href="#" class="filter-item active" data-filter="location">全部</a>
+        <a href="#" class="filter-item active" data-filter="location"><%= t('recommends.filter.all') %></a>
       <% @locations.each do |location|%>
           <a href="#" class="filter-item" data-filter="location" data-name="<%= location %>"><%= location %></a>
       <% end %>
@@ -61,10 +61,10 @@
 
     <div class="filters">
       <div class="filter-header">
-        <h2>按类型查看:</h2>
+        <h2><%= t('recommends.filter.type') %></h2>
       </div>
       <div class="filter-wrapper">
-        <a href="#" class="filter-item active" data-filter="type" data-name="">全部</a>
+        <a href="#" class="filter-item active" data-filter="type" data-name=""><%= t('recommends.filter.all') %></a>
         <% @types.each do |type|%>
             <a href="#" class="filter-item" data-filter="type" data-name="<%= type %>"><%= type %></a>
         <% end %>

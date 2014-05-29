@@ -1,6 +1,8 @@
 defaults: &defaults
   admin_emails:
     - "linyaoyi011@gmail.com"
+  time_zone: 'Beijing'
+  default_locale: 'zh-CN'
   faye_server: "http://127.0.0.1:9292/faye"
   faye_token: "123456"
   weibo_key: '15461246'
@@ -8,11 +10,8 @@ defaults: &defaults
   logo_home: "uploads/photo/image/16/LOGO-Home_page.png"
   logo_welcome: "uploads/photo/image/17/LOGO-Welcome_page.png"
 
-
 development:
   <<: *defaults
-  time_zone: 'Beijing'
-  default_locale: 'zh-CN'
 
 test:
   <<: *defaults

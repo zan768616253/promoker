@@ -54,6 +54,10 @@ Rails.application.routes.draw do
       post 'unlike'  
     end
   end
+
+  match '/simplified' => 'locale#simplified', :via => :get
+  match '/traditional' => 'locale#traditional', :via => :get
+
   match '/promote' => 'home#promote', :via => :get
   match '/home' => 'home#index', :via => :get
   root to: "home#welcome"

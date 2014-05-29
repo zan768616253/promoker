@@ -34,12 +34,12 @@
 				</div>
 				<ul class="project-stats">
 					<li class="pledged">
-						<strong><span class="money usd no-code"><%= project.budget %>万</span></strong>
-						预算
+						<strong><span class="money usd no-code"><%= project.budget %><%= t('home.wan') %></span></strong>
+						<%= t('home.budget') %>
 					</li>
 					<li class="pledged">
 						<strong><span class="money usd no-code"><%= (project.start_at.to_date - Date.current).to_i unless project.start_at.blank? %></span></strong>
-						天后开始拍摄
+						<%= t('home.day_to_film') %>
 					</li>
 				</ul>
 			</div>

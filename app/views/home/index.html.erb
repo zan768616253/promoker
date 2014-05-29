@@ -38,7 +38,7 @@
   <div id="content">
     <div class="left-col">
       <div class="recommend">
-        <h2><i class="fa fa-thumbs-o-up"></i><a href="<%= movies_path %>">特别推荐</a></h2>
+        <h2><i class="fa fa-thumbs-o-up"></i><a href="<%= movies_path %>"><%= t('home.hot_recommends') %></a></h2>
         <ul class="video-list clearfix mb30">
           <% @recommends.each do |movie| %>
             <li class="video">
@@ -56,31 +56,34 @@
         </ul>
       </div>
       <div class="festival">
-        <h2><i class="fa fa-video-camera"></i><a href="<%= events_path%>?type=电影节">电影节精选</a></h2>
-        <% unless @selections.empty? %>
+        <h2><i class="fa fa-video-camera"></i><a href="<%= events_path%>?type=电影节"><%= t('home.filmfest_selections') %></a></h2>
+        <% unless @selections.count < 3 %>
         <div class="poster-wrapper">
           <div class=" poster-left poster">
             <img src="<%= @selections.first.thumb %>" alt="">
             <div class="contenthover">
-              <h3>《玛丽的自然卷世界》</h3>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pulvinar ante quis augue lobortis volutpat. </p>
-              <p><a href="#" class="mybutton">Lorem ipsum</a></p>
+              <h3><%= @selections.first.title %></h3>
+              <p><%= @selections.first.summary %> </p>
+              <p><a href="#" class="mybutton"><%= t('home.read_more') %></a></p>
             </div>
           </div>
           <div class="poster-right-up poster">
             <img src="<%= @selections.second.thumb %>" alt="">
             <div class="contenthover">
-              <h3>《梦幻岛的天气预报员》</h3>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pulvinar ante quis augue lobortis volutpat. </p>
-              <p><a href="#" class="mybutton">Lorem ipsum</a></p>
+              <h3><%= @selections.second.title %></h3>
+              <p><%= @selections.second.summary %></p>
+              <p><a href="#" class="mybutton">
+                <%= t('home.read_more') %>
+              </a></p>
             </div>
           </div>
           <div class="poster-right-bottom poster">
             <img src="<%= @selections.third.thumb %>" alt="">
             <div class="contenthover">
-              <h3>《被超人绑架的爸爸》</h3>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pulvinar ante quis augue lobortis volutpat. </p>
-              <p><a href="#" class="mybutton">Lorem ipsum</a></p>
+              <h3><%= @selections.second.title %></h3>
+              <p><%= @selections.second.summary %></p>
+              <p><a href="#" class="mybutton"></a>
+              <%= t('home.read_more') %></p>
             </div>
           </div>
           <div></div>
@@ -88,7 +91,7 @@
         <% end %>
       </div>
       <div class="ongoing">
-        <h2><i class="fa fa-clock-o"></i><a href="<%= projects_path %>">正在进行的项目</a></h2>
+        <h2><i class="fa fa-clock-o"></i><a href="<%= projects_path %>"><%= t('home.ongoing_projects') %></a></h2>
         <ul class="ongoing-filter">
           <!-- <li class="active"><a href="#">拍摄计划</a></li>
           <li><a href="#">一句话项目</a></li> -->
@@ -132,12 +135,12 @@
                 </div>
                 <ul class="project-stats">
                   <li class="pledged">
-                    <strong><span class="money usd no-code"><%= project.budget %>万</span></strong>
-                  预算
+                    <strong><span class="money usd no-code"><%= project.budget %><%= t('home.wan') %></span></strong>
+                  <%= t('home.budget') %>
                   </li>
                   <li class="pledged">
                     <strong><span class="money usd no-code"><%= (project.start_at.to_date - Date.current).to_i unless project.start_at.blank? %></span></strong>
-                  天后开始拍摄
+                  <%= t('home.day_to_film') %>
                   </li>
                 </ul>
               </div>
@@ -150,7 +153,7 @@
     <div class="right-col">
       <div class="news shadowbox feeds">
         <ul>
-          <h1>最新资讯
+          <h1><%= t('home.latest_news') %>
             <a href="<%= articles_path %>" target="_blank"><i class="fa fa-chevron-right"></i></a>
           </h1>
           <% @articles.each_with_index do |article, i| %>
@@ -164,7 +167,7 @@
       </div>
       <div class="news shadowbox events">
         <ul>
-          <h1>最新活动
+          <h1><%= t('home.latest_events') %>
             <a href="<%= events_path %>" target="_blank"><i class="fa fa-chevron-right"></i></a>
           </h1>
           <% @events.each do |event| %>
@@ -176,7 +179,7 @@
               <p>
                 <a href="<%= event_path(event) %>" title="<%= event.title %>" target="_blank"><%= event.title %></a>
               </p>
-              <a class="rmhdcona btn" href="<%= event_path(event) %>" target="_blank">查看更多</a>
+              <a class="rmhdcona btn" href="<%= event_path(event) %>" target="_blank"><%= t('home.read_more') %></a>
             </div>
           </li>
           <% end %>
@@ -184,7 +187,7 @@
       </div>
       <div class="news shadowbox mini-project">
         <ul>
-          <h1>一句话项目
+          <h1><%= t('home.tickets') %>
             <a href="<%= projects_path %>" target="_blank"><i class="fa fa-chevron-right"></i></a>
           </h1>
           <% @tickets.each do |ticket| %>
@@ -202,108 +205,17 @@
  <div id="footer-wrapper">
    <div id="footer-inner">
      <div id="footer-partners-wrapper">
-       <h3>Our partners</h3>
+       <h3><%= t('home.footer.partner') %></h3>
        <div id="footer-partners-inner">
          <div id="footer-partners">
            <ul class="bx-slider">
-             <li>
-               <a href="http://www.zouba123.com" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/10/zouba_406810305_11_31_logo.jpg">
-               </a>
-             </li>
-
-             <li>
-               <a href="http://www.nuandao.com/?utm_campaign=campaign1&amp;utm_medium=banner&amp;utm_source=fqpai&amp;utm_content=260x130" target="_blank">
-                 <img src="http://www.fqpai.com/img/nuandaologo.jpg">
-               </a>
-             </li>
-
-
-             <li>
-               <a href="http://mall.boluopai.cn" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2014/03/bolo_03_22-04_22.jpg">
-               </a>
-             </li>
-
-
-             <li>
-               <a href="http://tinyear.tmall.com" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/08/tin2.jpg">
-               </a>
-             </li>
-
-
-             <li>
-               <a href="http://joyce2010.taobao.com" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/08/12191920logo_09_03.jpg">
-               </a>
-             </li>
-             <li>
-               <a href="http://shadilan.tmall.com/?spm=a1z10.1.0.0.e2aPve" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/11/2351136901_12_13_logo.jpg">
-               </a>
-             </li>
-
-
-             <li>
-               <a href="http://wanqianxiangshui.taobao.com" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/09/794792201_12_5_logo.jpg">
-               </a>
-             </li>
-
-
-             <li>
-               <a href="http://huodong.maimai.taobao.com/go/activities/cdn/page/1000068033/24914/viewPag.html" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/09/307748848_10_11.png">
-               </a>
-             </li>
-
-
-             <li>
-               <a href="http://www.yetang.com/?utm_campaign=campaign1&amp;utm_medium=banner&amp;utm_source=fqpai" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/09/yetanglogo.jpg">
-               </a>
-             </li>
-
-
-             <li>
-               <a href="http://xiaobao2046.taobao.com/?xn=fqpai" target="_blank">
-                 <img src="http://www.fqpai.com/img/xiaobaologo_10-27_11-27.jpg">
-               </a>
-             </li>
-
-
-             <li>
-               <a href="http://www.zouba123.com" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/10/zouba_406810305_11_31_logo.jpg">
-               </a>
-             </li>
-
-             <li>
-               <a href="http://www.nuandao.com/?utm_campaign=campaign1&amp;utm_medium=banner&amp;utm_source=fqpai&amp;utm_content=260x130" target="_blank">
-                 <img src="http://www.fqpai.com/img/nuandaologo.jpg">
-               </a>
-             </li>
-             <li>
-               <a href="http://mall.boluopai.cn" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2014/03/bolo_03_22-04_22.jpg">
-               </a>
-             </li>
-             <li>
-               <a href="http://tinyear.tmall.com" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/08/tin2.jpg">
-               </a>
-             </li>
-             <li>
-               <a href="http://joyce2010.taobao.com" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/08/12191920logo_09_03.jpg">
-               </a>
-             </li>
-             <li>
-               <a href="http://shadilan.tmall.com/?spm=a1z10.1.0.0.e2aPve" target="_blank">
-                 <img src="http://www.fqpai.com/wp-content/uploads/2013/11/2351136901_12_13_logo.jpg">
-               </a>
-             </li>
+            <% @partners.each do |partner| %>
+              <li>
+                <a href="<%= partner.url %>">
+                  <%= image_tag partner.thumb %>
+                </a>
+              </li>
+            <% end %>
            </ul>
          </div>
        </div>

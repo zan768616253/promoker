@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_filter :set_locale
   after_filter :store_location
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
@@ -24,6 +25,11 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     session[:previous_url] || root_path
   end
+  
+  def after_sign_up_path_for(resource)
+    session[:previous_url] || root_path
+  end
+
   def render_404
     render_optional_error_file(404)
   end
@@ -44,5 +50,9 @@ class ApplicationController < ActionController::Base
   private
     def record_not_found
       render_404
+    end
+    def set_locale
+      I18n.locale = session[:locale] || I18n.default_locale
+      session[:locale] = I18n.locale
     end
 end

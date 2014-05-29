@@ -482,7 +482,7 @@ p {
 }
 
 
-#login form input[type="text"], #login form input[type="password"] {
+#login form input[type="text"], #login form input[type="email"], #login form input[type="password"] {
   color: #A2A2A2;
   margin-bottom: 1em;
   padding: 0 16px;
@@ -537,7 +537,7 @@ p {
   height: 50px;
 }
 
-#register form input[type="text"], #register form input[type="password"] {
+#register form input[type="text"],#register form input[type="email"], #register form input[type="password"] {
   color: #A2A2A2;
   margin-bottom: 1em;
   padding: 0 16px;
@@ -587,7 +587,7 @@ p {
   background: #E62E4C;
   padding: 10px;
   width: 600px;
-  margin: 60px auto;
+  margin: 100px auto;
 }
 
 .login-auth li {
@@ -1229,4 +1229,29 @@ div.list-ribbon {
 
 .ongoing .project-thumbnail img {
   width: 180px;
+}
+
+div.field_with_errors input {
+    border: 2px solid #bbb;
+}
+div#error_explanation h2 {
+    font-size: 15px;
+    font-weight: bold;
+}
+div#error_explanation li {
+    list-style: initial;
+}
+div#error_explanation {
+    padding: 5px;
+    border: 1px dashed;
+    margin-bottom: 10px;
+    background: white;
+    color: red;
+}
+div#error_explanation ul {
+    margin-left: 20px;
+}
+
+div.field_with_errors input {
+  border: 2px dashed #F00;
 }

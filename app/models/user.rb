@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_one :profile, :as => :profilable, :dependent => :destroy
   has_many :authorizations, :dependent => :destroy
 
+
   mount_uploader :avatar, ImageUploader
 
   # before_create :copy_name

@@ -1,0 +1,52 @@
+zh-CN:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "已经被注册啦"
+            password_confirmation:
+              confirmation: "和密码不一致哦"
+            password:
+              too_short: "太短啦(最短 %{count}个字符)"
+    models:
+      user: "用户"
+      event: "活动"
+      movie: "电影"
+      comment: "评论"
+      profile: "资料"
+      project: "拍摄计划"
+      ticket: "一句话项目"
+    attributes:
+      user:
+        name: "昵称"
+        nickname: "昵称"
+        email: "邮箱"
+        password: "密码"
+        password_confirmation: "确认密码"
+        current_password: "当前密码"
+        remember_me: "记住我"
+        created_at: "注册时间"
+      event:
+        title: "主题"
+        start_time: "开始时间"
+        end_time: "结束时间"
+        address: "地点"
+        content: "简介"
+      article:
+        title: "标题"
+        body: "内容"
+        author: "作者"
+        summary: "摘要"
+      project:
+        title: "标题"
+        location: "拍摄地"
+        budget: "预算"
+        description: "项目说明"
+        script: "项目剧本"
+        team: "团队介绍"
+        plan: "详细计划"
+        expense: "项目费用"
+        duration: "片长"
+

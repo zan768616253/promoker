@@ -29,18 +29,18 @@
         		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         			<ul class="nav navbar-nav">
         				<li class="dropdown">
-        					<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('home.menu.share') %> <b class="fa fa-angle-down rotate"></b></a>
+        					<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('home.nav.share') %><b class="fa fa-angle-down rotate"></b></a>
         					<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>"><%= t('home.menu.recommend') %></a></li>
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>">资讯</a></li>
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>">活动</a></li>
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=电影节">电影节</a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>"><%= t('home.nav.recommend') %></a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>"><%= t('home.nav.news') %></a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>"><%= t('home.nav.event') %></a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=电影节"><%= t('home.nav.filmfest') %></a></li>
                     <li role="presentation" class="divider"></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'">微电影学院</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'"><%= t('home.nav.colleage') %></a></li>
         					</ul>
         				</li>
-        				<li><a href="<%= projects_path %>">项目</a></li>
-        				<li><a href="<%= promote_path %>">营销</a></li>
+        				<li><a href="<%= projects_path %>"><%= t('home.nav.project') %></a></li>
+        				<li><a href="<%= promote_path %>"><%= t('home.nav.marketing') %></a></li>
         			</ul>
                 <!-- <div class="searchbar navbar-left">
                     <input type="text" placeholder="搜作品"/>
@@ -52,15 +52,16 @@
                 </ul> -->
 
                 <ul class="nav navbar-nav navbar-right local">
+                  <li class="lang"><%= link_to t('home.nav.simplified'), simplified_path %></a>|<a href="?l=hk"><%= link_to t('home.nav.traditional'), traditional_path %></a></li>
                 	<li>
                 		<a class="btn btn-primary" 
                     data-toggle="modal" 
                     data-target="#post-modal"
                     data-backdrop="static"
-                    data-keyboard="false">发布</a>
+                    data-keyboard="false"><%= t('home.nav.publish') %></a>
                 	</li>
                 	<li>
-                		<a class="btn btn-primary">推广</a>
+                		<a class="btn btn-primary"><%= t('home.nav.promote') %></a>
                 	</li>
                   <% if user_signed_in? %>
                     <li>
@@ -82,56 +83,45 @@
                         </a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 
-                          <li role="presentation"><a href="<%= user_path(current_user) %>"><i class="fa fa-home"></i>我的主页</a></li>
+                          <li role="presentation"><a href="<%= user_path(current_user) %>"><i class="fa fa-home"></i><%= t('home.nav.account.home_page') %></a></li>
                           <!--<li role="presentation"><a href="#"><i class="fa fa-signal"></i>关注动态</a></li>-->
                           <!--<li role="presentation"><a href="#"><i class="fa fa-bell"></i>我的消息</a></li>-->
-                          <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-gear "></i>个人设置</a></li>
+                          <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-gear "></i><%= t('home.nav.account.settings') %></a></li>
                           <li role="presentation"><a href="<%= messages_path %>">
                             <% if Message.unread(current_user).count != 0%>
-                            <i class="fa fa-envelope "></i>我的消息 
+                            <i class="fa fa-envelope "></i><%= t('home.nav.account.messages') %> 
                             <span>(<%= Message.unread(current_user).count %>)</span>
                             <% else %>
-                            <i class="fa fa-envelope "></i>我的消息
+                            <i class="fa fa-envelope "></i><%= t('home.nav.account.messages') %> 
                             <% end %>
                           </a>
                         </li>
                           <li class="divider"></li>
                           <li role="presentation">
                             <%= link_to destroy_user_session_path, method: :delete do %>
-                              <i class="fa fa-power-off"></i>退出
+                              <i class="fa fa-power-off"></i><%= t('home.nav.account') %>
                             <% end %>
                           </li>
                         </ul>
                       </div>
                     </li>
                   <% else %>
-                	<li><a href="#" id="register-modal-link">注册</a></li>
+                	<li><a href="#" id="register-modal-link"><%= t('home.nav.register') %></a></li>
                 	<li class="vdivider"></li>
-                	<li><a href="#" id="login-modal-link">登录</a></li>
-                	<!-- <li><a href="#">简/繁</a></li> -->
+                	<li><a href="#" id="login-modal-link"><%= t('home.nav.login') %></a></li>
                   <% end %>
                 </ul>
             </div>
         </div>
     </nav>
   <div class="flash">
-    <% if not flash[:notice].nil? %>
-    <!--   <div class="alert alert-success">
+    <% flash.each do |key, value| %>
+      <% unless key == 'notice' %>
+      <div class="alert <%= flash_class(key) %>">
         <button type="button" class="close" data-dismiss="alert">×</button>
-        <%= flash[:notice] %>
-      </div> -->
-    <% end %>
-    <% if not flash[:alert].nil? %>
-      <div class="alert alert-warning">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <%= flash[:alert] %>
+        <div><%= value %></div>
       </div>
-    <% end %>
-    <% if not flash[:error].nil? %>
-      <div class="alert alert-danger">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <%= flash[:error] %>
-      </div>
+      <% end %>
     <% end %>
   </div>
     <div class="breadcrumb"></div>
@@ -142,43 +132,43 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <div class="modal-title">发布项目</div>
+            <div class="modal-title"><%= t('home.post_modal.title') %></div>
           </div>
           <div class="modal-body">
             <div id="post-wrapper">
               <div class="post-project">
                 <div class="post-project-desc">
-                  如果您有影视项目需求，发起一句话项目，让我们帮你快速匹配资源
+                  <%= t('home.post_modal.desc') %>
                 </div>
                 <% if user_signed_in? %>
-                  <a href="" class="btn btn-wine" id="ticket-link">发布一句话项目</a>
+                  <a href="" class="btn btn-wine" id="ticket-link"><%= t('home.post_modal.ticket') %></a>
                 <% else %>
-                  <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-wine">发布一句话项目</a>
+                  <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-wine"><%= t('home.post_modal.ticket') %></a>
                 <% end %>
               </div>
               <div class="post-ticket">
                 <div class="post-ticket-desc">
-                  如果您正在筹备影视项目，详细描述您的项目和需求，让我们帮您找到您正缺少的资源
+                  <%= t('home.post_modal.project_desc') %>
                 </div>
                 <% if user_signed_in? %>
-                  <a href="#" id="project-link" class="btn btn-wine">发布拍摄计划</a>
+                  <a href="#" id="project-link" class="btn btn-wine"><%= t('home.post_modal.project') %></a>
                 <% else %>
-                  <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-wine">发布拍摄计划</a>
+                  <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-wine"><%= t('home.post_modal.project') %></a>
                 <% end %>  
               </div>
             </div>
             <div id="project-wrapper" style="display:none;">
               <%= form_for Project.new, :html => {:class => 'form-horizontal'} do |f|%>
                 <div class="form-group">
-                  <%= f.label :title, '项目名称', :class => 'col-sm-2 control-label' %>
+                  <%= f.label :title, t('home.post_modal.project_title'), :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-8">
                     <%= f.text_field :title, :class => 'form-control' %>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="text-center">
-                    <a href="#" id="project-back"><< 返回</a>
-                    <%= f.submit "创建拍摄计划", :class => 'btn btn-wine' %>
+                    <a href="#" id="project-back"><< <%= t('home.post_modal.back') %></a>
+                    <%= f.submit t('home.post_modal.project_create'), :class => 'btn btn-wine' %>
                   </div>
                 </div>
               <% end %>
@@ -187,19 +177,19 @@
               <%= form_for Ticket.new, :html => {:class => 'form-horizontal'}  do |f| %>
                 <%= f.hidden_field :needs %>
                 <div class="form-group">
-                  <%= f.label :title, '描述', :class => 'col-sm-2 control-label' %>
+                  <%= f.label :title, t('home.post_modal.ticket_title'), :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-8">
-                    <%= f.text_field :title, :placeholder => '描述', :class => 'form-control' %>
+                    <%= f.text_field :title, :placeholder => t('home.post_modal.ticket_title'), :class => 'form-control' %>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="" class="col-sm-2 control-label">地点</label>
+                  <label for="" class="col-sm-2 control-label"><%= t('home.post_modal.ticket_location') %></label>
                   <div class="col-sm-8">
-                    <%= f.region_select [:province, :city], province_prompt: '请选择省', city_prompt: '请选择市'%>
+                    <%= f.region_select [:province, :city], province_prompt: t('home.post_modal.select_province'), city_prompt: t('home.post_modal.select_city')%>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="" class="col-sm-2 control-label">需求</label>
+                  <label for="" class="col-sm-2 control-label"><%= t('home.post_modal.ticket_needs') %></label>
                   <div class="col-sm-8">
                     <% Tag.tags_on('roles').each do |tag| %>
                     <span class="tag">
@@ -209,15 +199,15 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="" class="col-sm-2 control-label">联系方式</label>
+                  <label for="" class="col-sm-2 control-label"><%= t('home.post_modal.ticket_contact') %></label>
                   <div class="col-sm-8">
-                    <%= f.text_field :contact, :placeholder => 'whatapp, QQ, 微信, 电话', :class => 'form-control' %>
+                    <%= f.text_field :contact, :placeholder => t('home.post_modal.ticket_contact_ex'), :class => 'form-control' %>
                   </div>
                 </div>
                 <div class="form-group">
                     <div class="pull-right">
-                      <a href="#" id="ticket-back"><< 返回</a>
-                      <a href="" class='btn btn-wine submit'>发布</a> 
+                      <a href="#" id="ticket-back"><< <%= t('home.post_modal.back') %></a>
+                      <a href="" class='btn btn-wine submit'><%= t('home.post_modal.post') %></a> 
                     </div>
                   </div>
                 </div>
@@ -232,7 +222,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <div class="modal-title title">Promoker 登录</div>
+            <div class="modal-title title"><%= t('promoker') %></div>
           </div>
           <div class="modal-body">
             <div class="login-auth">
@@ -265,39 +255,39 @@
               <%= form_for :user, :url => session_path(:user), :html => {:id => 'login-form'} do |f| %>
                 <fieldset class="clearfix">
                   <p>
-                    <%= f.text_field :email, :autofocus => true, :placeholder => '邮箱' %>
+                    <%= f.email_field :email, :autofocus => true, :placeholder => t('home.login_modal.email') %>
                   </p>
                   <p>
-                    <%= f.password_field :password, :placeholder => '密码' %>
+                    <%= f.password_field :password, :placeholder => t('home.login_modal.password'), autocomplete: "off" %>
                   </p>
                   <p>
-                    <%= f.submit '登录' %>
+                    <%= f.submit t('home.login_modal.login') %>
                   </p>
                 </fieldset>
               <% end %>
-              <p>没有帐号? <a href="#" id="register-link">立即注册</a><span class="fontawesome-arrow-right"></span></p>
+              <p><%= t('home.login_modal.no_account') %>? <a href="#" id="register-link"><%= t('home.login_modal.register_now') %></a><span class="fontawesome-arrow-right"></span></p>
             </div>
             <div id="register" style="display:none;">
               <%= form_for :user, :url => registration_path(:user), :html => {:id => 'register-form'} do |f| %>
                 <fieldset class="clearfix">
                   <p>
-                    <%= f.text_field :email, :autofocus => true, :placeholder => '邮箱' %>
+                    <%= f.email_field :email, :autofocus => true, :placeholder => t('home.login_modal.email') %>
                   </p>
                   <p>
-                    <%= f.text_field :nickname, :placeholder => '昵称' %>
+                    <%= f.text_field :nickname, :placeholder => t('home.login_modal.nickname') %>
                   </p>
                   <p>
-                    <%= f.password_field :password, :placeholder => '密码' %>
+                    <%= f.password_field :password, :placeholder => t('home.login_modal.password'), autocomplete: "off" %>
                   </p>
                   <p>
-                    <%= f.password_field :password_confirmation, :placeholder => '确认密码' %>
+                    <%= f.password_field :password_confirmation, :placeholder => t('home.login_modal.password_confirmation'), autocomplete: "off" %>
                   </p>
                   <p>
-                    <%= f.submit '注册' %>
+                    <%= f.submit t('home.login_modal.register') %>
                   </p>
                 </fieldset>
               <% end %>
-              <p><a href="#" id="login-link"><< 返回登录</a></p>
+              <p><a href="#" id="login-link"><< <%= t('home.login_modal.back_login') %></a></p>
             </div>
 
           </div>
@@ -306,18 +296,18 @@
     </div>
     <div id="footer">
 		<div class="tip">Copyright © 2011-2014 &nbsp;&nbsp;
-			<a href="/">Promoker</a>
-			<!-- &nbsp;&nbsp;京ICP备12001467号 &nbsp;&nbsp;京公网安备11010802011460号 -->
+			<a href="/"><%= t('promoker') %></a>
 		&nbsp;
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/cn/">
-				<img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/2.5/cn/80x15.png" width="80px" height="15px">
+				<img alt="" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/2.5/cn/80x15.png" width="80px" height="15px">
 			</a>
-			<br>本作品采用
-			<a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/cn/">知识共享署名-非商业性使用 2.5 中国大陆许可协议</a>进行许可。
+			<br><%= t('home.copyright.prefix') %>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/cn/"><%= t('home.copyright.license') %></a><%= t('home.copyright.surfix') %>
 			<br>
-	本站不提供任何视听上传服务，所有内容均来自视频分享站点所提供的公开引用资源。
+	<%= t('home.copyright.detail') %>
 		</div>
 </div>
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
   <script type="text/javascript" data-turbolinks-eval=false>
     ROOT_URL = "<%= root_url %>";
     FAYE_SERVER_URL = "<%= Settings.faye_server %>";

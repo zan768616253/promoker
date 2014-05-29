@@ -7,6 +7,7 @@ gem 'rails', '4.1.0'
 group :development do
 	gem 'sqlite3'
 	gem 'capistrano'
+  gem 'rvm-capistrano'
 end
 
 group :production do
@@ -54,6 +55,9 @@ gem 'imgareaselect-rails'
 
 gem 'fancybox2-rails', '~> 0.2.8'
 
+gem 'http_accept_language'
+gem 'rails-i18n'
+
 group :development do
   gem 'pry-nav'
   gem 'pry-rails'
@@ -96,7 +100,7 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

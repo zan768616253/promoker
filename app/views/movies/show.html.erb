@@ -13,7 +13,7 @@
     <a href="#" class="btn btn-default" data-toggle="modal" data-target="#login-modal">
         <i class="fa fa-heart-o"></i>
         <i class="fa fa-heart"></i>
-        喜欢
+        <%= t('like') %>
     </a>
     <% else %>
       <a href="#" class="btn btn-default <%= 'liked' if current_user.liked? @movie%>"
@@ -23,7 +23,7 @@
             onclick="Movies.like(this, event)">
         <i class="fa fa-heart-o"></i>
         <i class="fa fa-heart"></i>
-      喜欢
+      <%= t('like') %>
     </a>
     <% end %>
     <div class="movie-share">
@@ -58,16 +58,16 @@
       <div class="movie-desc"><%=raw @movie.desc %></div>
   </div>
   <div class="comments-wrapper">
-    <h2>评论一下吧</h2>
+    <h2><%= t('comment') %></h2>
     <div class="comments-new">
       <%= form_for :comment, :url => movie_comments_path(@movie), :remote => true do |f| %>
         <div class="form-group">
           <%= f.text_area :comment, :rows => '4', :class => 'form-control', :id => "newcomment" %>
         </div>
         <% if user_signed_in? %>
-          <%= f.submit '发表评论', :class => 'btn btn-primary pull-right' %>
+          <%= f.submit t('new_comment'), :class => 'btn btn-primary pull-right' %>
         <% else %>
-          <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#login-modal">发表评论</a>
+          <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#login-modal"><%= t('new_comment') %></a>
         <% end %>
       <% end %>
 
@@ -111,7 +111,7 @@
         <%= image_tag @director.profiles.first.avatar %>
       </div>
       <div class="movie-director-info">
-        <span>导演: </span>
+        <span><%= t('recommends.director') %></span>
         <span><%=  @director.name %></span>
       </div>
     </div>

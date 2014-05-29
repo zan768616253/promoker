@@ -14,11 +14,11 @@
   <% if current_user != @user %>
   <div class="actions">
     <% if current_user and current_user.following?(@user) %>
-    <a href="#" id="follow" class="btn btn-warning followed" data-id="<%= @user.id %>" data-state="followed"><i class="fa fa-minus"></i><span>已关注</span></a>
+    <a href="#" id="follow" class="btn btn-warning followed" data-id="<%= @user.id %>" data-state="followed"><i class="fa fa-minus"></i><span><%= t('users.followed') %></span></a>
     <% else %>
-    <a href="#" id="follow" class="btn btn-warning" data-id="<%= @user.id %>" data-state=""><i class="fa fa-plus"></i><span>关注</span></a>
+    <a href="#" id="follow" class="btn btn-warning" data-id="<%= @user.id %>" data-state=""><i class="fa fa-plus"></i><span><%= t('users.follow') %></span></a>
     <% end %>
-    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#message-modal"><i class="fa fa-comment"></i>约谈</a>
+    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#message-modal"><i class="fa fa-comment"></i><%= t('users.chat') %></a>
   </div>
   <% end %>
 </div>
