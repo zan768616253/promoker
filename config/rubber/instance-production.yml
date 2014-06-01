@@ -1,0 +1,78 @@
+---
+- !ruby/object:Rubber::Configuration::InstanceItem
+  name: production
+  domain: promoker.com
+  roles:
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: app
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: unicorn
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: nginx
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: collectd
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: common
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: monit
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: db
+    options:
+      primary: true
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: mysql
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: mysql_master
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: examples
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: graphite_server
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: graphite_web
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: web
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: web_tools
+    options: {}
+  instance_id: 1758715
+  image_type: 512MB
+  image_id: Ubuntu 12.04.4 x64
+  security_groups:
+  - promoker_production_default
+  - promoker_production_web
+  - promoker_production_web_tools
+  - promoker_production_production
+  - promoker_production_app
+  - promoker_production_unicorn
+  - promoker_production_nginx
+  - promoker_production_collectd
+  - promoker_production_common
+  - promoker_production_monit
+  - promoker_production_db
+  - promoker_production_mysql
+  - promoker_production_mysql_master
+  - promoker_production_examples
+  - promoker_production_graphite_server
+  - promoker_production_graphite_web
+  external_host: 
+  external_ip: 128.199.190.93
+  internal_host: 
+  internal_ip: 128.199.190.93
+  zone: 
+  provider: digital_ocean
+  platform: linux
+  root_device_type: 
+- volumes: {}
+  static_ips: {}
