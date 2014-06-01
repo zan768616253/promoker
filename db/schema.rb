@@ -64,12 +64,12 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.datetime "updated_at"
   end
 
-  add_index "cities", ["level"], name: "index_cities_on_level"
-  add_index "cities", ["name"], name: "index_cities_on_name"
-  add_index "cities", ["pinyin"], name: "index_cities_on_pinyin"
-  add_index "cities", ["pinyin_abbr"], name: "index_cities_on_pinyin_abbr"
-  add_index "cities", ["province_id"], name: "index_cities_on_province_id"
-  add_index "cities", ["zip_code"], name: "index_cities_on_zip_code"
+  add_index "cities", ["level"], name: "index_cities_on_level", using: :btree
+  add_index "cities", ["name"], name: "index_cities_on_name", using: :btree
+  add_index "cities", ["pinyin"], name: "index_cities_on_pinyin", using: :btree
+  add_index "cities", ["pinyin_abbr"], name: "index_cities_on_pinyin_abbr", using: :btree
+  add_index "cities", ["province_id"], name: "index_cities_on_province_id", using: :btree
+  add_index "cities", ["zip_code"], name: "index_cities_on_zip_code", using: :btree
 
   create_table "comments", force: true do |t|
     t.string   "title",            limit: 50, default: ""
@@ -82,9 +82,9 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["commentable_id"], name: "index_comments_on_commentable_id"
-  add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["commentable_id"], name: "index_comments_on_commentable_id", using: :btree
+  add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "directors", force: true do |t|
     t.datetime "created_at"
@@ -111,10 +111,10 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.datetime "updated_at"
   end
 
-  add_index "districts", ["city_id"], name: "index_districts_on_city_id"
-  add_index "districts", ["name"], name: "index_districts_on_name"
-  add_index "districts", ["pinyin"], name: "index_districts_on_pinyin"
-  add_index "districts", ["pinyin_abbr"], name: "index_districts_on_pinyin_abbr"
+  add_index "districts", ["city_id"], name: "index_districts_on_city_id", using: :btree
+  add_index "districts", ["name"], name: "index_districts_on_name", using: :btree
+  add_index "districts", ["pinyin"], name: "index_districts_on_pinyin", using: :btree
+  add_index "districts", ["pinyin_abbr"], name: "index_districts_on_pinyin_abbr", using: :btree
 
   create_table "events", force: true do |t|
     t.string   "thumb"
@@ -139,8 +139,8 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.datetime "updated_at"
   end
 
-  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables"
-  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
+  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
+  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
 
   create_table "messages", force: true do |t|
     t.integer  "from_id"
@@ -151,8 +151,8 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.boolean  "read",       default: false
   end
 
-  add_index "messages", ["from_id"], name: "index_messages_on_from_id"
-  add_index "messages", ["to_id"], name: "index_messages_on_to_id"
+  add_index "messages", ["from_id"], name: "index_messages_on_from_id", using: :btree
+  add_index "messages", ["to_id"], name: "index_messages_on_to_id", using: :btree
 
   create_table "movies", force: true do |t|
     t.string   "title"
@@ -202,7 +202,7 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.string   "profilable_type"
   end
 
-  add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id"
+  add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "title",       default: "untitled"
@@ -237,9 +237,9 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.datetime "updated_at"
   end
 
-  add_index "provinces", ["name"], name: "index_provinces_on_name"
-  add_index "provinces", ["pinyin"], name: "index_provinces_on_pinyin"
-  add_index "provinces", ["pinyin_abbr"], name: "index_provinces_on_pinyin_abbr"
+  add_index "provinces", ["name"], name: "index_provinces_on_name", using: :btree
+  add_index "provinces", ["pinyin"], name: "index_provinces_on_pinyin", using: :btree
+  add_index "provinces", ["pinyin_abbr"], name: "index_provinces_on_pinyin_abbr", using: :btree
 
   create_table "site_configs", force: true do |t|
     t.string   "property"
@@ -258,7 +258,7 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.datetime "created_at"
   end
 
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
 
   create_table "tags", force: true do |t|
     t.string  "name"
@@ -302,8 +302,8 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.string   "name"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "votes", force: true do |t|
     t.integer  "votable_id"
@@ -317,7 +317,7 @@ ActiveRecord::Schema.define(version: 20140524090846) do
     t.datetime "updated_at"
   end
 
-  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
-  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
 end
