@@ -64,7 +64,7 @@
             <div class="contenthover">
               <h3><%= @selections.first.title %></h3>
               <p><%= @selections.first.summary %> </p>
-              <p><a href="#" class="mybutton"><%= t('home.read_more') %></a></p>
+              <p><a href="<%= event_path(@selections.first) %>" class="mybutton"><%= t('home.read_more') %></a></p>
             </div>
           </div>
           <div class="poster-right-up poster">
@@ -72,7 +72,7 @@
             <div class="contenthover">
               <h3><%= @selections.second.title %></h3>
               <p><%= @selections.second.summary %></p>
-              <p><a href="#" class="mybutton">
+              <p><a href="<%= event_path(@selections.second) %>" class="mybutton">
                 <%= t('home.read_more') %>
               </a></p>
             </div>
@@ -80,10 +80,9 @@
           <div class="poster-right-bottom poster">
             <img src="<%= @selections.third.thumb %>" alt="">
             <div class="contenthover">
-              <h3><%= @selections.second.title %></h3>
-              <p><%= @selections.second.summary %></p>
-              <p><a href="#" class="mybutton"></a>
-              <%= t('home.read_more') %></p>
+              <h3><%= @selections.third.title %></h3>
+              <p><%= @selections.third.summary %></p>
+              <p><a href="<%= event_path(@selections.third) %>" class="mybutton"><%= t('home.read_more') %></a></p>
             </div>
           </div>
           <div></div>
