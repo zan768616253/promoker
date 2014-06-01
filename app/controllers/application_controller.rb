@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-
+  before_filter :authenticate!
   before_filter :set_locale
   after_filter :store_location
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
@@ -48,6 +48,11 @@ class ApplicationController < ActionController::Base
   end
 
   private
+    def authenticate!
+      authenticate_or_request_with_http_basic do |username, password|
+        username == "admin" && password == "promoker"
+      end
+    end
     def record_not_found
       render_404
     end
