@@ -19,7 +19,7 @@ end
 set :scm, :git
 set :repository, "git@github.com:yaoyi/promoker.git"
 set :deploy_via, :remote_cache
-set :branch, "master"
+set :branch, ENV['rev'] || "master"
 
 # Easier to do system level config as root - probably should do it through
 # sudo in the future.  We use ssh keys for access, so no passwd needed
