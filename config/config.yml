@@ -15,6 +15,7 @@ development:
 
 test:
   <<: *defaults
-
+vagrant:
+  <<: *defaults
 production:
   <<: *defaults

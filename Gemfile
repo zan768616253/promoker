@@ -6,11 +6,10 @@ gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 group :development do
 	gem 'sqlite3'
-	gem 'capistrano'
-  gem 'rvm-capistrano'
 end
+gem 'rubber'
 
-group :production do
+group :production, :development do
 	gem 'mysql2'
 end
 # Use SCSS for stylesheets
@@ -79,7 +78,6 @@ group :test do
   gem 'database_cleaner'
 end
 
-gem 'omniauth-weibo-oauth2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -97,13 +95,17 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
+# gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
 gem 'open4'
+
+group :development do
+  gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
+end
 
