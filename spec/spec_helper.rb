@@ -62,6 +62,7 @@ Spork.prefork do
     config.after(:each) do
       DatabaseCleaner.clean
     end
+    Faker::Config.locale = :en
   end
 
 end

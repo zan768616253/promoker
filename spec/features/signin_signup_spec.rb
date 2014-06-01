@@ -22,7 +22,7 @@ feature "Sign in and Sign up" do
 			    	fill_in 'user_password', with: 'wrongpassword'
 			    end
 		    	click_button '登录'
-		    	page.should have_content('Invalid email or password.')
+		    	page.should have_content('邮箱或密码错误.')
 			end
 		end
 		context 'sign up' do
@@ -36,7 +36,7 @@ feature "Sign in and Sign up" do
 		    		fill_in 'user_password_confirmation', with: user.password_confirmation
 		    	end
 		    	click_button '注册'
-		    	page.should have_content('Email has already been taken')
+		    	page.should have_content('邮箱 已经被注册啦')
 			end
 			scenario "sign up with blank passowrd" do
 				visit new_user_registration_path
@@ -48,7 +48,7 @@ feature "Sign in and Sign up" do
 		    		fill_in 'user_password_confirmation', with: ""
 		    	end
 		    	click_button '注册'
-		    	page.should have_content("Password can't be blank")
+		    	page.should have_content("密码 不能为空字符")
 			end
 			scenario "sign up with passowrd mismatch" do
 				visit home_path
@@ -60,7 +60,7 @@ feature "Sign in and Sign up" do
 		    		fill_in 'user_password_confirmation', with: "wrongpassword"
 		    	end
 		    	click_button '注册'
-		    	page.should have_content("Password confirmation doesn't match Password")
+		    	page.should have_content("确认密码 和密码不一致哦")
 			end
 			scenario "sign up with new user info" do
 		    	visit home_path
@@ -90,7 +90,7 @@ feature "Sign in and Sign up" do
 		    	fill_in 'user_email', with: user.email
 		    	fill_in 'user_password', with: Faker::Lorem.word
 		    	click_button '登录'
-		    	page.should have_content('Invalid email or password.')
+		    	page.should have_content('邮箱或密码错误.')
 			end
 		end
 		context 'sign up' do
@@ -102,7 +102,7 @@ feature "Sign in and Sign up" do
 		    	fill_in 'user_password', with: user.password
 	    		fill_in 'user_password_confirmation', with: user.password_confirmation
 		    	click_button '注册'
-		    	page.should have_content('Email has already been taken')
+		    	page.should have_content('邮箱 已经被注册啦')
 			end
 			scenario "sign up with passowrd mismatch" do
 				visit new_user_registration_path
@@ -112,7 +112,7 @@ feature "Sign in and Sign up" do
 		    	fill_in 'user_password', with: "password"
 	    		fill_in 'user_password_confirmation', with: "wrongpassword"
 		    	click_button '注册'
-		    	page.should have_content("Password confirmation doesn't match Password")
+		    	page.should have_content("确认密码 和密码不一致哦")
 			end
 			scenario "sign up with blank passowrd" do
 				visit new_user_registration_path
@@ -122,7 +122,7 @@ feature "Sign in and Sign up" do
 		    	fill_in 'user_password', with: ""
 	    		fill_in 'user_password_confirmation', with: ""
 		    	click_button '注册'
-		    	page.should have_content("Password can't be blank")
+		    	page.should have_content("密码 不能为空字符")
 			end
 			scenario "sign up with new user info" do
 		    	visit new_user_registration_path

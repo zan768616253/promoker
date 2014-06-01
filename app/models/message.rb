@@ -4,7 +4,7 @@ class Message < ActiveRecord::Base
 	belongs_to :to, :class_name => 'User'
 
 	scope :recent, ->(user) { where("to_id = ?", user.id).order('created_at DESC') }
-	scope :unread, ->(user) { where("to_id = ? AND read = ?", user.id, false) }
+	scope :unread, ->(user) { where("to_id = ? AND is_read = ?", user.id, false) }
 
 	after_create :realtime_push_to_client
 
