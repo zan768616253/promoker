@@ -91,8 +91,8 @@ task :cleanup, :except => { :no_release => true } do
     for r in $remove; do rm -rf #{releases_path}/$r; done;
   CMD
 end
-after "deploy", "after_deploy"
-task :after_deploy, :except => { :no_release => true } do
+after "deploy:setup", "after_deploy"
+task :chmod_public, :except => { :no_release => true } do
   rsudo <<-CMD
     chown -R deploy: #{release_path}
     chmod 777 #{release_path}/public 
