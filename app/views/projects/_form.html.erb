@@ -122,7 +122,7 @@
 	        	<div class="project-thumbnail">
 	          		<a href="#" target="">
 	          			<% if @project.cover.blank? %>
-	            			<img alt="Photo-little" class="projectphoto-little" height="150" src="https://d297h9he240fqh.cloudfront.net/assets/projects/missing_little.png" width="220">
+	            			<img alt="Photo-little" class="projectphoto-little" height="150" src="<%= asset_path('missing_little.png') %>" width="220">
 	            		<% else %>
 							<%= image_tag @project.cover, :class => "projectphoto-little" %>
 	            		<% end %>

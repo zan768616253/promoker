@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140601123534) do
+ActiveRecord::Schema.define(version: 20140602093403) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -227,6 +227,27 @@ ActiveRecord::Schema.define(version: 20140601123534) do
     t.datetime "start_at"
     t.integer  "project_id"
     t.string   "movie_type"
+  end
+
+  create_table "promotion_records", force: true do |t|
+    t.datetime "promote_time"
+    t.string   "channel"
+    t.string   "desc"
+    t.string   "screenshot"
+    t.string   "url"
+    t.integer  "promotion_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "promotions", force: true do |t|
+    t.string   "title",      default: "untitled"
+    t.string   "file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "state",      default: "draft"
+    t.string   "cover"
   end
 
   create_table "provinces", force: true do |t|

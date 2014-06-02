@@ -61,7 +61,17 @@
                     data-keyboard="false"><%= t('home.nav.publish') %></a>
                 	</li>
                 	<li>
-                		<a class="btn btn-primary"><%= t('home.nav.promote') %></a>
+                    <% if user_signed_in? %>
+                  		<a class="btn btn-primary" 
+                      data-toggle="modal" 
+                      data-target="#promote-modal"
+                      data-backdrop="static"
+                      data-keyboard="false"><%= t('home.nav.promote') %></a>
+                    <% else %>
+                      <a class="btn btn-primary" 
+                      data-toggle="modal" 
+                      data-target="#login-modal"><%= t('home.nav.promote') %></a>
+                    <% end %>
                 	</li>
                   <% if user_signed_in? %>
                     <li>
@@ -290,6 +300,40 @@
               <p><a href="#" id="login-link"><< <%= t('home.login_modal.back_login') %></a></p>
             </div>
 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="promote-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-title"><%= t('home.promote_modal.title') %></div>
+          </div>
+          <div class="modal-body">
+            <div class="agreement">
+              <div>
+                <%= t("instruction") %>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, ratione, voluptatibus, saepe cum dolore eum minus impedit veritatis ullam aliquam sunt nisi fugiat sit asperiores in eveniet ex ad a natus suscipit? Itaque, minima, aut, maxime, facere inventore illum dolores facilis odio quidem cum fugit aliquid commodi accusantium ab ex ipsa saepe voluptatum rem cupiditate enim soluta expedita perspiciatis dolorum maiores dolorem velit earum doloribus temporibus odit laboriosam amet officiis sunt in nesciunt eum voluptatem nostrum perferendis! Fugiat, dicta, facilis, deserunt ducimus minima asperiores amet consequatur suscipit eligendi dignissimos nemo blanditiis odio animi vel quod alias sint officiis voluptate omnis debitis? Numquam, tempore, quia, deserunt laudantium inventore sed beatae esse unde eos assumenda praesentium blanditiis possimus sunt quibusdam aperiam eveniet cum odio veritatis? Fugit pariatur error illum. Placeat, sapiente, totam rem itaque ut dolor similique id est cumque facilis nostrum laboriosam delectus asperiores mollitia accusamus labore ullam? Voluptate, doloremque sit quidem hic molestiae itaque id! Consequatur, tempore, expedita, excepturi animi autem reiciendis quasi officia magni dolorem quos inventore unde aperiam molestiae maxime sapiente nulla eum eaque recusandae fuga tenetur incidunt laboriosam nemo possimus numquam culpa neque ab perferendis nam eius illum. Ipsum, magni voluptatem ad quidem atque quisquam tempora consectetur!</p>
+              <div class="agree">
+                <span><%= t('agree') %></span><input type="checkbox" id="agree">
+              </div>
+            </div>
+            <%= form_for Promotion.new, :html => {:class => 'form-horizontal',:style => "display:none;" } do |f|%>
+                <div class="form-group">
+                  <%= f.label :title, t('home.promote_modal.promotion_title'), :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-8">
+                    <%= f.text_field :title, :class => 'form-control' %>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="text-center">
+                    <%= f.submit t('home.promote_modal.promotion_create'), :class => 'btn btn-wine'%>
+                  </div>
+                </div>
+              <% end %>
           </div>
         </div>
       </div>

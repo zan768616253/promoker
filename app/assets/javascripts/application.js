@@ -109,4 +109,12 @@ $(function() {
             scrollTop : 0                       // Scroll to top of body
         }, 500);
     });
+
+    $('#agree').click(function(){
+        if(this.checked){
+            $('#new_promotion').show()
+        }else{
+            $('#new_promotion').hide()
+        }
+    })
 })

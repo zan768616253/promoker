@@ -738,6 +738,7 @@ ul.nav li.dropdown:hover .rotate {
 .rmhdcont {
   position: relative;
   left: 10px;
+  min-height: 80px;
 }
 
 #content {
@@ -1175,6 +1176,7 @@ a.rmhdcona:hover {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  display: inline-block;
 }
 
 #login-modal .modal-body {

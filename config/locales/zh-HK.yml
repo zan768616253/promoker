@@ -1,11 +1,14 @@
 zh-HK:
+  welcome:
+    blurb: "一個專門做推廣的網站"
+    start: "開始"
   promoker: "普摩客"
   errors:
     404: "似乎沒有這個頁面哦！大哥，回去看看別的吧。"
   home:
     nav:
       share: "分享"
-      recommend: "推薦"
+      recommend: "影片推薦"
       news: "資訊"
       event: "活動"
       filmfest: "電影節"
@@ -78,10 +81,11 @@ zh-HK:
     filter:
       area: "按區域查看: "
       type: "按類型查看: "
+      status: "按進程查看: "
       all: "全部: "
     status:
-      enroll: "報名中"
-      underway: "進行中"
+      enroll: "即將開始"
+      underway: "正在進行"
       finished: "已結束"
     like_count: "人感興趣"
     event_date: "時間: "
@@ -95,7 +99,7 @@ zh-HK:
     message: "消息"
     mark_all_read: "全部標記為已讀"
   recommends:
-    recommend: "推薦"
+    recommend: "影片推薦"
     filter:
       area: "按區域查看: "
       type: "按類型查看: "

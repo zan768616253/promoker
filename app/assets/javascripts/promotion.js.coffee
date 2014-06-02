@@ -1,0 +1,2 @@
+$ ->
+	$('a.fancy').fancybox()

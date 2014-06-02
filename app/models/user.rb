@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :projects, :dependent => :destroy
   has_one :profile, :as => :profilable, :dependent => :destroy
   has_many :authorizations, :dependent => :destroy
+  has_many :promotions, :dependent => :destroy
 
 
   mount_uploader :avatar, ImageUploader

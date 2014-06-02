@@ -13,6 +13,9 @@
     if(getParameterByName('type')){
       params['type'] = getParameterByName('type')
     }
+    if(getParameterByName('status')){
+      params['status'] = getParameterByName('status')
+    }
       
     for (key in params){
       $('a[data-filter="'+ key + '"]').removeClass('active')
@@ -69,6 +72,17 @@
 		        <% end %>
 	     	</div>
 	    </div>
+	    <div class="filters">
+		    <div class="filter-header">
+		     <h2><%= t('events.filter.status') %></h2>
+		    </div>
+	      	<div class="filter-wrapper">
+		        <a href="#" class="filter-item active" data-filter="status" data-name=""><%= t('events.filter.all') %></a>
+		            <a href="#" class="filter-item" data-filter="status" data-name="enroll"><%= t('events.status.enroll') %></a>
+		            <a href="#" class="filter-item" data-filter="status" data-name="underway"><%= t('events.status.underway') %></a>
+		            <a href="#" class="filter-item" data-filter="status" data-name="finished"><%= t('events.status.finished') %></a>
+	     	</div>
+	    </div>
 	</div>
 	<div class="events-container">
 		<ul class="events">
@@ -83,29 +97,29 @@
 					
 					<div class="event-title">
 						<% case event.status
-						when t('enroll')
+						when 'enroll'
 							style = 'warning' 
-						when t('underway')
+						when 'underway'
 							style = 'info' 
-						when t('finished')
+						when 'finished'
 							style = 'default' 
 						else
 							style = 'default' 
 						end %>
 						<span class="label label-<%= style %>">
-							<%= event.status %>
+							<%= t('events.status.'+event.status) %>
 						</span>
 						<%= link_to event.title, event_path(event) %>
 					</div>
 					<div class="event-date">
-						<span><i class="fa fa-clock-o"></i> </span><%= event.start.strftime("%m#{t('month')}%d#{t('date')}") %> ~ <%= event.end.strftime("%m#{t('month')}%d#{t('date')}") %>
+						<span><i class="fa fa-clock-o"></i> </span><%= event.start_time.strftime("%m#{t('month')}%d#{t('date')}") %> ~ <%= event.end_time.strftime("%m#{t('month')}%d#{t('date')}") %>
 					</div>
 					<div class="event-address">
 						<span><i class="fa fa-map-marker"></i> </span><%= event.address %>
 					</div>
 					<div class="event-likes">
 						<i class="fa fa-heart"></i>
-						<b><%= event.likes.count %></b> <%= t('like_count') %>
+						<b><%= event.likes.count %></b> <%= t('events.like_count') %>
 					</div>
 					<div class="event-likers">
 						

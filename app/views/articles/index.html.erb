@@ -2,6 +2,34 @@
   <div class="articles-header">
     <h2><%= t('articles.news') %></h2>
   </div>
+  <div class="filters-container">
+      <div class="ribbon"></div>
+      <div class="filters">
+        <div class="filter-header">
+            <h2>按时间排序: </h2>
+        </div>
+        <div class="filter-wrapper">
+            <a href="#" class="filter-item active" data-filter="location">全部</a>
+            <a href="#" class="filter-item" data-filter="location" data-name="香港">香港</a>
+            <a href="#" class="filter-item" data-filter="location" data-name="内地">内地</a>
+            <a href="#" class="filter-item" data-filter="location" data-name="台湾">台湾</a>
+            <a href="#" class="filter-item" data-filter="location" data-name="海外">海外</a>
+        </div>
+    </div>
+      <div class="filters">
+        <div class="filter-header">
+         <h2>按类型查看: </h2>
+        </div>
+          <div class="filter-wrapper">
+            <a href="#" class="filter-item active" data-filter="type" data-name="">全部: </a>
+                <a href="#" class="filter-item" data-filter="type" data-name="讲座">讲座</a>
+                <a href="#" class="filter-item" data-filter="type" data-name="聚会">聚会</a>
+                <a href="#" class="filter-item" data-filter="type" data-name="展览">展览</a>
+                <a href="#" class="filter-item" data-filter="type" data-name="公益">公益</a>
+                <a href="#" class="filter-item" data-filter="type" data-name="电影节">电影节</a>
+        </div>
+      </div>
+  </div>
   <div class="articles">
     <% @articles.each do |article| %>
     <div class="article">

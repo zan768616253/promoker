@@ -3,7 +3,7 @@
     <ul class="user-nav">
       <li class="active"><a href="#likes" data-toggle="tab"><%= t('dashboard.tab.like') %></a></li>
       <li><a href="#user-projects" data-toggle="tab"><%= t('dashboard.tab.project') %></a></li>
-      <li><a href="#promotes"><%= t('dashboard.tab.promote') %></a></li>
+      <li><a href="<%= promotions_path %>"><%= t('dashboard.tab.promote') %></a></li>
       <li><a href="#follows" data-toggle="tab"><%= t('dashboard.tab.follow') %></a></li>
       <li><a href="<%= messages_path %>">
         <% if Message.unread(current_user).count != 0%>
@@ -19,9 +19,9 @@
       <div id="user-projects" class="tab-pane">
         <%= render 'projects'%>
       </div>
-      <div id="promotes" class="tab-pane">
+      <!-- <div id="promotes" class="tab-pane">
         <%= render 'promotes'%>
-      </div>
+      </div> -->
       <div id="follows" class="tab-pane">
         <ul>
           <% @followings.each do |f| %>

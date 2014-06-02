@@ -1,11 +1,14 @@
 zh-CN:
+  welcome:
+    blurb: "一个专门做推广的网站"
+    start: "开始"
   promoker: "普摩客"
   errors:
     404: "似乎没有这个页面哦！大哥，回去看看别的吧。"
   home:
     nav:
       share: "分享"
-      recommend: "推荐"
+      recommend: "影片推荐"
       news: "资讯"
       event: "活动"
       filmfest: "电影节"
@@ -23,6 +26,11 @@ zh-CN:
         settings: "个人设置"
         messages: "我的消息"
         logout: "退出"
+    promote_modal:
+      title: "推广影片"
+      promotion_title: "推广名称"
+      promotion_create: "创建推广申请"
+
     post_modal:
       title: "发布项目"
       ticket_desc: "如果您有影视项目需求，发起一句话项目，让我们帮您快速匹配资源"
@@ -78,10 +86,11 @@ zh-CN:
     filter:
       area: "按区域查看: "
       type: "按类型查看: "
+      status: "按进程查看: "
       all: "全部: "
     status:
-      enroll: "报名中"
-      underway: "进行中"
+      enroll: "即将开始"
+      underway: "正在进行"
       finished: "已结束"
     like_count: "人感兴趣"
     event_date: "时间: "
@@ -95,7 +104,7 @@ zh-CN:
     message: "消息"
     mark_all_read: "全部标记为已读"
   recommends:
-    recommend: "推荐"
+    recommend: "影片推荐"
     filter:
       area: "按区域查看: "
       type: "按类型查看: "
@@ -183,3 +192,22 @@ zh-CN:
     message_modal:
       send: "发送消息"
     message: "消息"
+  instruction: "请仔细阅读以下推广协议"
+  agree: "同意上述推广协议"
+  promotion:
+    title: "推广"
+    progress: "推广进度"
+    form: "推广申请表.doc"
+    instruction: "请下载申请表格，填写完成之后上传并提交推广申请"
+    submit: "提交推广申请"
+    draft: "填写表格"
+    received: "正在审核"
+    promoting: "正在推广"
+    complete: "推广结束"
+    detail: "推广详情"
+    time: "时间"
+    channel: "渠道"
+    desc: "情况"
+    screenshot: "截图"
+    url: "链接"
+    not: "通过审核后，开始推广"

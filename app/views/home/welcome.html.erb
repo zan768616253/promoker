@@ -45,7 +45,6 @@
 	    float: right;
 	    position: relative;
 	    right: 20px;
-	    bottom: 20px;
 	}
 
 	@font-face {
@@ -152,8 +151,9 @@
 	}
 	div#logo {
 		position: absolute;
-		top: -320px;
+		top: -350px;
 		left: 10%;
+		z-index: -1;
 	}
 
 	a.blink {
@@ -161,11 +161,11 @@
 	}
 
 	#logo img {
-    	width: 500px;
+    	width: 550px;
 	}
 
 	div.welcome-text-wrapper {
-	    background: rgba(255, 255, 255, 0.4);
+	    background: rgba(255, 255, 255, 0.6);
 	    position: absolute;
 	    padding-left: 100px;
 	    top: 10px;
@@ -175,6 +175,7 @@
 	    padding-top: 10px;
 	    height: 100px;
 	    padding-right: 10px;
+	    font-size: 13px;
 	}
 	div.author-wrapper {
 	    position: relative;
@@ -186,17 +187,21 @@
 		font-size: 30px;
 	}
 
-	.welcome-wrapper a {
-	    font-size: 18px;
-	    float: right;
-	    color: white;
-	    text-decoration: none;
-	    position: relative;
-	    right: 70px;
-	    top: 10px;
+	div.welcome-blurb {
+		color: #FFF;
+		font-size: 22px;
+		width: 220px;
+		margin: 0px auto;
+		top: -40px;
+		position: relative;
 	}
-
-
+	div.welcome-start {
+	    width: 150px;
+	    margin: 0px auto;
+	}
+	div.welcome-start a.btn.btn-danger.btn-lg {
+	    width: 150px;
+	}
 
 
   </style>
@@ -239,6 +244,7 @@
 			<div id="logo">
 				<img src="<%= @siteConfig['logo_welcome'] %>" alt="">
 			</div>
+			<div class="welcome-blurb"><%= t('welcome.blurb') %></div>
 			<div class="author-wrapper">
 				<div class="welcome-avatar">
 					<img src="<%= @siteConfig['welcome_avatar'] %>">
@@ -253,7 +259,9 @@
 				</div>
 			</div>
 			<div id="weather"></div>
-			<a href="/home">>>></a>
+			<div class='welcome-start'>
+				<a href="/home" class="btn btn-danger btn-lg"><%= t('welcome.start') %></a>
+			</div>
 		</div>
 	</div>
 </body>

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   resources :tickets, :only => [:create,:show]
+  resources :promotions
   
   resources :project_details, :only => [:create, :update]
   resources :projects do

@@ -1,0 +1,153 @@
+div.promotions-wrapper {
+  width: 960px;
+  margin: 60px auto;
+  padding-top: 10px;
+}
+
+div.promotion-box {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+  position: relative;
+}
+
+div.promotion-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+div.promotion-instruction {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+form.edit-promotion {
+	width: 100px;
+	margin: 0px auto;
+}
+
+li.progress-item {
+	display: inline-block;
+}
+
+li.progress-item .pic {
+	font-size: 30px;
+	padding: 10px;
+	border: 1px solid #BBB;
+	border-radius: 50%;
+	color: #BBB;
+	margin-bottom: 5px;
+}
+
+li.progress-item.active p {
+	color: orange;
+	font-weight: bold;
+}
+
+li.progress-item.line {
+	width: 40px;
+	height: 1px;
+	border-top: 1px solid #BBB;
+	position: relative;
+	bottom: 40px;
+}
+
+ul.promotion-progress {
+	width: 350px;
+	margin: 0px auto;
+}
+
+div.promotion-prepare {
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+}
+div.promotion-progress-wrapper {
+    padding: 10px;
+}
+.promotion-progress-wrapper h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+li.progress-item.active .pic {
+	border: 2px solid #FFA500;
+	color: #FFA500;
+}
+
+li.progress-item i.fa.fa-user {
+	width: 30px;
+	position: relative;
+	left: 3px;
+}
+
+td.screenshot img {
+	width: 50px;
+}
+
+table.table.table-hover {
+	font-size: 14px;
+}
+
+table.table.table-hover th {
+	font-weight: bold;
+}
+
+div.promotion-cover {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+}
+div.promotion-cover img {
+	width: 200px;
+}
+div.promotion-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.promotion-user {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.promotion-user img {
+	width: 40px;
+	border-radius: 50%;
+}
+
+.promotion-wrapper {
+	width: 80%;
+	display: inline-block;
+	background: #E7E7E7;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 6px;
+}
+
+div.promotion-item {
+	padding: 20px;
+}
+
+div.promotion-state {
+	font-size: 14px;
+	color: #A52A2A;
+}
+
+.promotion-state i {
+	margin-right: 3px;
+	position: relative;
+}
+
+.promotion-title a {
+	text-decoration: none;
+	color: #444;
+}
+
+table.table.table-hover {
+	width: 90%;
+	margin: 10px auto;
+}

@@ -325,8 +325,8 @@ div.post-ticket-desc {
 
 .navbar-brand img {
     position: relative;
-    top: -100px;
-    left: -40px;
+    top: -97px;
+    left: -30px;
     width: 200px;
 }
 a.navbar-brand {
@@ -379,4 +379,41 @@ li.lang a {
   display: inline-block;
   padding-right: 3px;
   padding-left: 3px;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top {
+  min-height: 55px;
+  font-size: 14px;
+}
+a.navbar-brand {
+  overflow: hidden;
+  height: 50px;
+  width: 150px;
+}
+
+.agreement p {
+    padding: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    max-height: 500px;
+    overflow: auto;
+}
+div.agree {
+    float: right;
+    position: relative;
+    right: 10px;
+    top: 10px;
+    font-size: 13px;
+}
+div.agree span {
+  margin-right: 5px;
+}
+div.agreement {
+    margin-bottom: 40px;
+    font-size: 13px;
+}
+
+.modal-title {
+  font-size: 16px;
+  font-weight: bold;
 }
