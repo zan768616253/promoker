@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ margin:0px; padding:0px; font-family:"微软雅黑"; color:#555; font-size:14px;}
+ul,li{ margin:0px; padding:0px; list-style:none;}
+.clear_float{ zoom:1;} 
+/* for IE */.clear_float:after { content:"."; display: block; clear:both; font-size:0px; height:0; visibility:hidden; overflow:hidden;}/* for other */
+.mar_left{ float:left;}
+.mar_right{ float:right;}
+
+#marketing_banner{ background:url(/assets/marketing_banner.jpg) no-repeat top center; height:673px;}
+.marketing_banner{ width:980px; margin:0 auto;}
+
+#marketing_case{ background:#edecec; border-bottom:1px solid #d6d6d6; padding:0 0 45px 0;}
+.marketing_case{ width:980px; margin:0 auto;}
+.marketing_case_left{ width:391px;}
+.marketing_case_right{ width:481px; margin:0 50px 0 0; padding:30px 0 0 0;}
+.marketing_case_tit{ padding:0 0 10px 0; border-bottom:1px dotted #b5b5b5; }
+.marketing_case_tit h2{ font-size:25px; color:#d36b1f; margin:0px; padding:0px;}
+.marketing_case_name{ font-size:18px; margin:15px 0;}
+.marketing_case_about span{ background:#555555; color:#fff; padding:1px 5px;}
+.marketing_case_about ul li{ width:240px; float:left; margin:0 0 6px 0;}
+.marketing_case_results li{ width:160px; float:left;}
+.marketing_case_team li{ float:left; width:120px; text-align:center;}
+.marketing_margin{ margin:31px 0 0 0;}
+
+#who{ background:url(/assets/marketing_who.jpg) no-repeat center 150px #fff; height:502px; text-align:center;  border-bottom:1px solid #d6d6d6;}
+.who{ margin:0 auto; width:980px;}
+.who_tit h2{ font-size:25px; color:#d36b1f; margin:30px 0 20px 0; padding:0px;}
+.who_con span{ font-size:20px; color:#fff; background:#d97f3d; font-weight:bold; padding:3px;}
+
+#what{ background:url(/assets/marketing_moeny.jpg) bottom center no-repeat #edecec; height:616px; border-bottom:1px solid #d6d6d6; text-align:center}
+.what{ margin:0 auto; width:980px;}
+.what_tit h2{ margin:0px; padding:40px 0 20px 0; font-size:25px; color:#d36b1f;}
+.what_con{ margin:30px 0 0 0;}
+.what_con li{ float:left; width:196px; text-align:center;}
+.what_con span{ color:#d36b1f; font-size:17px; font-weight:bold;}
+
+.icon_tit{ height:49px; background:#e5e5e5;}
+.icon_tit span{ background:#d36c21; color:#fff; height:49px; display:block; width:187px; margin:0 auto; text-align:center; font-size:25px; line-height:49px;}
+.icon_con{ width:980px; margin:0 auto;}
+.icon_con_box{ width:479px; height:200px; background:url(/assets/icon_bg.jpg) repeat-x;}
+.icon_con_box_tit{ font-size:20px; color:#d36c21; margin:38px 0 0 0 ;}
+.icon_con_box_info{ margin:17px 0;}
+.icon_con_box_img img{ margin:0 40px  0 0;}
+
+#join{ background:#f0f3f4; border-top:1px solid #d7d7d8; border-bottom:1px solid #d7d7d8;}
+.join{ background:url(/assets/join_bg.jpg) no-repeat right bottom; width:980px; margin:0 auto; height:221px; padding:80px 0;}
+.join_tit{ font-size:30px; color:#d36b1f;}
+.join_info{ font-size:25px; color:#000;}
+.join_jh{ margin:20px 0 0 0;}
+.join_jh span{ background:#d36b1f; color:#fff; font-size:18px; padding:4px 10px;}
+
+#go{ width:980px; margin:70px auto;}
+.go_box li.go_boxa{ float:left; width:100px; text-align:center; line-height:30px; margin:0 0 0 150px;}
+.go_box li.go_boxb{ float:left; width:100px; text-align:center; line-height:30px; margin:0 0 0 90px;}
+.go_box li.go_boxc{ float:left; width:100px; text-align:center; line-height:30px; margin:0 0 0 100px;}
+.go_box li.go_boxd{ float:left; width:100px; text-align:center; line-height:30px; margin:0 0 0 90px;}
+.go_boxa{ margin:40px 0 40px 0;}
+.go_boxa li{ float:left; width:196px; text-align:center; line-height:30px;}
+.go_line{ height:13px; background:url(/assets/icon_bg.jpg) no-repeat bottom;}
+.go_about{ padding:30px 0;}
+.go_about h2{ font-size:50px; font-weight:normal; margin:0px; padding:0px; text-align:center; color:#d36b1f;}
+.go_about h3{ font-size:40px; font-weight:normal; margin:0px; padding:0px; text-align:center;}
+.go_btn a{ width:222px; height:59px; display:block; background:url(/assets/btn.png) no-repeat; text-align:center; line-height:59px; color:#fff; font-size:20px; text-decoration:none; margin:0 auto;}
+.go_btn a:hover{ background:url(/assets/btn.png) no-repeat 0 -59px;}
+.go_btna{ padding:400px 0 0 95px;}
+.go_btna a{ width:222px; height:59px; display:block; background:url(/assets/btn.png) no-repeat; text-align:center; line-height:59px; color:#fff; font-size:20px; text-decoration:none;}
+.go_btna a:hover{ background:url(/assets/btn.png) no-repeat 0 -59px;}
+.go_btnb{ margin:20px 0 0 70px;}
+.go_btnb a{ width:222px; height:59px; display:block; background:url(/assets/btn.png) no-repeat; text-align:center; line-height:59px; color:#fff; font-size:20px; text-decoration:none;}
+.go_btnb a:hover{ background:url(/assets/btn.png) no-repeat 0 -59px;}
+
+#contact{ height:559px; background:url(/assets/map.jpg) top center;}
+.contact{ width:980px; margin:0 auto;}
+.contact_ipnut{ width:361px; height:459px; background:url(/assets/contact_input.png) no-repeat; margin:25px 0 0 0; float:right; padding:35px;}
+.contact_ipnut_tit{ font-size:25px; color:#d36b1f; font-weight:bold; margin:0 0 5px 0;}
+.contact_ipnut input{ width:247px; height:33px; background:#e4e4e4; border:1px solid #d7d7d7; font-family:"微软雅黑"; color:#555; padding:0 15px;}
+.textarea{ background:#e4e4e4; border:1px solid #d7d7d7; font-family:"微软雅黑"; color:#555; padding:0 15px; width:247px; height:100px;}
+
+body.theme-m {
+    background: white;
+}
+#join * {
+    box-sizing: content-box;
+}
+#go {
+	font: initial;
+}

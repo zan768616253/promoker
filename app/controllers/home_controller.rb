@@ -29,7 +29,7 @@ class HomeController < ApplicationController
 		end
 	end
 
-	def promote
-		render 'promote'
+	def marketing
+		render 'marketing'
 	end
 end

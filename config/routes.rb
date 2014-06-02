@@ -59,7 +59,7 @@ Rails.application.routes.draw do
   match '/simplified' => 'locale#simplified', :via => :get
   match '/traditional' => 'locale#traditional', :via => :get
 
-  match '/promote' => 'home#promote', :via => :get
+  match '/marketing' => 'home#marketing', :via => :get
   match '/home' => 'home#index', :via => :get
   root to: "home#welcome"
 
