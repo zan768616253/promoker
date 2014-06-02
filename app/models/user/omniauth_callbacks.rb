@@ -3,7 +3,6 @@ class User
   module OmniauthCallbacks
     ["weibo", "google", "facebook", "twitter"].each do |provider|
       define_method "find_or_create_for_#{provider}" do |response|
-
         # assume that we've got a legal authorization from the remote user
         uid = response["uid"].to_s
         data = response["info"]

@@ -189,6 +189,7 @@ zh-CN:
       project: "项目"
       promote: "推广"
       follow: "关注"
+      message: "消息"
     message_modal:
       send: "发送消息"
     message: "消息"
