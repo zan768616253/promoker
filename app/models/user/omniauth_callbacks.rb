@@ -23,7 +23,7 @@ class User
           # but seems that the authorization is not stored in our website
 
           # find whether the user did registred with the same email in our website
-          user = User.find_by_email(data["email"])
+          user = User.find_by_email(data["email"] || "#{provider + uid.to_s}@example.com" )
           if user
             # if the user is found, just login the user
             # and bind the authorization to that user

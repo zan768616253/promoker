@@ -12,16 +12,12 @@ end
 
 # Use a simple directory tree copy here to make demo easier.
 # You probably want to use your own repository for a real app
-if ENV['scm'] == '.'
-  set :scm, :none
-  set :repository, "."
-  set :deploy_via, :copy
-else
-  set :scm, :git
-  set :repository, "git@github.com:yaoyi/promoker.git"
-  set :deploy_via, :remote_cache
-  set :branch, ENV['rev'] || "master"
-end
+
+set :scm, :git
+set :repository, "git@github.com:yaoyi/promoker.git"
+set :deploy_via, :remote_cache
+set :branch, ENV['rev'] || "master"
+
 
 # Easier to do system level config as root - probably should do it through
 # sudo in the future.  We use ssh keys for access, so no passwd needed
@@ -95,6 +91,14 @@ task :cleanup, :except => { :no_release => true } do
     for r in $remove; do rm -rf #{releases_path}/$r; done;
   CMD
 end
+after "deploy", "after_deploy"
+task :after_deploy, :except => { :no_release => true } do
+  rsudo <<-CMD
+    chown -R deploy: #{release_path}
+    chmod 777 #{release_path}/public 
+  CMD
+end
+
 
 # We need to ensure that rubber:config runs before asset precompilation in Rails, as Rails tries to boot the environment,
 # which means needing to have DB access.  However, if rubber:config hasn't run yet, then the DB config will not have
