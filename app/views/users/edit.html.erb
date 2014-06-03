@@ -91,7 +91,7 @@
         <% end %>
       </div>
       <div class="tab-pane" id="avatar">
-        <%= form_for @user, :url => user_update_avatar_path(@user), :method => :post, :html => { :class => 'form-horizontal' } do |f| %>
+        <%= form_for @user, :url => update_avatar_user_path(@user), :method => :post, :html => { :class => 'form-horizontal' } do |f| %>
           <%= hidden_field_tag 'user[crop][x1]'  %>
           <%= hidden_field_tag 'user[crop][y1]' %>
           <%= hidden_field_tag 'user[crop][w]'  %>
