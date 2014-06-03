@@ -29,8 +29,19 @@
 						<span class="location-name"><%= project.location %></span>
 					</li>
 				</ul>
+				<div class="project-needs-wrap">
+                  <% project.need_list.take(3).each do |tag| %>
+                    <span class="tag">
+                      <%= tag %>
+                    </span>
+                    <% end %>
+                </div>
 				<div class="project-pledged-wrap">
-					<div class="project-pledged" style="width: 100%"></div>
+					<%  elapse = (Date.current - project.created_at.to_date).to_f
+                      total = (project.start_at.to_date - project.created_at.to_date).to_f
+                      progress = (elapse/total).round(2)*100
+                  	%>
+                  <div class="project-pledged" style="width: <%= progress %>%"></div>
 				</div>
 				<ul class="project-stats">
 					<li class="pledged">
@@ -38,7 +49,7 @@
 						<%= t('home.budget') %>
 					</li>
 					<li class="pledged">
-						<strong><span class="money usd no-code"><%= (project.start_at.to_date - Date.current).to_i unless project.start_at.blank? %></span></strong>
+						<strong><span class="money usd no-code"><%= (total - elapse).to_i %></span></strong>
 						<%= t('home.day_to_film') %>
 					</li>
 				</ul>

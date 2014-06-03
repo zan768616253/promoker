@@ -197,3 +197,16 @@ div.back {
 .project-thumbnail img {
   width: 220px;
 }
+
+div.project-needs-wrap {
+    position: relative;
+    font-size: 11px;
+}
+div.project-needs-wrap .tag {
+    border: 1px solid #83AAA2;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 5px;
+    background: #83AAA2;
+    color: white;
+}

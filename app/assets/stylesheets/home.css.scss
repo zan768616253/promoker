@@ -968,16 +968,15 @@ ul.nav li.dropdown:hover .rotate {
   text-overflow: ellipsis;
   overflow: hidden;
   word-wrap: word-break;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .project-card-wrap .project-card ul.project-meta {
   list-style: none;
-  position: absolute;
+  position: relative;
   width: 190px;
-  bottom: 65px;
-  left: 10px;
-  margin: 0;
+  left: 5px;
+  margin-bottom: 3px;
 }
 
 
@@ -1015,20 +1014,13 @@ ul.nav li.dropdown:hover .rotate {
 .project-card-wrap .project-card .project-pledged-wrap {
   border-radius: 4px;
   position: absolute;
-  bottom: 43px;
-  left: 10px;
-  width: 190px;
+  bottom: 25px;
+  width: 95%;
   height: 8px;
   background: #D0D5CB;
   padding: 0;
-  margin-top: 5px;
+  margin: 5px auto;
 }
-
-.ongoing .project-card-wrap .project-card .project-pledged-wrap {
-  width: 170px;
-}
-
-
 
 
 .project-card-wrap .project-card .project-pledged-wrap .project-pledged {
@@ -1036,9 +1028,6 @@ ul.nav li.dropdown:hover .rotate {
   border-radius: 4px;
   height: 8px;
 }
-
-
-
 
 .project-card-wrap .project-card ul.project-stats {
   margin: 0;

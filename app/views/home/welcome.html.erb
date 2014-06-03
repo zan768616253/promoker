@@ -208,8 +208,9 @@
   <script>
   	$(function(){
   		$.getJSON('http://freegeoip.net/json/', function(location) {
+  		// $.getJSON('http://api.hostip.info/get_json.php', function(location){
 	        $.simpleWeather({
-	            location: location.country_name,
+	            location: location.latitude + ',' + location.longitude,
 	            woeid: '',
 	            unit: 'c',
 	            success: function(weather) {

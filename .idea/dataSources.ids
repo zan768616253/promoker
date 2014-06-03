@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails promoker: development" uuid="dac6e357-2213-422a-91c4-42d75aa9994f">
+  <data-source source="LOCAL" name="Rails promoker: development" uuid="bbcc0dc5-da99-44fc-9e77-8716db09b2b2">
     <database-info product="MySQL" version="5.6.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -11006,7 +11006,7 @@
       <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>
-  <data-source source="LOCAL" name="Rails promoker: test" uuid="2feb4fd5-e8ec-4c92-8978-5856d58bd002">
+  <data-source source="LOCAL" name="Rails promoker: test" uuid="1675dab9-6bde-4b77-8b51-6a1621ab7d5f">
     <database-info product="MySQL" version="5.6.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -22012,10 +22012,10 @@
       <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>
-  <data-source source="LOCAL" name="Rails promoker: production" uuid="dcf90f72-b151-490c-82f7-737eda284675">
+  <data-source source="LOCAL" name="Rails promoker: production" uuid="b722a420-06ab-438f-8d30-137a72872a1b">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
-  <data-source source="LOCAL" name="Rails promoker: vagrant" uuid="12de7d36-10c0-47c1-a54b-98ce2e83d1a6">
+  <data-source source="LOCAL" name="Rails promoker: vagrant" uuid="45cca68e-0a2d-45de-a215-2acbddf96134">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
 </component>
