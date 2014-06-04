@@ -770,6 +770,11 @@ ul.nav li.dropdown:hover .rotate {
 .left-col .video-list li a {
   color: #444;
   text-decoration: none;
+  width: 100%;
+  // text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
 }
 
 .video-list .list-desc {
