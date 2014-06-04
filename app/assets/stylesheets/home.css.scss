@@ -853,6 +853,8 @@ ul.nav li.dropdown:hover .rotate {
   margin: 0 0 10px 0;
   line-height: 1.4em;
   padding: 0;
+  max-height: 53px;
+  overflow: hidden;
 }
 
 .contenthover a.mybutton {
