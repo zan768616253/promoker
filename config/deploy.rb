@@ -14,8 +14,8 @@ end
 # You probably want to use your own repository for a real app
 
 set :scm, :git
-set :repository, "git@github.com:yaoyi/promoker.git"
-set :deploy_via, :remote_cache
+set :repository, "git@bitbucket.org:linyaoyi/promoker.git"
+# set :deploy_via, :copy
 set :branch, ENV['rev'] || "master"
 
 
@@ -91,13 +91,13 @@ task :cleanup, :except => { :no_release => true } do
     for r in $remove; do rm -rf #{releases_path}/$r; done;
   CMD
 end
-after "deploy:setup", "after_deploy"
-task :chmod_public, :except => { :no_release => true } do
-  rsudo <<-CMD
-    chown -R deploy: #{release_path}
-    chmod 777 #{release_path}/public 
-  CMD
-end
+# after "deploy:setup", "chmod_public"
+# task :chmod_public, :except => { :no_release => true } do
+#   rsudo <<-CMD
+#     chown -R deploy: #{release_path}
+#     chmod 777 #{release_path}/public 
+#   CMD
+# end
 
 
 # We need to ensure that rubber:config runs before asset precompilation in Rails, as Rails tries to boot the environment,
