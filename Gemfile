@@ -38,6 +38,7 @@ gem 'thin'
 gem 'faye-rails'
 gem "settingslogic"
 gem 'carrierwave'
+gem 'carrierwave-upyun', git: "git@github.com:nowa/carrierwave-upyun.git"
 gem 'mini_magick'
 gem 'ruby_identicon'
 gem "acts_as_follower"

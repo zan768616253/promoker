@@ -12,10 +12,24 @@ defaults: &defaults
 
 development:
   <<: *defaults
-
+  upyun:
+    username: promokerdev
+    password: aWDR89vlVpvH
+    bucket: promoker-dev
+    bucket_host: http://promoker-dev.b0.upaiyun.com
 test:
   <<: *defaults
 vagrant:
   <<: *defaults
+  upyun:
+    username: promokerstaging
+    password: ylNOtF8PPjUy
+    bucket: promoker-staging
+    bucket_host: http://promoker.b0.upaiyun.com
 production:
   <<: *defaults
+  upyun:
+    username: promoker
+    password: Rtoe2GtNo1KO
+    bucket: promoker
+    bucket_host: http://promoker.b0.upaiyun.com
