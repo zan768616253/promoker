@@ -6,6 +6,14 @@ GIT
     yaml_db (0.2.3)
 
 GIT
+  remote: git://github.com/nowa/carrierwave-upyun.git
+  revision: e65e9e39e2d352f34082694ad98a98941b751ac6
+  specs:
+    carrierwave-upyun (0.1.7)
+      carrierwave (>= 0.5.7)
+      rest-client (>= 1.6.7)
+
+GIT
   remote: git://github.com/yaoyi/redis_captcha.git
   revision: c17530063597c695c84a969cbde7704c4a7ea26c
   specs:
@@ -13,14 +21,6 @@ GIT
       rails
       redis
       uuid
-
-GIT
-  remote: git@github.com:nowa/carrierwave-upyun.git
-  revision: e65e9e39e2d352f34082694ad98a98941b751ac6
-  specs:
-    carrierwave-upyun (0.1.7)
-      carrierwave (>= 0.5.7)
-      rest-client (>= 1.6.7)
 
 GIT
   remote: https://github.com/emoreth/rails_admin_tag_list.git
