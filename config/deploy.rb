@@ -15,18 +15,17 @@ end
 
 set :scm, :git
 set :repository, "git@bitbucket.org:linyaoyi/promoker.git"
-# set :deploy_via, :copy
 set :branch, ENV['rev'] || "master"
 
 
 # Easier to do system level config as root - probably should do it through
 # sudo in the future.  We use ssh keys for access, so no passwd needed
-set :user, 'root'
+set :user, rubber_env.app_user
 set :password, nil
 
 # Use sudo with user rails for cap deploy:[stop|start|restart]
 # This way exposed services (mongrel) aren't running as a privileged user
-set :use_sudo, true
+# set :use_sudo, true
 
 # How many old releases should be kept around when running "cleanup" task
 set :keep_releases, 3
@@ -91,14 +90,6 @@ task :cleanup, :except => { :no_release => true } do
     for r in $remove; do rm -rf #{releases_path}/$r; done;
   CMD
 end
-# after "deploy:setup", "chmod_public"
-# task :chmod_public, :except => { :no_release => true } do
-#   rsudo <<-CMD
-#     chown -R deploy: #{release_path}
-#     chmod 777 #{release_path}/public 
-#   CMD
-# end
-
 
 # We need to ensure that rubber:config runs before asset precompilation in Rails, as Rails tries to boot the environment,
 # which means needing to have DB access.  However, if rubber:config hasn't run yet, then the DB config will not have

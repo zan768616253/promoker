@@ -25,7 +25,7 @@ vagrant:
     username: promokerstaging
     password: ylNOtF8PPjUy
     bucket: promoker-staging
-    bucket_host: http://promoker.b0.upaiyun.com
+    bucket_host: http://promoker-staging.b0.upaiyun.com
 production:
   <<: *defaults
   upyun:
