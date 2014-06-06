@@ -9,14 +9,14 @@ defaults: &defaults
   weibo_secret: '24362b95d5bab896da9508692c367782'
   logo_home: "uploads/photo/image/16/LOGO-Home_page.png"
   logo_welcome: "uploads/photo/image/17/LOGO-Welcome_page.png"
-
-development:
-  <<: *defaults
   upyun:
     username: promokerdev
     password: aWDR89vlVpvH
     bucket: promoker-dev
     bucket_host: http://promoker-dev.b0.upaiyun.com
+
+development:
+  <<: *defaults
 test:
   <<: *defaults
 vagrant:

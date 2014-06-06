@@ -13,14 +13,21 @@ end
 # Use a simple directory tree copy here to make demo easier.
 # You probably want to use your own repository for a real app
 
-set :scm, :git
-set :repository, "git@bitbucket.org:linyaoyi/promoker.git"
-set :branch, ENV['rev'] || "master"
+
+if RUBBER_ENV == 'vagrant'
+  set :scm, :none
+  set :repository, '.'  
+  set :deploy_via, 'copy'
+else
+  set :scm, :git
+  set :repository, "git@bitbucket.org:linyaoyi/promoker.git"
+  set :branch, ENV['rev'] || "master"
+end
 
 
 # Easier to do system level config as root - probably should do it through
 # sudo in the future.  We use ssh keys for access, so no passwd needed
-set :user, rubber_env.app_user
+set :user, 'root'
 set :password, nil
 
 # Use sudo with user rails for cap deploy:[stop|start|restart]
@@ -91,6 +98,12 @@ task :cleanup, :except => { :no_release => true } do
   CMD
 end
 
+before "deploy:assets:precompile", "change_ownership"
+task :change_ownership, :except => { :no_release => true } do
+  rsudo <<-CMD
+    chown -R #{runner}:#{runner} #{releases_path}
+  CMD
+end
 # We need to ensure that rubber:config runs before asset precompilation in Rails, as Rails tries to boot the environment,
 # which means needing to have DB access.  However, if rubber:config hasn't run yet, then the DB config will not have
 # been generated yet.  Rails will fail to boot, asset precompilation will fail to complete, and the deploy will abort.
