@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
   	end
 
 	def index 
-		@projects = Project.recent.page(params[:page])
+		@projects = Project.published.recent.page(params[:page])
 		@tickets = Ticket.recent.page(params[:page])
 	end
 

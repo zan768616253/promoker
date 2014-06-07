@@ -137,8 +137,8 @@
                     <% end %>
                 </div>
                 <div class="project-pledged-wrap">
-                  <%  elapse = (Date.current - project.created_at.to_date).to_f
-                      total = (project.start_at.to_date - project.created_at.to_date).to_f
+                  <%  elapse = (Date.current - project.published_at.to_date).to_f
+                      total = (project.start_at.to_date - project.published_at.to_date).to_f
                       progress = (elapse/total).round(2)*100
                   %>
                   <div class="project-pledged" style="width: <%= progress %>%"></div>

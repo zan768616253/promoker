@@ -7,6 +7,7 @@ class Project < ActiveRecord::Base
 
 	def publish!
 		self.status = 'published'
+		self.published_at = Time.now
 	end
 	def unpublish!
 		self.status = 'draft'
