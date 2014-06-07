@@ -216,6 +216,11 @@ li.comment:last-child {
 }
 .relate-title a {
   color: #444;
+  display: block;
+  white-space: nowrap;
+  width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .relate-thumb img {
