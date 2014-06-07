@@ -55,7 +55,7 @@ li.progress-item.line {
 }
 
 ul.promotion-progress {
-	width: 350px;
+	width: 380px;
 	margin: 0px auto;
 }
 
@@ -79,7 +79,7 @@ li.progress-item.active .pic {
 li.progress-item i.fa.fa-user {
 	width: 30px;
 	position: relative;
-	left: 3px;
+	left: 5px;
 }
 
 td.screenshot img {
@@ -150,4 +150,12 @@ div.promotion-state {
 table.table.table-hover {
 	width: 90%;
 	margin: 10px auto;
+}
+
+.progress-item .pic i {
+    position: relative;
+    left: 3px;
+}
+.progress-item .pic i.fa.fa-bar-chart-o {
+    left: 0px;
 }
