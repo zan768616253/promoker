@@ -291,23 +291,23 @@ div.user-like-summary {
     color: #999;
 }
 
-.user-wrapper div#user-projects ul li {
+.user-wrapper div#user-projects ul.user-projects-nav li {
   display: inline-block;
   padding: 5px 10px;
   margin: 10px;
   border-radius: 5px;
 }
 
-.user-wrapper div#user-projects ul li a {
+.user-wrapper div#user-projects ul.user-projects-nav li a {
   color: #999;
   text-decoration: none;
 }
 
-.user-wrapper div#user-projects ul li.active {
+.user-wrapper div#user-projects ul.user-projects-nav li.active {
   background: orange;
 }
 
-.user-wrapper div#user-projects ul li.active a {
+.user-wrapper div#user-projects ul.user-projects-nav li.active a {
   color: white;
 }
 
@@ -455,4 +455,8 @@ div.preview.icon-30 {
 
 #follows ul li:hover img {
   border: 2px solid #E62E4C;
+}
+
+#user-ticket table.table.table-hover {
+ font-size: 12px; 
 }
