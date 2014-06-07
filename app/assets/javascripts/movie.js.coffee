@@ -1,5 +1,7 @@
 window.Movies =
-	like : (elem) ->
+	like : (elem, e) ->
+    e.preventDefault()
+    e.stopPropagation()
     $elem = $(elem)
     likes_count = parseInt($elem.data("count"))
     if $elem.data("state") != "liked"
