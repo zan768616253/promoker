@@ -61,8 +61,8 @@ zh-CN:
     footer:
       partner: "合作伙伴"
     copyright:
-      prefix: "本作品采用"
-      license: "知识共享署名-非商业性使用 2.5 中国大陆许可协议"
+      prefix: ""
+      license: ""
       surfix: "进行许可。"
       detail: "本站不提供任何视听上传服务，所有内容均来自视频分享站点所提供的公开引用资源。"
     hot_recommends: "特别推荐"
