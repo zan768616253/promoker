@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
 		if @message.to != current_user and @message.from != current_user
 			render_404
 		else
-			@message.read = true
+			@message.is_read = true
 			@message.save!
 		end
 	end
@@ -26,7 +26,7 @@ class MessagesController < ApplicationController
 	def mark
 		messages = Message.unread(current_user)
 		for message in messages
-			message.read = true
+			message.is_read = true
 			message.save
 		end
 		redirect_to messages_path

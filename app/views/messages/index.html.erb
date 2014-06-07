@@ -11,7 +11,7 @@
 		<a id="mark-read" class="btn btn-warning" onclick="Messages.mark_all_as_read(this,event)"><%= t('messages.mark_all_read') %></a>
 		<table class="table table-hover messages">
 			<% @messages.each do |m| %>
-			<tr class="message <%= 'unread' if m.read == false %>" data-href="<%= message_path(m) %>" >
+			<tr class="message <%= 'unread' if m.is_read == false %>" data-href="<%= message_path(m) %>" >
 				<td width="5%" class="message-user-thumb"><%= image_tag m.from.avatar %></td>
 				<td width="10%" class="message-user"><%= link_to m.from.nickname, user_path(m.from) %></td>
 				<td width="50%" class="message-summary"><%= truncate m.content, length: 30 %></td>
