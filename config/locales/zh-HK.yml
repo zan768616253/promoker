@@ -26,6 +26,10 @@ zh-HK:
         settings: "個人設置"
         messages: "我的消息"
         logout: "退出"
+    promote_modal:
+      title: "推廣影片"
+      promotion_title: "影片名稱"
+      promotion_create: "創建推廣申請"
     post_modal:
       title: "發佈項目"
       ticket_desc: "如果您有影視項目需求，發起一句話項目，讓我們幫您快速匹配資源"
@@ -188,3 +192,22 @@ zh-HK:
     message_modal:
       send: "發送消息"
     message: "消息"
+  instruction: "請仔細閱讀以下推廣協議"
+  agree: "同意上述推廣協議"
+  promotion:
+    title: "推廣"
+    progress: "推廣進度"
+    form: "推廣申請表.doc"
+    instruction: "請下載申請表格，填寫完成之後上傳並提交推廣申請"
+    submit: "提交推廣申請"
+    draft: "填寫表格"
+    received: "正在審核"
+    promoting: "正在推廣"
+    complete: "推廣結束"
+    detail: "推廣詳情"
+    time: "時間"
+    channel: "渠道"
+    desc: "情況"
+    screenshot: "截圖"
+    url: "鏈接"
+    not: "通過審核後，開始推廣"

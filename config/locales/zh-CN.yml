@@ -28,7 +28,7 @@ zh-CN:
         logout: "退出"
     promote_modal:
       title: "推广影片"
-      promotion_title: "推广名称"
+      promotion_title: "影片名称"
       promotion_create: "创建推广申请"
 
     post_modal:
