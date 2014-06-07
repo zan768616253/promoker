@@ -24,7 +24,7 @@
 </div>
 
 <div class="form-group">
-	<%= f.label :start_at, t('projects.start_at'), :class => 'col-sm-2 control-label' %>
+	<%= f.label :start_at, t('projects.project_start_at'), :class => 'col-sm-2 control-label' %>
 	<div class="col-sm-5">
   		<%= f.date_field :start_at%>
 	</div>
@@ -76,7 +76,7 @@
 </div>
 
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label"><%= t('projects_script') %></label>
+	<label for="" class="col-sm-2 control-label"><%= t('projects.project_script') %></label>
 	<div class="col-sm-5">
   		<%= f.text_area :script, :rows => 5, :cols => 20, :class => 'form-control' %>
 	</div>
