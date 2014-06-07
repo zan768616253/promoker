@@ -8,6 +8,9 @@ on :load do
   set :deploy_to,   "/mnt/#{application}-#{Rubber.env}"
   set :copy_exclude, [".git/*", ".bundle/*", "log/*", ".rvmrc", ".rbenv-version"]
   set :assets_role, [:app]
+  set :faye_user, 'root'
+  set :faye_pid, "#{deploy_to}/shared/pids/faye.pid"
+  set :faye_config, "#{deploy_to}/current/faye.ru"
 end
 
 # Use a simple directory tree copy here to make demo easier.
@@ -117,8 +120,6 @@ end
 
 load "config/recipes/faye"
 
-set :faye_pid, "#{deploy_to}/shared/pids/faye.pid"
-set :faye_config, "#{deploy_to}/current/faye.ru"
 namespace :faye do
   desc "Start Faye"
   task :start do

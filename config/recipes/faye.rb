@@ -1,6 +1,3 @@
-set_default(:faye_user) { user }
-set_default(:faye_pid) { "#{current_path}/tmp/pids/faye.pid" }
-
 namespace :faye do
   desc "Setup Faye initializer"
   task :setup, roles: :app do

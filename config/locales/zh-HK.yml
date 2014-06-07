@@ -157,6 +157,7 @@ zh-HK:
       email: "郵箱"
       password: "密碼"
       nickname: "昵稱"
+      role: "職位"
       gender: "性別"
       male: "男"
       female: "女"

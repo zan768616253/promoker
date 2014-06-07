@@ -223,6 +223,9 @@ GEM
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    kaminari-bootstrap (3.0.1)
+      kaminari (>= 0.13.0)
+      rails
     kgio (2.9.2)
     launchy (2.4.2)
       addressable (~> 2.3)
@@ -483,6 +486,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   kaminari
+  kaminari-bootstrap (~> 3.0.1)
   launchy
   meta_request
   mini_magick

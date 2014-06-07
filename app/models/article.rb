@@ -1,7 +1,7 @@
 # coding: utf-8
 class Article < ActiveRecord::Base
 
-
+  paginates_per 10
   acts_as_taggable
   acts_as_commentable
   acts_as_votable

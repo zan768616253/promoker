@@ -162,6 +162,7 @@ zh-CN:
       email: "邮箱"
       password: "密码"
       nickname: "昵称"
+      role: "职位"
       gender: "性别"
       male: "男"
       female: "女"

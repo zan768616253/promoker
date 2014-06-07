@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="form-group">
-            <%= f.label :roles, t('users.edit.nickname'), :class => 'col-sm-2 control-label' %>
+            <%= f.label :roles, t('users.edit.role'), :class => 'col-sm-2 control-label' %>
             <%= f.hidden_field :roles, :value => @user.role_list %>
             <div class="col-sm-8">
                 <% @roles.each do |role|%>
