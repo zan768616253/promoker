@@ -91,7 +91,7 @@
             <div class="overlay"></div>
           </div>
           <div class="movie-title">
-            <%= link_to movie.title, movie_path(movie) %>
+            <%= link_to movie.title, movie_path(movie), :title => movie.title %>
           </div>
           <div class="movie-tags">
             <% movie.type_list.each do |type| %>

@@ -183,6 +183,11 @@ li.comment:last-child {
   color: #444;
   text-decoration: none;
   font-size: 14px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 200px;
 }
 
 .movie-item .movie-title a:hover {
