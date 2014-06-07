@@ -87,7 +87,7 @@ zh-CN:
       area: "按区域查看: "
       type: "按类型查看: "
       status: "按进程查看: "
-      all: "全部: "
+      all: "全部"
     status:
       enroll: "即将开始"
       underway: "正在进行"
@@ -108,7 +108,7 @@ zh-CN:
     filter:
       area: "按区域查看: "
       type: "按类型查看: "
-      all: "全部: "
+      all: "全部"
     director: "导演: "
   projects:
     project_summary: "项目简介"
