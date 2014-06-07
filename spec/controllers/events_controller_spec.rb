@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe EventsController do
+	render_views
 	let(:user)  { create(:user) }
 	let(:event) { create(:event)}
 	describe "GET index" do

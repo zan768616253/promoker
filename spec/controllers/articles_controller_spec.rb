@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ArticlesController do
+	render_views
 	let(:user) { create(:user) }
 	let(:article) { create(:article)}
 	describe "GET index" do

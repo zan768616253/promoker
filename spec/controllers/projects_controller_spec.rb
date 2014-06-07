@@ -2,6 +2,7 @@
 require 'spec_helper'
 
 describe ProjectsController do
+	render_views
 	let(:user) { create(:user) }
 	let(:user_test) { create(:user) }
 	let(:project) { create(:project, :user => user) }

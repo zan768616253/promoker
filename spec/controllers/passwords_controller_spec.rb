@@ -2,9 +2,10 @@
 require 'spec_helper'
 
 describe PasswordsController do
-  let(:user) { create(:user) }
-  let(:user_test) { create(:user) }
-  describe "PUT update" do
+  	render_views
+  	let(:user) { create(:user) }
+  	let(:user_test) { create(:user) }
+  	describe "PUT update" do
 	it "should rediect to signed in page if not signed in" do
 	  	put :update, :id => user.id
 	  	response.should redirect_to new_user_session_path

@@ -9,6 +9,7 @@ FactoryGirl.define do
 		cover { Faker::Internet.url }
 		video { Faker::Internet.url }
 		status "draft"
+		start_at 10.days.ago
 		association :user
 
 		trait :published do

@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe MoviesController do
+	render_views
 	let(:user)  { create(:user) }
 	let(:movie) { create(:movie) }
 	describe "GET index" do

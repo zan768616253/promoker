@@ -9,7 +9,7 @@ describe ApplicationHelper do
     end
     context 'when flash key is error' do
       let(:flash_key) { 'error' }
-      it { should == 'alert-error' }
+      it { should == 'alert-danger' }
     end
   end
 end

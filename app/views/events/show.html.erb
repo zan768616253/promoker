@@ -5,7 +5,7 @@
 				<%=  @event.title %>
 			</div>
 			<div class="event-date">
-				<span><%= t('events.event_date') %></span><%= @event.start.strftime("%m#{t('month')}%d#{t('date')}") %> ~ <%= @event.end.strftime("%m#{t('month')}%d#{t('date')}") %>
+				<span><%= t('events.event_date') %></span><%= @event.start_time.strftime("%m#{t('month')}%d#{t('date')}") %> ~ <%= @event.end_time.strftime("%m#{t('month')}%d#{t('date')}") %>
 			</div>
 			<div class="event-type">
 				<span><%= t('events.event_type') %></span><%= link_to @event.type_list.join(' '), events_path({:type=>@event.type_list.join(' ')}) %>
@@ -32,7 +32,7 @@
 				<%= @event.title %>
 			</div>
 			<div class="event-date">
-				<span><%= t('events.event_date') %> </span><%= @event.start.strftime("%m#{t('month')}%d#{t('date')}") %> ~ <%= @event.end.strftime("%m#{t('month')}%d#{t('date')}") %>
+				<span><%= t('events.event_date') %> </span><%= @event.start_time.strftime("%m#{t('month')}%d#{t('date')}") %> ~ <%= @event.end_time.strftime("%m#{t('month')}%d#{t('date')}") %>
 			</div>
 			<div class="event-type">
 				<span><%= t('events.event_type') %> </span><%= link_to @event.type_list.join(' '), events_path({:type=>@event.type_list.join(' ')}) %>

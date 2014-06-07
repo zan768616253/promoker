@@ -64,6 +64,12 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'spork-rails'
+  gem 'pry'
+  gem 'pry-rescue'
+  gem 'pry-remote'
+  gem 'pry-stack_explorer'
+  gem 'pry-debugger'
+  gem 'rspec-console'
 end
 
 group :test do
@@ -102,5 +108,4 @@ gem 'unicorn'
 gem 'open4'
 gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
 gem 'newrelic_rpm'
-
 

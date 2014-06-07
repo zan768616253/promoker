@@ -37,6 +37,7 @@ class ProjectsController < ApplicationController
 		@project = Project.new
 		@project.title = params[:project][:title]
 		@project.user = current_user
+		@project.start_at = Time.now
 		if @project.save
 			redirect_to edit_project_path(@project)
 		else

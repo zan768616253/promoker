@@ -2,6 +2,7 @@
 require 'spec_helper'
 
 describe TicketsController do
+	render_views
 	let(:user) { create(:user) }
 	let(:ticket) { create(:ticket)}
 	describe "GET show" do
