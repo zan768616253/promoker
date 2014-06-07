@@ -1,5 +1,6 @@
 # coding: utf-8
 class Message < ActiveRecord::Base
+	paginates_per 20
 	belongs_to :from, :class_name => 'User'
 	belongs_to :to, :class_name => 'User'
 

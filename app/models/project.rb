@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+	paginates_per 12
 	acts_as_taggable_on :needs
 	mount_uploader :cover, ImageUploader
 	scope :published,  -> { where(status: 'published') }

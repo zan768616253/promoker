@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+	paginates_per 5
 	acts_as_taggable_on :types, :tags, :locations
 	acts_as_votable
 	acts_as_commentable

@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
+  paginates_per 12
   acts_as_taggable_on :locations, :types
   acts_as_commentable
   acts_as_votable

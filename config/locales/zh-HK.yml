@@ -5,6 +5,12 @@ zh-HK:
   promoker: "普摩客"
   errors:
     404: "似乎沒有這個頁面哦！大哥，回去看看別的吧。"
+  views:
+    pagination:
+      next: "下一頁"
+      previous: "上一頁"
+      first: "首頁"
+      last: "尾頁"
   home:
     nav:
       share: "分享"

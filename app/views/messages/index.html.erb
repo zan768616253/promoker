@@ -18,6 +18,7 @@
 				<td width="20%" class="message-date"><%= m.created_at.strftime("%Y-%m-%d %H:%M") %></td>
 			</tr>
 			<% end %>
+			<%= paginate @messages %>
 		</table>
 	</div>
 </div>
