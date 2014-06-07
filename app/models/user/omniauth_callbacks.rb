@@ -1,15 +1,12 @@
 # coding: utf-8
 class User
   module OmniauthCallbacks
-    ["weibo", "google", "facebook", "twitter"].each do |provider|
+    ["weibo", "google_oauth2", "facebook", "twitter"].each do |provider|
       define_method "find_or_create_for_#{provider}" do |response|
         # assume that we've got a legal authorization from the remote user
-        uid = response["uid"].to_s
-        data = response["info"]
-        if provider == "weibo"
-          data["extra"] = response["extra"]["raw_info"]
-        end
-
+        uid = response.uid.to_s
+        data = response.info
+        extra = response.extra.raw_info
         user = nil
 
         authorization = Authorization.where(:provider => provider, :uid => uid).first
@@ -22,7 +19,7 @@ class User
           # but seems that the authorization is not stored in our website
 
           # find whether the user did registred with the same email in our website
-          user = User.find_by_email(data["email"] || "#{provider + uid.to_s}@example.com" )
+          user = User.find_by_email(data.email || "#{provider + uid.to_s}@example.com" )
           if user
             # if the user is found, just login the user
             # and bind the authorization to that user
@@ -30,7 +27,7 @@ class User
           else
             # response has nothing to identify the user
             # could be a brand new user, logging in with 3rd party account
-            user = User.new_from_provider_data(provider,uid,data)
+            user = User.new_from_provider_data(provider,uid,data, extra)
 
             if user.save(:validate => false)
               user.authorizations << Authorization.new(:provider => provider, :uid => uid )
@@ -42,19 +39,22 @@ class User
         return user
       end
     end
-    def new_from_provider_data(provider, uid, data)
+    def new_from_provider_data(provider, uid, data, extra) 
       user = User.new
-      user.email = data["email"]
-      user.email = "#{provider + uid.to_s}@example.com" if data[:email].nil?
+      user.email = data.email || "#{provider + uid.to_s}@example.com"
 
-      user.nickname = data["nickname"]
-      # user.avatar = data["image"] if user.avatar.nil?
-      user.remote_avatar_url = data["image"] + '.jpg' unless user.avatar?
+      user.nickname = data.name
+      user.name = data.name
 
+      if provider == "facebook"
+        data.image = data.image.gsub('http://','https://')
+      end
+      user.remote_avatar_url = data.image unless user.avatar?
       user.password = Devise.friendly_token[0,20]
-      user.location = data["location"]
-      user.gender = data["extra"]["gender"]
-
+      user.location = data.location
+      if provider.in? ['weibo','facebook']
+        user.gender = extra.gender
+      end
       # user.skip_confirmation!
       user
     end

@@ -43,6 +43,10 @@ gem 'mini_magick'
 gem 'ruby_identicon'
 gem "acts_as_follower"
 gem 'omniauth-weibo-oauth2'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
 gem 'jquery-turbolinks'
 gem 'redis_captcha', github: 'yaoyi/redis_captcha'
 

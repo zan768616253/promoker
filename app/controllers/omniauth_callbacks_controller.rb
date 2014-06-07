@@ -28,5 +28,5 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       }
     end
   end
-  providers_callback_for :weibo
+  providers_callback_for :weibo, :twitter, :facebook, :google_oauth2
 end

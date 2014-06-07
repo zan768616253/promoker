@@ -160,28 +160,28 @@
       </div>
       <div class="tab-pane" id="oauth">
         <ul>
-          <li class="weibo bind">
+          <li class="weibo <%= 'bind' if @user.bind?("weibo") %>">
             <i class="fa fa-weibo"></i>
-            <a href="#">
-              <%= t('users.edit.binded') %>
+            <a href="<%= user_omniauth_authorize_path(:weibo) %>">
+              <%= @user.bind?("weibo") ? t('users.edit.binded') : t('users.edit.bind') %>
             </a>
           </li>
-          <li class="facebook">
+          <li class="facebook <%= 'bind' if @user.bind?("facebook") %>">
             <i class="fa fa-facebook-square"></i>
-            <a href="#">
-              <%= t('users.edit.bind') %>
+            <a href="<%= user_omniauth_authorize_path(:facebook) %>">
+              <%= @user.bind?("facebook") ? t('users.edit.binded') : t('users.edit.bind') %>
             </a>
           </li>
-          <li class="twitter">
+          <li class="twitter <%= 'bind' if @user.bind?("twitter") %>">
             <i class="fa fa-twitter-square"></i>
-            <a href="#" class="">
-              <%= t('users.edit.bind') %>
+            <a href="<%= user_omniauth_authorize_path(:twitter) %>">
+              <%= @user.bind?("twitter") ? t('users.edit.binded') : t('users.edit.bind') %>
             </a>
           </li>
-          <li class="google">
+          <li class="google <%= 'bind' if @user.bind?("google_oauth2") %>">
             <i class="fa fa-google-plus"></i>
-            <a href="#">
-              <%= t('users.edit.bind') %>
+            <a href="<%= user_omniauth_authorize_path(:google_oauth2) %>">
+              <%= @user.bind?("google_oauth2") ? t('users.edit.binded') : t('users.edit.bind') %>
             </a>
           </li>
         </ul>

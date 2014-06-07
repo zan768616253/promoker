@@ -56,9 +56,9 @@ zh-HK:
     footer:
       partner: "合作伙伴"
     copyright:
-      prefix: "本作品采用"
-      license: "知識共享署名-非商業使用 2.5 中國大陸許可協議"
-      surfix: "進行許可。"
+      prefix: ""
+      license: ""
+      surfix: ""
       detail: "本站不提供任何視聽上傳服務，所有內容均來自視頻分享站點所提供的公開引用資源。"
     hot_recommends: "特別推薦"
     filmfest_selections: "電影節精選"
