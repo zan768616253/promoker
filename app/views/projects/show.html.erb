@@ -42,7 +42,7 @@
 				<p><%= t('projects.project_duration') %>: <%= @project.duration %></p>
 				<p><%= t('projects.project_start_at') %>: <%= @project.start_at.strftime('%y-%m-%m') %> </p>
 				<p><%= t('projects.project_budget') %>: <%= @project.budget %><%= t('home.wan') %></p>
-				<p><%= t('projects.project_need') %>: <%= @project.need_list.join(',') %></p>
+				<p><%= t('projects.project_needs') %>: <%= @project.need_list.join(',') %></p>
 			</div>
 			<%= render 'users/profile'%>
 		</div>
