@@ -4,10 +4,8 @@ $ ->
 	$('.bx-slider').bxSlider
 		minSlides: 1,
 		maxSlides: 6,
-		# slideWidth: 170,
-		# slideMargin: 10,
 		pager: false,
-		# auto: true,
+		auto: true,
 		moveSlides: 1
 
 	$('.poster img').contenthover

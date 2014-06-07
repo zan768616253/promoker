@@ -153,7 +153,7 @@ ul.dropdown-menu li {
 #footer-inner {
 	margin:auto;
 	border-top:1px solid #d9d9d9;
-	background:url(http://www.fqpai.com/wp-content/themes/fqp-three/images/footer-pattern-bg.png) repeat;
+	background: image-url('footer-pattern-bg.png') repeat;
 }
 .footer-inner-no-content {
 	border:0px !important;
@@ -173,12 +173,12 @@ ul.dropdown-menu li {
 	width:940px;
 	padding:10px;
 	margin:0 auto;
-	background:url(http://www.fqpai.com/wp-content/themes/fqp-three/images/pattern-pixel.png) repeat;	
+	background:image-url('pattern-pixel.png') repeat;	
 }
 #footer-partners {
 	width:920px;
 	padding:20px;
-	background:#FFF url(http://www.fqpai.com/wp-content/themes/fqp-three/images/footer-partners.png) repeat;
+	background:#FFF image-url('footer-partners.png') repeat;
 }
 #footer-partners ul {
 	list-style:none;
@@ -194,7 +194,7 @@ ul.dropdown-menu li {
 	position:absolute;
 	top:-55px;
 	right:-5px;
-	background-image:url(http://www.fqpai.com/wp-content/themes/fqp-three/images/footer-partners-prev.png);
+	background-image: image-url('footer-partners-prev.png');
 	background-repeat:no-repeat;
 	background-position:7px 5px;
 	height:20px;
@@ -208,7 +208,7 @@ ul.dropdown-menu li {
 	position:absolute;
 	top:-55px;
 	right:-30px;
-	background-image:url(http://www.fqpai.com/wp-content/themes/fqp-three/images/footer-partners-next.png);	
+	background-image:image-url('footer-partners-next.png');	
 	background-color:#b2b2b2;
 	background-repeat:no-repeat;
 	background-position:7px 5px;

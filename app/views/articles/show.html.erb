@@ -56,7 +56,7 @@
       <% if user_signed_in? %>
         <%= f.submit t('new_comment'), :class => 'btn btn-primary pull-right' %>
       <% else %>
-        <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#login-modal">t('new_comment')</a>
+        <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#login-modal"><%= t('new_comment') %></a>
       <% end %>
      <% end %>
 
