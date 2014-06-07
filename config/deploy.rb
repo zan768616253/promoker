@@ -98,10 +98,10 @@ task :cleanup, :except => { :no_release => true } do
   CMD
 end
 
-before "deploy:assets:precompile", "change_ownership"
+before "rubber:unicorn:reload", "change_ownership"
 task :change_ownership, :except => { :no_release => true } do
   rsudo <<-CMD
-    chown -R #{runner}:#{runner} #{releases_path}
+    chown -R #{runner}:#{runner} #{deploy_to}
   CMD
 end
 # We need to ensure that rubber:config runs before asset precompilation in Rails, as Rails tries to boot the environment,
