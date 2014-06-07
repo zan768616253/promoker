@@ -27,7 +27,7 @@ test:
   <<: *defaults
 vagrant:
   <<: *defaults
-  faye_server: "http://default.foo.com:9292/faye"
+  faye_server: "http://default.foo.com:8080/faye"
   faye_token: "123456"
   upyun:
     username: promokerstaging
@@ -36,7 +36,7 @@ vagrant:
     bucket_host: http://promoker-staging.b0.upaiyun.com
 production:
   <<: *defaults
-  faye_server: "http://promoker.com:9292/faye"
+  faye_server: "http://promoker.com:8080/faye"
   faye_token: "123456"
   upyun:
     username: promoker
