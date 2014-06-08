@@ -36,6 +36,7 @@
                     </span>
                     <% end %>
                 </div>
+                <% if project.published? %>
 				<div class="project-pledged-wrap">
 					<%  elapse = (Date.current - project.published_at.to_date).to_f
                       total = (project.start_at.to_date - project.published_at.to_date).to_f
@@ -45,7 +46,7 @@
 				</div>
 				<ul class="project-stats">
 					<li class="pledged">
-						<strong><span class="money usd no-code"><%= project.budget %><%= t('home.wan') %></span></strong>
+						<strong><span class="money usd no-code"><%= Money.new(project.budget.to_i, project.currency).format(:no_cents => true) %></span></strong>
 						<%= t('home.budget') %>
 					</li>
 					<li class="pledged">
@@ -53,6 +54,12 @@
 						<%= t('home.day_to_film') %>
 					</li>
 				</ul>
+				<% else %>
+				<div class="unpublished">
+					<span class="badge badge-error"><%= t('projects.unpublished') %></span>
+					<a class="btn btn-default" href="<%= edit_project_path(project) %>">编辑</a>
+				</div>
+				<% end %>
 			</div>
 		</div>
 	</div>		

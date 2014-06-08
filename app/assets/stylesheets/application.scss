@@ -14,6 +14,7 @@
  *= require bxslider
  *= require social-share-button
  *= require fancybox
+ *= require bootsy
  *= require_tree .
  */
 
@@ -471,4 +472,10 @@ font-size: 15px;
 .modal-title {
   font-size: 16px;
   font-weight: bold;
+}
+
+#footer .tip li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 13px;
 }

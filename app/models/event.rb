@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
 	acts_as_votable
 	acts_as_commentable
 
-	mount_uploader :thumb, ImageUploader
+	mount_uploader :thumb, PhotoUploader
 	scope :recent, -> { order("created_at DESC")}
 
 	def started?

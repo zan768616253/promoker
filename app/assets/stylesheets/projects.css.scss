@@ -70,14 +70,11 @@ td.ticket-user {
 div#preview {
   width: 240px;
   position: fixed;
-  top: 100px;
-  right: 200px;
+  top: 120px;
+  right: 160px;
 }
 
 div.projects-header {
-    margin: 60px auto;
-    margin-bottom: 0px;
-    width: 960px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -92,6 +89,7 @@ div.project-save {
     padding: 5px;
     z-index: 9999;
 }
+
 .project-save a {
     margin-right: 10px;
     float: right;
@@ -104,7 +102,7 @@ div.project-save {
 
 .project-save a:hover {
     color: #FFF;
-    background: #8FBC8F; 
+    background: #719271;
 }
 
 select#project_movie_type {
@@ -213,4 +211,26 @@ div.project-needs-wrap .tag {
 
 #tickets table.table.table-hover {
   font-size: 12px;
+}
+
+.unpublished span.badge.badge-error {
+    display: block;
+    padding: 6px;
+    font-size: 14px;
+}
+.unpublished a.btn {
+    display: block;
+    padding: 0px;
+    margin-top: 5px;
+}
+div.unpublished {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    padding: 5px;
+    bottom: 0px;
+}
+
+.edit-project .form-group {
+  margin-left: -75px;
 }

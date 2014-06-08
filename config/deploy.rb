@@ -118,7 +118,7 @@ if Rubber::Util.has_asset_pipeline?
   after "rubber:config", "deploy:assets:precompile"
 end
 
-load "config/recipes/faye"
+# load "config/recipes/faye"
 
 namespace :faye do
   desc "Start Faye"
@@ -129,6 +129,12 @@ namespace :faye do
   task :stop do
     run "kill `cat #{faye_pid}` || true"
   end
+  desc "Restart Faye"
+  tast :restart do
+    run "kill `cat #{faye_pid}` || true"
+    run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
+  end
 end
 before 'deploy:update_code', 'faye:stop'
 after 'deploy:finalize_update', 'faye:start'
+after "deploy:restart", "faye:restart"

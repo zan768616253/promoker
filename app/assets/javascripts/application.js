@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require bootsy
 //= require bootstrap
 //= require bxslider
 //= require social-share-button

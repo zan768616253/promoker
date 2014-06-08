@@ -313,9 +313,9 @@
           </div>
           <div class="modal-body">
             <div class="agreement">
-              <div class="agreement-instruction">
+              <!-- <div class="agreement-instruction">
                 <%= t("instruction") %>
-              </div>
+              </div> -->
               <div class="argreement-body">
                 <div class="argreement-title">授权推广协议</div>
                 <p>
@@ -347,7 +347,13 @@
       </div>
     </div>
     <div id="footer">
-		<div class="tip">Copyright © 2011-2014 &nbsp;&nbsp;
+		<div class="tip">
+      <ul>
+        <li><%= link_to t('contact'), contact_path %></li>
+        <li><%= link_to t('privacy'), contact_path %></li>
+        <li><%= link_to t('disclaimer'), contact_path %></li>
+      </ul>
+      Copyright © 2011-2014 &nbsp;&nbsp;
 			<a href="/"><%= t('promoker') %></a>
 		&nbsp;
 			<!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/cn/">

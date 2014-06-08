@@ -32,4 +32,8 @@ class HomeController < ApplicationController
 	def marketing
 		render 'marketing'
 	end
+
+	def contact 
+		
+	end
 end

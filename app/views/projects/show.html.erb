@@ -13,25 +13,25 @@
 			</div>
 			<div class="project-page-description project-page-text">
 				<h2><%= t('projects.project_desc') %></h2>
-				<p>
+				<div>
 					<%= @project.description %>
-				</p>
+				</div>
 			</div>
 			<div class="project-page-script project-page-text">
 				<h2><%= t('projects.project_script') %></h2>
-				<%= @project.script %>
+				<div><%= raw @project.script %></div>
 			</div>
 			<div class="project-page-team project-page-text">
-				<h2><%= t('projects.project-team') %></h2>
-				<%= @project.team %>
+				<h2><%= t('projects.project_team') %></h2>
+				<div><%= raw @project.team %></div>
 			</div>
 			<div class="project-page-plan project-page-text">
 				<h2><%= t('projects.project_plan') %></h2>
-				<%= @project.plan %>
+				<div><%= raw @project.plan %></div>
 			</div>
 			<div class="project-page-expense project-page-text">
 				<h2><%= t('projects.project_expense') %></h2>
-				<%= @project.expense %>
+				<div><%= raw @project.expense %></div>
 			</div>
 		</div>
 		<div class="project-page-right">
@@ -41,7 +41,7 @@
 				<p><%= t('projects.project_type') %>: <%= @project.movie_type %></p>
 				<p><%= t('projects.project_duration') %>: <%= @project.duration %></p>
 				<p><%= t('projects.project_start_at') %>: <%= @project.start_at.strftime('%y-%m-%m') %> </p>
-				<p><%= t('projects.project_budget') %>: <%= @project.budget %><%= t('home.wan') %></p>
+				<p><%= t('projects.project_budget') %>: <%= Money.new(@project.budget.to_i, @project.currency).format %></p>
 				<p><%= t('projects.project_needs') %>: <%= @project.need_list.join(',') %></p>
 			</div>
 			<%= render 'users/profile'%>

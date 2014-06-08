@@ -3,6 +3,35 @@ zh-CN:
     blurb: "一个专门做推广的网站"
     start: "开始"
   promoker: "普摩客"
+  contact: '联系我们'
+  privacy: "隐私政策"
+  disclaimer: "免责声明"
+  bootsy:
+    action:
+      refresh: 更新
+      destroy: 删除
+      close: 关闭
+      load: 加载
+      upload: 上传新图片
+    image_gallery: 图片库
+    image:
+      s: 图片
+      p: 图片
+      size: 尺寸
+      large: 大
+      medium: 中
+      small: 小
+      original: 原始尺寸
+      new: 新图片
+      confirm:
+        destroy: 确定删除这张图片?
+      position:
+        left: 左
+        right: 右
+        inline: 嵌入
+    no_images_uploaded: 当前没有已上传的图片.
+    js:
+      alert_unsaved: 你有未保存的内容.
   errors:
     404: "似乎没有这个页面哦！大哥，回去看看别的吧。"
   views:
@@ -138,6 +167,7 @@ zh-CN:
     project_preview: "预览"
     project_save: "保存"
     project_header: "项目"
+    unpublished: "未发布"
     desc: "描述"
     location: "地点"
     needs: "需求"

@@ -1,6 +1,6 @@
 class Profile < ActiveRecord::Base
   belongs_to :profilable, :polymorphic => true
-  mount_uploader :avatar, ImageUploader
+  mount_uploader :avatar, PhotoUploader
 
   after_create :generate_avatar
 

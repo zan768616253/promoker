@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140607064309) do
+ActiveRecord::Schema.define(version: 20140608075525) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -42,6 +42,20 @@ ActiveRecord::Schema.define(version: 20140607064309) do
     t.string   "provider"
     t.integer  "user_id"
     t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bootsy_image_galleries", force: true do |t|
+    t.integer  "bootsy_resource_id"
+    t.string   "bootsy_resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bootsy_images", force: true do |t|
+    t.string   "image_file"
+    t.integer  "image_gallery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -228,6 +242,7 @@ ActiveRecord::Schema.define(version: 20140607064309) do
     t.integer  "project_id"
     t.string   "movie_type"
     t.datetime "published_at"
+    t.string   "currency"
   end
 
   create_table "promotion_records", force: true do |t|

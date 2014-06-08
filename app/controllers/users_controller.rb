@@ -28,11 +28,13 @@ class UsersController < ApplicationController
     @likes = @user.find_votes.order('created_at desc')
     @liked_items = @user.find_liked_items.reverse
     @tickets = @user.tickets
-    @projects = @user.projects
+    
     if not current_user.nil? and current_user.id == @user.id
+      @projects = @user.projects.page(params[:page])
       @followings = @user.all_following
       render 'dashboard'
     else
+      @projects = @user.published_projects.page(params[:page])
       render 'show'
     end
   end

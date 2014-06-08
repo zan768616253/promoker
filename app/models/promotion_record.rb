@@ -1,4 +1,4 @@
 class PromotionRecord < ActiveRecord::Base
 	belongs_to :promotion
-	mount_uploader :screenshot, ImageUploader
+	mount_uploader :screenshot, PhotoUploader
 end

@@ -50,7 +50,7 @@
 <div class="form-group">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_location') %></label>
 	<div class="col-sm-5">
-  		<%= f.region_select [:province, :city], province_prompt: t('projects.select_province'), city_prompt: t('projects.project_city')%>
+  		<%= f.region_select [:province, :city], province_prompt: t('projects.select_province'), city_prompt: t('projects.select_city')%>
 	</div>
 </div>
 
@@ -61,51 +61,52 @@
 	</div>
 </div>
 
-<div class="form-group">
+<div class="form-group form-inline">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_budget') %></label>
-	<div class="col-sm-5">
+	<div class="col-sm-4">
   		<%= f.number_field :budget, :class => "form-control" %>
+  		<%= f.select :currency, options_for_select([ "CNY", "HKD", "USD"], @project.currency || 'CNY'), {}, {:class => 'form-control'} %>
 	</div>
 </div>
 
 <div class="form-group">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_desc') %></label>
-	<div class="col-sm-5">
-  		<%= f.text_area :description, :rows => 5, :cols => 20, :class => 'form-control' %>
+	<div class="col-sm-7">
+  		<%= f.text_area :description, :rows => 10, :cols => 40, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_script') %></label>
-	<div class="col-sm-5">
-  		<%= f.text_area :script, :rows => 5, :cols => 20, :class => 'form-control' %>
+	<div class="col-sm-7">
+  		<%= f.bootsy_area :script, :rows => 10, :cols => 40, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_team') %></label>
-	<div class="col-sm-5">
-  		<%= f.text_area :team, :rows => 5, :cols => 20, :class => 'form-control' %>
+	<div class="col-sm-7">
+  		<%= f.bootsy_area :team, :rows => 10, :cols => 40, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_plan') %></label>
-	<div class="col-sm-5">
-  		<%= f.text_area :plan, :rows => 5, :cols => 20, :class => 'form-control' %>
+	<div class="col-sm-7">
+  		<%= f.bootsy_area :plan, :rows => 10, :cols => 40, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_expense') %></label>
-	<div class="col-sm-5">
-  		<%= f.text_area :expense, :rows => 5, :cols => 20, :class => 'form-control' %>
+	<div class="col-sm-7">
+  		<%= f.bootsy_area :expense, :rows => 10, :cols => 40, :class => 'form-control' %>
 	</div>
 </div>
 
 <div class="form-group">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_video') %></label>
-	<div class="col-sm-5">
+	<div class="col-sm-7">
   		<%= f.text_field :video, :class => 'form-control' %>
 	</div>
 </div>
@@ -145,12 +146,19 @@
 		            	<span class="location-name"><%= @project.location %></span>
 		          	</li>
 		        </ul>
+		        <div class="project-needs-wrap">
+                  <% @project.need_list.take(4).each do |tag| %>
+                    <span class="tag">
+                      <%= tag %>
+                    </span>
+                    <% end %>
+                </div>
 		        <div class="project-pledged-wrap">
 		          <div class="project-pledged" style="width: 100%"></div>
 		        </div>
 		        <ul class="project-stats">
 		          <li class="pledged">
-		            <strong><span class="money usd no-code"><%= @project.budget %><%= t('home.wan') %></span></strong>
+		            <strong><span class="money usd no-code"><%= Money.new(@project.budget.to_i, @project.currency).format(:no_cents => true) %></span></strong>
 		            <%= t('home.budget') %>
 		          </li>
 		          <li class="pledged">

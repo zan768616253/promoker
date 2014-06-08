@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   has_many :promotions, :dependent => :destroy
 
 
-  mount_uploader :avatar, ImageUploader
+  mount_uploader :avatar, PhotoUploader
 
   # before_create :copy_name
   after_create :generate_avatar
@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
   acts_as_voter
   acts_as_followable
   acts_as_follower
+
+  def published_projects
+    Project.published.where(user_id: self.id)
+  end
 
 
   def admin?

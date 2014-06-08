@@ -145,13 +145,13 @@
                 </div>
                 <ul class="project-stats">
                   <li class="pledged">
-                    <strong><span class="money usd no-code"><%= project.budget %><%= t('home.wan') %></span></strong>
+                    <strong><span class="money usd no-code"><%= Money.new(project.budget.to_i, project.currency).format(:no_cents => true) %></span></strong>
                   <%= t('home.budget') %>
                   </li>
-                  <li class="pledged">
+                  <!-- <li class="pledged">
                     <strong><span class="money usd no-code"><%= (total - elapse).to_i %></span></strong>
                   <%= t('home.day_to_film') %>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>

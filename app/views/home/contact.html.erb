@@ -1,0 +1,240 @@
+<style>
+	.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 4px 4px;
+     -moz-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+  border-top-color: #ddd;
+  border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+.tabs-right > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: #ffffff;
+}
+
+div.contact-detail {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+#tab-contact div#contact {
+    width: 400px;
+    height: 400px;
+    background-position: -400px -100px;
+    display: inline-block;
+}
+
+.tabs-left div#tab-pane {
+    line-height: 25px;
+}
+.tabs-left .tab-pane h2 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+.tabs-left div.tab-content {
+    display: inline-block;
+    width: 770px;
+}
+
+.tabs-left .tab-pane h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px 0px;
+    color: #444;
+}
+.tabs-left .tab-pane {
+    color: #5F5F5F;
+}
+</style>
+<div class="container">
+	<div class="article-box">
+		<div class="tabbable tabs-left">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab-contact" data-toggle="tab"><%= t('contact') %></a></li>
+				<li class=""><a href="#tab-privacy" data-toggle="tab"><%= t('privacy') %></a></li>
+				<li class=""><a href="#tab-disclaimer" data-toggle="tab"><%= t('disclaimer') %></a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab-contact">	
+					<div class="contact-detail">
+						普摩客（Promoker）是一个专门做新媒体影视推广的网站<br>
+						如果您手上有好的影视作品<br>
+						如果您对您的创作团队够自信<br>
+						如果您正在寻求与我们的合作，或者有好的建议<br>
+						在本网站使用的过程中，如果您遇到问题<br>
+						请用以下提供的方式与我们取得联系，我们会尽快回复您。<br>
+
+						在线客服邮箱：service@promoker.com <br>
+						地址：香港九龙观塘敬业街55号皇廷广场<br>
+					</div>
+					<div id="contact"></div>
+				</div>
+				<div class="tab-pane" id="tab-privacy">	
+					<h2>私隐政策声明</h2>
+	<p>
+	Promoker.com(“本网站”)会不时修订私隐政策，以符合法律要求。故此，请定时浏览本政策，以确保您得悉最新版本，及保障您在这网站内的活动。 <br>
+
+	<h3>收集的个人资料内容</h3>
+	在本网站内，您同意本网站使用您递交的所有数据作任何用途而无须向您或任何人承担任何责任，包括以任何形式、媒体及版本推广由本网站及其客户直接或间接拥有、营运、许可或管辖的产品或服务有关的广告、推广或交易的用途(包括旅游、餐饮、娱乐、服装、保健美容、教育、家居、交通、银行、保险及其他消费类产品及服务)。
+	当您浏览本网站时，本网站可能会收集您计算机内的信息，包括您的浏览器类型，操作系统类型，您的网络服务供货商的域名，及您的互联网规程地址。 <br>
+
+	<h3>个人资料的用途</h3>
+	本网站可能会使用您的个人资料作任何用途，包括根据您的意愿向您发出通知，通知您有关本网站或服务的任何变更，响应您的查询、搜集顾客资料，用于宣传及推广活动，进行统计分析，以及为您提供其他本网站相信您会感兴趣的服务或商品。为此，您同意及授权本网站：<br>
+
+	<h3>使用您的个人资料来与您沟通； </h3>
+	把您递交的所有数据或任何部份作出删剪、编辑及更改， 
+	收集来自您计算机所得的数据会用以分析网站的使用习惯，以及提供服务、设施和货品。 
+	本网站遵守《个人资料（私隐）条例》－第486 章的责任及要求，属下主管人员、管理层及员工必须时刻对本网站所收集及/或储存及/或传送及/或使用的所有个人资料保密，并妥善保存。
+	本网站所持有的全部个人资料将予以保密，然而本网站可在有需要披露您的个人资料以达到收集此等数据之目的，或直接与其有关之目的时，向下述人士披露资料：<br>
+
+	<h3>任何代表本网站的个人或公司； </h3>
+	有责任为本网站对上述资料保密的任何其他人士或公司，而该人士或公司有法定的权利取用该资料 
+	本网站的经销商、代理、承办商、供货商及内容供货商；本网站的专业顾问，包括会计师、审计师及律师； 
+	由法律规定或授权的政府和监管机关、执法机构和其他组织，如有法例规定例如法庭下令，本网站会披露有关资料，也会应执法机关的要求披露上述资料。 
+	<h3>个人资料的转移</h3>
+	为满足上述任何用途之需要，本网站可能会将您的个人资料转移予本网站雇员、关连公司、合营伙伴、代理人、独立承办商及业务联系人士，惟上述第三者仅可按上述任何用途之需要使用有关数据，并须对本网站负有相类的保密责任。当有关的个人资料毋须再作上述任何用途时，本网站将会删除您的个人资料，并促使第三者同时删除您的个人资料。
+	除非已得到你的同意，本网站不会租用、出售、或透露你的个人资料予他人或非附属公司。 
+
+	<h3>第三者网站收集资料</h3>
+	本网站可能会与其他网站连结，而该等网站的私隐保护的政策可能会与本网站有所不同。由这些第三者网站收集有关您的资料，本网站无权管制，因此，您应查阅该等网站的私隐政策以保障您的权益。 
+
+	<h3>「Cookies」功能</h3>
+	本网站会放置于您计算机网际网络浏览器内的纯文本档案，用来储存您的个人喜好，以加强本网站的功能及方便您浏览。除非您选 择直接向本网站提供该等数据，「Cookies」功能本身不会向本网站提供您的电邮地址等个人资料，但若您选择向本网站提供您的个人资料，这些数据便会与储存于「Cookies」功能内的数据链路。 
+
+	<h3>安全承诺</h3>
+	根据《个人资料（私隐）条例》，我们可以就处理您查阅或改正个人资料的要求时，以合理的步骤核实您的身份，并收取有关的合理费用后，然后让您查阅或更正您的个人资料及身份。 联络方法如您本网站所制订的私隐政策声明或其用途有任何疑问或意见，欢迎以电邮〔info@promoker.com〕与本网站联络。
+	</p>
+
+				</div>
+				<div class="tab-pane" id="tab-disclaimer">	
+					<h2>本站免责声明</h2>
+<h3>1、关 于 本 站</h3>
+
+（1）本站旨在为广大用户提供更多的信息，其服务是无偿的；本站不保证向使用者提供的外部连结的准确性和完整性，该外部连结指向的不由本站实际控制的任何网页上的内容，本网站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本网站之观点或意见。<br>
+
+（2） 本网站中的文章（包括转贴文章）的版权仅归原作者所有，若作者有版权声明的或文章从其它网站转载而附带有原所有站的版权声明者，其版权归属以附带声明为准；文章仅代表作者本人的观点，与本网站立场无关；<br>
+
+（3） 任何单位或个人认为本站内容可能涉嫌侵犯其合法权益，应该及时向本站书面回馈，并提供身份证明、权属证明及详细情况证明，本站在收到上述档后将会尽快移除相关内容。<br>
+
+（4） 由于与本网站连结的其它网站所造成之个人资料泄露及由此而导致的任何法律争议和后果，本网站均得免责。<br>
+
+（5） 由于用户将个人密码告知他人或与他人共享注册账户，由此导致的任何个人资料泄露，本网站不负任何责任。<br>
+
+（6）当政府司法机关依照法定程序要求本网站披露个人资料时，我们将根据执法单位之要求或为公共安全之目的提供个人资料。在此情况下之任何披露，本网站均得免责。<br>
+
+（7）凡以任何方式登陆本网站或直接、间接使用本网站数据者，视为自愿接受本网站声明的约束。<br>
+
+<h3>2、网 站 运 行</h3>
+
+（1）本网站如因系统维护或升级而需暂停服务时，将事先公告。若因线路及非本公司控制范围外的硬件故障或其它不可抗力而导致暂停服务，于暂停服务期间造成的一切不便与损失，本网站不负任何责任。<br>
+
+（2） 任何由于黑客攻击、计算机病毒侵入或发作、因政府管制而造成的暂时性关闭等影响网络正常经营的不可抗力而造成的个人资料泄露、丢失、被盗用或被窜改等，本网站均得免责。<br>
+
+<h3>3、法 律 责 任</h3>
+
+（1）本网站使用者因为违反本声明的规定而触犯中华人民共和国香港特别行政区法律的，一切后果自己负责，本网站不承担任何责任。<br>
+
+（2） 凡以任何方式登陆本网站或直接、间接使用本网站数据者，视为自愿接受本网站声明的约束。<br>
+
+（3） 本声明未涉及的问题参见国家有关法律法规，当本声明与国家法律法规冲突时，以国家法律法规为准。<br>	
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
