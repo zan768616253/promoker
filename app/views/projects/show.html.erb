@@ -11,27 +11,49 @@
 			<div class="project-page-video">
 				<embed src="<%= @project.video %>" allowFullScreen="true" quality="high" width="700" height="500" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 			</div>
-			<div class="project-page-description project-page-text">
-				<h2><%= t('projects.project_desc') %></h2>
-				<div>
-					<%= @project.description %>
+			<div class="project-tabs">
+				<ul class="nav nav-tabs">
+				  <li class="active"><a href="#project-page-description" data-toggle="tab"><%= t('projects.project_desc') %></a></li>
+				  <li><a href="#project-page-script" data-toggle="tab"><%= t('projects.project_script') %></a></li>
+				  <li><a href="#project-page-team" data-toggle="tab"><%= t('projects.project_team') %></a></li>
+				  <li><a href="#project-page-plan" data-toggle="tab"><%= t('projects.project_plan') %></a></li>
+				  <li><a href="#project-page-expense" data-toggle="tab"><%= t('projects.project_expense') %></a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+				  <div class="tab-pane active" id="project-page-description">
+				  	<div class="project-page-description project-page-text">
+						<h2><%= t('projects.project_desc') %></h2>
+						<div>
+							<%= @project.description %>
+						</div>
+					</div>
+				  </div>
+				  <div class="tab-pane" id="project-page-script">
+					<div class="project-page-script project-page-text">
+						<h2><%= t('projects.project_script') %></h2>
+						<div><%= raw @project.script %></div>
+					</div>
+				  </div>
+				  <div class="tab-pane" id="project-page-team">
+				  	<div class="project-page-team project-page-text">
+						<h2><%= t('projects.project_team') %></h2>
+						<div><%= raw @project.team %></div>
+					</div>
+				  </div>
+				  <div class="tab-pane" id="project-page-plan">
+				  	<div class="project-page-plan project-page-text">
+						<h2><%= t('projects.project_plan') %></h2>
+						<div><%= raw @project.plan %></div>
+					</div>
+				  </div>
+				  <div class="tab-pane" id="project-page-expense">
+				  	<div class="project-page-expense project-page-text">
+						<h2><%= t('projects.project_expense') %></h2>
+						<div><%= raw @project.expense %></div>
+					</div>
+				  </div>
 				</div>
-			</div>
-			<div class="project-page-script project-page-text">
-				<h2><%= t('projects.project_script') %></h2>
-				<div><%= raw @project.script %></div>
-			</div>
-			<div class="project-page-team project-page-text">
-				<h2><%= t('projects.project_team') %></h2>
-				<div><%= raw @project.team %></div>
-			</div>
-			<div class="project-page-plan project-page-text">
-				<h2><%= t('projects.project_plan') %></h2>
-				<div><%= raw @project.plan %></div>
-			</div>
-			<div class="project-page-expense project-page-text">
-				<h2><%= t('projects.project_expense') %></h2>
-				<div><%= raw @project.expense %></div>
 			</div>
 		</div>
 		<div class="project-page-right">

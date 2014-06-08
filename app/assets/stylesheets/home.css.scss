@@ -1261,3 +1261,20 @@ div.field_with_errors input {
   height: 42px;
   margin-bottom: 5px;
 }
+
+
+#content div#marketing_case .marketing_case {
+    width: 900px;
+}
+#content div#marketing_case .marketing_case .marketing_case_left {
+    width: 300px;
+}
+#content div#marketing_case .marketing_case .marketing_case_left img {
+    width: 330px;
+}
+#content div#marketing_case {
+    margin-top: 20px;
+}
+#content div#marketing_case div.marketing_case_right.mar_right {
+    padding: 0px;
+}

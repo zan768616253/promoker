@@ -29,6 +29,7 @@
 						<span class="location-name"><%= project.location %></span>
 					</li>
 				</ul>
+				<% if project.published? %>
 				<div class="project-needs-wrap">
                   <% project.need_list.take(3).each do |tag| %>
                     <span class="tag">
@@ -36,7 +37,6 @@
                     </span>
                     <% end %>
                 </div>
-                <% if project.published? %>
 				<div class="project-pledged-wrap">
 					<%  elapse = (Date.current - project.published_at.to_date).to_f
                       total = (project.start_at.to_date - project.published_at.to_date).to_f
