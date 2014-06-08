@@ -1,0 +1,139 @@
+Searching 1270 files for "fa fa-heart-o"
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/articles/index.html.erb:
+   49            </div>
+   50            <div class="article-likes">
+   51:             <i class="fa fa-heart-o"></i> <%= article.likes.count %>
+   52            </div>
+   53            <div class="article-summary">
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/articles/show.html.erb:
+   14        <% if current_user.nil? %>
+   15        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#login-modal">
+   16:         <i class="fa fa-heart-o"></i>
+   17          <i class="fa fa-heart"></i>
+   18          <%= t('like') %>
+   ..
+   24                data-count="<%= @article.likes.size %>"
+   25                onclick="Articles.like(this, event)">
+   26:           <i class="fa fa-heart-o"></i>
+   27            <i class="fa fa-heart"></i>
+   28          <%= t('like') %>
+   ..
+   81  
+   82            <div class="comment-actions">
+   83:             <!-- <i class="fa fa-heart-o"></i> -->
+   84              <% if c.user == current_user %>
+   85                <!-- <a href="<%= article_comment_ %>"><i class="fa fa-trash-o"></i></a> -->
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/comments/_comment.html.erb:
+   16      <div class="comment-actions">
+   17        <!--<i class="fa fa-comment-o"></i>-->
+   18:       <i class="fa fa-heart-o"></i>
+   19        <% if @comment.user == current_user %>
+   20          <i class="fa fa-trash-o"></i>
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/events/show.html.erb:
+   47  				<% if current_user.nil? %>
+   48  			    <a href="#" class="btn btn-default" data-toggle="modal" data-target="#login-modal">
+   49: 			        <i class="fa fa-heart-o"></i>
+   50  			        <i class="fa fa-heart"></i>
+   51  			        <%= t('events.event_like') %>
+   ..
+   57  			            data-count="<%= @event.likes.size %>"
+   58  			            onclick="Events.like(this, event)">
+   59: 			        <i class="fa fa-heart-o"></i>
+   60  			        <i class="fa fa-heart"></i>
+   61  			      <%= t('events.event_like') %>
+   ..
+  116            <div class="comment-actions">
+  117              <!--<i class="fa fa-comment-o"></i>-->
+  118:             <i class="fa fa-heart-o"></i>
+  119              <% if c.user == current_user %>
+  120                <i class="fa fa-trash-o"></i>
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/movies/show.html.erb:
+   12      <% if current_user.nil? %>
+   13      <a href="#" class="btn btn-default" data-toggle="modal" data-target="#login-modal">
+   14:         <i class="fa fa-heart-o"></i>
+   15          <i class="fa fa-heart"></i>
+   16          <%= t('like') %>
+   ..
+   22              data-count="<%= @movie.likes.size %>"
+   23              onclick="Movies.like(this, event)">
+   24:         <i class="fa fa-heart-o"></i>
+   25          <i class="fa fa-heart"></i>
+   26        <%= t('like') %>
+   ..
+   91  
+   92              <!-- <div class="comment-actions">
+   93:               <i class="fa fa-heart-o"></i>
+   94                <% if c.user == current_user %>
+   95                  <i class="fa fa-trash-o"></i>
+
+11 matches across 5 files
+
+
+Searching 1270 files for "comment-actions"
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/assets/stylesheets/article.css.scss:
+  177  }
+  178  
+  179: .comment-actions {
+  180    float: right;
+  181    font-size: 16px;
+  182  }
+  183: .comment-actions i {
+  184    cursor: pointer;
+  185    margin: 15px 0px 0px 5px;
+  186  }
+  187  
+  188: .comment-actions i:hover {
+  189    color: orange;
+  190  }
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/assets/stylesheets/movie.css.scss:
+  168  }
+  169  
+  170: .comment-actions {
+  171    float: right;
+  172    font-size: 16px;
+  173  }
+  174: .comment-actions i {
+  175    cursor: pointer;
+  176    margin: 15px 0px 0px 5px;
+  177  }
+  178  
+  179: .comment-actions i:hover {
+  180    color: orange;
+  181  }
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/articles/show.html.erb:
+   80            </div>
+   81  
+   82:           <div class="comment-actions">
+   83              <!-- <i class="fa fa-heart-o"></i> -->
+   84              <% if c.user == current_user %>
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/comments/_comment.html.erb:
+   14      </div>
+   15  
+   16:     <div class="comment-actions">
+   17        <!--<i class="fa fa-comment-o"></i>-->
+   18        <!-- <i class="fa fa-heart-o"></i> -->
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/events/show.html.erb:
+  114            </div>
+  115  
+  116:           <div class="comment-actions">
+  117              <!--<i class="fa fa-comment-o"></i>-->
+  118              <!-- <i class="fa fa-heart-o"></i> -->
+
+/Users/yaoyi/Workspace/bitbucket/promoker/app/views/movies/show.html.erb:
+   90              </div>
+   91  
+   92:             <div class="comment-actions">
+   93                <!-- <i class="fa fa-heart-o"></i> -->
+   94                <% if c.user == current_user %>
+
+10 matches across 6 files

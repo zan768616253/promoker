@@ -29,14 +29,14 @@ Rails.application.routes.draw do
     end
   end
   resources :events do
-    resources :comments, :only => :create
+    resources :comments, :only => [:create,:destroy]
     member do
       post 'like'
       post 'unlike'  
     end    
   end
   resources :movies do
-    resources :comments, :only => :create
+    resources :comments, :only => [:create,:destroy]
     member do
       post 'like'
       post 'unlike'  
@@ -50,7 +50,7 @@ Rails.application.routes.draw do
     end
   end
   resources :articles, :only => [:show, :index] do
-    resources :comments, :only => :create
+    resources :comments, :only => [:create,:destroy]
     member do
       post 'like'
       post 'unlike'  
