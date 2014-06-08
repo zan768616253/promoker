@@ -130,7 +130,7 @@ namespace :faye do
     run "kill `cat #{faye_pid}` || true"
   end
   desc "Restart Faye"
-  tast :restart do
+  task :restart do
     run "kill `cat #{faye_pid}` || true"
     run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
   end
