@@ -1,3 +1,4 @@
+# coding: utf-8
 class Event < ActiveRecord::Base
 	paginates_per 5
 	acts_as_taggable_on :types, :tags, :locations
@@ -6,6 +7,18 @@ class Event < ActiveRecord::Base
 
 	mount_uploader :thumb, PhotoUploader
 	scope :recent, -> { order("created_at DESC")}
+
+	def status_enum
+    	['upcoming', 'ongoing', 'finished']
+  	end
+
+  	def type_enum
+  		Tag.tags_on(:event)
+  	end
+
+  	def location_enum
+  		['香港', '臺灣', '內地', '海外']
+  	end
 
 	def started?
     	start_time.past?

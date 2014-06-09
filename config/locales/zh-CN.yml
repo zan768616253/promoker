@@ -1,4 +1,5 @@
 zh-CN:
+  minute: '分钟'
   welcome:
     blurb: "一个专门做推广的网站"
     start: "开始"
@@ -125,8 +126,8 @@ zh-CN:
       status: "按进程查看: "
       all: "全部"
     status:
-      enroll: "即将开始"
-      underway: "正在进行"
+      upcoming: "即将开始"
+      ongoing: "正在进行"
       finished: "已结束"
     like_count: "人感兴趣"
     event_date: "时间: "
@@ -165,6 +166,7 @@ zh-CN:
     project_expense: "资金用途"
     project_video: "相关视频"
     project_publish: "发布"
+    project_unpublish: "撤回"
     project_preview: "预览"
     project_save: "保存"
     project_header: "项目"

@@ -78,8 +78,8 @@
 		    </div>
 	      	<div class="filter-wrapper">
 		        <a href="#" class="filter-item active" data-filter="status" data-name=""><%= t('events.filter.all') %></a>
-		            <a href="#" class="filter-item" data-filter="status" data-name="enroll"><%= t('events.status.enroll') %></a>
-		            <a href="#" class="filter-item" data-filter="status" data-name="underway"><%= t('events.status.underway') %></a>
+		            <a href="#" class="filter-item" data-filter="status" data-name="upcoming"><%= t('events.status.upcoming') %></a>
+		            <a href="#" class="filter-item" data-filter="status" data-name="ongoing"><%= t('events.status.ongoing') %></a>
 		            <a href="#" class="filter-item" data-filter="status" data-name="finished"><%= t('events.status.finished') %></a>
 	     	</div>
 	    </div>
@@ -97,9 +97,9 @@
 					
 					<div class="event-title">
 						<% case event.status
-						when 'enroll'
+						when 'upcoming'
 							style = 'warning' 
-						when 'underway'
+						when 'ongoing'
 							style = 'info' 
 						when 'finished'
 							style = 'default' 
@@ -112,7 +112,7 @@
 						<%= link_to event.title, event_path(event) %>
 					</div>
 					<div class="event-date">
-						<span><i class="fa fa-clock-o"></i> </span><%= event.start_time.strftime("%m#{t('month')}%d#{t('date')}") %> ~ <%= event.end_time.strftime("%m#{t('month')}%d#{t('date')}") %>
+						<span><i class="fa fa-clock-o"></i> </span><%= event.start_time.strftime("%m#{t('month')}%d#{t('date')}") unless event.start_time.nil? %> ~ <%= event.end_time.strftime("%m#{t('month')}%d#{t('date')}") unless event.end_time.nil?%>
 					</div>
 					<div class="event-address">
 						<span><i class="fa fa-map-marker"></i> </span><%= event.address %>

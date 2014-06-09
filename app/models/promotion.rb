@@ -3,4 +3,8 @@ class Promotion < ActiveRecord::Base
 	mount_uploader :cover, PhotoUploader
 	mount_uploader :file, FileUploader
 	has_many :promotion_records, :dependent => :destroy
+	# draft received, promoting, complete
+	def state_enum
+		['draft', 'received', 'promoting', 'complete']
+	end
 end

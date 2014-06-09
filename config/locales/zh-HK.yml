@@ -1,4 +1,5 @@
 zh-HK:
+  minute: '分鐘'
   welcome:
     blurb: "一個專門做推廣的網站"
     start: "開始"
@@ -123,10 +124,10 @@ zh-HK:
       area: "按區域查看: "
       type: "按類型查看: "
       status: "按進程查看: "
-      all: "全部: "
+      all: "全部"
     status:
-      enroll: "即將開始"
-      underway: "正在進行"
+      upcoming: "即將開始"
+      ongoing: "正在進行"
       finished: "已結束"
     like_count: "人感興趣"
     event_date: "時間: "
@@ -144,7 +145,7 @@ zh-HK:
     filter:
       area: "按區域查看: "
       type: "按類型查看: "
-      all: "全部: "
+      all: "全部"
     director: "導演: "
   projects:
     project_summary: "項目簡介"
@@ -165,6 +166,7 @@ zh-HK:
     project_expense: "資金用途"
     project_video: "相關視頻"
     project_publish: "發佈"
+    project_unpublish: "撤回"
     unpublished: "未發佈"
     project_preview: "預覽"
     project_save: "保存"

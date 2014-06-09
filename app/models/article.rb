@@ -14,4 +14,5 @@ class Article < ActiveRecord::Base
   }
 
   validates_presence_of :title
+  mount_uploader :thumb, PhotoUploader
 end

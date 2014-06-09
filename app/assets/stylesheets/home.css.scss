@@ -679,15 +679,12 @@ ul.nav li.dropdown:hover .rotate {
 }
 
 .news ul li span {
-  display: inline-block;
   color: #E62E4C;
-  width: 14px;
-  height: 14px;
-  text-align: center;
-  line-height: 14px;
   font-size: 11px;
   margin-right: 8px;
-  border-radius: 50%;
+  position: relative;
+  vertical-align: top;
+  top: 1px;
 }
 
 .news ul a {

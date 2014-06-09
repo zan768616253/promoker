@@ -1,10 +1,13 @@
 <div class="project-list">
 	<% @projects.each do |project| %>
 	<div class="project">
+		<% if current_user == project.user %>
+			<a class="btn btn-default btn-edit" href="<%= edit_project_path(project) %>">编辑</a>
+		<% end %>
 		<div class="project-card-wrap">
 			<div class="project-card">
 				<div class="project-thumbnail">
-					<a href="<%= project_path(project) %>" target="_blank">
+					<a href="<%= project.status == 'published' ? project_path(project) : preview_project_path(project)%>" target="_blank">
 						<% if project.cover.blank? %>
 						<img alt="Photo-little" class="projectphoto-little" height="150" src="https://d297h9he240fqh.cloudfront.net/assets/projects/missing_little.png" width="220">
 						<% else %>
@@ -14,7 +17,7 @@
 				</div>
 				<h2 class="bbcard_name">
 					<strong>
-						<a href="<%= project_path(project) %>" target=""><%= project.title %></a>
+						<a href="<%= project.status == 'published' ? project_path(project) : preview_project_path(project)%>" target=""><%= project.title %></a>
 					</strong>
 					<span>
 						<%= link_to project.user.nickname, user_path(project.user) unless project.user.blank? %>
@@ -46,7 +49,7 @@
 				</div>
 				<ul class="project-stats">
 					<li class="pledged">
-						<strong><span class="money usd no-code"><%= Money.new(project.budget.to_i, project.currency).format(:no_cents => true) %></span></strong>
+						<strong><span class="money usd no-code"><%= Money.new(project.budget.to_i, project.currency).format(:no_cents => true) %><%= t('home.wan') %></span></strong>
 						<%= t('home.budget') %>
 					</li>
 					<li class="pledged">
@@ -57,7 +60,6 @@
 				<% else %>
 				<div class="unpublished">
 					<span class="badge badge-error"><%= t('projects.unpublished') %></span>
-					<a class="btn btn-default" href="<%= edit_project_path(project) %>">编辑</a>
 				</div>
 				<% end %>
 			</div>

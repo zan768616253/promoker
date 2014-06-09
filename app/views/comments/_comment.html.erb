@@ -17,7 +17,9 @@
       <!--<i class="fa fa-comment-o"></i>-->
       <!-- <i class="fa fa-heart-o"></i> -->
       <% if @comment.user == current_user %>
-        <i class="fa fa-trash-o"></i>
+        <%= link_to article_comment_path(@comment.commentable, @comment), data: { confirm: t('confirm') }, :method => :delete do %>
+            <i class="fa fa-trash-o"></i>
+        <% end %>
       <% end %>
     </div>
   </div>

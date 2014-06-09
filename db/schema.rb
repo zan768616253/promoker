@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20140607194140) do
   end
 
   create_table "actors_movies", force: true do |t|
-    t.integer "movies_id"
-    t.integer "actors_id"
+    t.integer "movie_id"
+    t.integer "actor_id"
   end
 
   create_table "articles", force: true do |t|

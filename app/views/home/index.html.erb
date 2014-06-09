@@ -192,7 +192,7 @@
                 </div>
                 <ul class="project-stats">
                   <li class="pledged">
-                    <strong><span class="money usd no-code"><%= Money.new(project.budget.to_i, project.currency).format(:no_cents => true) %></span></strong>
+                    <strong><span class="money usd no-code"><%= Money.new(project.budget.to_i, project.currency).format(:no_cents => true) %><%= t('home.wan') %></span></strong>
                   <%= t('home.budget') %>
                   </li>
                   <!-- <li class="pledged">

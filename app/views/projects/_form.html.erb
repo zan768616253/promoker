@@ -54,17 +54,19 @@
 	</div>
 </div>
 
-<div class="form-group">
+<div class="form-group form-inline">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_duration') %></label>
-	<div class="col-sm-5">
-  		<%= f.text_field :duration, :class => "form-control" %>
+	<div class="col-sm-4">
+  		<%= f.number_field :duration, :class => "form-control" %> 
+  		<span class="control-label"><%= t('minute') %></span>
 	</div>
 </div>
 
 <div class="form-group form-inline">
 	<label for="" class="col-sm-2 control-label"><%= t('projects.project_budget') %></label>
 	<div class="col-sm-4">
-  		<%= f.number_field :budget, :class => "form-control" %>
+  		<%= f.number_field :budget, :class => "form-control", :max => 1000, :min => 0 %>
+  		<span class="control-label"><%= t('home.wan') %></span>
   		<%= f.select :currency, options_for_select([ "CNY", "HKD", "USD"], @project.currency || 'CNY'), {}, {:class => 'form-control'} %>
 	</div>
 </div>
@@ -111,7 +113,11 @@
 	</div>
 </div>
 <div class="project-save">
-	<%= link_to t('projects.project_publish'), publish_project_path(@project), :method => :post, :class => 'btn submit', :id => "project-publish" %> 
+	<% if @project.status == 'published' %>
+	<%= link_to t('projects.project_unpublish'), unpublish_project_path(@project), :method => :post, :class => 'btn submit', :id => "project-unpublish" %> 
+	<% else %>
+		<%= link_to t('projects.project_publish'), publish_project_path(@project), :method => :post, :class => 'btn submit', :id => "project-publish" %> 
+	<% end %>
 	<a href="<%= preview_project_path(@project) %>" target="_blank" class='btn preview' id="project-review"><%= t('projects.project_preview') %></a> 
 	<a href="" class="btn" id="project-save"><%= t('projects.project_save') %></a>
 </div>

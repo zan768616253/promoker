@@ -1,8 +1,8 @@
 class CreateActorsMovies < ActiveRecord::Migration
   def change
     create_table :actors_movies do |t|
-      t.belongs_to :movies
-      t.belongs_to :actors
+      t.belongs_to :movie
+      t.belongs_to :actor
     end
   end
 end

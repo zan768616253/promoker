@@ -87,6 +87,7 @@ class ProjectsController < ApplicationController
 
 	def unpublish
 		@project.unpublish!
+		@project.save!
 		flash[:alert] = "#{@project.title}已取消发布"
 		redirect_to user_path(@project.user)
 	end

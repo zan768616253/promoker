@@ -33,21 +33,25 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  # config.included_models = [
-  #   'ActsAsTaggableOn::Tag', 
-  #   'ActsAsTaggableOn::Tagging', 
-  #   'Article', 
-  #   'Movie',
-  #   'Actor',
-  #   'Comment',
-  #   'Director',
-  #   'Event',
-  #   'Message',
-  #   'Movie',
-  #   'Project',
-  #   'Ticket',
-  #   'User'
-  # ]
+  config.included_models = [
+    'Actor',
+    'Article', 
+    'Comment',
+    'Director',
+    'Event',
+    'Message',
+    'Movie',
+    'Partner',
+    'Photo',
+    'Project',
+    'Promotion',
+    'PromotionRecord',
+    'SiteConfig',
+    'Tag',
+    'Tagging',
+    'Ticket',
+    'User'
+  ]
 
 
 
@@ -91,7 +95,6 @@ RailsAdmin.config do |config|
 
   config.model Event do
     edit do
-      field :id
       field :title
       field :summary
       field :content, :ck_editor
@@ -99,8 +102,17 @@ RailsAdmin.config do |config|
       field :address
       field :start_time
       field :end_time
-      field :location_list
-      field :type_list
+      field :status
+      field :location_list, :enum do
+        enum_method do
+          :location_enum
+        end
+      end
+      field :type_list, :enum do
+        enum_method do
+          :type_enum
+        end
+      end
       field :tag_list
     end
   end
