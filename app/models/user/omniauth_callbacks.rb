@@ -44,7 +44,6 @@ class User
       user.email = data.email || "#{provider + uid.to_s}@example.com"
 
       user.nickname = data.name
-      user.name = data.name
 
       if provider == "facebook"
         data.image = data.image.gsub('http://','https://')

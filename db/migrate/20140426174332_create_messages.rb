@@ -4,6 +4,7 @@ class CreateMessages < ActiveRecord::Migration
       t.integer :from_id	
       t.integer :to_id
       t.text :content
+      t.boolean :is_read
       t.timestamps
     end
     add_index :messages, :from_id

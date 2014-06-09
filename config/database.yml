@@ -1,6 +1,6 @@
 development:
   adapter: mysql2
-  database: promoker_development
+  database: promoker_staging
   username: root
   password:
   host: localhost

@@ -7,6 +7,7 @@ class CreateTickets < ActiveRecord::Migration
       t.string :district
       t.string :location
       t.string :contact
+      t.references :user
       t.timestamps
     end
   end

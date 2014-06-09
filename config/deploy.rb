@@ -123,16 +123,16 @@ end
 namespace :faye do
   desc "Start Faye"
   task :start do
-    run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
+    run "rm #{faye_pid} && cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
   end
   desc "Stop Faye"
   task :stop do
-    run "kill `cat #{faye_pid}` || true"
+    run "cat #{faye_pid} | xargs kill; exit 0;"
   end
   desc "Restart Faye"
   task :restart do
-    run "kill `cat #{faye_pid}` || true"
-    run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
+    run "cat #{faye_pid} | xargs kill; exit 0;"
+    run "rm #{faye_pid} && cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
   end
 end
 before 'deploy:update_code', 'faye:stop'

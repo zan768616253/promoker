@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140608075525) do
+ActiveRecord::Schema.define(version: 20140607194140) do
 
   create_table "actors", force: true do |t|
+    t.string   "name"
+    t.string   "about"
+    t.string   "location"
+    t.string   "avatar"
+    t.string   "style"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "actors_movies", force: true do |t|
-    t.integer "movie_id"
-    t.integer "actor_id"
-  end
-
-  create_table "actors_movies_tables", force: true do |t|
     t.integer "movies_id"
     t.integer "actors_id"
   end
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.text     "body"
     t.string   "author"
     t.string   "thumb"
+    t.text     "summary"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "summary"
   end
 
   create_table "authorizations", force: true do |t|
@@ -56,13 +56,6 @@ ActiveRecord::Schema.define(version: 20140608075525) do
   create_table "bootsy_images", force: true do |t|
     t.string   "image_file"
     t.integer  "image_gallery_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "categories", force: true do |t|
-    t.string   "name"
-    t.string   "scope"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -101,19 +94,13 @@ ActiveRecord::Schema.define(version: 20140608075525) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "directors", force: true do |t|
+    t.string   "name"
+    t.string   "about"
+    t.string   "location"
+    t.string   "avatar"
+    t.string   "style"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-  end
-
-  create_table "directors_movies", force: true do |t|
-    t.integer "movie_id"
-    t.integer "director_id"
-  end
-
-  create_table "directors_movies_tables", force: true do |t|
-    t.integer "movies_id"
-    t.integer "directors_id"
   end
 
   create_table "districts", force: true do |t|
@@ -134,13 +121,13 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.string   "thumb"
     t.string   "address"
     t.text     "content"
-    t.time     "start_time"
-    t.time     "end_time"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string   "title"
     t.text     "summary"
     t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "follows", force: true do |t|
@@ -160,9 +147,9 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.integer  "from_id"
     t.integer  "to_id"
     t.text     "content"
+    t.boolean  "is_read"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "is_read",    default: false
   end
 
   add_index "messages", ["from_id"], name: "index_messages_on_from_id", using: :btree
@@ -174,20 +161,12 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.string   "short_desc"
     t.string   "thumb"
     t.string   "duration"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "url"
     t.text     "summary"
-  end
-
-  create_table "movies_actors_tables", force: true do |t|
-    t.integer "movies_id"
-    t.integer "actors_id"
-  end
-
-  create_table "movies_directors_tables", force: true do |t|
-    t.integer "movies_id"
-    t.integer "directors_id"
+    t.integer  "director_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "partners", force: true do |t|
@@ -205,15 +184,21 @@ ActiveRecord::Schema.define(version: 20140608075525) do
   end
 
   create_table "profiles", force: true do |t|
+    t.string   "nickname"
+    t.string   "gender"
+    t.string   "about"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.string   "location"
     t.string   "name"
     t.string   "role"
-    t.string   "about"
     t.string   "style"
     t.string   "avatar"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "profilable_id"
     t.string   "profilable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id", using: :btree
@@ -225,8 +210,6 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.string   "district"
     t.string   "location"
     t.string   "contact"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "duration"
     t.string   "budget"
     t.text     "description"
@@ -243,6 +226,8 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.string   "movie_type"
     t.datetime "published_at"
     t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "promotion_records", force: true do |t|
@@ -303,6 +288,8 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.string  "context",        default: "default"
   end
 
+  add_index "tags", ["context"], name: "index_tags_on_context", using: :btree
+
   create_table "tickets", force: true do |t|
     t.string   "title"
     t.string   "province"
@@ -310,9 +297,9 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.string   "district"
     t.string   "location"
     t.string   "contact"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
@@ -326,21 +313,30 @@ ActiveRecord::Schema.define(version: 20140608075525) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.integer  "failed_attempts",        default: 0,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
     t.string   "nickname"
-    t.string   "avatar"
     t.string   "gender"
     t.string   "about"
     t.string   "province"
     t.string   "city"
     t.string   "district"
     t.string   "location"
-    t.string   "name"
+    t.string   "avatar"
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
   create_table "votes", force: true do |t|
     t.integer  "votable_id"

@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
-    @director = @movie.directors.first
+    @director = @movie.director
     @actors = @movie.actors
   end
 

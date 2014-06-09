@@ -4,20 +4,19 @@ class User < ActiveRecord::Base
   extend OmniauthCallbacks
   # include RedisCaptcha::Model
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :async, :lockable
   has_many :sent_messages, :foreign_key => 'from_id', :class_name => "Message", :dependent => :destroy
   has_many :received_messages, :foreign_key => 'to_id', :class_name => "Message", :dependent => :destroy
   has_many :tickets, :dependent => :destroy
   has_many :projects, :dependent => :destroy
-  has_one :profile, :as => :profilable, :dependent => :destroy
   has_many :authorizations, :dependent => :destroy
   has_many :promotions, :dependent => :destroy
+  has_many :movies, :dependent => :destroy
 
+  before_create :generate_avatar
 
   mount_uploader :avatar, PhotoUploader
 
-  # before_create :copy_name
-  after_create :generate_avatar
   acts_as_taggable_on :roles
   acts_as_voter
   acts_as_followable
@@ -26,7 +25,6 @@ class User < ActiveRecord::Base
   def published_projects
     Project.published.where(user_id: self.id)
   end
-
 
   def admin?
     Settings.admin_emails.include?(self.email)
@@ -53,21 +51,17 @@ class User < ActiveRecord::Base
     Rails.cache.fetch("user-#{self.id}-temp_access_token-#{Time.now.strftime("%Y%m%d")}") do
       SecureRandom.hex
     end
-  end
+  end  
 
-  # def copy_name
-  #   self.name = self.nickname
-  # end 
-
-  def generate_avatar
-    if self.avatar.blank?
-      blob = RubyIdenticon.create(self.email, background_color: 0xffffffff, square_size: 30, grid_size: 6)
-      tempfile = Tempfile.new ['avatar', 'jpg']
-      tempfile.binmode
-      tempfile.write(blob)
-      upload = ActionDispatch::Http::UploadedFile.new(tempfile: tempfile, filename: '1')
-      self.avatar = upload
+  private
+    def generate_avatar
+      if self.avatar.blank?
+        blob = RubyIdenticon.create(self.email, background_color: 0xffffffff, square_size: 30, grid_size: 6)
+        tempfile = Tempfile.new ['avatar', 'jpg']
+        tempfile.binmode
+        tempfile.write(blob)
+        upload = ActionDispatch::Http::UploadedFile.new(tempfile: tempfile, filename: '1')
+        self.avatar = upload
+      end
     end
-  end
-  
 end

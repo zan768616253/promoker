@@ -45,11 +45,12 @@ RailsAdmin.config do |config|
   #   'Event',
   #   'Message',
   #   'Movie',
-  #   'Profile',
   #   'Project',
   #   'Ticket',
   #   'User'
   # ]
+
+
 
   config.models do
     list do
@@ -81,7 +82,6 @@ RailsAdmin.config do |config|
       field :desc
       field :summary
       field :thumb
-      field :directors
       field :actors
       field :duration
       field :url
@@ -138,15 +138,6 @@ RailsAdmin.config do |config|
       field :tag
       field :taggable
       field :context
-    end
-  end
-
-  config.model Profile do
-    edit do
-      field :name
-      field :role
-      field :about
-      field :avatar, :carrierwave
     end
   end
 

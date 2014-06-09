@@ -13,7 +13,7 @@ class Movie < ActiveRecord::Base
     order("comments_count DESC")
   }
 
-  has_and_belongs_to_many :directors
+  belongs_to :director
   has_and_belongs_to_many :actors
-
+  
 end

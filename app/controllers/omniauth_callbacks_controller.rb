@@ -11,8 +11,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
             if Authorization.exists?(:provider => provider, :uid => uid)
               redirect_to session[:previous_url], :alert => "该微博帐号已被其他用户绑定 !"
             else
-              if current_user.avatar.nil?
-                current_user.avatar = env["omniauth.auth"]["info"]["image"]
+              if current_user.profile.avatar.nil?
+                current_user.profile = env["omniauth.auth"]["info"]["image"]
                 current_user.save
               end
               current_user.bind_service(env["omniauth.auth"])#Add an auth to existing

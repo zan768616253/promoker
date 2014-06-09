@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -36,4 +36,14 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.exmail.qq.com",
+    :port => 465,
+    :domain  => "exmail.qq.com",
+    :authentication => :plain,
+    :user_name => 'verify@promoker.com',
+    :password => 'u6tWn7xvwwl4',
+    :ssl => true
+  }
 end
