@@ -37,24 +37,6 @@
 <div class="container-fluid">
   <div id="content">
     <div class="left-col">
-      <div class="recommend">
-        <h2><i class="fa fa-thumbs-o-up"></i><a href="<%= movies_path %>"><%= t('home.hot_recommends') %></a></h2>
-        <ul class="video-list clearfix mb30">
-          <% @recommends.each do |movie| %>
-            <li class="video">
-              <div class="list-image">
-                <a href="<%= movie_path(movie) %>" class="work-img" target="_blank">
-                  <%= image_tag movie.thumb %>
-                </a>
-              </div>
-              <div class="list-desc">
-                <a href="<%= movie_path(movie) %>" class="overdot work-title" target="_blank" title="<%= movie.title %>"><%= movie.title %></a>
-              </div>
-              <div class="list-ribbon"></div>
-            </li>
-          <% end %>
-        </ul>
-      </div>
       <div id="marketing_case">
   <div class="marketing_case clear_float">
         <div class="marketing_case_left mar_left"><img src="<%= asset_path('marketing_img.jpg') %>" /></div>
@@ -102,6 +84,24 @@
         </div>
     </div>
 </div>
+      <div class="recommend">
+        <h2><i class="fa fa-thumbs-o-up"></i><a href="<%= movies_path %>"><%= t('home.hot_recommends') %></a></h2>
+        <ul class="video-list clearfix mb30">
+          <% @recommends.each do |movie| %>
+            <li class="video">
+              <div class="list-image">
+                <a href="<%= movie_path(movie) %>" class="work-img" target="_blank">
+                  <%= image_tag movie.thumb %>
+                </a>
+              </div>
+              <div class="list-desc">
+                <a href="<%= movie_path(movie) %>" class="overdot work-title" target="_blank" title="<%= movie.title %>"><%= movie.title %></a>
+              </div>
+              <div class="list-ribbon"></div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
       <div class="festival">
         <h2><i class="fa fa-video-camera"></i><a href="<%= events_path%>?type=电影节"><%= t('home.filmfest_selections') %></a></h2>
         <% unless @selections.count < 3 %>
@@ -234,7 +234,7 @@
             </a>
             <div class="rmhdcont">
               <p>
-                <a href="<%= event_path(event) %>" title="<%= event.title %>" target="_blank"><%= event.title %></a>
+                <a href="<%= event_path(event) %>" title="<%= event.title %>" target="_blank"><%= event.title.html_safe %></a>
               </p>
               <a class="rmhdcona btn" href="<%= event_path(event) %>" target="_blank"><%= t('home.read_more') %></a>
             </div>

@@ -2,7 +2,7 @@ defaults: &defaults
   admin_emails:
     - "linyaoyi011@gmail.com"
   time_zone: 'Beijing'
-  default_locale: 'zh-CN'
+  default_locale: 'zh-HK'
   faye_server: "http://127.0.0.1:9292/faye"
   faye_token: "123456"
   weibo_key: '1555320033'

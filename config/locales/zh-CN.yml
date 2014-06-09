@@ -230,7 +230,6 @@ zh-CN:
       message: "消息"
     message_modal:
       send: "发送消息"
-    message: "消息"
   instruction: "请仔细阅读以下推广协议"
   agree: "同意上述推广协议"
   promotion:

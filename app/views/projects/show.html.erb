@@ -9,7 +9,11 @@
 	<div class="project-page-content">
 		<div class="project-page-left">
 			<div class="project-page-video">
-				<embed src="<%= @project.video %>" allowFullScreen="true" quality="high" width="700" height="500" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+				<% if @project.video.include?('http://youtu.be/') %>
+					<iframe width="700" height="500" src="//<%= @project.video.gsub('http://youtu.be/', 'www.youtube.com/embed/') %>" frameborder="0" allowfullscreen></iframe>
+				<% else %>
+					<embed src="<%= @project.video %>" allowFullScreen="true" quality="high" width="700" height="500" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+				<% end %>
 			</div>
 			<div class="project-tabs">
 				<ul class="nav nav-tabs">

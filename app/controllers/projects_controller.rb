@@ -37,6 +37,7 @@ class ProjectsController < ApplicationController
 		@project = Project.new
 		@project.title = params[:project][:title]
 		@project.user = current_user
+		@project.currency = 'CNY'
 		@project.start_at = Time.now
 		if @project.save
 			redirect_to edit_project_path(@project)
@@ -79,6 +80,7 @@ class ProjectsController < ApplicationController
 
 	def publish
 		@project.publish!
+		@project.save!
 		flash[:alert] = "#{@project.title}发布成功"
 		redirect_to user_path(@project.user)
 	end

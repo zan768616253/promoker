@@ -98,8 +98,8 @@ RailsAdmin.config do |config|
       field :content, :ck_editor
       field :thumb
       field :address
-      field :start
-      field :end
+      field :start_time
+      field :end_time
       field :location_list
       field :type_list
       field :tag_list

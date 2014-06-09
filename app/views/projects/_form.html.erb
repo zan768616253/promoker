@@ -111,7 +111,7 @@
 	</div>
 </div>
 <div class="project-save">
-	<a href="" class='btn submit' id="project-publish"><%= t('projects.project_publish') %></a> 
+	<%= link_to t('projects.project_publish'), publish_project_path(@project), :method => :post, :class => 'btn submit', :id => "project-publish" %> 
 	<a href="<%= preview_project_path(@project) %>" target="_blank" class='btn preview' id="project-review"><%= t('projects.project_preview') %></a> 
 	<a href="" class="btn" id="project-save"><%= t('projects.project_save') %></a>
 </div>
