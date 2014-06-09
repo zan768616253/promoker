@@ -39,7 +39,6 @@ RailsAdmin.config do |config|
   #   'Article', 
   #   'Movie',
   #   'Actor',
-  #   'Category',
   #   'Comment',
   #   'Director',
   #   'Event',

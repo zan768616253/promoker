@@ -65,6 +65,7 @@ Rails.application.routes.draw do
   match '/home' => 'home#index', :via => :get
   match 'contact' => 'home#contact', :via => :get
   root to: "home#welcome"
+  get '*unmatched_route', :to => 'application#rescue_routing'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -47,6 +47,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def rescue_routing
+    redirect_to home_path
+  end
+
   private
     def authenticate!
       authenticate_or_request_with_http_basic do |username, password|
