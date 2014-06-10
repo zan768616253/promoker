@@ -28,10 +28,8 @@ gem 'rails_admin_tag_list', git: 'https://github.com/emoreth/rails_admin_tag_lis
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'bxslider-rails'
-#gem 'bootstrap-wysihtml5-rails'
 
-# gem 'ckeditor'
-gem 'ckeditor-rails'
+gem 'ckeditor'
 gem 'kaminari'
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable'
