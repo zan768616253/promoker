@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   extend OmniauthCallbacks
   # include RedisCaptcha::Model
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :async, :lockable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :async
   has_many :sent_messages, :foreign_key => 'from_id', :class_name => "Message", :dependent => :destroy
   has_many :received_messages, :foreign_key => 'to_id', :class_name => "Message", :dependent => :destroy
   has_many :tickets, :dependent => :destroy

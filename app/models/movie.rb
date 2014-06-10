@@ -15,5 +15,13 @@ class Movie < ActiveRecord::Base
 
   belongs_to :director
   has_and_belongs_to_many :actors
+
+  def type_enum
+    Tag.tags_on(:movie_type)
+  end
+
+  def location_enum
+    Tag.tags_on(:location)
+  end
   
 end

@@ -88,8 +88,16 @@ RailsAdmin.config do |config|
       field :actors
       field :duration
       field :url
-      field :location_list
-      field :type_list
+      field :location_list, :enum do
+        enum_method do
+          :location_enum
+        end
+      end
+      field :type_list, :enum do
+        enum_method do
+          :type_enum
+        end
+      end
     end
   end
 

@@ -12,13 +12,13 @@ class Event < ActiveRecord::Base
     	['upcoming', 'ongoing', 'finished']
   	end
 
-  	def type_enum
-  		Tag.tags_on(:event)
-  	end
+	def type_enum
+		Tag.tags_on(:event_type)
+	end
 
-  	def location_enum
-  		['香港', '臺灣', '內地', '海外']
-  	end
+	def location_enum
+		Tag.tags_on(:location)
+	end
 
 	def started?
     	start_time.past?

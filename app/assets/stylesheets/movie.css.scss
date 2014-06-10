@@ -288,7 +288,7 @@ div.movie-author-info {
   background: #FFF;
   width: 395px;
   display: inline-block;
-  height: 200px;
+  height: 240px;
   margin-left: 10px;
   box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
 }
@@ -350,4 +350,13 @@ div.movie-director-info {
 
 .movie-actions a.liked .fa-heart-o {
   display: none;
+}
+
+li.movie-actor {
+    display: inline-block;
+    text-align: center;
+    color: #999;
+}
+ul.movie-actors {
+    margin-left: 50px;
 }
