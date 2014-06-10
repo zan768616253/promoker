@@ -123,7 +123,7 @@ end
 namespace :faye do
   desc "Start Faye"
   task :start do
-    run "rm #{faye_pid} && cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
+    run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
   end
   desc "Stop Faye"
   task :stop do
