@@ -17,15 +17,16 @@ end
 # You probably want to use your own repository for a real app
 
 
-if RUBBER_ENV == 'vagrant'
-  set :scm, :none
-  set :repository, '.'  
-  set :deploy_via, 'copy'
-else
+# if RUBBER_ENV == 'vagrant'
+#   set :scm, :none
+#   set :repository, '.'  
+  
+# else
   set :scm, :git
   set :repository, "git@bitbucket.org:linyaoyi/promoker.git"
   set :branch, ENV['rev'] || "master"
-end
+  set :deploy_via, :remote_cache
+# end
 
 
 # Easier to do system level config as root - probably should do it through

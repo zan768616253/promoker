@@ -19,6 +19,7 @@
 //= require social-share-button
 //= require faye
 //= require jquery.imgareaselect
+//= require ckeditor-jquery
 //= require fancybox
 //= require_tree .
 //= require turbolinks

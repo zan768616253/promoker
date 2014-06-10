@@ -201,7 +201,7 @@
                 <div class="form-group">
                   <label for="" class="col-sm-2 control-label"><%= t('home.post_modal.ticket_needs') %></label>
                   <div class="col-sm-8">
-                    <% Tag.tags_on('roles').each do |tag| %>
+                    <% Tag.tags_on('needs').each do |tag| %>
                     <span class="tag">
                       <%= tag %>
                     </span>

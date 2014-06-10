@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
 	def edit 
 		@types = Tag.tags_on('movie_type')
 		@roles = Tag.tags_on('roles')
-		@needs = @roles + Tag.tags_on('needs')
+		@needs = Tag.tags_on('needs')
 	end
 
 	def create
