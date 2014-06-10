@@ -30,6 +30,7 @@ gem 'font-awesome-rails'
 gem 'bxslider-rails'
 
 gem 'ckeditor'
+gem "non-stupid-digest-assets"
 gem 'kaminari'
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable'
