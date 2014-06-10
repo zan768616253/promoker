@@ -13,13 +13,13 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require ckeditor-jquery
 //= require bootsy
 //= require bootstrap
 //= require bxslider
 //= require social-share-button
 //= require faye
 //= require jquery.imgareaselect
-//= require ckeditor-jquery
 //= require fancybox
 //= require_tree .
 //= require turbolinks
