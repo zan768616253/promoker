@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 	  before_filter :authenticate_user!, :except => [:index, :show]
 	def index
 		@locations = Tag.tags_on(:location)
-		@types = Tag.tags_on(:event)
+		@types = Tag.tags_on(:event_type)
     	if(params[:location] || params[:type])
     		if params[:status]
       			@events = Event.tagged_with([params[:location], params[:type]]).page(params[:page]).where(:status => param[:status])

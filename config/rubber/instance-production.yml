@@ -32,15 +32,6 @@
     name: mysql_master
     options: {}
   - !ruby/object:Rubber::Configuration::RoleItem
-    name: examples
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
-    name: graphite_server
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
-    name: graphite_web
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
     name: web
     options: {}
   - !ruby/object:Rubber::Configuration::RoleItem
@@ -63,9 +54,6 @@
   - promoker_production_db
   - promoker_production_mysql
   - promoker_production_mysql_master
-  - promoker_production_examples
-  - promoker_production_graphite_server
-  - promoker_production_graphite_web
   external_host: 
   external_ip: 128.199.190.93
   internal_host: 
