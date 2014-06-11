@@ -13,8 +13,6 @@ defaults: &defaults
   facebook_secret: "5587a9514a86d370c782d5c61cbb0931"
   google_key: "476925498782-d9nvimc4qv7f3ffl1esg0r5rgru51sfa.apps.googleusercontent.com"
   google_secret: "f47QPyfPPvUT7WkAEKRKMKMw"
-  logo_home: "uploads/photo/image/16/LOGO-Home_page.png"
-  logo_welcome: "uploads/photo/image/17/LOGO-Welcome_page.png"
   upyun:
     username: promokerdev
     password: aWDR89vlVpvH
