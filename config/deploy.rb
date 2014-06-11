@@ -25,7 +25,7 @@ end
   set :scm, :git
   set :repository, "git@bitbucket.org:linyaoyi/promoker.git"
   set :branch, ENV['rev'] || "master"
-  set :deploy_via, :remote_cache
+  #set :deploy_via, :remote_cache
 # end
 
 
@@ -133,7 +133,7 @@ namespace :faye do
   desc "Restart Faye"
   task :restart do
     run "cat #{faye_pid} | xargs kill; exit 0;"
-    run "rm #{faye_pid} && cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
+    run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
   end
 end
 before 'deploy:update_code', 'faye:stop'
