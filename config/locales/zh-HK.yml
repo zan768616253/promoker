@@ -8,6 +8,9 @@ zh-HK:
   contact: '聯系我們'
   privacy: '隱私政策'
   disclaimer: "免責聲明"
+  event:
+    type:
+      filmfest: '電影節'
   bootsy:
     action:
       refresh: 更新
