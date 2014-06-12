@@ -212,7 +212,7 @@
   </style>
   <script>
   	$(function(){
-  		$.getJSON('http://freegeoip.net/json/', function(location) {
+  		$.getJSON('http://www.telize.com/geoip?callback=?', function(location) {
   		// $.getJSON('http://api.hostip.info/get_json.php', function(location){
 	        $.simpleWeather({
 	            location: location.latitude + ',' + location.longitude,
