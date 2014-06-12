@@ -135,6 +135,9 @@ namespace :faye do
     run "cat #{faye_pid} | xargs kill; exit 0;"
     run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
   end
+  task :remove do
+    run "rm -rf #{faye_pid}"
+  end
 end
 before 'deploy:update_code', 'faye:stop'
 after 'deploy:finalize_update', 'faye:start'
