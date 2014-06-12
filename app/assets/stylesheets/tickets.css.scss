@@ -1,4 +1,4 @@
-.user-profile {
+.home-ticket-wrapper #user-profile {
   display: inline-block;
   float: right;
   vertical-align: top;
@@ -9,8 +9,8 @@
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
   background-color: #FFF;
 }
-.user-profile .avatar {
-  	border-radius: 50%;
+.home-ticket-wrapper #user-profile .avatar {
+  border-radius: 50%;
 	overflow: hidden;
 	width: 50px;
 	height: 50px;
@@ -18,30 +18,30 @@
 	margin-bottom: 5px;
 }
 
-.user-profile .avatar img {
+.home-ticket-wrapper #user-profile .avatar img {
   width: 50px;
 }
-.user-profile .location i {
+.home-ticket-wrapper #user-profile .location i {
   margin-right: 5px;
 }
 
-.user-profile .role {
+.home-ticket-wrapper #user-profile .role {
   color: #999;
   font-size: 12px;
 }
 
-.user-profile .actions a {
+.home-ticket-wrapper #user-profile .actions a {
   color: white;
 }
-.user-profile .actions a i {
+.home-ticket-wrapper #user-profile .actions a i {
   margin-right: 6px;
 }
 
-.user-profile .location {
+.home-ticket-wrapper #user-profile .location {
   color: #999;
   font-size: 11px;
 }
-.user-profile .actions {
+.home-ticket-wrapper #user-profile .actions {
   margin-top: 10px;
 }
 

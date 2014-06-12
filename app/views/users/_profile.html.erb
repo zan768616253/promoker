@@ -2,7 +2,7 @@
   <div class="avatar">
     <%= image_tag @user.avatar %>
   </div>
-  <div class="nickname"><%= @user.nickname %></div>
+  <div class="nickname"><%= link_to @user.nickname, user_path(@user) %></div>
   <div class="role"><%= @user.role_list.join(' ') %></div>
   <% if @user.location %>
     <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
