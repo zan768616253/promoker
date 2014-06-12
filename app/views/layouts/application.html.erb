@@ -34,9 +34,9 @@
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>"><%= t('home.nav.recommend') %></a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>"><%= t('home.nav.news') %></a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>"><%= t('home.nav.event') %></a></li>
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=电影节"><%= t('home.nav.filmfest') %></a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=<%= t('home.nav.filmfest') %>"><%= t('home.nav.filmfest') %></a></li>
                     <li role="presentation" class="divider"></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'"><%= t('home.nav.colleage') %></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=<%= t('home.nav.filmfest') %>"><%= t('home.nav.colleage') %></a></li>
         					</ul>
         				</li>
         				<li><a href="<%= projects_path %>"><%= t('home.nav.project') %></a></li>
