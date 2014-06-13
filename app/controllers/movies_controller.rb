@@ -1,3 +1,4 @@
+# coding: utf-8
 class MoviesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
 	def index

@@ -1,3 +1,4 @@
+# coding: utf-8
 class RegistrationsController < Devise::RegistrationsController
 	before_filter :configure_permitted_parameters
 	protected

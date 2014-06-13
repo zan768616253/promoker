@@ -103,7 +103,7 @@
         </ul>
       </div>
       <div class="festival">
-        <h2><i class="fa fa-video-camera"></i><a href="<%= events_path%>?type=电影节"><%= t('home.filmfest_selections') %></a></h2>
+        <h2><i class="fa fa-video-camera"></i><a href="<%= events_path%>?type=<%= t('home.nav.filmfest') %>"><%= t('home.filmfest_selections') %></a></h2>
         <% unless @selections.count < 3 %>
         <div class="poster-wrapper">
           <div class=" poster-left poster">

@@ -1,3 +1,4 @@
+# coding: utf-8
 class LocaleController < ApplicationController
   def simplified
     I18n.locale = "zh-CN"
