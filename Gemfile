@@ -6,7 +6,7 @@ gem 'rails', '4.1.1'
 
 gem 'mysql2'
 
-gem 'rubber'
+# gem 'rubber'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -117,4 +117,7 @@ gem 'newrelic_rpm'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'bootsy', '~> 2.0.9'
 gem 'money', '~> 6.1.1'
+
+gem 'capistrano', '3.1'
+gem 'capistrano-rails', '~> 1.1'
 

@@ -12,9 +12,9 @@ test:
   password:
   host: localhost
 
-vagrant:
+staging:
   adapter: mysql2
-  database: promoker_vagrant
+  database: promoker_staging
   username: root
   password:
   host: localhost
