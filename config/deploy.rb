@@ -3,6 +3,7 @@ lock '3.1.0'
 
 set :application, 'promoker'
 set :repo_url, 'git@bitbucket.org:linyaoyi/promoker.git'
+set :branch, ENV['rev'] || "master"
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }

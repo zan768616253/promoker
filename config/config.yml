@@ -23,7 +23,7 @@ development:
   <<: *defaults
 test:
   <<: *defaults
-vagrant:
+staging:
   <<: *defaults
   faye_server: "http://default.foo.com:8080/faye"
   faye_token: "123456"
