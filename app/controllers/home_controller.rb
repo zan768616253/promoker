@@ -7,11 +7,10 @@ class HomeController < ApplicationController
 		@tickets = Ticket.recent.limit(10)
 		@recommends = Movie.all.limit(4)
 		@partners = Partner.all
-		@selections = Event.tagged_with('电影节')
+		@selections = Event.tagged_with(I18n.t('event.type.filmfest'))
 		siteConfigs = SiteConfig.all
 		@siteConfig = {}
 		for config in siteConfigs
-			p config
 			@siteConfig[config.property] = config.value
 		end
 	end

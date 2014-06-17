@@ -7,8 +7,8 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :upyun
+  # storage :file
+  storage :upyun
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -49,4 +49,16 @@ class PhotoUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  def filename
+    if super.present?
+      @name ||= Digest::MD5.hexdigest(File.dirname(current_path))
+      # unless file.extension.nil?
+      #   if file.extension.downcase.empty?
+          @name
+      #   else
+      #     "#{@name}.#{file.extension.downcase}" 
+      #   end
+      # end
+    end
+  end
 end

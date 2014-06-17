@@ -5,7 +5,7 @@
 				<%=  @event.title %>
 			</div>
 			<div class="event-date">
-				<span><%= t('events.event_date') %></span><%= @event.start_time.strftime("%m#{t('month')}%d#{t('date')}") unless @event.start_time.nil? %> ~ <%= @event.end_time.strftime("%m#{t('month')}%d#{t('date')}") unless @event.end_time.nil? %>
+				<span><%= t('events.event_date') %></span><%= @event.start_time.strftime("%m#{t('month')}%d#{t('date')} %H:%M") unless @event.start_time.nil? %> ~ <%= @event.end_time.strftime("%m#{t('month')}%d#{t('date')} %H:%M") unless @event.end_time.nil? %>
 			</div>
 			<div class="event-type">
 				<span><%= t('events.event_type') %></span><%= link_to @event.type_list.join(' '), events_path({:type=>@event.type_list.join(' ')}) unless @event.type_list.nil?%>
@@ -32,7 +32,7 @@
 				<%= @event.title %>
 			</div>
 			<div class="event-date">
-				<span><%= t('events.event_date') %> </span><%= @event.start_time.strftime("%m#{t('month')}%d#{t('date')}") unless @event.start_time.nil?%> ~ <%= @event.end_time.strftime("%m#{t('month')}%d#{t('date')}") unless @event.end_time.nil?%>
+				<span><%= t('events.event_date') %> </span><%= @event.start_time.strftime("%m#{t('month')}%d#{t('date')} %H:%M") unless @event.start_time.nil?%> ~ <%= @event.end_time.strftime("%m#{t('month')}%d#{t('date')} %H:%M") unless @event.end_time.nil?%>
 			</div>
 			<div class="event-type">
 				<span><%= t('events.event_type') %> </span><%= link_to @event.type_list.join(' '), events_path({:type=>@event.type_list.join(' ')}) %>

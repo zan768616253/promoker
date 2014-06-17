@@ -8,6 +8,9 @@ zh-CN:
   contact: '联系我们'
   privacy: "隐私政策"
   disclaimer: "免责声明"
+  event:
+    type:
+      filmfest: '电影节'
   bootsy:
     action:
       refresh: 更新

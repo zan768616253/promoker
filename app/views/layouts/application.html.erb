@@ -23,7 +23,7 @@
         				<span class="icon-bar"></span>
         			</button> -->
         			<a href="/home" class="navbar-brand">
-                <img src="<%= root_url + '/' + Settings.logo_home %>">
+                <img src="<%= asset_path('logo_home_page.png') %>">
               </a>
         		</div>
         		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -34,9 +34,9 @@
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= movies_path %>"><%= t('home.nav.recommend') %></a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= articles_path %>"><%= t('home.nav.news') %></a></li>
         						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>"><%= t('home.nav.event') %></a></li>
-        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=电影节"><%= t('home.nav.filmfest') %></a></li>
+        						<li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=<%= t('home.nav.filmfest') %>"><%= t('home.nav.filmfest') %></a></li>
                     <li role="presentation" class="divider"></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type='电影节'"><%= t('home.nav.colleage') %></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= events_path %>?type=<%= t('home.nav.filmfest') %>"><%= t('home.nav.colleage') %></a></li>
         					</ul>
         				</li>
         				<li><a href="<%= projects_path %>"><%= t('home.nav.project') %></a></li>
@@ -199,7 +199,7 @@
                 <div class="form-group">
                   <label for="" class="col-sm-2 control-label"><%= t('home.post_modal.ticket_needs') %></label>
                   <div class="col-sm-8">
-                    <% Tag.tags_on('roles').each do |tag| %>
+                    <% Tag.tags_on('needs').each do |tag| %>
                     <span class="tag">
                       <%= tag %>
                     </span>

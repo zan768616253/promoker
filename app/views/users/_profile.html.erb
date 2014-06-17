@@ -2,7 +2,7 @@
   <div class="avatar">
     <%= image_tag @user.avatar %>
   </div>
-  <div class="nickname"><%= @user.nickname %></div>
+  <div class="nickname"><%= link_to @user.nickname, user_path(@user) %></div>
   <div class="role"><%= @user.role_list.join(' ') %></div>
   <% if @user.location %>
     <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
@@ -11,14 +11,19 @@
   <div class="about">
     <%= @user.about %>
   </div>
-  <% if current_user != @user %>
-  <div class="actions">
-    <% if current_user and current_user.following?(@user) %>
-    <a href="#" id="follow" class="btn btn-warning followed" data-id="<%= @user.id %>" data-state="followed"><i class="fa fa-minus"></i><span><%= t('users.followed') %></span></a>
-    <% else %>
-    <a href="#" id="follow" class="btn btn-warning" data-id="<%= @user.id %>" data-state=""><i class="fa fa-plus"></i><span><%= t('users.follow') %></span></a>
+  <% if user_signed_in? %>
+    <% if current_user != @user %>
+    <div class="actions">
+      <% if current_user and current_user.following?(@user) %>
+      <a href="#" id="follow" class="btn btn-warning followed" data-id="<%= @user.id %>" data-state="followed"><i class="fa fa-minus"></i><span><%= t('users.followed') %></span></a>
+      <% else %>
+      <a href="#" id="follow" class="btn btn-warning" data-id="<%= @user.id %>" data-state=""><i class="fa fa-plus"></i><span><%= t('users.follow') %></span></a>
+      <% end %>
+      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#message-modal"><i class="fa fa-comment"></i><%= t('users.chat') %></a>
+    </div>
     <% end %>
-    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#message-modal"><i class="fa fa-comment"></i><%= t('users.chat') %></a>
-  </div>
+  <% else %>
+    <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-warning"><i class="fa fa-plus"></i><span> <%= t('users.follow') %></span></a>
+    <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-info"><i class="fa fa-comment"></i> <%= t('users.chat') %></a>
   <% end %>
 </div>

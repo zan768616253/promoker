@@ -16,16 +16,11 @@ zh-CN:
       invalid_token: '认证码无效.'
       timeout: '您已登录超时，请重新登录.'
       inactive: '您还没有激活帐户.'
-    mailer:
-      confirmation_instructions:
-        subject: '激活信息'
-      reset_password_instructions:
-        subject: '重置密码信息'
-      unlock_instructions:
-        subject: '解锁信息'
-    omniauth_callbacks:
-      success: '成功地从 %{kind}获得授权.'
-      failure: '因为 %{reason}，所以您无法从 %{kind}获得授权.'
+      user:
+        not_found_in_database: '该帐号尚未注册'
+    sessions:
+      signed_in: '登录成功.'
+      signed_out: '' # 首页不要显示退出成功提示
     passwords:
       send_instructions: '稍后你将收到重设密码的电子邮件'
       updated: '您的密码已修改成功，您现在已登录.'

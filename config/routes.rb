@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount RedisCaptcha::Engine => '/captcha', :as => :captcha

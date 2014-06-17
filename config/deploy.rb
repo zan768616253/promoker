@@ -17,15 +17,16 @@ end
 # You probably want to use your own repository for a real app
 
 
-if RUBBER_ENV == 'vagrant'
-  set :scm, :none
-  set :repository, '.'  
-  set :deploy_via, 'copy'
-else
+# if RUBBER_ENV == 'vagrant'
+#   set :scm, :none
+#   set :repository, '.'  
+  
+# else
   set :scm, :git
   set :repository, "git@bitbucket.org:linyaoyi/promoker.git"
   set :branch, ENV['rev'] || "master"
-end
+  #set :deploy_via, :remote_cache
+# end
 
 
 # Easier to do system level config as root - probably should do it through
@@ -123,7 +124,7 @@ end
 namespace :faye do
   desc "Start Faye"
   task :start do
-    run "rm #{faye_pid} && cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
+    run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
   end
   desc "Stop Faye"
   task :stop do
@@ -132,9 +133,18 @@ namespace :faye do
   desc "Restart Faye"
   task :restart do
     run "cat #{faye_pid} | xargs kill; exit 0;"
-    run "rm #{faye_pid} && cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
+    run "cd #{deploy_to}/current && bundle exec rackup #{faye_config} -s thin -E production -D --pid #{faye_pid}"
+  end
+  task :remove do
+    run "rm -rf #{faye_pid}"
   end
 end
 before 'deploy:update_code', 'faye:stop'
 after 'deploy:finalize_update', 'faye:start'
 after "deploy:restart", "faye:restart"
+
+# desc 'copy ckeditor nondigest assets'
+# task :copy_nondigest_assets, roles: :app do
+#   run "cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} ckeditor:create_nondigest_assets"
+# end
+# after 'deploy:assets:precompile', 'copy_nondigest_assets'

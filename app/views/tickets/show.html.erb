@@ -16,24 +16,5 @@
 			<%= @ticket.contact %>
 		</div>
 	</div>
-	<div class="user-profile">
-	  <div class="avatar">
-	    <%= image_tag @user.avatar %>
-	  </div>
-	  <div class="nickname"><%= @user.nickname %></div>
-	  <div class="role"><%= @user.role_list.join(' ') %></div>
-	  <% if @user.location %>
-	    <div class="location"><i class="fa fa-map-marker"></i><%= @user.location %></div>
-	  <% end %>
-	  <div class="about-divider"></div>
-	  <div class="about">
-	    <%= @user.about %>
-	  </div>
-	  <% if current_user != @user %>
-	  <div class="actions">
-	    <a href="#" class="btn btn-warning"><i class="fa fa-plus"></i><%= t('users.follow') %></a>
-	    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#message-modal"><i class="fa fa-comment"></i><%= t('users.chat') %></a>
-	  </div>
-	  <% end %>
-	</div>
+	<%= render 'users/profile' %>
 </div>
