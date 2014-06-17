@@ -57,12 +57,12 @@ zh-HK:
         sign_in: '登錄'
         sign_up: '註冊'
         forget_pass: '忘記密碼?'
-        resend_confirmation: "沒有收到確認指令？"
-        resend_unlock: "沒有收到解鎖指令？"
+        resend_confirmation: "沒有收到確認郵件？"
+        resend_unlock: "沒有收到解鎖郵件？"
         omni_auth: "用%{provider}登錄"
       confirmations:
         new:
-          title: '重新發送確認指令'
+          title: '重新發送確認郵件'
           submit: '重發確認郵件'
       passwords:
         edit:
@@ -94,7 +94,7 @@ zh-HK:
           remember_me: '記住我'
       unlocks:
         new:
-          title: '重發解鎖指令'
+          title: '重發解鎖郵件'
           submit: '重發解鎖郵件'
     navigation:
       home: '我的主頁'

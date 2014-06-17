@@ -2,7 +2,7 @@
 	<div class="auth-page">
 		<h3><%= t('devise.views.confirmations.new.title') %></h3>
 
-		<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+		<%= form_for(resource, :as => resource_name, :url => user_confirmation_path, :html => { :method => :post }) do |f| %>
 		  <%= devise_error_messages! %>
 		  <div class="form-group form-inline">
 		  	<%= f.email_field :email, :placeholder => t('activerecord.attributes.user.email'), :class => "form-control" %>

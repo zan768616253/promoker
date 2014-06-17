@@ -83,7 +83,7 @@ zh-CN:
           remember_me: '记住我'
       unlocks:
         new:
-          title: '重发解锁指令'
+          title: '重发解锁邮件'
           submit: '重发解锁邮件'
     navigation:
       home: '我的主页'
