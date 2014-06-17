@@ -1,35 +1,19 @@
-"zh-HK":
-  errors:
-    messages:
-      not_found: "沒有找到"
-      already_confirmed: "已經確認"
-      not_locked: "沒有鎖定"
-      not_saved: "有 %{count} 個錯誤發生導致「%{model}」無法被儲存。 "
+zh-HK:
   devise:
+    confirmations:
+      send_instructions: '幾分後，您將收到帳號激活的電子郵件。'
+      confirmed: '您的帳號已經激活，請登入。'
+      send_paranoid_instructions: '如果您的郵箱存在與我們的數據庫中，您將收到一封激活帳號的郵件.'
     failure:
+      already_authenticated: '您已經登錄.'
       unauthenticated: '繼續操作前請註冊或者登錄.'
-      unconfirmed: '請先啟動您的帳號'
+      unconfirmed: '請先激活您的帳號'
       locked: '您的帳號已被鎖定。'
-      invalid: '帳號或密碼錯誤'
+      not_found_in_database: '沒有該用戶，請您重新註冊.'
+      invalid: '郵箱或密碼錯誤'
       invalid_token: '認證碼無效。'
       timeout: '您已登入超時，請重新登入。'
-      inactive: '您還沒有啟動帳戶。'
-    sessions:
-      signed_in: '登入成功。'
-      signed_out: '登出成功。'
-    passwords:
-      send_instructions: '幾分後，您將收到重置密碼的電子郵件。'
-      updated: '您的密碼已修改成功，請重新登錄.'
-    confirmations:
-      send_instructions: '幾分後，您將收到帳號啟動的電子郵件。'
-      confirmed: '您的帳號已經啟動，請登入。'
-    account:
-      signed_up: '您的帳號已註冊成功，如無意外，您將收到一封確認郵件。'
-      updated: '帳號資料更新成功。'
-      destroyed: '再見！您的帳戶已成功刪除。我們希望很快可以再見到您。'
-    unlocks:
-      send_instructions: '幾分後，您將收到一封帳號解鎖的郵件。'
-      unlocked: '您的帳號已成功解鎖，請登入。'
+      inactive: '您還沒有激活帳戶。'
     mailer:
       confirmation_instructions:
         subject: '確認訊息'
@@ -37,3 +21,78 @@
         subject: '重置密碼訊息'
       unlock_instructions:
         subject: '解鎖訊息'
+    omniauth_callbacks:
+      success: '成功成功地从 %{kind}获得授权.'
+      failure: '因为 %{reason}，所以您无法从 %{kind}获得授权.'
+    passwords:
+      send_instructions: '幾分後，您將收到重置密碼的電子郵件。'
+      updated: '您的密碼已修改成功，請重新登錄.'
+      updated_not_active: '您的密碼已修改成功'
+      send_paranoid_instructions: '如果您的郵箱存在與我們的數據庫中，您將收到一封找回密碼的郵件.'
+    registrations:
+      signed_up: '您的帳號已註冊成功，如無意外，您將收到一封確認郵件。'
+      updated: '帳號資料更新成功。'
+      update_needs_confirmation: '您更改了邮箱地址，我们需要验证您的新邮箱地址，请查看您的邮箱，点击激活链接来验证您的新邮箱地址.'
+      destroyed: '再見！您的帳戶已成功刪除。我們希望很快可以再見到您。'
+      signed_up_but_unconfirmed: '帶有激活鏈接的信息已經發送到您的郵箱，請打開此鏈接來激活您的帳號'
+      signed_up_but_inactive: '雖然您已經註冊成功，但因為您的帳號還未激活，所以您暫時無法登錄'
+      signed_up_but_locked: '雖然您已經註冊成功，但因為您的帳號已經鎖定，所以您暫時無法登錄'
+    sessions:
+      signed_in: '登錄成功。'
+      signed_out: ''
+    unlocks:
+      send_instructions: '幾分鐘後，您將收到一封帳號解鎖的郵件。'
+      unlocked: '您的帳號已成功解鎖，請登入。'
+    views:
+      links:
+        sign_in: '登錄'
+        sign_up: '註冊'
+        forget_pass: '忘記密碼?'
+        resend_confirmation: "沒有收到確認郵件？"
+        resend_unlock: "沒有收到解鎖郵件？"
+        omni_auth: "用%{provider}登錄"
+      confirmations:
+        new:
+          title: '重新發送確認郵件'
+          submit: '重發確認郵件'
+      passwords:
+        edit:
+          title: '修改密碼'
+          submit: '修改'
+        new:
+          title: '忘記密碼'
+          submit: '發送重置郵件'
+      registrations:
+        edit:
+          title: '更改註冊信息'
+          password: '修改密碼'
+          submit: '修改'
+          change_pass_tip: ""
+          change_pass_confirm: "需要輸入當前密碼確認"
+          cancel_account: "註銷帳號"
+          cancel_account_warning: "註銷帳號會刪除所有關聯的個人資料，並且操作無法恢復"
+          cancel_account_confirm: "確認註銷帳號嗎？"
+        new:
+          title: '註冊'
+          submit: '註冊'
+        binding:
+          title: '綁定'
+          submit: '綁定'
+      sessions:
+        new:
+          title: '登錄'
+          submit: '登錄'
+          remember_me: '記住我'
+      unlocks:
+        new:
+          title: '重發解鎖郵件'
+          submit: '重發解鎖郵件'
+  errors:
+    messages:
+      expired: "您已經過期，請重新申請"
+      not_found: "沒有該用戶"
+      already_confirmed: "已經確認"
+      not_locked: "沒有鎖定"
+      not_saved:
+        one: "出問題了:"
+        other: "出問題了:"

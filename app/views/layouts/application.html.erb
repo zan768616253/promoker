@@ -126,16 +126,14 @@
     </nav>
   <div class="flash">
     <% flash.each do |key, value| %>
-      <% unless key == 'notice' %>
       <div class="alert <%= flash_class(key) %>">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <div><%= value %></div>
       </div>
-      <% end %>
     <% end %>
   </div>
     <div class="breadcrumb"></div>
-    <%= yield %>
+      <%= yield %>
 
     <div id="post-modal" class="modal fade">
       <div class="modal-dialog">
@@ -227,7 +225,7 @@
           </div>
         </div>
     </div>
-    <div id="login-modal" class="modal fade">
+    <div id="login-modal" class="modal">
       <div class="modal-dialog login-wrapper">
         <div class="modal-content">
           <div class="modal-header">
@@ -271,11 +269,17 @@
                     <%= f.password_field :password, :placeholder => t('home.login_modal.password'), autocomplete: "off" %>
                   </p>
                   <p>
+                      <%= f.check_box :remember_me, {:checked => "checked"}%>
+                      <span class="remember"><%= t('devise.views.sessions.new.remember_me') %></span>
+                      <%# link_to "忘记密码?", new_password_path(:user) %>
+                      <%= link_to t('devise.views.links.resend_confirmation'), new_confirmation_path(:user) %>
+                  </p>
+                  <p>
                     <%= f.submit t('home.login_modal.login') %>
                   </p>
                 </fieldset>
               <% end %>
-              <p><%= t('home.login_modal.no_account') %>? <a href="#" id="register-link"><%= t('home.login_modal.register_now') %></a><span class="fontawesome-arrow-right"></span></p>
+              <p><a href="#" id="register-link"><%= t('home.login_modal.register_now') %></a><span class="fontawesome-arrow-right"></span></p>
             </div>
             <div id="register" style="display:none;">
               <%= form_for :user, :url => registration_path(:user), :html => {:id => 'register-form'} do |f| %>
@@ -304,7 +308,7 @@
         </div>
       </div>
     </div>
-    <div id="promote-modal" class="modal fade">
+    <div id="promote-modal" class="modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">

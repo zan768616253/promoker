@@ -84,11 +84,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'promoker.com' }
 
   ActionMailer::Base.smtp_settings = {
-      :address => "smtp.exmail.qq.com",
-      :port => 465,
-      :domain  => "exmail.qq.com",
-      :authentication => :login,
-      :user_name => ENV['QQ_SMTP_USER'],
-      :password => ENV['QQ_SMTP_PASSWORD'],
+    :address => "smtp.exmail.qq.com",
+    :port => 465,
+    :domain  => "exmail.qq.com",
+    :authentication => :plain,
+    :user_name => 'verify@promoker.com',
+    :password => 'u6tWn7xvwwl4',
+    :ssl => true
   }
 end

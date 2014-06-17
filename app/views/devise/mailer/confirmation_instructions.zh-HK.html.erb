@@ -1,0 +1,18 @@
+<div style="border: 1px solid #ddd;padding: 10px;line-height: 20px;">
+  <p>親愛的<%= @resource.nickname %>,</p>
+  <p>您好, 感謝您註冊普摩客 (<a href="promoker.com">www.promoker.com</a>)
+  <p>這是一封確認郵件。 您的普摩客帳戶信息如下:</p>
+  <div style="background-color: #B5CFE7; border: 1px solid #bbb; padding: 5px;">
+    <div>
+      <span>登錄郵箱: </span>
+      <%= @email %>
+    </div>
+    <div>
+      <span>昵稱: </span>
+      <%= @resource.nickname %>
+    </div>
+  </div>
+  <p>請點擊下面的鏈接完成確認:</p>
+  <p><%= confirmation_url(@resource, :confirmation_token => @token) %></p>
+  <p>(如果鏈接不能點擊，請復制並粘貼到瀏覽器的地址欄，然後按回車鍵)</p>
+</div>

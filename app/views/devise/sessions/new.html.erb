@@ -39,9 +39,16 @@
             <%= f.password_field :password, :placeholder => t('home.login_modal.password'), autocomplete: "off" %>
           </p>
           <p>
+              <%= f.check_box :remember_me, {:checked => "checked"}%>
+              <span class="remember">记住我</span>
+              <%= link_to "忘记密码?", new_password_path(resource_name) %>
+              <%= link_to "没收到验证邮件?", new_confirmation_path(resource_name) %>
+          </p>
+          <p>
             <%= f.submit t('home.login_modal.login') %>
           </p>
         </fieldset>
+        <p style="text-align:center;"><a href="<%= new_user_registration_path %>" ><%= t('home.login_modal.register_now') %></a><span class="fa fa-arrow-right"></span></p>
       <% end %>
     </div>
   </div>

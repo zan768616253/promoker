@@ -479,3 +479,57 @@ font-size: 15px;
     margin-right: 20px;
     font-size: 13px;
 }
+
+.auth-page {
+  position: relative;
+  padding: 30px 60px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.2);
+}
+
+#login-form input#user_remember_me {
+  height: 10px;
+  margin: 10px 0px;
+}
+
+#login input#user_remember_me {
+  height: 10px;
+  margin: 10px 0px;
+}
+
+#login-form span.remember {
+  display: inline-block;
+  background: none;
+  float: none;
+  color: #444;
+  margin-right: 10px;
+}
+
+#login span.remember {
+  display: inline-block;
+  background: none;
+  float: none;
+  color: #444;
+  margin-right: 10px;
+}
+
+#login span.fa.fa-arrow-right {
+  display: inline-block;
+  background: none;
+  float: none;
+  color: #444;
+}
+
+.auth-page h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+.auth-page input#user_email {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.auth-page div.field_with_errors {
+  display: inline-block;
+}

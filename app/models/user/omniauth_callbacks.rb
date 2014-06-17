@@ -54,7 +54,7 @@ class User
       if provider.in? ['weibo','facebook']
         user.gender = extra.gender
       end
-      # user.skip_confirmation!
+      user.skip_confirmation!
       user
     end
   end

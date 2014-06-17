@@ -8,6 +8,8 @@ zh-HK:
   contact: '聯系我們'
   privacy: '隱私政策'
   disclaimer: "免責聲明"
+  confirmation:
+    resend: "重新發送驗證郵件郵件"
   bootsy:
     action:
       refresh: 更新
@@ -89,7 +91,6 @@ zh-HK:
       password: "密碼"
       nickname: "昵稱"
       password_confirmation: "確認密碼"
-      no_account: "沒有帳號"
       register_now: "立即註冊"
       login: "登錄"
       register: "註冊"

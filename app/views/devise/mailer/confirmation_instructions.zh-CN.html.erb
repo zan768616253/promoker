@@ -1,0 +1,18 @@
+<div style="border: 1px solid #ddd;padding: 10px;line-height: 20px;">
+  <p>亲爱的<%= @resource.nickname %>,</p>
+  <p>您好, 感谢您注册普摩客 (<a href="promoker.com">www.promoker.com</a>)
+  <p>这是一封确认邮件。 您的普摩客帐户信息如下:</p>
+  <div style="background-color: #B5CFE7; border: 1px solid #bbb; padding: 5px;">
+    <div>
+      <span>登录邮箱: </span>
+      <%= @email %>
+    </div>
+    <div>
+      <span>昵称: </span>
+      <%= @resource.nickname %>
+    </div>
+  </div>
+  <p>请点击下面的链接完成确认:</p>
+  <p><%= confirmation_url(@resource, :confirmation_token => @token) %></p>
+  <p>(如果链接不能点击，请复制并粘贴到浏览器的地址栏，然后按回车键)</p>
+</div>

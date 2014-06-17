@@ -15,3 +15,4 @@
 /log/*.log
 /tmp
 /config/rubber/rubber-secret.yml
+public/uploads
