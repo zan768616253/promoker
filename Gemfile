@@ -75,6 +75,12 @@ group :development, :test, :staging do
   gem 'rspec-console'
 end
 
+group :development do
+  gem 'capistrano', '3.1'
+  gem 'capistrano-rails', '~> 1.1'
+  gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false
+end
+
 group :test do
   gem 'launchy'
   gem 'capybara'
@@ -114,9 +120,3 @@ gem 'newrelic_rpm'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'bootsy', '~> 2.0.9'
 gem 'money', '~> 6.1.1'
-
-gem 'capistrano', '3.1'
-gem 'capistrano-rails', '~> 1.1'
-gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false
-gem 'capistrano3-nginx', '~> 2.0'
-

@@ -9,7 +9,7 @@ set :branch, ENV['rev'] || "master"
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/u/apps/'#{fetch(:application)}'"
+set :deploy_to, "/u/apps/#{fetch(:application)}"
 
 # Use agent forwarding for SSH so you can deploy with the SSH key on your workstation.
 set :ssh_options, {
