@@ -59,15 +59,12 @@ gem 'fancybox2-rails', '~> 0.2.8'
 gem 'http_accept_language'
 gem 'rails-i18n'
 
-group :development do
+group :development, :test, :staging do
   gem 'pry-nav'
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-end
-
-group :development, :test do
   gem 'rspec-rails'
   gem 'spork-rails'
   gem 'pry'
