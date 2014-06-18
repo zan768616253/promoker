@@ -47,6 +47,6 @@ end
 role :resque_worker, "staging.promoker.com"
 role :resque_scheduler, "staging.promoker.com"
 
-set :workers, { "confirm_email" => 2 }
+set :workers, { "confirm_email" => 1 }
 
 after "deploy:restart", "resque:restart"
