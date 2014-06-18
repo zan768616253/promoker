@@ -19,7 +19,6 @@ gem 'therubyracer',  platforms: :ruby
 gem "devise"
 gem 'devise-async'
 gem 'resque', :require => "resque/server"
-gem 'resque-scheduler'
 
 # gem "gravatar_image_tag"
 gem 'china_region_fu'

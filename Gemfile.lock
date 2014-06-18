@@ -535,7 +535,6 @@ DEPENDENCIES
   rails_admin_tag_list!
   redis_captcha!
   resque
-  resque-scheduler
   rspec-console
   rspec-rails
   ruby_identicon
