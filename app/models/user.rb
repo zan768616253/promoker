@@ -55,7 +55,6 @@ class User < ActiveRecord::Base
 
   private
     def generate_avatar
-      binding.pry
       if self.avatar.blank?
         blob = RubyIdenticon.create(self.email, background_color: 0xffffffff, square_size: 30, grid_size: 6)
         tempfile = Tempfile.new ['avatar', 'jpg']
