@@ -80,4 +80,16 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: 'staging.promoker.com' }
+  
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.exmail.qq.com",
+    :port => 465,
+    :domain  => "exmail.qq.com",
+    :authentication => :plain,
+    :user_name => 'verify@promoker.com',
+    :password => 'u6tWn7xvwwl4',
+    :ssl => true
+  }
 end

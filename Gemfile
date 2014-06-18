@@ -120,4 +120,5 @@ gem 'money', '~> 6.1.1'
 
 gem 'capistrano', '3.1'
 gem 'capistrano-rails', '~> 1.1'
+gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false
 
