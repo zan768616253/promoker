@@ -9,7 +9,7 @@
 		<div class="promotion-prepare">
 			<div class="promotion-instruction">
 				<%= t('promotion.instruction') %>
-				<%= link_to	t('promotion.form'), asset_path('推廣申請表.doc'), :target => "_blank" %>
+				<%= link_to	t('promotion.form'), asset_path(t('promotion_form')), :target => "_blank" %>
 			</div>
 			<%= form_for @promotion, :html => {:class => 'form-horizontal edit-promotion'} do |f|%>
 				<div class="form-group">

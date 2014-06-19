@@ -77,7 +77,7 @@
                     <li>
                       <div class="account pull-right dropdown">
                         <a href="<%= messages_path %>">
-                            <span id="user_messages_count" class="badge badge-error" style="display:none"><%= Message.unread(current_user).count %></span>
+                            <span id="user_messages_count" class="badge badge-error <%= 'hidden' unless Message.unread(current_user).count > 0%>"><%= Message.unread(current_user).count %></span>
                         </a>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                           <div class="profile">
