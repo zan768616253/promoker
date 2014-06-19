@@ -6,6 +6,7 @@ window.App =
 	    faye = new Faye.Client(FAYE_SERVER_URL)
 	    message_subscription = faye.subscribe "/messages_count/#{CURRENT_USER_ACCESS_TOKEN}",(json) ->
 	      span = $("span#user_messages_count")
+	      span.show()
 	      new_title = $(document).attr("title").replace(/\(\d+\) /,'')
 	      if json.count > 0
 	        span.addClass("badge-error")
