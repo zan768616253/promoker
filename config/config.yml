@@ -35,7 +35,7 @@ test:
   <<: *defaults
 staging:
   <<: *defaults
-  faye_server: "http://default.foo.com:8080/faye"
+  faye_server: "http://staging.promoker.com:8080/faye"
   faye_token: "123456"
   upyun:
     username: promokerstaging

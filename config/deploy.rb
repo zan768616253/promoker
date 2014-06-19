@@ -45,3 +45,41 @@ namespace :deploy do
 end
 
 after "deploy:restart", "resque:restart"
+
+namespace :faye do
+  desc "See current faye status"
+  task :status do
+  	on release_roles :all do
+	    if test "[ -e #{current_path}/tmp/pids/faye.pid ]"
+	        within current_path do
+	          file = capture(:ls, "-1 tmp/pids/faye.pid")
+	          info capture(:ps, "-f -p $(cat #{file.chomp}) | sed -n 2p")
+	        end
+	    end
+	end
+  end
+  desc "Start Faye"
+  task :start do
+  	on release_roles :all do
+	  	within current_path do
+	    	execute :bundle, "exec rackup faye.ru -s thin -E production -D --pid tmp/pids/faye.pid"
+	    end
+	end
+  end
+  desc "Stop Faye"
+  task :stop do
+  	on release_roles :all do
+	  	if test "[ -e #{current_path}/tmp/pids/faye.pid ]"
+	        within current_path do
+	        	execute :kill, "$(cat tmp/pids/faye.pid && rm tmp/pids/faye.pid"
+	        end
+	    end
+	end
+  end
+  desc "Restart Faye"
+  task :restart do
+  	invoke "faye:stop"  
+  	invoke "faye:start"  
+  end
+end
+after 'deploy:restart', 'faye:restart'
