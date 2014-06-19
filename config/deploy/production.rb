@@ -17,6 +17,10 @@ set :rails_env, "production"
 server 'promoker.com', user: 'deploy', roles: %w{web app db}
 
 
+role :resque_worker, "promoker.com"
+
+set :workers, { "*" => 3 }
+
 # Custom SSH Options
 # ==================
 # You may pass any option but keep in mind that net/ssh understands a
