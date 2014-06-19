@@ -353,6 +353,10 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
     rake (10.3.2)
+    raygun4ruby (1.1.2)
+      httparty (~> 0.11)
+      json
+      rack
     rdoc (4.1.1)
       json (~> 1.4)
     redis (3.0.7)
@@ -530,6 +534,7 @@ DEPENDENCIES
   rails-i18n
   rails_admin
   rails_admin_tag_list!
+  raygun4ruby
   redis_captcha!
   resque
   rspec-console
