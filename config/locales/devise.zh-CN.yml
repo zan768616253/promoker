@@ -97,6 +97,7 @@ zh-CN:
       expired: "您已过期，请重新申请"
       not_found: "没有该用户"
       already_confirmed: "已经激活，请重新登录."
+      confirmation_period_expired: "需要在%{period}內激活，请重新请求激活邮件"
       not_locked: "未锁定"
       not_saved:
         one: "出问题了:"

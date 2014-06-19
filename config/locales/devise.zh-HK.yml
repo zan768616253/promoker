@@ -104,6 +104,7 @@ zh-HK:
       expired: "您已過期，請重新申請"
       not_found: "沒有該用戶"
       already_confirmed: "已經激活，請重新登錄."
+      confirmation_period_expired: "需要在%{period}內激活，請重新請求激活郵件"
       not_locked: "未鎖定"
       not_saved:
         one: "出問題了:"

@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   has_many :promotions, :dependent => :destroy
   has_many :movies, :dependent => :destroy
 
-  before_create :generate_avatar
+  before_save :generate_avatar
 
   mount_uploader :avatar, PhotoUploader
 
