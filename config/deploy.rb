@@ -71,7 +71,7 @@ namespace :faye do
   	on release_roles :all do
 	  	if test "[ -e #{current_path}/tmp/pids/faye.pid ]"
 	        within current_path do
-	        	execute :kill, "$(cat tmp/pids/faye.pid && rm tmp/pids/faye.pid"
+	        	execute :kill, "$(cat tmp/pids/faye.pid) && rm tmp/pids/faye.pid"
 	        end
 	    end
 	end
