@@ -26,10 +26,6 @@ zh-HK:
       updated: '您的密碼已經修改成功，您現在已登錄.'
       updated_not_active: '您的密碼已經修改成功.'
       send_paranoid_instructions: '如果您的郵箱存在於我們的數據庫中，您將收到收到一封找回密碼的郵件.'
-    confirmations:
-      send_instructions: '稍後您將收到帳號激活的電子郵件'
-      confirmed: '您的帳號已經激活，您現在已登錄.'
-      send_paranoid_instructions: '如果您的郵箱存在於我們的數據庫中，您將收到一封激活郵件.'
     registrations:
       signed_up: '歡迎！ 你已註冊成功.'
       updated: '帳號資料更新成功.'
