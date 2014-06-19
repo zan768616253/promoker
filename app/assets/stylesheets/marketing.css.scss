@@ -62,7 +62,7 @@ ul,li{ margin:0px; padding:0px; list-style:none;}
 .go_about{ padding:30px 0;}
 .go_about h2{ font-size:50px; font-weight:normal; margin:0px; padding:0px; text-align:center; color:#d36b1f;}
 .go_about h3{ font-size:40px; font-weight:normal; margin:0px; padding:0px; text-align:center;}
-.go_btn a{ width:222px; height:59px; display:block; background:image-url('btn.png') no-repeat; text-align:center; line-height:59px; color:#fff; font-size:20px; text-decoration:none; margin:0 auto;}
+.go_btn a{ width:222px; height:59px; display:block; background:image-url('btn.png') no-repeat; text-align:center; line-height:59px; color:#fff; font-size:20px; text-decoration:none; margin:0 auto;cursor: pointer;}
 .go_btn a:hover{ background:image-url('btn.png') no-repeat 0 -59px;}
 .go_btna{ padding:400px 0 0 95px;}
 .go_btna a{ width:222px; height:59px; display:block; background:image-url('btn.png') no-repeat; text-align:center; line-height:59px; color:#fff; font-size:20px; text-decoration:none;}
@@ -76,7 +76,7 @@ ul,li{ margin:0px; padding:0px; list-style:none;}
 .contact_ipnut{ width:361px; height:459px; background:image-url('contact_input.png') no-repeat; margin:25px 0 0 0; float:right; padding:35px;}
 .contact_ipnut_tit{ font-size:25px; color:#d36b1f; font-weight:bold; margin:0 0 5px 0;}
 .contact_ipnut input{ width:247px; height:33px; background:#e4e4e4; border:1px solid #d7d7d7; font-family:"微软雅黑"; color:#555; padding:0 15px;}
-.textarea{ background:#e4e4e4; border:1px solid #d7d7d7; font-family:"微软雅黑"; color:#555; padding:0 15px; width:247px; height:100px;}
+.textarea{ background:#e4e4e4; border:1px solid #d7d7d7; font-family:"微软雅黑"; color:#555; padding:0 15px; width:247px; height:100px; resize: none;}
 
 body.theme-m {
     background: white;

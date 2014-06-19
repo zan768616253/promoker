@@ -1,6 +1,14 @@
 defaults: &defaults
-  admin_emails:
-    - "linyaoyi011@gmail.com"
+  smtp:
+    address: "smtp.exmail.qq.com"
+    port: 465
+    domain: "exmail.qq.com"
+    authentication: "plain"
+  from:
+    service: 
+      user_name: "service@promoker.com"
+      password: "qQWu3SeRmQU4"
+
   time_zone: 'Beijing'
   default_locale: 'zh-HK'
   faye_server: "http://127.0.0.1:9292/faye"
@@ -13,14 +21,16 @@ defaults: &defaults
   facebook_secret: "5587a9514a86d370c782d5c61cbb0931"
   google_key: "476925498782-d9nvimc4qv7f3ffl1esg0r5rgru51sfa.apps.googleusercontent.com"
   google_secret: "f47QPyfPPvUT7WkAEKRKMKMw"
+
+development:
+  <<: *defaults
   upyun:
     username: promokerdev
     password: aWDR89vlVpvH
     bucket: promoker-dev
     bucket_host: http://promoker-dev.b0.upaiyun.com
-
-development:
-  <<: *defaults
+  admin_emails:
+   - "linyaoyi011@gmail.com"
 test:
   <<: *defaults
 staging:
@@ -32,8 +42,15 @@ staging:
     password: ylNOtF8PPjUy
     bucket: promoker-staging
     bucket_host: http://promoker-staging.b0.upaiyun.com
+  admin_emails:
+   - "linyaoyi011@gmail.com"
+   - "ben@promoker.com" 
 production:
   <<: *defaults
+  admin_emails:
+    - "edward.he@promoker.com"
+    - "ben@promoker.com"
+    - "linyaoyi011@gmail.com"
   faye_server: "http://promoker.com:8080/faye"
   faye_token: "123456"
   upyun:

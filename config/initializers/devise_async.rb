@@ -2,5 +2,5 @@
 Devise::Async.setup do |config|
   config.enabled = true
   config.backend = :resque
-  config.queue   = :confirm_email
+  config.queue   = :confirm_mailer
 end

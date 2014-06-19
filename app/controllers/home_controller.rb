@@ -33,6 +33,10 @@ class HomeController < ApplicationController
 	end
 
 	def contact 
-		
+		if request.post?
+			Resque.enqueue ContactEmailWorker, params[:contact]
+			flash[:notice] = I18n.t('contact_later')
+			redirect_to marketing_path
+		end
 	end
 end

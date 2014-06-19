@@ -59,7 +59,7 @@ Rails.application.routes.draw do
 
   match '/marketing' => 'home#marketing', :via => :get
   match '/home' => 'home#index', :via => :get
-  match 'contact' => 'home#contact', :via => :get
+  match 'contact' => 'home#contact', :via => [:get,:post]
   root to: "home#welcome"
   get '*unmatched_route', :to => 'application#rescue_routing'
 
