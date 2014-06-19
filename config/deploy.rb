@@ -44,7 +44,7 @@ namespace :deploy do
 
 end
 
-after "deploy:restart", "resque:restart"
+after "deploy:restart", "resque:start"
 
 namespace :faye do
   desc "See current faye status"
