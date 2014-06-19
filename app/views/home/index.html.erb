@@ -37,53 +37,7 @@
 <div class="container-fluid">
   <div id="content">
     <div class="left-col">
-      <div id="marketing_case">
-  <div class="marketing_case clear_float">
-        <div class="marketing_case_left mar_left"><img src="<%= asset_path('marketing_img.jpg') %>" /></div>
-        <div class="marketing_case_right mar_right">
-          <div class="marketing_box clear_float">
-                <div class="marketing_case_tit"><h2>正在推广</h2></div>
-                <div class="marketing_case_name">《小偷儿》 </div>
-                <div class="marketing_case_about">
-                    <ul>
-                        <li><span>类型：</span> 微电影</li>
-                        <li><span>上线：</span> 2013年9月1日</li>
-                        <li><span>时长：</span> 32：29</li>
-                        <li><span>地区：</span> 香港</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="marketing_box clear_float">
-                <div class="marketing_case_tit marketing_margin"><h2>推广成果</h2></div>
-                <div class="marketing_case_name"></div>
-                <div class="marketing_case_results">
-                    <ul>
-                        <li>● 15个国内外奖项</li>
-                        <li>● 38家媒体报导</li>
-                        <li>● 百度百科上榜</li>
-                        <li>● 全网播放800万次</li>
-                        <li>● 4家电视台展映</li>
-                        <li>● 营收：10-15万</li>
-                        <li>● 22家网站强力推荐</li>
-                        <li>● 豆瓣电影上榜</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="marketing_box">
-                <div class="marketing_case_tit marketing_margin"><h2>主创团队</h2></div>
-                <div class="marketing_case_name"></div>
-                <div class="marketing_case_team">
-                    <ul>
-                        <li><img src="<%= asset_path('dy.jpg') %>" /><br />导演：朱思溢</li>
-                        <li><img src="<%= asset_path('jz.jpg') %>" /><br />监制：徐鸿</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+      <%= render 'marketing' %>
       <div class="recommend">
         <h2><i class="fa fa-thumbs-o-up"></i><a href="<%= movies_path %>"><%= t('home.hot_recommends') %></a></h2>
         <ul class="video-list clearfix mb30">
