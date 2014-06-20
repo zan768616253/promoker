@@ -59,26 +59,28 @@ gem 'fancybox2-rails', '~> 0.2.8'
 gem 'http_accept_language'
 gem 'rails-i18n'
 
-group :development, :test, :staging do
+group :development, :staging do
+  gem 'pry'
   gem 'pry-nav'
   gem 'pry-rails'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'meta_request'
-  gem 'rspec-rails'
-  gem 'spork-rails'
-  gem 'pry'
   gem 'pry-rescue'
   gem 'pry-remote'
   gem 'pry-stack_explorer'
   gem 'pry-debugger'
-  gem 'rspec-console'
 end
 
 group :development do
   gem 'capistrano', '3.1'
   gem 'capistrano-rails', '~> 1.1'
   gem "capistrano-resque", github: "sshingler/capistrano-resque", require: false
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'spork-rails'
 end
 
 group :test do
