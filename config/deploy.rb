@@ -83,3 +83,5 @@ namespace :faye do
   end
 end
 after 'deploy:restart', 'faye:restart'
+require './config/boot'
+require 'airbrake/capistrano'
