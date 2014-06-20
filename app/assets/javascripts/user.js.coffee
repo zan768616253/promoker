@@ -80,13 +80,28 @@ $ ->
             true
           if not empty(ias)
             ias.remove()
+          if width > height and height < 180
+            x1 = (width - height)/2
+            y1 = 0
+            x2 = (width - height)/2 + height
+            y2 = height
+          else if width < height and width < 180
+            x1 = 0
+            y1 = (height - width)/2
+            x2 = width
+            y2 = (height - width)/2 + width
+          else
+            x1 = (width - 180)/2
+            y1 = (height - 180)/2
+            x2 = (width - 180)/2 + 180
+            y2 = (height - 180)/2 + 180
           ias = $("#photo").imgAreaSelect
             instance: true
             aspectRatio: "1:1"
-            x1: (width - 180)/2
-            y1: (height - 180)/2
-            x2: (width - 180)/2 + 180
-            y2: (height - 180)/2 + 180
+            x1: x1
+            y1: y1
+            x2: x2
+            y2: y2
             handles: true
             onSelectChange: preview
             onInit: preview
