@@ -44,7 +44,17 @@ namespace :deploy do
 
 end
 
-# after "deploy:restart", "resque:restart"
+
+namespace :resque do
+  task :_restart do
+    begin
+      invoke "resque:restart"
+    rescue
+      invoke "resque:start"
+    end
+  end
+end
+after "deploy:restart", "resque:_restart"
 
 namespace :faye do
   desc "See current faye status"
@@ -78,8 +88,17 @@ namespace :faye do
   end
   desc "Restart Faye"
   task :restart do
-  	invoke "faye:stop"  
-  	invoke "faye:start"  
+    begin
+  	  invoke "faye:stop"  
+  	  invoke "faye:start"  
+    rescue
+      on release_roles :all do
+        if test "[ -e #{current_path}/tmp/pids/faye.pid ]"
+          execute :rm, "#{current_path}/tmp/pids/faye.pid"
+        end
+      end
+      invoke "faye:start"
+    end
   end
 end
-# after 'deploy:restart', 'faye:restart'
+after 'deploy:restart', 'faye:restart'
