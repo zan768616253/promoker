@@ -149,10 +149,10 @@
                     <strong><span class="money usd no-code"><%= Money.new(project.budget.to_i, project.currency).format(:no_cents => true) %><%= t('home.wan') %></span></strong>
                   <%= t('home.budget') %>
                   </li>
-                  <!-- <li class="pledged">
+                  <li class="pledged">
                     <strong><span class="money usd no-code"><%= (total - elapse).to_i %></span></strong>
-                  <%= t('home.day_to_film') %>
-                  </li> -->
+                      <%= t('home.day_to_film') %>
+                  </li>
                 </ul>
               </div>
             </div>

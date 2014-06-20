@@ -56,7 +56,7 @@ zh-HK:
       filmfest: "電影節"
       colleage: "微電影學院"
       project: "項目"
-      marketing: "營銷" 
+      marketing: "行銷" 
       publish: "發佈"
       promote: "推廣"
       login: "登錄"
@@ -114,7 +114,7 @@ zh-HK:
     tickets: "一句話項目"
     read_more: "查看更多"
     wan: "萬"
-    day_to_film: "天後開始拍攝"
+    day_to_film: "天後拍攝"
     our_partners: "合作夥伴"
   articles:
     news: "資訊"
