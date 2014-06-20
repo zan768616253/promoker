@@ -416,6 +416,9 @@ div.preview.icon-30 {
     width: 30px;
   }
 }
+div.preview.icon-30:before {
+  content: initial;
+}
 .preview-wrapper .preview {
     border: 1px solid #ccc;
     margin: 5px;
