@@ -33,6 +33,11 @@ development:
    - "linyaoyi011@gmail.com"
 test:
   <<: *defaults
+  upyun:
+    username: promokerdev
+    password: aWDR89vlVpvH
+    bucket: promoker-dev
+    bucket_host: http://promoker-dev.b0.upaiyun.com
 staging:
   <<: *defaults
   faye_server: "http://staging.promoker.com:9292/faye"
