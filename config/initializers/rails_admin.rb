@@ -81,6 +81,7 @@ RailsAdmin.config do |config|
 
   config.model Movie do
     edit do
+      field :home_page
       field :title
       field :desc
       field :summary
@@ -103,6 +104,7 @@ RailsAdmin.config do |config|
 
   config.model Event do
     edit do
+      field :home_page
       field :title
       field :summary
       field :content, :ck_editor
