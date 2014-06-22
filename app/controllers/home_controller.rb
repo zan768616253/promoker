@@ -5,9 +5,9 @@ class HomeController < ApplicationController
 		@articles = Article.recent.limit(10)
 		@events = Event.recent.limit(3)
 		@tickets = Ticket.recent.limit(10)
-		@recommends = Movie.all.limit(4)
+		@recommends = Movie.recommends
 		@partners = Partner.all
-		@selections = Event.tagged_with(I18n.t('event.type.filmfest'))
+		@selections = Event.selections
 		siteConfigs = SiteConfig.all
 		@siteConfig = {}
 		for config in siteConfigs

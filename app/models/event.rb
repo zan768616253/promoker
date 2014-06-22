@@ -7,6 +7,7 @@ class Event < ActiveRecord::Base
 
 	mount_uploader :thumb, PhotoUploader
 	scope :recent, -> { order("created_at DESC")}
+	scope :selections, -> { tagged_with(I18n.t('event.type.filmfest')).where(:home_page => true).limit(3).order(home_page_order: :asc) }
 
 	def status_enum
     	['upcoming', 'ongoing', 'finished']

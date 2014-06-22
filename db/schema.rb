@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140619171832) do
+ActiveRecord::Schema.define(version: 20140622165850) do
 
   create_table "actors", force: true do |t|
     t.string   "name"
@@ -144,6 +144,8 @@ ActiveRecord::Schema.define(version: 20140619171832) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "home_page",       default: false
+    t.integer  "home_page_order", default: 0
   end
 
   create_table "follows", force: true do |t|
@@ -183,6 +185,8 @@ ActiveRecord::Schema.define(version: 20140619171832) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "home_page",       default: false
+    t.integer  "home_page_order", default: 0
   end
 
   create_table "partners", force: true do |t|
@@ -220,7 +224,7 @@ ActiveRecord::Schema.define(version: 20140619171832) do
   add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id", using: :btree
 
   create_table "projects", force: true do |t|
-    t.string   "title",        default: "untitled"
+    t.string   "title",           default: "untitled"
     t.string   "province"
     t.string   "city"
     t.string   "district"
@@ -236,7 +240,7 @@ ActiveRecord::Schema.define(version: 20140619171832) do
     t.string   "cover"
     t.string   "video"
     t.integer  "user_id"
-    t.string   "status",       default: "draft"
+    t.string   "status",          default: "draft"
     t.datetime "start_at"
     t.integer  "project_id"
     t.string   "movie_type"
@@ -244,6 +248,8 @@ ActiveRecord::Schema.define(version: 20140619171832) do
     t.string   "currency"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "home_page",       default: false
+    t.integer  "home_page_order", default: 0
   end
 
   create_table "promotion_records", force: true do |t|

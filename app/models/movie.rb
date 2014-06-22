@@ -12,6 +12,7 @@ class Movie < ActiveRecord::Base
     group("movies.id").
     order("comments_count DESC")
   }
+  scope :recommends, -> { where(:home_page => true).limit(4).order(home_page_order: :asc) }
 
   belongs_to :director
   has_and_belongs_to_many :actors

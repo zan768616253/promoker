@@ -58,33 +58,33 @@
       </div>
       <div class="festival">
         <h2><i class="fa fa-video-camera"></i><a href="<%= events_path%>?type=<%= t('home.nav.filmfest') %>"><%= t('home.filmfest_selections') %></a></h2>
-        <% unless @selections.count < 3 %>
+        <% if @selections.count == 3 %>
         <div class="poster-wrapper">
           <div class=" poster-left poster">
-            <img src="<%= @selections.first.thumb %>" alt="">
+            <img src="<%= @selections[0].thumb %>" alt="">
             <div class="contenthover">
-              <h3><%= @selections.first.title %></h3>
-              <p><%= @selections.first.summary %> </p>
-              <p><a href="<%= event_path(@selections.first) %>" class="mybutton"><%= t('home.read_more') %></a></p>
+              <h3><%= @selections[0].title %></h3>
+              <p><%= @selections[0].summary %> </p>
+              <p><a href="<%= event_path(@selections[0]) %>" class="mybutton"><%= t('home.read_more') %></a></p>
             </div>
           </div>
           <div class="poster-right-up poster">
-            <img src="<%= @selections.second.thumb %>" alt="">
-            <div class="contenthover">
-              <h3><%= @selections.second.title %></h3>
-              <p><%= @selections.second.summary %></p>
-              <p><a href="<%= event_path(@selections.second) %>" class="mybutton">
-                <%= t('home.read_more') %>
-              </a></p>
-            </div>
+              <img src="<%= @selections[1].thumb %>" alt="">
+              <div class="contenthover">
+                <h3><%= @selections[1].title %></h3>
+                <p><%= @selections[1].summary %></p>
+                <p><a href="<%= event_path(@selections[1]) %>" class="mybutton">
+                  <%= t('home.read_more') %>
+                </a></p>
+              </div>
           </div>
           <div class="poster-right-bottom poster">
-            <img src="<%= @selections.third.thumb %>" alt="">
-            <div class="contenthover">
-              <h3><%= @selections.third.title %></h3>
-              <p><%= @selections.third.summary %></p>
-              <p><a href="<%= event_path(@selections.third) %>" class="mybutton"><%= t('home.read_more') %></a></p>
-            </div>
+              <img src="<%= @selections[2].thumb %>" alt="">
+              <div class="contenthover">
+                <h3><%= @selections[2].title %></h3>
+                <p><%= @selections[2].summary %></p>
+                <p><a href="<%= event_path(@selections[2]) %>" class="mybutton"><%= t('home.read_more') %></a></p>
+              </div>
           </div>
           <div></div>
         </div>
