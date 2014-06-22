@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount RedisCaptcha::Engine => '/captcha', :as => :captcha
   mount Resque::Server, :at => "/resque"
+  get '/china_region_fu/fetch_options', to: ChinaRegionFu::FetchOptionsController.action(:index)
+  
   devise_for :users, :controllers => {:passwords => "passwords", :omniauth_callbacks => 'omniauth_callbacks', :registrations => "registrations"} do
     resources :passwords
   end
