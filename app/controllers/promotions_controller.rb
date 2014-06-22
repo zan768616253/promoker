@@ -1,9 +1,9 @@
 # coding: utf-8
 class PromotionsController < ApplicationController
 	# draft received, promoting, complete
-	before_filter :authenticate_user!, :except => [:index, :show]
+	before_filter :authenticate_user!, :except => [:show]
 	before_filter :find_promotion, :except => [:index, :create]
-	before_filter :current_user!, :except => [:index, :create]
+	before_filter :current_user!, :except => [:create]
 
 	def find_promotion
 		@promotion = Promotion.find(params[:id])
