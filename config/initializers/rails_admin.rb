@@ -52,7 +52,8 @@ RailsAdmin.config do |config|
     'Ticket',
     'User',
     'City',
-    'Province'
+    'Province',
+    'District'
   ]
 
 
@@ -84,6 +85,7 @@ RailsAdmin.config do |config|
   config.model Movie do
     edit do
       field :home_page
+      field :home_page_order
       field :title
       field :desc
       field :summary
@@ -107,6 +109,7 @@ RailsAdmin.config do |config|
   config.model Event do
     edit do
       field :home_page
+      field :home_page_order
       field :title
       field :summary
       field :content, :ck_editor
