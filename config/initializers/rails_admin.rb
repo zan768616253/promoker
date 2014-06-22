@@ -50,7 +50,9 @@ RailsAdmin.config do |config|
     'Tag',
     'Tagging',
     'Ticket',
-    'User'
+    'User',
+    'City',
+    'Province'
   ]
 
 
