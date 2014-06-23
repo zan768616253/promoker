@@ -56,6 +56,7 @@ production:
     - "edward.he@promoker.com"
     - "ben@promoker.com"
     - "linyaoyi011@gmail.com"
+    - "hsc521412@gmail.com"
   faye_server: "http://promoker.com:9292/faye"
   faye_token: "123456"
   upyun:
