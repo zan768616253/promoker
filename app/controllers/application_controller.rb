@@ -51,7 +51,11 @@ class ApplicationController < ActionController::Base
       render_404
     end
     def set_locale
-      I18n.locale = session[:locale] || I18n.default_locale
-      session[:locale] = I18n.locale
+      if self.kind_of? RailsAdmin::ApplicationController
+        I18n.locale = :en
+      else
+        I18n.locale = session[:locale] || I18n.default_locale
+        session[:locale] = I18n.locale
+      end
     end
 end

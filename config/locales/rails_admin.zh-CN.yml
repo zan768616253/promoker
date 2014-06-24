@@ -7,7 +7,7 @@ zh-CN:
       next: "下一页 &raquo;"
       truncate: "…"
     misc:
-      filter_date_format: "mm/dd/yy" # a combination of 'dd', 'mm' and 'yy' with any delimiter. No other interpolation will be done!
+      filter_date_format: "mm/dd/yy"
       search: "搜索"
       filter: "筛选"
       refresh: "刷新"
@@ -118,7 +118,7 @@ zh-CN:
       empty_value_for_associated_objects: "<空>"
       click_to_reverse_selection: '反选'
       csv:
-        header_for_root_methods: "%{name}" # 'model' is available
+        header_for_root_methods: "%{name}"
         header_for_association_methods: "%{name} [%{association}]"
         encoding_to: "文字编码"
         encoding_to_help: "选择输出编码。留空保持原来的编码不变：（%{name}）"
@@ -126,4 +126,4 @@ zh-CN:
         skip_header_help: "不输出字段描述"
         default_col_sep: ","
         col_sep: "分隔符"
-        col_sep_help: "留空使用默认设置（'%{value}'）" # value is default_col_sep
+        col_sep_help: "留空使用默认设置（'%{value}'）"
