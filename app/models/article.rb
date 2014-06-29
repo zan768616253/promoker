@@ -1,4 +1,5 @@
 # coding: utf-8
+require 'file_size_validator' 
 class Article < ActiveRecord::Base
 
   paginates_per 5
@@ -15,4 +16,5 @@ class Article < ActiveRecord::Base
 
   validates_presence_of :title
   mount_uploader :thumb, PhotoUploader
+  validates :thumb, :presence => true,  :file_size => { :maximum => 0.5.megabytes.to_i } 
 end

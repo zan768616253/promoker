@@ -1,3 +1,4 @@
+require 'file_size_validator' 
 class Movie < ActiveRecord::Base
   paginates_per 12
   acts_as_taggable_on :locations, :types
@@ -5,7 +6,7 @@ class Movie < ActiveRecord::Base
   acts_as_votable
 
   mount_uploader :thumb, PhotoUploader
-
+  validates :thumb, :presence => true,  :file_size => { :maximum => 0.5.megabytes.to_i } 
   scope :recent, -> { order("created_at DESC ")}
   scope :top, -> { select("*, count(comments.id) AS comments_count").
     joins(:comments).

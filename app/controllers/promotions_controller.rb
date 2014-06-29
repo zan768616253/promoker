@@ -29,11 +29,11 @@ class PromotionsController < ApplicationController
 			@promotion = Promotion.find(params[:id])
 			@promotion.file = params[:promotion][:file]
 			@promotion.state = "received"
-			if @promotion.save!
+			if @promotion.save
 				flash[:alert] = "提交成功，请等待审核"
 				redirect_to :back	
 			else
-				flash[:error] = "提交失败，请重新提交"
+				flash[:error] = "提交失败，请重新提交: " + @promotion.errors.messages[:file].join(' ')
 				redirect_to :back
 			end
 		end

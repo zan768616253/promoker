@@ -1,3 +1,4 @@
+require 'file_size_validator' 
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -16,6 +17,7 @@ class User < ActiveRecord::Base
   before_save :generate_avatar
 
   mount_uploader :avatar, PhotoUploader
+  validates :avatar, :presence => true,  :file_size => { :maximum => 0.5.megabytes.to_i } 
 
   acts_as_taggable_on :roles
   acts_as_voter
