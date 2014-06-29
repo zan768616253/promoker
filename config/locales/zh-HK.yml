@@ -193,6 +193,9 @@ zh-HK:
     date: "發佈日期"
     contact: "聯系方式"
   users:
+    update:
+      success: "更新成功"
+      failed: "更新失敗"
     follow: "關注"
     chat: "約談"
     liked: "贊了"
@@ -255,3 +258,9 @@ zh-HK:
     screenshot: "截圖"
     url: "鏈接"
     not: "通過審核後，開始推廣"
+    upload: 
+      not_found: "請提交申請文件"
+      success: "提交成功，請等待審核"
+      failed: "提交失敗，請重新提交: "
+    create:
+      failed: "創建失敗"

@@ -1,6 +1,5 @@
 # coding: utf-8
 class PromotionsController < ApplicationController
-	# draft received, promoting, complete
 	before_filter :authenticate_user!, :except => [:show]
 	before_filter :find_promotion, :except => [:index, :create]
 	before_filter :current_user!, :except => [:create]
@@ -16,24 +15,24 @@ class PromotionsController < ApplicationController
 		if @promotion.save
 			redirect_to promotion_path(@promotion)
 		else
-			flash[:error] = "创建失败"
+			flash[:error] = I18n.t('promotion.create.failed')
 			redirect_to root_url
 		end
 	end
 
 	def update
 		if params[:promotion].blank?
-			flash[:error] = "请提交申请文件"
+			flash[:error] = I18n.t('promotion.update.not_found')
 			redirect_to :back
 		else
 			@promotion = Promotion.find(params[:id])
 			@promotion.file = params[:promotion][:file]
 			@promotion.state = "received"
 			if @promotion.save
-				flash[:alert] = "提交成功，请等待审核"
+				flash[:alert] = I18n.t('promotion.update.success')
 				redirect_to :back	
 			else
-				flash[:error] = "提交失败，请重新提交: " + @promotion.errors.messages[:file].join(' ')
+				flash[:error] = I18n.t('promotion.update.success') + @promotion.errors.messages[:file].join(' ')
 				redirect_to :back
 			end
 		end

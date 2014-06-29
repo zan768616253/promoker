@@ -8,5 +8,5 @@ class Promotion < ActiveRecord::Base
 		['draft', 'received', 'promoting', 'complete']
 	end
 
-	validates :file, :presence => true,  :file_size => { :maximum => 0.3.megabytes.to_i } 
+	validates :file,  :file_size => { :maximum => 0.3.megabytes.to_i } 
 end

@@ -16,11 +16,12 @@ class UsersController < ApplicationController
 
   def update_avatar
     @user.avatar = cropped_image(params[:user])
-    if @user.save!
-      flash[:alert] = "更新成功"
+    if @user.save
+      flash[:alert] = I18n.t('users.update.success')
       redirect_to edit_user_path(@user)
     else
-      render action: 'edit'
+      flash[:alert] = I18n.t('users.update.failed') + @user.errors.messages[:avatar].join(' ')
+      redirect_to edit_user_path(@user)
     end
   end
 
@@ -40,7 +41,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @roles = Tag.tags_on('roles')
+    @roles = Tag.tags_on('roles') || []
   end
 
   def update
@@ -70,7 +71,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         format.html {
-          flash[:alert] = "更新成功"
+          flash[:alert] = I18n.t('users.update.success')
           redirect_to edit_user_path(@user)
         }
       else
