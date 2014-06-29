@@ -99,7 +99,7 @@
           <div class="upload-wrapper">
             <div class="fileUpload btn btn-default" id="upload">
               <span><i class="fa fa-upload"></i><%= t('users.edit.pick') %></span>  
-            <%= f.file_field :avatar, :class => "upload", :id => "files" %>
+            <%= f.file_field :avatar, :class => "upload", :id => "files", :data => {:max_file_size => 0.5.megabytes} %>
             </div>
             <div id="holder">
               <i class="fa fa-cloud-upload"></i>

@@ -48,6 +48,9 @@ class User
       if provider == "facebook"
         data.image = data.image.gsub('http://','https://')
       end
+      if provider == "weibo"
+        data.image = data.image + '.jpg'
+      end
       user.remote_avatar_url = data.image unless user.avatar?
       user.password = Devise.friendly_token[0,20]
       user.location = data.location
