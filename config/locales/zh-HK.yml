@@ -258,7 +258,8 @@ zh-HK:
     screenshot: "截圖"
     url: "鏈接"
     not: "通過審核後，開始推廣"
-    upload: 
+    rejected: "請重新提交。"
+    update: 
       not_found: "請提交申請文件"
       success: "提交成功，請等待審核"
       failed: "提交失敗，請重新提交: "

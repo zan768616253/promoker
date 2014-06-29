@@ -5,7 +5,7 @@
 	<div class="promotion-box">
 		<div class="ribbon"></div>
 		<div class="promotion-title"><%= @promotion.title %></div>
-		<% if @promotion.state == "draft" %>
+		<% if @promotion.state == "draft" || @promotion.state == "rejected" %>
 		<div class="promotion-prepare">
 			<div class="promotion-instruction">
 				<%= t('promotion.instruction') %>
@@ -23,8 +23,11 @@
 		<% end %>
 		<div class="promotion-progress-wrapper">
 			<h2><%= t('promotion.progress') %></h2>
+			<% if @promotion.state == 'rejected' %>
+				<p style="color:red; font-weight: bold; font-size: 16px;"><%= @promotion.reject_reason %> <%= t('promotion.rejected') %></p>
+			<% end %>
 			<ul class="promotion-progress">
-				<li class="progress-item  <%= 'active' if @promotion.state=="draft" %>">
+				<li class="progress-item  <%= 'active' if @promotion.state=="draft" %> <%= 'error' if @promotion.state=='rejected' %>">
 					<div class="pic">
 						<i class="fa fa-edit"></i>
 					</div>

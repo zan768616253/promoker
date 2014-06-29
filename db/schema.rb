@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622165850) do
+ActiveRecord::Schema.define(version: 20140629172159) do
 
   create_table "actors", force: true do |t|
     t.string   "name"
@@ -203,26 +203,6 @@ ActiveRecord::Schema.define(version: 20140622165850) do
     t.datetime "updated_at"
   end
 
-  create_table "profiles", force: true do |t|
-    t.string   "nickname"
-    t.string   "gender"
-    t.string   "about"
-    t.string   "province"
-    t.string   "city"
-    t.string   "district"
-    t.string   "location"
-    t.string   "name"
-    t.string   "role"
-    t.string   "style"
-    t.string   "avatar"
-    t.integer  "profilable_id"
-    t.string   "profilable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id", using: :btree
-
   create_table "projects", force: true do |t|
     t.string   "title",           default: "untitled"
     t.string   "province"
@@ -264,13 +244,14 @@ ActiveRecord::Schema.define(version: 20140622165850) do
   end
 
   create_table "promotions", force: true do |t|
-    t.string   "title",      default: "untitled"
+    t.string   "title",         default: "untitled"
     t.string   "file"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "state",      default: "draft"
+    t.string   "state",         default: "draft"
     t.string   "cover"
+    t.string   "reject_reason"
   end
 
   create_table "provinces", force: true do |t|

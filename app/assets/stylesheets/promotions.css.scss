@@ -46,6 +46,11 @@ li.progress-item.active p {
 	font-weight: bold;
 }
 
+li.progress-item.error p {
+	color: red;
+	font-weight: bold;
+}
+
 li.progress-item.line {
 	width: 40px;
 	height: 1px;
@@ -74,6 +79,11 @@ div.promotion-progress-wrapper {
 li.progress-item.active .pic {
 	border: 2px solid #FFA500;
 	color: #FFA500;
+}
+
+li.progress-item.error .pic {
+	border: 2px solid red;
+	color: red;
 }
 
 li.progress-item i.fa.fa-user {

@@ -2,7 +2,7 @@
 class PromotionsController < ApplicationController
 	before_filter :authenticate_user!, :except => [:show]
 	before_filter :find_promotion, :except => [:index, :create]
-	before_filter :current_user!, :except => [:create]
+	before_filter :current_user!, :except => [:index, :create]
 
 	def find_promotion
 		@promotion = Promotion.find(params[:id])
@@ -32,7 +32,7 @@ class PromotionsController < ApplicationController
 				flash[:alert] = I18n.t('promotion.update.success')
 				redirect_to :back	
 			else
-				flash[:error] = I18n.t('promotion.update.success') + @promotion.errors.messages[:file].join(' ')
+				flash[:error] = I18n.t('promotion.update.failed') + @promotion.errors.messages[:file].join(' ')
 				redirect_to :back
 			end
 		end

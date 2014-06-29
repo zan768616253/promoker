@@ -259,7 +259,8 @@ zh-CN:
     screenshot: "截图"
     url: "链接"
     not: "通过审核后，开始推广"
-    upload: 
+    rejected: "请重新提交。"
+    update: 
       not_found: "请提交申请文件"
       success: "提交成功，请等待审核"
       failed: "提交失败，请重新提交: "

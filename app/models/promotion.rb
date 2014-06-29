@@ -5,7 +5,7 @@ class Promotion < ActiveRecord::Base
 	mount_uploader :file, FileUploader
 	has_many :promotion_records, :dependent => :destroy
 	def state_enum
-		['draft', 'received', 'promoting', 'complete']
+		['draft', 'received', 'promoting', 'complete', 'rejected']
 	end
 
 	validates :file,  :file_size => { :maximum => 0.3.megabytes.to_i } 
