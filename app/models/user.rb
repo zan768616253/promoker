@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
         tempfile = Tempfile.new ['avatar', 'jpg']
         tempfile.binmode
         tempfile.write(blob)
-        upload = ActionDispatch::Http::UploadedFile.new(tempfile: tempfile, filename: '1')
+        upload = ActionDispatch::Http::UploadedFile.new(tempfile: tempfile, filename: '1.jpg')
         self.avatar = upload
       end
     end
