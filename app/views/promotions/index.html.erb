@@ -21,7 +21,7 @@
 					<div class="promotion-info">
 						<div class="promotion-title"><%= link_to promotion.title, promotion_path(promotion) %></a></div>
 						<ul class="promotion-progress">
-						<li class="progress-item  <%= 'active' if promotion.state=="draft" %>">
+						<li class="progress-item  <%= 'active' if promotion.state=="draft" %> <%= 'error' if promotion.state=='rejected' %>">
 							<div class="pic">
 								<i class="fa fa-edit"></i>
 							</div>

@@ -112,6 +112,8 @@ class UsersController < ApplicationController
     image = MiniMagick::Image.open(params[:avatar].path)
     crop_params = "#{params[:crop][:w]}x#{params[:crop][:h]}+#{params[:crop][:x1]}+#{params[:crop][:y1]}"
     image.crop(crop_params)
+    File.rename(image.path,image.path + '.jpg')
+    image.path = image.path + '.jpg'
     image
   end
 end
