@@ -118,7 +118,7 @@ gem 'unicorn'
 
 gem 'open4'
 gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'bootsy', '~> 2.0.9'
 gem 'money', '~> 6.1.1'
