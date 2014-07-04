@@ -9,7 +9,7 @@
 # For more information about Backup's components, see the documentation at:
 # http://meskyanichi.github.io/backup
 #
-db_config           = YAML.load_file('/u/apps/promoker/shared/config/database.yml')['production']
+db_config = YAML.load_file('/u/apps/promoker/shared/config/database.yml')['production']
 Model.new(:db_backup, 'Description for db_backup') do
 
   ##
@@ -20,9 +20,7 @@ Model.new(:db_backup, 'Description for db_backup') do
     db.name               = db_config['database']
     db.username           = db_config['username']
     db.password           = db_config['password']
-    db.host               = "localhost"
-    db.port               = 3306
-    db.socket             = "/tmp/mysql.sock"
+    db.socket             = '/var/run/mysqld/mysqld.sock'
   end
 
   ##
@@ -49,13 +47,13 @@ Model.new(:db_backup, 'Description for db_backup') do
     mail.on_warning           = true
     mail.on_failure           = true
 
-    mail.from                 = "service@promoker.com"
+    mail.from                 = "alert@promoker.com"
     mail.to                   = "linyaoyi011@gmail.com"
     mail.address              = "smtp.exmail.qq.com"
     mail.port                 = 465
     mail.domain               = "exmail.qq.com"
-    mail.user_name            = "service@promoker.com"
-    mail.password             = "qQWu3SeRmQU4"
+    mail.user_name            = "alert@promoker.com"
+    mail.password             = "p9kLmjI182Pf"
     mail.authentication       = :plain
     mail.encryption           = :ssl
   end

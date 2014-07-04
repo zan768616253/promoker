@@ -7,7 +7,6 @@ set :branch, ENV['rev'] || "master"
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/u/apps/#{fetch(:application)}"
 
@@ -31,8 +30,8 @@ set :default_env, { path: "/opt/rbenv/shims:$PATH" }
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :keep_db_backups, 10
-
+# db backups
+set :keep_db_backups, 5
 set :backup_path, "#{fetch(:deploy_to)}/backups"
 
 namespace :deploy do
@@ -160,12 +159,12 @@ namespace :db do
     on roles(:app) do
       execute "mkdir -p #{fetch(:backup_path)}/config"
       execute "touch #{fetch(:backup_path)}/config/cron.log"
-      upload! StringIO.new(File.read("config/backup/schedule.rb")), "#{fetch(:backup_path)}/config/schedule.rb"
+      upload! StringIO.new(File.read("config/backup/config/schedule.rb")), "#{fetch(:backup_path)}/config/schedule.rb"
 
       within "#{fetch(:backup_path)}" do
         # capistrano was unable to find the executable for whenever
         # without the path to rbenv shims set
-        with path: "/home/#{fetch(:deploy_user)}/.rbenv/shims:$PATH" do
+        with rbenv_version: "2.1.0" do
           puts capture :whenever
           puts capture :whenever, '--update-crontab'
         end
@@ -173,4 +172,6 @@ namespace :db do
     end
   end
 end
-before 'deploy:updating', 'db:backup'
+before 'deploy:migrate', 'db:backup'
+after 'deploy:log_revision', 'db:upload_config'
+after 'deploy:log_revision', 'db:upload_cron'
