@@ -5,7 +5,7 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
+set :output, "/u/apps/promoker/backups/config/cron.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 #
-every 1.day, :at => '11:05 pm' do
-  command "backup perform -t db_backup -r ."
+every 3.hours do
+  command "RBENV_VERSION=2.1.0 backup perform -t db_backup -r /u/apps/promoker/backups/"
 end
