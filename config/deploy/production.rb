@@ -21,6 +21,10 @@ role :resque_worker, "promoker.com"
 
 set :workers, { "*" => 3 }
 
+before 'deploy:migrate', 'db:backup'
+after 'deploy:log_revision', 'db:upload_config'
+after 'deploy:log_revision', 'db:upload_cron'
+
 # Custom SSH Options
 # ==================
 # You may pass any option but keep in mind that net/ssh understands a

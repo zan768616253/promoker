@@ -172,6 +172,3 @@ namespace :db do
     end
   end
 end
-before 'deploy:migrate', 'db:backup'
-after 'deploy:log_revision', 'db:upload_config'
-after 'deploy:log_revision', 'db:upload_cron'
