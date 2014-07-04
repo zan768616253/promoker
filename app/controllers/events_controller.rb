@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 		@types = Tag.tags_on(:event_type)
     	if(params[:location] || params[:type])
     		if params[:status]
-      			@events = Event.tagged_with([params[:location], params[:type]]).page(params[:page]).where(:status => param[:status])
+      			@events = Event.tagged_with([params[:location], params[:type]]).page(params[:page]).where(:status => params[:status])
       		else
       			@events = Event.tagged_with([params[:location], params[:type]]).page(params[:page])
       		end
