@@ -33,6 +33,8 @@ set :default_env, { path: "/opt/rbenv/shims:$PATH" }
 
 set :keep_db_backups, 10
 
+set :backup_path, "#{fetch(:deploy_to)}/backups"
+
 namespace :deploy do
 
   desc 'Restart application'
@@ -142,6 +144,32 @@ namespace :db do
       info "Keeping #{max_keep} of #{backup_files.length} database backups"
       delete_backups = (backup_files - backup_files.last(max_keep)).join(" ")
       execute :rm, "-rf #{delete_backups}"
+    end
+  end
+  desc "Upload backup config files."
+  task :upload_config do
+    on roles(:app) do
+      execute "mkdir -p #{fetch(:backup_path)}/models"
+      upload! StringIO.new(File.read("config/backup/config.rb")), "#{fetch(:backup_path)}/config.rb"
+      upload! StringIO.new(File.read("config/backup/models/db_backup.rb")), "#{fetch(:backup_path)}/models/db_backup.rb"
+    end
+  end
+
+  desc "Upload cron schedule file."
+  task :upload_cron do
+    on roles(:app) do
+      execute "mkdir -p #{fetch(:backup_path)}/config"
+      execute "touch #{fetch(:backup_path)}/config/cron.log"
+      upload! StringIO.new(File.read("config/backup/schedule.rb")), "#{fetch(:backup_path)}/config/schedule.rb"
+
+      within "#{fetch(:backup_path)}" do
+        # capistrano was unable to find the executable for whenever
+        # without the path to rbenv shims set
+        with path: "/home/#{fetch(:deploy_user)}/.rbenv/shims:$PATH" do
+          puts capture :whenever
+          puts capture :whenever, '--update-crontab'
+        end
+      end
     end
   end
 end
