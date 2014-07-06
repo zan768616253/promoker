@@ -203,6 +203,26 @@ ActiveRecord::Schema.define(version: 20140629172159) do
     t.datetime "updated_at"
   end
 
+  create_table "profiles", force: true do |t|
+    t.string   "nickname"
+    t.string   "gender"
+    t.string   "about"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.string   "location"
+    t.string   "name"
+    t.string   "role"
+    t.string   "style"
+    t.string   "avatar"
+    t.integer  "profilable_id"
+    t.string   "profilable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "profiles", ["profilable_id"], name: "index_profiles_on_profilable_id", using: :btree
+
   create_table "projects", force: true do |t|
     t.string   "title",           default: "untitled"
     t.string   "province"
