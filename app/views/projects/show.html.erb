@@ -67,7 +67,7 @@
 				<p><%= t('projects.project_type') %>: <%= @project.movie_type %></p>
 				<p><%= t('projects.project_duration') %>: <%= @project.duration %></p>
 				<p><%= t('projects.project_start_at') %>: <%= @project.start_at.strftime('%y-%m-%m') %> </p>
-				<p><%= t('projects.project_budget') %>: <%= Money.new(@project.budget.to_i, @project.currency).format %></p>
+				<p><%= t('projects.project_budget') %>: <%= Money.new(@project.budget.to_i, @project.currency).format %> <%= t('home.wan') %></p>
 				<p><%= t('projects.project_needs') %>: <%= @project.need_list.join(',') %></p>
 			</div>
 			<%= render 'users/profile'%>
