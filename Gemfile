@@ -123,3 +123,4 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'bootsy', '~> 2.0.9'
 gem 'money', '~> 6.1.1'
 gem "airbrake"
+gem 'dumper'
