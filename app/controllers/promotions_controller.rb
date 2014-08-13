@@ -1,7 +1,7 @@
 # coding: utf-8
 class PromotionsController < ApplicationController
-	before_filter :authenticate_user!, :except => [:show]
-	before_filter :find_promotion, :except => [:index, :create]
+	before_filter :authenticate_user!
+	before_filter :find_promotion, :except => [:index, :create, :maike]
 	before_filter :current_user!, :except => [:index, :create]
 
 	def find_promotion
@@ -43,7 +43,18 @@ class PromotionsController < ApplicationController
 	end
 
 	def show
+	    session[:last_promotion] = params[:id]
+	end
 
+	def maike
+		unless session[:last_promotion].nil? || params[:state].blank?
+			@promotion = Promotion.find session[:last_promotion]
+			@promotion.state = params[:state]
+			@promotion.save!
+			redirect_to promotion_path(@promotion)
+		else
+			redirect_to home_path
+		end
 	end
 
 	protected

@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   end
 
   resources :tickets, :only => [:create,:show]
-  resources :promotions
+  resources :promotions do
+    collection do
+      get 'maike'
+    end
+  end
   
   resources :project_details, :only => [:create, :update]
   resources :projects do
