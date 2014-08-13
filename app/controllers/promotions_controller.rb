@@ -2,7 +2,7 @@
 class PromotionsController < ApplicationController
 	before_filter :authenticate_user!
 	before_filter :find_promotion, :except => [:index, :create, :maike]
-	before_filter :current_user!, :except => [:index, :create]
+	before_filter :current_user!, :except => [:index, :create, :maike]
 
 	def find_promotion
 		@promotion = Promotion.find(params[:id])
