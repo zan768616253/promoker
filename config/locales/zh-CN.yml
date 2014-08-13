@@ -250,6 +250,7 @@ zh-CN:
     submit: "提交推广申请"
     draft: "填写表格"
     received: "正在审核"
+    selecting: "选择平台"
     promoting: "正在推广"
     complete: "推广结束"
     detail: "推广详情"

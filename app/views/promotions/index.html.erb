@@ -11,13 +11,13 @@
 					<%= image_tag promotion.user.avatar%>
 				</div>
 				<div class="promotion-wrapper">
-					<div class="promotion-cover">
-						<% if promotion.cover.nil? %>
-						<%= image_tag asset_path('missing_little.png') %>
-						<% else %>
-						<%= image_tag promotion.cover %>
-						<% end %>
-					</div>
+					<!-- <div class="promotion-cover"> -->
+						<%# if promotion.cover.nil? %>
+						<%# image_tag asset_path('missing_little.png') %>
+						<%# else %>
+						<%# image_tag promotion.cover %>
+						<%# end %>
+					<!-- </div> -->
 					<div class="promotion-info">
 						<div class="promotion-title"><%= link_to promotion.title, promotion_path(promotion) %></a></div>
 						<ul class="promotion-progress">
@@ -33,6 +33,13 @@
 								<i class="fa fa-user"></i>
 							</div>
 							<p><%= t('promotion.received') %></p>
+						</li>
+						<li class="progress-item line"></li>
+						<li class="progress-item  <%= 'active' if promotion.state=="selecting" %>">
+							<div class="pic">
+								<i class="fa fa-hand-o-up"></i>
+							</div>
+							<p><%= t('promotion.selecting') %></p>
 						</li>
 						<li class="progress-item line"></li>
 						<li class="progress-item  <%= 'active' if promotion.state=="promoting" %>">

@@ -249,6 +249,7 @@ zh-HK:
     submit: "提交推廣申請"
     draft: "填寫表格"
     received: "正在審核"
+    selecting: "選擇平臺"
     promoting: "正在推廣"
     complete: "推廣結束"
     detail: "推廣詳情"

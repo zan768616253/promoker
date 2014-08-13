@@ -25,6 +25,13 @@
 					<p><%= t('promotion.received') %></p>
 				</li>
 				<li class="progress-item line"></li>
+				<li class="progress-item  <%= 'active' if @promotion.state=="selecting" %>">
+					<div class="pic">
+						<i class="fa fa-hand-o-up"></i>
+					</div>
+					<p><%= t('promotion.selecting') %></p>
+				</li>
+				<li class="progress-item line"></li>
 				<li class="progress-item  <%= 'active' if @promotion.state=="promoting" %>">
 					<div class="pic">
 						<i class="fa fa-bar-chart-o"></i>
@@ -40,7 +47,7 @@
 				</li>
 			</ul>
 		</div>
-		<% unless  @promotion.promotion_records.empty? %>
+		<% if @promotion.state=="promoting" %>
 		<div class="promotion-progress-wrapper">
 			<h2><%= t('promotion.detail') %></h2>
 			<table class="table table-hover table-bordered">
@@ -70,7 +77,7 @@
 		<% if @promotion.state=="draft" %> <%= 'error' if @promotion.state=='rejected' %>
 			<iframe height="600" allowTransparency="true" style="width:100%;border:none;overflow:auto;" frameborder="0" src="http://www.mikecrm.com/f.php?t=2cVIG8"></iframe>
 		<% end  %>
-		<% if @promotion.state=="received" %>
+		<% if @promotion.state=="selecting" %>
 			<iframe height="600" allowTransparency="true" style="width:100%;border:none;overflow:auto;" frameborder="0" src="http://www.mikecrm.com/f.php?t=XgCvNX"></iframe>
 		<% end %>
 	</div>
